@@ -1,0 +1,1 @@
+"# Bypass Paywalls for Chrome" 
