@@ -1,4 +1,5 @@
 Updates--
+2017-07-15 v1.05: removed Barron's as the google redirect no longer works
 2017-04-16: Added MIT Technology Review (technologyreview.com), NRC (nrc.nl), The Courier Mail (couriermail.com.au).
 2017-04-05: Added 'Nikkei Asian Review'.
 2017-02-25: If you are trying to view NYT articles or tired of the WSJ popup, try installing an adblocker (I recommend 'uBlock Origin').
