@@ -4,15 +4,19 @@ var defaultSites = {
   'The Age': 'theage.com.au',
   'The Australian': 'theaustralian.com.au',
   'Baltimore Sun': 'baltimoresun.com',
+  'Barron\'s': 'barrons.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
   'Daily Press': 'dailypress.com',
   'The Economist': 'economist.com',
   'Financial Times': 'ft.com',
   'Glassdoor': 'glassdoor.com',
+  'Haaretz': 'haaretz.co.il',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
+  'Het Financieele Dagblad': 'fd.nl',
   'Inc.com': 'inc.com',
+  'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
   'Medscape': 'medscape.com',
   'MIT Technology Review': 'technologyreview.com',
@@ -43,14 +47,18 @@ var allow_cookies = [
 'asia.nikkei.com',
 'nytimes.com',
 'wsj.com',
-'couriermail.com.au'
+'couriermail.com.au',
+'letemps.ch',
+'fd.nl'
 ]
 
 // Removes cookies after page load
 var remove_cookies = [
 'theaustralian.com.au',
 'asia.nikkei.com',
-'couriermail.com.au'
+'couriermail.com.au',
+'letemps.ch',
+'fd.nl'
 ]
 
 function setDefaultOptions() {
@@ -106,6 +114,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
 
 
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
+  console.log("hello asdf");
   if (blockedRegexes.some(function(regex) { return regex.test(details.url); })) {
     return { cancel: true };
   }
