@@ -1,6 +1,5 @@
 var defaultSites = {
   'The Age': 'theage.com.au',
-  'The Australian': 'theaustralian.com.au',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
@@ -16,11 +15,13 @@ var defaultSites = {
   'Inc.com': 'inc.com',
   'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
+  'Medium': 'medium.com',
   'Medscape': 'medscape.com',
   'MIT Technology Review': 'technologyreview.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
-  'The Courier Mail': 'couriermail.com.au',
+  'The Boston Globe': 'bostonglobe.com',
+  'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
   'The Nation': 'thenation.com',
   'The New York Times': 'nytimes.com',
@@ -30,7 +31,6 @@ var defaultSites = {
   'SunSentinel': 'sun-sentinel.com',
   'The Seattle Times': 'seattletimes.com',
   'The Sydney Morning Herald': 'smh.com.au',
-  'The Telegraph': 'telegraph.co.uk',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com'
 };

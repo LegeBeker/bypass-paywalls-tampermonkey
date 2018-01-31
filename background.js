@@ -2,7 +2,6 @@
 
 var defaultSites = {
   'The Age': 'theage.com.au',
-  'The Australian': 'theaustralian.com.au',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
@@ -18,11 +17,13 @@ var defaultSites = {
   'Inc.com': 'inc.com',
   'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
+  'Medium': 'medium.com',
   'Medscape': 'medscape.com',
   'MIT Technology Review': 'technologyreview.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
-  'The Courier Mail': 'couriermail.com.au',
+  'The Boston Globe': 'bostonglobe.com',
+  'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
   'The Nation': 'thenation.com',
   'The New York Times': 'nytimes.com',
@@ -32,33 +33,34 @@ var defaultSites = {
   'SunSentinel': 'sun-sentinel.com',
   'The Seattle Times': 'seattletimes.com',
   'The Sydney Morning Herald': 'smh.com.au',
-  'The Telegraph': 'telegraph.co.uk',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com'
 };
 
-var restrictions = {
+const restrictions = {
   'barrons.com': 'barrons.com/articles'
 }
 
 // Don't remove cookies before page load
-var allow_cookies = [
-'theaustralian.com.au',
+const allow_cookies = [
 'asia.nikkei.com',
 'nytimes.com',
 'wsj.com',
-'couriermail.com.au',
+'ft.com',
 'letemps.ch',
-'fd.nl'
+'fd.nl',
+'bostonglobe.com',
+'mercurynews.com'
 ]
 
 // Removes cookies after page load
-var remove_cookies = [
-'theaustralian.com.au',
+const remove_cookies = [
 'asia.nikkei.com',
-'couriermail.com.au',
+'ft.com',
 'letemps.ch',
-'fd.nl'
+'fd.nl',
+'bostonglobe.com',
+'mercurynews.com'
 ]
 
 function setDefaultOptions() {
@@ -114,7 +116,6 @@ chrome.runtime.onInstalled.addListener(function (details) {
 
 
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
-  console.log("hello asdf");
   if (blockedRegexes.some(function(regex) { return regex.test(details.url); })) {
     return { cancel: true };
   }
