@@ -6,7 +6,9 @@ var defaultSites = {
   'Barron\'s': 'barrons.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
+  'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
+  'Dagens Nyheter': 'dn.se',
   'The Economist': 'economist.com',
   'Financial Times': 'ft.com',
   'Glassdoor': 'glassdoor.com',
@@ -50,7 +52,8 @@ const allow_cookies = [
 'letemps.ch',
 'fd.nl',
 'bostonglobe.com',
-'mercurynews.com'
+'mercurynews.com',
+'theage.com.au'
 ]
 
 // Removes cookies after page load
@@ -60,7 +63,8 @@ const remove_cookies = [
 'letemps.ch',
 'fd.nl',
 'bostonglobe.com',
-'mercurynews.com'
+'mercurynews.com',
+'theage.com.au'
 ]
 
 function setDefaultOptions() {
