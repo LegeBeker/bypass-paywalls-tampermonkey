@@ -1,4 +1,11 @@
 # Bypass Paywalls for Chrome
+### Installation Instructions
+**Google Chrome**:
+1. Download this repo as a ZIP from github.
+1. Unzip the file and you should have a folder named `bypass-paywalls-chrome-master`.
+1. In Chrome go to the extensions page (`chrome://extensions`) and drag the `bypass-paywalls-chrome-master` folder anywhere on the page to import it.
+
+Note: Every time you open Chrome it may warn you about running extensions in developer mode, just hit cancel to keep the extension enabled.
 
 Bypass the following sites' paywalls with this extension:
 
@@ -38,3 +45,6 @@ The Seattle Times (seattletimes.com)\
 The Sydney Morning Herald (smh.com.au)\
 The Washington Post (washingtonpost.com)\
 The Wall Street Journal (wsj.com)
+
+### Troubleshooting
+If WSJ stops working try removing all wsj.com site cookies.
