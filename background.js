@@ -53,7 +53,8 @@ const allow_cookies = [
 'fd.nl',
 'bostonglobe.com',
 'mercurynews.com',
-'theage.com.au'
+'theage.com.au',
+'economist.com'
 ]
 
 // Removes cookies after page load
@@ -64,7 +65,8 @@ const remove_cookies = [
 'fd.nl',
 'bostonglobe.com',
 'mercurynews.com',
-'theage.com.au'
+'theage.com.au',
+'economist.com'
 ]
 
 function setDefaultOptions() {
