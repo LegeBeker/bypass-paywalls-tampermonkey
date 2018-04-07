@@ -7,7 +7,7 @@
 
 Note: Every time you open Chrome it may warn you about running extensions in developer mode, just hit cancel to keep the extension enabled.
 
-Bypass the following sites' paywalls with this extension:
+### Bypass the following sites' paywalls with this extension:
 
 The Age (theage.com.au)\
 Baltimore Sun (baltimoresun.com)\
