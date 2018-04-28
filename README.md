@@ -20,7 +20,7 @@ Dagens Nyheter (dn.se)\
 The Economist (economist.com)\
 Financial Times (ft.com)\
 Glassdoor (glassdoor.com)\
-Haaretz (haaretz.co.il)\
+Haaretz (haaretz.co.il / haaretz.com)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
 Het Financieele Dagblad (fd.nl)\
