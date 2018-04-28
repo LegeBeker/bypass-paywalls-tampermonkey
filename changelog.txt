@@ -1,6 +1,6 @@
 Updates--
-2018-04-23 v1.2.2: Fixed The English Version of Haaretz website (haaretz.com)
-2018-04-07 v1.2.1: Fixed The Economist (economist.com)
+2018-04-23 v1.2.2: Added the English Version of Haaretz website (haaretz.com)
+2018-04-07 v1.2.1: Open Source'd Bypass Paywalls! Fixed The Economist (economist.com)
 2018-04-05 v1.2.0: added Corriere Della Sera (corriere.it), added Dagens Nyheter (dn.se), fixed The Age (theage.com.au)
 2018-01-30 v1.0.7: Added Medium (medium.com), added The Boston Globe (bostonglobe.com), added The Mercury News (mercurynews.com), removed The Australian (theaustralian.com.au), removed The Courier Mail (couriermail.com.au), removed The Telegraph (telegraph.co.uk)
 2017-09-14 v1.06: Added back Barron's, added Het Financieele Dagblad (fd.nl), added Le Temps (letemps.ch), added Haaretz (haaretz.co.il)
