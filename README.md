@@ -12,6 +12,7 @@ Note: Every time you open Chrome it may warn you about running extensions in dev
 The Age (theage.com.au)\
 Baltimore Sun (baltimoresun.com)\
 Barron's (barrons.com)\
+Bloomberg (bloomberg.com)\
 Crain's Chicago Business (chicagobusiness.com)\
 Chicago Tribune (chicagotribune.com)\
 Corriere Della Sera (corriere.it)\

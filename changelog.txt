@@ -1,4 +1,6 @@
 Updates--
+
+2018-05-05 v1.2.3: Added Bloomberg (bloomberg.com)
 2018-04-23 v1.2.2: Added the English Version of Haaretz website (haaretz.com)
 2018-04-07 v1.2.1: Open Source'd Bypass Paywalls! Fixed The Economist (economist.com)
 2018-04-05 v1.2.0: added Corriere Della Sera (corriere.it), added Dagens Nyheter (dn.se), fixed The Age (theage.com.au)
@@ -16,6 +18,7 @@ Bypass the following sites' paywalls:
 The Age (theage.com.au)
 Baltimore Sun (baltimoresun.com)
 Barron's (barrons.com)
+Bloomberg (bloomberg.com)
 Crain's Chicago Business (chicagobusiness.com)
 Chicago Tribune (chicagotribune.com)
 Corriere Della Sera (corriere.it)
