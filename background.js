@@ -130,7 +130,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   var isEnabled = enabledSites.some(function(enabledSite) {
 
-    var useSite = details.url.indexOf(enabledSite) !== -1;
+    var useSite = details.url.indexOf("." + enabledSite) !== -1;
 
     if (enabledSite in restrictions) {
       return useSite && details.url.indexOf(restrictions[enabledSite]) !== -1;
