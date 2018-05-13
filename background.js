@@ -56,7 +56,8 @@ const allow_cookies = [
 'bostonglobe.com',
 'mercurynews.com',
 'theage.com.au',
-'economist.com'
+'economist.com',
+'bostonglobe.com'
 ]
 
 // Removes cookies after page load
@@ -68,7 +69,8 @@ const remove_cookies = [
 'bostonglobe.com',
 'mercurynews.com',
 'theage.com.au',
-'economist.com'
+'economist.com',
+'bostonglobe.com'
 ]
 
 function setDefaultOptions() {
