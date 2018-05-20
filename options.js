@@ -13,6 +13,7 @@ var defaultSites = {
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
+  'TheMarker': 'themarker.com',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
   'Het Financieele Dagblad': 'fd.nl',
