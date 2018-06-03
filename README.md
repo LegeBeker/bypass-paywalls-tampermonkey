@@ -42,6 +42,7 @@ The New Yorker (newyorker.com)\
 OrlandoSentinel (orlandosentinel.com)\
 Quora (quora.com)\
 SunSentinel (sun-sentinel.com)\
+TheMarker (themarker.com)\
 The Seattle Times (seattletimes.com)\
 The Sydney Morning Herald (smh.com.au)\
 The Washington Post (washingtonpost.com)\
