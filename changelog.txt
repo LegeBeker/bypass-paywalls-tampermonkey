@@ -1,5 +1,6 @@
 Updates--
 
+2018-06-26 v1.2.8: Bug fixes (washingtonpost.com)
 2018-06-08 v1.2.7: Added Wired (wired.com)
 2018-05-20 v1.2.6: Added TheMarker (themarker.com)
 2018-05-12 v1.2.5: Fixed Boston Globe (bostonglobe.com)

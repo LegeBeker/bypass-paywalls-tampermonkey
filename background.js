@@ -39,7 +39,7 @@ var defaultSites = {
   'The Seattle Times': 'seattletimes.com',
   'The Sydney Morning Herald': 'smh.com.au',
   'The Washington Post': 'washingtonpost.com',
-  'The Wall Street Journal': 'wsj.com'
+  'The Wall Street Journal': 'wsj.com',
   'Wired': 'wired.com'
 };
 
@@ -55,7 +55,6 @@ const allow_cookies = [
 'ft.com',
 'letemps.ch',
 'fd.nl',
-'bostonglobe.com',
 'mercurynews.com',
 'theage.com.au',
 'economist.com',
@@ -68,7 +67,6 @@ const remove_cookies = [
 'ft.com',
 'letemps.ch',
 'fd.nl',
-'bostonglobe.com',
 'mercurynews.com',
 'theage.com.au',
 'economist.com',
