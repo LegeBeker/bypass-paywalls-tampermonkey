@@ -18,6 +18,7 @@ Chicago Tribune (chicagotribune.com)\
 Corriere Della Sera (corriere.it)\
 Daily Press (dailypress.com)\
 Dagens Nyheter (dn.se)\
+Denver Post (denverpost.com)\
 The Economist (economist.com)\
 Financial Times (ft.com)\
 Glassdoor (glassdoor.com)\
@@ -50,4 +51,5 @@ The Wall Street Journal (wsj.com)\
 Wired (wired.com)
 
 ### Troubleshooting
-If WSJ stops working try removing all wsj.com site cookies.
+If WSJ stops working try removing all wsj.com site cookies.\
+For The Denver Post turn off uBlock.

@@ -10,6 +10,7 @@ var defaultSites = {
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
   'Dagens Nyheter': 'dn.se',
+  'Denver Post': 'denverpost.com',
   'The Economist': 'economist.com',
   'Financial Times': 'ft.com',
   'Glassdoor': 'glassdoor.com',
@@ -58,7 +59,8 @@ const allow_cookies = [
 'mercurynews.com',
 'theage.com.au',
 'economist.com',
-'bostonglobe.com'
+'bostonglobe.com',
+'denverpost.com'
 ]
 
 // Removes cookies after page load
@@ -71,7 +73,8 @@ const remove_cookies = [
 'theage.com.au',
 'economist.com',
 'bostonglobe.com',
-'wired.com'
+'wired.com',
+'denverpost.com'
 ]
 
 function setDefaultOptions() {
