@@ -7,6 +7,8 @@
 
 Note: Every time you open Chrome it may warn you about running extensions in developer mode, just hit cancel to keep the extension enabled.
 
+**This extension works best along side the adblocker uBlock Origin
+
 ### Bypass the following sites' paywalls with this extension:
 
 The Age (theage.com.au)\
