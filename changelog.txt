@@ -1,5 +1,6 @@
 Updates--
 
+2018-08-26 v1.2.10: Added The New Statesman
 2018-07-04 v1.2.9: Added The Denver Post (denverpost.com, note: need to turn off uBlock for this site)
 2018-06-26 v1.2.8: Bug fixes (washingtonpost.com)
 2018-06-08 v1.2.7: Added Wired (wired.com)

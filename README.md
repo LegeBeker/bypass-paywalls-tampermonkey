@@ -44,6 +44,7 @@ The Boston Globe (bostonglobe.com)\
 The Mercury News (mercurynews.com)\
 The Morning Call (mcall.com)\
 The Nation (thenation.com)\
+The New Statesman (newstatesman.com)\
 The New York Times (nytimes.com)\
 The New Yorker (newyorker.com)\
 The Seattle Times (seattletimes.com)\
