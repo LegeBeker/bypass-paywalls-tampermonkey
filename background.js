@@ -39,6 +39,7 @@ var defaultSites = {
   'SunSentinel': 'sun-sentinel.com',
   'TheMarker': 'themarker.com',
   'The Seattle Times': 'seattletimes.com',
+  'The Spectator': 'spectator.co.uk',
   'The Sydney Morning Herald': 'smh.com.au',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
