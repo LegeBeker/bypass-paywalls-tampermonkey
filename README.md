@@ -36,17 +36,19 @@ Medscape (medscape.com)\
 MIT Technology Review (technologyreview.com)\
 Nikkei Asian Review (asia.nikkei.com)\
 NRC (nrc.nl)\
-The Boston Globe (bostonglobe.com)\
-The Mercury News (mercurynews.com)\
-The Morning Call (mcall.com)\
-The Nation (thenation.com)\
-The New York Times (nytimes.com)\
-The New Yorker (newyorker.com)\
 OrlandoSentinel (orlandosentinel.com)\
 Quora (quora.com)\
 SunSentinel (sun-sentinel.com)\
 TheMarker (themarker.com)\
+The Boston Globe (bostonglobe.com)\
+The Mercury News (mercurynews.com)\
+The Morning Call (mcall.com)\
+The Nation (thenation.com)\
+The New Statesman (newstatesman.com)\
+The New York Times (nytimes.com)\
+The New Yorker (newyorker.com)\
 The Seattle Times (seattletimes.com)\
+The Spectator (spectator.co.uk)\
 The Sydney Morning Herald (smh.com.au)\
 The Washington Post (washingtonpost.com)\
 The Wall Street Journal (wsj.com)\
