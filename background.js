@@ -63,7 +63,8 @@ const allow_cookies = [
 'theage.com.au',
 'economist.com',
 'bostonglobe.com',
-'denverpost.com'
+'denverpost.com',
+'chicagobusiness.com'
 ]
 
 // Removes cookies after page load
@@ -77,7 +78,8 @@ const remove_cookies = [
 'economist.com',
 'bostonglobe.com',
 'wired.com',
-'denverpost.com'
+'denverpost.com',
+'chicagobusiness.com'
 ]
 
 function setDefaultOptions() {
