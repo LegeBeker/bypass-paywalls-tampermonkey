@@ -28,7 +28,6 @@ Glassdoor (glassdoor.com)\
 Haaretz (haaretz.co.il / haaretz.com)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
-Het Financieele Dagblad (fd.nl)\
 Inc.com (inc.com)\
 Le Temps (letemps.ch)\
 Los Angeles Times (latimes.com)\

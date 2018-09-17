@@ -1,5 +1,6 @@
 Updates--
 
+2018-09-16 v1.3.1: Removed Het Financieele Dagblad (fd.nl)
 2018-09-09 v1.3.0: Fixed chicagobusiness.com
 2018-09-06 v1.2.11: Add Dynamed Plus
 2018-08-26 v1.2.10: Fixed alphabeticised lists, Added The New Statesman and The Spectator
