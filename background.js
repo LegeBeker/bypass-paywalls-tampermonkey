@@ -228,7 +228,7 @@ chrome.webRequest.onCompleted.addListener(function(details) {
     }
     chrome.cookies.getAll({domain: domainVar}, function(cookies) {
       for (var i=0; i<cookies.length; i++) {
-        chrome.cookies.remove({url: cookies[i].secure ? "https://" : "http://" + cookies[i].domain + cookies[i].path, name: cookies[i].name});
+        chrome.cookies.remove({url: (cookies[i].secure ? "https://" : "http://") + cookies[i].domain + cookies[i].path, name: cookies[i].name});
       }
     });
   }
