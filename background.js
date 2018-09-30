@@ -66,8 +66,8 @@ const allow_cookies = [
 'bostonglobe.com',
 'denverpost.com',
 'chicagobusiness.com',
-'The Advocate': 'theadvocate.com.au',
-'Examiner': 'examiner.com.au' 
+'theadvocate.com.au',
+'examiner.com.au' 
 ]
 
 // Removes cookies after page load
@@ -83,8 +83,8 @@ const remove_cookies = [
 'wired.com',
 'denverpost.com',
 'chicagobusiness.com',
-'The Advocate': 'theadvocate.com.au',
-'Examiner': 'examiner.com.au'
+'theadvocate.com.au',
+'examiner.com.au'
 ]
 
 function setDefaultOptions() {
