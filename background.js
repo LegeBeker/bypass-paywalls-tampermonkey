@@ -65,7 +65,9 @@ const allow_cookies = [
 'economist.com',
 'bostonglobe.com',
 'denverpost.com',
-'chicagobusiness.com'
+'chicagobusiness.com',
+'The Advocate': 'theadvocate.com.au',
+'Examiner': 'examiner.com.au' 
 ]
 
 // Removes cookies after page load
