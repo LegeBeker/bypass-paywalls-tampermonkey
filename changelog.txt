@@ -1,5 +1,5 @@
 Updates--
-
+2018-10-2 v1.3.2: Added The Advocate(theadvocate.com.au), added Examiner (examiner.com.au)
 2018-09-16 v1.3.1: Removed Het Financieele Dagblad (fd.nl)
 2018-09-09 v1.3.0: Fixed chicagobusiness.com
 2018-09-06 v1.2.11: Add Dynamed Plus
