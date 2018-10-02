@@ -13,6 +13,7 @@ var defaultSites = {
   'Denver Post': 'denverpost.com',
   'Dynamed Plus': 'dynamed.com',
   'The Economist': 'economist.com',
+  'Examiner': 'examiner.com.au'
   'Financial Times': 'ft.com',
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
@@ -30,6 +31,7 @@ var defaultSites = {
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quora': 'quora.com',
   'SunSentinel': 'sun-sentinel.com',
+  'The Advocate': 'theadvocate.com.au',
   'The Boston Globe': 'bostonglobe.com',
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
@@ -43,9 +45,7 @@ var defaultSites = {
   'The Sydney Morning Herald': 'smh.com.au',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
-  'Wired': 'wired.com',
-  'The Advocate': 'theadvocate.com.au',
-  'Examiner': 'examiner.com.au'
+  'Wired': 'wired.com'
 };
 
 const restrictions = {
