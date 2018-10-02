@@ -11,7 +11,7 @@ var defaultSites = {
   'Denver Post': 'denverpost.com',
   'Dynamed Plus': 'dynamed.com',
   'The Economist': 'economist.com',
-  'Examiner': 'examiner.com.au'
+  'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
