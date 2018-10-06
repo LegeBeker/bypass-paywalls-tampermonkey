@@ -13,6 +13,7 @@ var defaultSites = {
   'Denver Post': 'denverpost.com',
   'Dynamed Plus': 'dynamed.com',
   'The Economist': 'economist.com',
+  'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
@@ -30,6 +31,7 @@ var defaultSites = {
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quora': 'quora.com',
   'SunSentinel': 'sun-sentinel.com',
+  'The Advocate': 'theadvocate.com.au',
   'The Boston Globe': 'bostonglobe.com',
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
@@ -63,7 +65,9 @@ const allow_cookies = [
 'economist.com',
 'bostonglobe.com',
 'denverpost.com',
-'chicagobusiness.com'
+'chicagobusiness.com',
+'theadvocate.com.au',
+'examiner.com.au' 
 ]
 
 // Removes cookies after page load
@@ -78,7 +82,9 @@ const remove_cookies = [
 'bostonglobe.com',
 'wired.com',
 'denverpost.com',
-'chicagobusiness.com'
+'chicagobusiness.com',
+'theadvocate.com.au',
+'examiner.com.au'
 ]
 
 function setDefaultOptions() {
