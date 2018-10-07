@@ -24,7 +24,6 @@ var defaultSites = {
   'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
-  'Medscape': 'medscape.com',
   'MIT Technology Review': 'technologyreview.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
@@ -67,7 +66,9 @@ const allow_cookies = [
 'denverpost.com',
 'chicagobusiness.com',
 'theadvocate.com.au',
-'examiner.com.au' 
+'examiner.com.au',
+'hbr.org',
+'medium.com'
 ]
 
 // Removes cookies after page load
@@ -84,7 +85,9 @@ const remove_cookies = [
 'denverpost.com',
 'chicagobusiness.com',
 'theadvocate.com.au',
-'examiner.com.au'
+'examiner.com.au',
+'hbr.org',
+'medium.com'
 ]
 
 function setDefaultOptions() {

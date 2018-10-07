@@ -33,7 +33,6 @@ Inc.com (inc.com)\
 Le Temps (letemps.ch)\
 Los Angeles Times (latimes.com)\
 Medium (medium.com)\
-Medscape (medscape.com)\
 MIT Technology Review (technologyreview.com)\
 Nikkei Asian Review (asia.nikkei.com)\
 NRC (nrc.nl)\
