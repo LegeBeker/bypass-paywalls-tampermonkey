@@ -58,4 +58,5 @@ Wired (wired.com)
 
 ### Troubleshooting
 If WSJ stops working try removing all wsj.com site cookies.\
-For The Denver Post turn off uBlock.
+For The Denver Post turn off uBlock.\
+For haaretz.co.il you may need need to turn off uBlock.
