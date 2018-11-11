@@ -27,8 +27,9 @@ Dynamed Plus (dynamed.com)\
 The Economist (economist.com)\
 Examiner (examiner.com.au)\
 Financial Times (ft.com)\
+Foreign Policy (foreignpolicy.com)\
 Glassdoor (glassdoor.com)\
-Haaretz (haaretz.co.il / haaretz.com)\
+Haaretz English (haaretz.com)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
 Inc.com (inc.com)\
@@ -58,6 +59,4 @@ The Wall Street Journal (wsj.com)\
 Wired (wired.com)
 
 ### Troubleshooting
-If WSJ stops working try removing all wsj.com site cookies.\
 For The Denver Post turn off uBlock.\
-For haaretz.co.il you may need need to turn off uBlock.

@@ -1,5 +1,6 @@
 Updates--
 
+2018-11-11 v1.3.5: No longer updating changelog in favor of git log
 2018-10-07 v1.3.4: Fixed hbr.org, fixed medium.com, removed medscape.com
 2018-10-07 v1.3.3: Fixed haaretz.co.il
 2018-10-02 v1.3.2: Added The Advocate(theadvocate.com.au), added Examiner (examiner.com.au)

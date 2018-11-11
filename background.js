@@ -15,8 +15,8 @@ var defaultSites = {
   'The Economist': 'economist.com',
   'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
+  'Foreign Policy': 'foreignpolicy.com',
   'Glassdoor': 'glassdoor.com',
-  'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
@@ -87,7 +87,9 @@ const remove_cookies = [
 'theadvocate.com.au',
 'examiner.com.au',
 'hbr.org',
-'medium.com'
+'medium.com',
+'foreignpolicy.com',
+'wsj.com'
 ]
 
 function setDefaultOptions() {
