@@ -1,7 +1,6 @@
 'use strict';
 
 var defaultSites = {
-  'The Age': 'theage.com.au',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
@@ -17,6 +16,7 @@ var defaultSites = {
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
   'Glassdoor': 'glassdoor.com',
+  'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
@@ -31,14 +31,15 @@ var defaultSites = {
   'Quora': 'quora.com',
   'SunSentinel': 'sun-sentinel.com',
   'The Advocate': 'theadvocate.com.au',
+  'The Age': 'theage.com.au',
   'The Boston Globe': 'bostonglobe.com',
+  'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
   'The Nation': 'thenation.com',
   'The New Statesman': 'newstatesman.com',
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
-  'TheMarker': 'themarker.com',
   'The Seattle Times': 'seattletimes.com',
   'The Spectator': 'spectator.co.uk',
   'The Sydney Morning Herald': 'smh.com.au',
@@ -146,10 +147,6 @@ chrome.runtime.onInstalled.addListener(function (details) {
 
 
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
-  if (blockedRegexes.some(function(regex) { return regex.test(details.url); })) {
-    return { cancel: true };
-  }
-
   var isEnabled = enabledSites.some(function(enabledSite) {
 
     var useSite = details.url.indexOf("." + enabledSite) !== -1;
@@ -164,6 +161,10 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   if (!isEnabled) {
     return;
+  }
+
+  if (blockedRegexes.some(function(regex) { return regex.test(details.url); })) {
+    return { cancel: true };
   }
 
   var requestHeaders = details.requestHeaders;

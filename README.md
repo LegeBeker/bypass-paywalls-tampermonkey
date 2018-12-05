@@ -7,13 +7,13 @@
 1. Enable Developer Mode
 1. Drag the `bypass-paywalls-chrome-master` folder anywhere on the page to import it.
 
-Note: Every time you open Chrome it may warn you about running extensions in developer mode, just hit cancel to keep the extension enabled.
-
-**This extension works best along side the adblocker uBlock Origin
+Notes:
+* Every time you open Chrome it may warn you about running extensions in developer mode, just hit 🗙 to keep the extension enabled.
+* You will be logged out for any site you have checked.
+* This extension works best along side the adblocker uBlock Origin.
 
 ### Bypass the following sites' paywalls with this extension:
 
-The Age (theage.com.au)\
 Baltimore Sun (baltimoresun.com)\
 Barron's (barrons.com)\
 Bloomberg (bloomberg.com)\
@@ -29,7 +29,7 @@ Examiner (examiner.com.au)\
 Financial Times (ft.com)\
 Foreign Policy (foreignpolicy.com)\
 Glassdoor (glassdoor.com)\
-Haaretz English (haaretz.com)\
+Haaretz (haaretz.co.il / haaretz.com)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
 Inc.com (inc.com)\
@@ -42,9 +42,10 @@ NRC (nrc.nl)\
 OrlandoSentinel (orlandosentinel.com)\
 Quora (quora.com)\
 SunSentinel (sun-sentinel.com)\
-TheMarker (themarker.com)\
 The Advocate (theadvocate.com.au)\
+The Age (theage.com.au)\
 The Boston Globe (bostonglobe.com)\
+TheMarker (themarker.com)\
 The Mercury News (mercurynews.com)\
 The Morning Call (mcall.com)\
 The Nation (thenation.com)\
@@ -59,4 +60,4 @@ The Wall Street Journal (wsj.com)\
 Wired (wired.com)
 
 ### Troubleshooting
-For The Denver Post turn off uBlock.\
+For The Denver Post turn off uBlock.
