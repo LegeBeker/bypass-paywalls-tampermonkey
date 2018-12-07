@@ -21,6 +21,7 @@ var defaultSites = {
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
+  'La Repubblica': 'repubblica.it',
   'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
