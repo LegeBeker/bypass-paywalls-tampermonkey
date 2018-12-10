@@ -91,7 +91,8 @@ const remove_cookies = [
 'hbr.org',
 'medium.com',
 'foreignpolicy.com',
-'wsj.com'
+'wsj.com',
+'seattletimes.com'
 ]
 
 function setDefaultOptions() {
