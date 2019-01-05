@@ -69,3 +69,6 @@ Wired (wired.com)
 ### Troubleshooting
 * If it doesn't work for an article try unchecking the site in Options, save, refresh the article, then re-check the site, save and refresh the article again.
 * For The Denver Post turn off uBlock.
+
+### License
+Bypass Paywalls is [MIT-licensed](https://github.com/iamadamdev/bypass-paywalls-chrome/blob/master/LICENSE).
