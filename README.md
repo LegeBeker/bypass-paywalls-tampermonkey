@@ -30,11 +30,14 @@ Financial Times (ft.com)\
 Foreign Policy (foreignpolicy.com)\
 Glassdoor (glassdoor.com)\
 Haaretz (haaretz.co.il / haaretz.com)\
+Harper's Magazine (harpers.org)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
 Inc.com (inc.com)\
 La Repubblica (repubblica.it)\
 Le Temps (letemps.ch)\
+Les Échos (lesechos.fr)\
+Libération (liberation.fr)\
 Los Angeles Times (latimes.com)\
 Medium (medium.com)\
 MIT Technology Review (technologyreview.com)\
