@@ -74,7 +74,8 @@ const allow_cookies = [
 'theadvocate.com.au',
 'examiner.com.au',
 'hbr.org',
-'medium.com'
+'medium.com',
+'washingtonpost.com'
 ]
 
 // Removes cookies after page load
@@ -97,7 +98,6 @@ const remove_cookies = [
 'liberation.fr',
 'hbr.org',
 'medium.com',
-'washingtonpost.com',
 'foreignpolicy.com',
 'wsj.com',
 'seattletimes.com'
