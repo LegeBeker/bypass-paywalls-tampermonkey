@@ -1,4 +1,7 @@
 # Bypass Paywalls for Chrome
+
+### 2019-02-02: The Wall Street Journal (wsj.com) bypass is currently not working. WSJ seems to have changed their algorithm.
+
 ### Installation Instructions
 **Google Chrome**:
 1. Download this repo as a ZIP from github.

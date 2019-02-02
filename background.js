@@ -240,7 +240,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   return { requestHeaders: requestHeaders };
 }, {
   urls: ['<all_urls>']
-}, ['blocking', 'requestHeaders']);
+}, ['blocking', 'requestHeaders', 'extraHeaders']);
 
 // remove cookies after page load
 chrome.webRequest.onCompleted.addListener(function(details) {
