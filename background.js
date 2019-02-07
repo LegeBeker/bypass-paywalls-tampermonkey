@@ -130,7 +130,6 @@ chrome.storage.sync.get({
   });
 });
 
-
 // Listen for changes to options
 chrome.storage.onChanged.addListener(function(changes, namespace) {
   var key;
@@ -155,21 +154,19 @@ chrome.runtime.onInstalled.addListener(function (details) {
   }
 });
 
+// WSJ bypass
+chrome.webRequest.onBeforeRequest.addListener(function (details) {
+  if (!isSiteEnabled(details)) {
+    return;
+  }
+    return { redirectUrl: details.url.replace(getParameterByName("mod", details.url), "rsswn") };
+  },
+  {urls:["*://*.wsj.com/*"]},
+  ["blocking"]
+);
 
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
-  var isEnabled = enabledSites.some(function(enabledSite) {
-
-    var useSite = details.url.indexOf("." + enabledSite) !== -1;
-
-    if (enabledSite in restrictions) {
-      return useSite && details.url.indexOf(restrictions[enabledSite]) !== -1;
-    }
-
-    return useSite;
-
-  });
-
-  if (!isEnabled) {
+  if (!isSiteEnabled(details)) {
     return;
   }
 
@@ -268,3 +265,24 @@ _gaq.push(['_trackPageview']);
   ga.src = 'https://ssl.google-analytics.com/ga.js';
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
+
+function isSiteEnabled(details) {
+  var isEnabled = enabledSites.some(function(enabledSite) {
+    var useSite = details.url.indexOf("." + enabledSite) !== -1;
+    if (enabledSite in restrictions) {
+      return useSite && details.url.indexOf(restrictions[enabledSite]) !== -1;
+    }
+    return useSite;
+  });
+  return isEnabled;
+}
+
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+  results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}

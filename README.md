@@ -1,5 +1,7 @@
 # Bypass Paywalls for Chrome
 
+### 2019-02-06: WSJ bypass fixed!
+
 ### 2019-02-02: The Wall Street Journal (wsj.com) bypass is currently not working. WSJ seems to have changed their algorithm.
 
 ### Installation Instructions
