@@ -144,7 +144,6 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
   }
 });
 
-
 // Set and show default options on install
 chrome.runtime.onInstalled.addListener(function (details) {
   if (details.reason == "install") {
@@ -159,10 +158,22 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details)) {
     return;
   }
-    return { redirectUrl: details.url.replace(getParameterByName("mod", details.url), "rsswn") };
-  },
-  {urls:["*://*.wsj.com/*"]},
-  ["blocking"]
+
+  var param;
+  var updatedUrl;
+
+  param = getParameterByName("mod", details.url);
+
+  if (param === null) {
+    updatedUrl = stripQueryStringAndHashFromPath(details.url);
+    updatedUrl += "?mod=rsswn";
+  } else {
+    updatedUrl = details.url.replace(param, "rsswn");
+  }
+  return { redirectUrl: updatedUrl};
+},
+{urls:["*://*.wsj.com/*"], types:["main_frame"]},
+["blocking"]
 );
 
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
@@ -285,4 +296,8 @@ function getParameterByName(name, url) {
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+function stripQueryStringAndHashFromPath(url) {
+  return url.split("?")[0].split("#")[0];
 }

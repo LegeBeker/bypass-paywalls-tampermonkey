@@ -13,7 +13,7 @@
 1. Drag the `bypass-paywalls-chrome-master` folder anywhere on the page to import it.
 
 Notes:
-* Every time you open Chrome it may warn you about running extensions in developer mode, just hit 🗙 to keep the extension enabled.
+* Every time you open Chrome it may warn you about running extensions in developer mode, just click 🗙 to keep the extension enabled.
 * You will be logged out for any site you have checked.
 * This extension works best along side the adblocker uBlock Origin.
 
@@ -75,7 +75,7 @@ Wired (wired.com)
 3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-firefox/issues/new) to add the site, otherwise my extension cannot bypass it either.
 
 ### Troubleshooting
-* If it doesn't work for an article try unchecking the site in Options, save, refresh the article, then re-check the site, save and refresh the article again.
+* On WSJ if you are already viewing an article and click into another article and the paywall comes up, try refreshing the page (and click 🗙 to close the "Continue reading your article with a WSJ membership" popup).
 * For The Denver Post turn off uBlock.
 
 ### License
