@@ -1,9 +1,5 @@
 # Bypass Paywalls for Chrome
 
-### 2019-02-06: WSJ bypass fixed!
-
-### 2019-02-02: The Wall Street Journal (wsj.com) bypass is currently not working. WSJ seems to have changed their algorithm.
-
 ### Installation Instructions
 **Google Chrome**:
 1. Download this repo as a ZIP from github.
@@ -75,6 +71,7 @@ Wired (wired.com)
 3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-firefox/issues/new) to add the site, otherwise my extension cannot bypass it either.
 
 ### Troubleshooting
+* This extension works best alongside [uBlock Origin](https://chrome.google.com/webstore/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn).
 * On WSJ if you are already viewing an article and click into another article and the paywall comes up, try refreshing the page (and click 🗙 to close the "Continue reading your article with a WSJ membership" popup).
 * For The Denver Post turn off uBlock.
 

@@ -155,7 +155,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
 
 // WSJ bypass
 chrome.webRequest.onBeforeRequest.addListener(function (details) {
-  if (!isSiteEnabled(details)) {
+  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
     return;
   }
 
