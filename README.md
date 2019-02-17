@@ -2,7 +2,7 @@
 
 ### Installation Instructions
 **Google Chrome**:
-1. Download this repo as a ZIP from github.
+1. Download this repo as a [ZIP file from GitHub](https://github.com/iamadamdev/bypass-paywalls-chrome/archive/master.zip).
 1. Unzip the file and you should have a folder named `bypass-paywalls-chrome-master`.
 1. In Chrome go to the extensions page (`chrome://extensions`) 
 1. Enable Developer Mode
@@ -72,7 +72,7 @@ Wired (wired.com)
 
 ### Troubleshooting
 * This extension works best alongside [uBlock Origin](https://chrome.google.com/webstore/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn).
-* On WSJ if you are already viewing an article and click into another article and the paywall comes up, try refreshing the page (and click 🗙 to close the "Continue reading your article with a WSJ membership" popup).
+* On some sites if you open an article and the paywall comes up try refreshing the page.
 * For The Denver Post turn off uBlock.
 
 ### License

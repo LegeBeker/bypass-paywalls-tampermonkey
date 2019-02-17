@@ -29,6 +29,7 @@ var defaultSites = {
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
   'MIT Technology Review': 'technologyreview.com',
+  'Newsrep': 'thenewsrep.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'OrlandoSentinel': 'orlandosentinel.com',
@@ -100,7 +101,9 @@ const remove_cookies = [
 'medium.com',
 'foreignpolicy.com',
 'wsj.com',
-'seattletimes.com'
+'seattletimes.com',
+'thenewsrep.com',
+'washingtonpost.com',
 ]
 
 function setDefaultOptions() {
