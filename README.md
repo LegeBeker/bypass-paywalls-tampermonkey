@@ -67,6 +67,7 @@ Winston-Salem Journal (journalnow.com)\
 Wired (wired.com)
 
 ### New site requests:
+Only large or major sites will be considered. No small sites or local newspapers.
 1. Visit an article on the site you want to bypass the paywall for and copy the article title.
 2. Open up a new incognito window (Ctrl+Shift+N) and paste the article title into Google.
 3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-firefox/issues/new) to add the site, otherwise my extension cannot bypass it either.
