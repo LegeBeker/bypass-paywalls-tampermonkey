@@ -196,7 +196,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   // if referer exists, set it to google
   requestHeaders = requestHeaders.map(function(requestHeader) {
     if (requestHeader.name === 'Referer') {
-      if (details.url.indexOf("wsj.com") !== -1) {
+      if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1) {
        requestHeader.value = 'https://www.facebook.com/';
      } else {
        requestHeader.value = 'https://www.google.com/';
