@@ -24,7 +24,6 @@ var defaultSites = {
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
   'La Repubblica': 'repubblica.it',
-  'Le Temps': 'letemps.ch',
   'Liberation': 'liberation.fr',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
@@ -64,7 +63,6 @@ const allow_cookies = [
 'nytimes.com',
 'wsj.com',
 'ft.com',
-'letemps.ch',
 'fd.nl',
 'mercurynews.com',
 'theage.com.au',
@@ -83,7 +81,6 @@ const allow_cookies = [
 const remove_cookies = [
 'asia.nikkei.com',
 'ft.com',
-'letemps.ch',
 'fd.nl',
 'mercurynews.com',
 'theage.com.au',

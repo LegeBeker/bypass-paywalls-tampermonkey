@@ -36,7 +36,6 @@ Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
 Inc.com (inc.com)\
 La Repubblica (repubblica.it)\
-Le Temps (letemps.ch)\
 Les Échos (lesechos.fr)\
 Libération (liberation.fr)\
 Los Angeles Times (latimes.com)\

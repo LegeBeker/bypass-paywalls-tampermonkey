@@ -21,7 +21,6 @@ var defaultSites = {
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
   'La Repubblica': 'repubblica.it',
-  'Le Temps': 'letemps.ch',
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
   'Los Angeles Times': 'latimes.com',
