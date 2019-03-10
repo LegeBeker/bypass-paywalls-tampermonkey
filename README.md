@@ -35,6 +35,7 @@ Harper's Magazine (harpers.org)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
 Inc.com (inc.com)\
+Irish Times (irishtimes.com)\
 La Repubblica (repubblica.it)\
 Les Échos (lesechos.fr)\
 Libération (liberation.fr)\

@@ -23,6 +23,7 @@ var defaultSites = {
   'Harper\'s Magazine': 'harpers.org',
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
+  'Irish Times': 'irishtimes.com',
   'La Repubblica': 'repubblica.it',
   'Liberation': 'liberation.fr',
   'Los Angeles Times': 'latimes.com',
@@ -74,7 +75,7 @@ const allow_cookies = [
 'examiner.com.au',
 'hbr.org',
 'medium.com',
-'washingtonpost.com'
+'washingtonpost.com',
 ]
 
 // Removes cookies after page load
