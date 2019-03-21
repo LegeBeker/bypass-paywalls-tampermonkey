@@ -38,6 +38,7 @@ var defaultSites = {
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
   'The Boston Globe': 'bostonglobe.com',
+  'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
