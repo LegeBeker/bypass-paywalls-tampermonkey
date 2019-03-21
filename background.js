@@ -13,6 +13,7 @@ var defaultSites = {
   'Dynamed Plus': 'dynamed.com',
   'The Economist': 'economist.com',
   'Les Echos': 'lesechos.fr',
+  'Encyclopedia Britannica': 'britannica.com',
   'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
