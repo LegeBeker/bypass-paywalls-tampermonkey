@@ -28,7 +28,9 @@ Dynamed Plus (dynamed.com)\
 The Economist (economist.com)\
 Encyclopedia Britannica (britannica.com)\
 Examiner (examiner.com.au)\
+Financial News (fnlondon.com)\
 Financial Times (ft.com)\
+Foreign Affairs (foreignaffairs.com)\
 Foreign Policy (foreignpolicy.com)\
 Glassdoor (glassdoor.com)\
 Haaretz (haaretz.co.il / haaretz.com)\
@@ -44,14 +46,17 @@ Los Angeles Times (latimes.com)\
 Medium (medium.com)\
 MIT Technology Review (technologyreview.com)\
 Newsrep (thenewsrep.com)\
+New York Magazine (nymag.com)\
 Nikkei Asian Review (asia.nikkei.com)\
 NRC (nrc.nl)\
 OrlandoSentinel (orlandosentinel.com)\
 Quora (quora.com)\
+San Francisco Chronicle (sfchronicle.com)\
 SunSentinel (sun-sentinel.com)\
 The Advocate (theadvocate.com.au)\
 The Age (theage.com.au)\
 The Boston Globe (bostonglobe.com)\
+The Globe and Mail (theglobeandmail.com)\
 The Japan Times (japantimes.co.jp)\
 TheMarker (themarker.com)\
 The Mercury News (mercurynews.com)\
@@ -66,13 +71,16 @@ The Sydney Morning Herald (smh.com.au)\
 The Washington Post (washingtonpost.com)\
 The Wall Street Journal (wsj.com)\
 Winston-Salem Journal (journalnow.com)\
+Vanity Fair (vanityfair.com)\
 Wired (wired.com)
 
 ### New site requests:
-Only large or major sites will be considered. No small sites or local newspapers.
+Only large or major sites will be considered.
 1. Visit an article on the site you want to bypass the paywall for and copy the article title.
 2. Open up a new incognito window (Ctrl+Shift+N) and paste the article title into Google.
 3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-chrome/issues/new) to add the site, otherwise my extension cannot bypass it either.
+
+Usually premium articles cannot be bypassed as they are behind a hard paywall.
 
 ### Troubleshooting
 * This extension works best alongside [uBlock Origin](https://chrome.google.com/webstore/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn).
