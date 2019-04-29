@@ -18,6 +18,7 @@ Notes:
 Baltimore Sun (baltimoresun.com)\
 Barron's (barrons.com)\
 Bloomberg (bloomberg.com)\
+Caixin (caixinglobal.com)\
 Crain's Chicago Business (chicagobusiness.com)\
 Chicago Tribune (chicagotribune.com)\
 Corriere Della Sera (corriere.it)\
@@ -56,6 +57,8 @@ Scientific American (scientificamerican.com)\
 SunSentinel (sun-sentinel.com)\
 The Advocate (theadvocate.com.au)\
 The Age (theage.com.au)\
+The Australian (theaustralian.com.au)\
+The Australian Financial Review (afr.com)\
 The Boston Globe (bostonglobe.com)\
 The Globe and Mail (theglobeandmail.com)\
 The Japan Times (japantimes.co.jp)\
@@ -63,12 +66,14 @@ TheMarker (themarker.com)\
 The Mercury News (mercurynews.com)\
 The Morning Call (mcall.com)\
 The Nation (thenation.com)\
+The News-Gazette (news-gazette.com)\
 The New Statesman (newstatesman.com)\
 The New York Times (nytimes.com)\
 The New Yorker (newyorker.com)\
 The Seattle Times (seattletimes.com)\
 The Spectator (spectator.co.uk)\
 The Sydney Morning Herald (smh.com.au)\
+The Toronto Star (thestar.com)\
 The Washington Post (washingtonpost.com)\
 The Wall Street Journal (wsj.com)\
 Winston-Salem Journal (journalnow.com)\

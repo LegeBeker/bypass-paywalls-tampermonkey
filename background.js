@@ -4,6 +4,7 @@ var defaultSites = {
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
+  'Caixin': 'caixinglobal.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
   'Corriere Della Sera': 'corriere.it',
@@ -43,6 +44,8 @@ var defaultSites = {
   'SunSentinel': 'sun-sentinel.com',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
+  'The Australian': 'theaustralian.com.au',
+  'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
   'The Globe and Mail': 'theglobeandmail.com',
   'The Japan Times': 'japantimes.co.jp',
@@ -50,12 +53,14 @@ var defaultSites = {
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
   'The Nation': 'thenation.com',
+  'The News-Gazette': 'news-gazette.com',
   'The New Statesman': 'newstatesman.com',
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
   'The Seattle Times': 'seattletimes.com',
   'The Spectator': 'spectator.co.uk',
   'The Sydney Morning Herald': 'smh.com.au',
+  'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
   'Winston-Salem Journal': 'journalnow.com',
@@ -86,6 +91,7 @@ const allow_cookies = [
 'medium.com',
 'washingtonpost.com',
 'nymag.com',
+'theaustralian.com.au',
 ]
 
 // Removes cookies after page load
@@ -116,6 +122,7 @@ const remove_cookies = [
 'nymag.com',
 'foreignaffairs.com',
 'scientificamerican.com',
+'thestar.com',
 ]
 
 function setDefaultOptions() {
@@ -132,6 +139,9 @@ var blockedRegexes = [
 /thenation\.com\/.+\/paywall-script\.php/,
 /haaretz\.co\.il\/htz\/js\/inter\.js/
 ];
+
+const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+const userAgentMobile = "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
 
 var enabledSites = [];
 
@@ -191,6 +201,20 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
 ["blocking"]
 );
 
+// Disable javascript for these sites
+chrome.webRequest.onBeforeRequest.addListener(function(details) {
+  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
+    return;
+  }
+  return {cancel: true}; 
+  },
+  {
+    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*"],
+    types: ["script"]
+  },
+  ["blocking"]
+);
+
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   if (!isSiteEnabled(details)) {
     return;
@@ -203,21 +227,25 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var requestHeaders = details.requestHeaders;
   var tabId = details.tabId;
 
+  var useUserAgentMobile = false;
   var setReferer = false;
 
   // if referer exists, set it to google
-  requestHeaders = requestHeaders.map(function(requestHeader) {
+  requestHeaders = requestHeaders.map(function (requestHeader) {
     if (requestHeader.name === 'Referer') {
       if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1) {
-       requestHeader.value = 'https://www.facebook.com/';
-     } else {
-       requestHeader.value = 'https://www.google.com/';
-     }
+        requestHeader.value = 'https://www.facebook.com/';
+      } else {
+        requestHeader.value = 'https://www.google.com/';
+      }
+      setReferer = true;
+    }
+    if (requestHeader.name === 'User-Agent') {
+      useUserAgentMobile = requestHeader.value.toLowerCase().includes("mobile");
+    }
 
-     setReferer = true;
-   }
-   return requestHeader;
- });
+    return requestHeader;
+  });
 
   // otherwise add it
   if (!setReferer) {
@@ -234,6 +262,19 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
     }
 
   }
+
+  // override User-Agent except on medium.com
+  if (details.url.indexOf("medium.com") === -1) {
+    requestHeaders.push({
+      "name": "User-Agent",
+      "value": useUserAgentMobile ? userAgentMobile : userAgentDesktop
+    })
+  }
+
+  requestHeaders.push({
+    "name": "X-Forwarded-For",
+    "value": "66.249.66.1"
+  })
 
   // remove cookies before page load
   requestHeaders = requestHeaders.map(function(requestHeader) {
