@@ -125,6 +125,11 @@ const remove_cookies = [
 'thestar.com',
 ]
 
+// Override User-Agent with Googlebot
+const use_google_bot = [
+'theaustralian.com.au',
+]
+
 function setDefaultOptions() {
   chrome.storage.sync.set({
     sites: defaultSites
@@ -263,18 +268,21 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   }
 
-  // override User-Agent except on medium.com
-  if (details.url.indexOf("medium.com") === -1) {
+  // override User-Agent to use Googlebot
+  var useGoogleBot = use_google_bot.filter(function(item) {
+    return typeof item == 'string' && details.url.indexOf(item) > -1;            
+  }).length > 0;
+
+  if (useGoogleBot) {
     requestHeaders.push({
       "name": "User-Agent",
       "value": useUserAgentMobile ? userAgentMobile : userAgentDesktop
     })
+    requestHeaders.push({
+      "name": "X-Forwarded-For",
+      "value": "66.249.66.1"
+    })
   }
-
-  requestHeaders.push({
-    "name": "X-Forwarded-For",
-    "value": "66.249.66.1"
-  })
 
   // remove cookies before page load
   requestHeaders = requestHeaders.map(function(requestHeader) {
