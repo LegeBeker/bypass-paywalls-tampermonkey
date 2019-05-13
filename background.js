@@ -4,6 +4,7 @@ var defaultSites = {
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
+  'Business Insider': 'businessinsider.com',
   'Caixin': 'caixinglobal.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
@@ -47,6 +48,7 @@ var defaultSites = {
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
+  'The Business Journals': 'bizjournals.com',
   'The Globe and Mail': 'theglobeandmail.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
@@ -214,7 +216,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*"],
+    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.businessinsider.com/*"],
     types: ["script"]
   },
   ["blocking"]
