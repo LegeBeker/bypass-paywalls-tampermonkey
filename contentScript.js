@@ -16,3 +16,12 @@ if (location.hostname.endsWith('rep.repubblica.it')) {
     }
   }
 }
+
+if (window.location.href.indexOf("americanbanker.com") !== -1) {
+  const paywall = document.getElementsByClassName(
+    "embargo-content"
+  );
+  if (paywall && paywall.length>0 ) {
+    paywall[0].className = "";
+  }
+}

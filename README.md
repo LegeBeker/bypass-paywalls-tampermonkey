@@ -15,6 +15,7 @@ Notes:
 
 ### Bypass the following sites' paywalls with this extension:
 
+American Banker (americanbanker.com)\
 Baltimore Sun (baltimoresun.com)\
 Barron's (barrons.com)\
 Bloomberg (bloomberg.com)\
@@ -92,8 +93,13 @@ Usually premium articles cannot be bypassed as they are behind a hard paywall.
 
 ### Troubleshooting
 * This extension works best alongside [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm).
-* On some sites if you open an article and the paywall comes up try refreshing the page.
-* For The Denver Post turn off uBlock.
+* If a site doesn't work try turning off uBlock and refreshing.
+
+### Pull Requesets
+* PRs are welcome.
+
+### Show your support
+* I am not asking for donations or anything like that, all I ask is that you star this repo.
 
 ### License
 Bypass Paywalls is [MIT-licensed](https://github.com/iamadamdev/bypass-paywalls-chrome/blob/master/LICENSE).
