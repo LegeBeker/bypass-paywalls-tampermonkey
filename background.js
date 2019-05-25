@@ -40,6 +40,7 @@ var defaultSites = {
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'OrlandoSentinel': 'orlandosentinel.com',
+  'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
@@ -126,6 +127,7 @@ const remove_cookies = [
 'foreignaffairs.com',
 'scientificamerican.com',
 'thestar.com',
+'qz.com',
 ]
 
 // Override User-Agent with Googlebot

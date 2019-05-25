@@ -53,6 +53,7 @@ New York Magazine (nymag.com)\
 Nikkei Asian Review (asia.nikkei.com)\
 NRC (nrc.nl)\
 OrlandoSentinel (orlandosentinel.com)\
+Quartz (qz.com)\
 Quora (quora.com)\
 San Francisco Chronicle (sfchronicle.com)\
 Scientific American (scientificamerican.com)\
