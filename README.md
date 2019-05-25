@@ -26,6 +26,7 @@ Chicago Tribune (chicagotribune.com)\
 Corriere Della Sera (corriere.it)\
 Daily Press (dailypress.com)\
 Dagens Nyheter (dn.se)\
+DeMorgen (demorgen.be)\
 Denver Post (denverpost.com)\
 Dynamed Plus (dynamed.com)\
 The Economist (economist.com)\

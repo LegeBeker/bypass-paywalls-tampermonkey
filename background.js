@@ -12,6 +12,7 @@ var defaultSites = {
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
   'Dagens Nyheter': 'dn.se',
+  'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
   'Dynamed Plus': 'dynamed.com',
   'The Economist': 'economist.com',
@@ -96,6 +97,7 @@ const allow_cookies = [
 'washingtonpost.com',
 'nymag.com',
 'theaustralian.com.au',
+'demorgen.be',
 ]
 
 // Removes cookies after page load
@@ -128,6 +130,7 @@ const remove_cookies = [
 'scientificamerican.com',
 'thestar.com',
 'qz.com',
+'demorgen.be',
 ]
 
 // Override User-Agent with Googlebot
