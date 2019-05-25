@@ -131,6 +131,7 @@ const remove_cookies = [
 // Override User-Agent with Googlebot
 const use_google_bot = [
 'theaustralian.com.au',
+'barrons.com',
 ]
 
 function setDefaultOptions() {
