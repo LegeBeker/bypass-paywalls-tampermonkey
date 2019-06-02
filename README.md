@@ -31,6 +31,7 @@ Denver Post (denverpost.com)\
 Dynamed Plus (dynamed.com)\
 The Economist (economist.com)\
 Encyclopedia Britannica (britannica.com)\
+Eindhovens Dagblad (ed.nl)\
 Examiner (examiner.com.au)\
 Financial News (fnlondon.com)\
 Financial Times (ft.com)\

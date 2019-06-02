@@ -17,6 +17,7 @@ var defaultSites = {
   'Dynamed Plus': 'dynamed.com',
   'The Economist': 'economist.com',
   'Les Echos': 'lesechos.fr',
+  'Eindhovens Dagblad': 'ed.nl',
   'Encyclopedia Britannica': 'britannica.com',
   'Examiner': 'examiner.com.au',
   'Financial News': 'fnlondon.com',
@@ -105,6 +106,7 @@ const allow_cookies = [
 // Removes cookies after page load
 const remove_cookies = [
 'asia.nikkei.com',
+'ed.nl'
 'ft.com',
 'fd.nl',
 'mercurynews.com',

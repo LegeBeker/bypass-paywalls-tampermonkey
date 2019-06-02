@@ -15,6 +15,7 @@ var defaultSites = {
   'Dynamed Plus': 'dynamed.com',
   'The Economist (javascript disabled)': 'economist.com',
   'Encyclopedia Britannica': 'britannica.com',
+  'Eindhovens Dagblad': 'ed.nl',
   'Examiner': 'examiner.com.au',
   'Financial News': 'fnlondon.com',
   'Financial Times': 'ft.com',
