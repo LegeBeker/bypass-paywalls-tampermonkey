@@ -46,6 +46,7 @@ var defaultSites = {
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
   'SunSentinel': 'sun-sentinel.com',
+  'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
   'The Australian': 'theaustralian.com.au',
@@ -97,6 +98,7 @@ const allow_cookies = [
 'washingtonpost.com',
 'nymag.com',
 'theaustralian.com.au',
+'telegraaf.nl', // keep accept cookies
 'demorgen.be',
 ]
 
@@ -128,6 +130,7 @@ const remove_cookies = [
 'nymag.com',
 'foreignaffairs.com',
 'scientificamerican.com',
+'telegraaf.nl',
 'thestar.com',
 'qz.com',
 'demorgen.be',

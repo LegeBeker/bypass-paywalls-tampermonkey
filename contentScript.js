@@ -25,3 +25,10 @@ if (window.location.href.indexOf("americanbanker.com") !== -1) {
     paywall[0].className = "";
   }
 }
+
+if (window.location.href.indexOf('telegraaf.nl') !== -1) {
+  const paywall = document.getElementById('TEMPRORARY_METERING_ID');
+  if (paywall) {
+    window.location.reload(1);
+  }
+}
