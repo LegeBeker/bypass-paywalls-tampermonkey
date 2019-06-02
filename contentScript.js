@@ -32,3 +32,11 @@ if (window.location.href.indexOf('telegraaf.nl') !== -1) {
     window.location.reload(1);
   }
 }
+
+if (window.location.href.indexOf('ed.nl') !== -1) {
+  const paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
+  if (paywall) {
+    paywall.remove();
+    paywall = null;
+  }
+}
