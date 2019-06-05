@@ -17,6 +17,7 @@ var defaultSites = {
   'Dynamed Plus': 'dynamed.com',
   'The Economist': 'economist.com',
   'Les Echos': 'lesechos.fr',
+  'Eindhovens Dagblad': 'ed.nl',
   'Encyclopedia Britannica': 'britannica.com',
   'Examiner': 'examiner.com.au',
   'Financial News': 'fnlondon.com',
@@ -46,6 +47,7 @@ var defaultSites = {
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
   'SunSentinel': 'sun-sentinel.com',
+  'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
   'The Australian': 'theaustralian.com.au',
@@ -97,12 +99,14 @@ const allow_cookies = [
 'washingtonpost.com',
 'nymag.com',
 'theaustralian.com.au',
+'telegraaf.nl', // keep accept cookies
 'demorgen.be',
 ]
 
 // Removes cookies after page load
 const remove_cookies = [
 'asia.nikkei.com',
+'ed.nl'
 'ft.com',
 'fd.nl',
 'mercurynews.com',
@@ -128,6 +132,7 @@ const remove_cookies = [
 'nymag.com',
 'foreignaffairs.com',
 'scientificamerican.com',
+'telegraaf.nl',
 'thestar.com',
 'qz.com',
 'demorgen.be',
