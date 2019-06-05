@@ -106,7 +106,7 @@ const allow_cookies = [
 // Removes cookies after page load
 const remove_cookies = [
 'asia.nikkei.com',
-'ed.nl'
+'ed.nl',
 'ft.com',
 'fd.nl',
 'mercurynews.com',
