@@ -54,3 +54,9 @@ if (window.location.href.indexOf("washingtonpost.com") !== -1) {
     }
   }
 }
+
+if (window.location.href.indexOf("wsj.com") !== -1) {
+  if (location.href.includes('/articles/')) {
+    document.querySelector('.close-btn').click();
+  }
+}
