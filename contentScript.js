@@ -60,3 +60,8 @@ if (window.location.href.indexOf("wsj.com") !== -1) {
     document.querySelector('.close-btn').click();
   }
 }
+
+if (window.location.href.indexOf("sloanreview.mit.edu") !== -1) {
+  document.querySelector('#cboxClose').click();
+}
+

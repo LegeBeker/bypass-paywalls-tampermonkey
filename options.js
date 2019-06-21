@@ -34,6 +34,7 @@ var defaultSites = {
   'Liberation': 'liberation.fr',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
+  'MIT Sloan Management Review': 'mit.edu',
   'MIT Technology Review': 'technologyreview.com',
   'Newsrep': 'thenewsrep.com',
   'New York Magazine': 'nymag.com',
