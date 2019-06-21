@@ -48,6 +48,7 @@ Notes:
 [Les Échos](https://lesechos.fr)\
 [Libération](https://liberation.fr)\
 [Los Angeles Times](https://www.latimes.com)\
+[MIT Sloan Management Review](https://sloanreview.mit.edu)\
 [MIT Technology Review](https://www.technologyreview.com)\
 [Medium](https://www.medium.com)\
 [NRC](https://www.nrc.nl)\
