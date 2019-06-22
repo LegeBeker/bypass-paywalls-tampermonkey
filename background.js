@@ -74,7 +74,8 @@ var defaultSites = {
   'The Wall Street Journal': 'wsj.com',
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
-  'Wired': 'wired.com'
+  'Wired': 'wired.com',
+  'Zeit Online': 'zeit.de'
 };
 
 const restrictions = {
@@ -139,6 +140,7 @@ const remove_cookies = [
 'qz.com',
 'demorgen.be',
 'sloanreview.mit.edu',
+'zeit.de',
 ]
 
 // Override User-Agent with Googlebot
@@ -146,6 +148,7 @@ const use_google_bot = [
 'theaustralian.com.au',
 'barrons.com',
 'telegraph.co.uk',
+'zeit.de'
 ]
 
 function setDefaultOptions() {

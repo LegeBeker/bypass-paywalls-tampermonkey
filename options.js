@@ -72,7 +72,8 @@ var defaultSites = {
   'The Wall Street Journal': 'wsj.com',
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
-  'Wired': 'wired.com'
+  'Wired': 'wired.com',
+  'Zeit Online': 'zeit.de'
 };
 
 // Saves options to chrome.storage
