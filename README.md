@@ -88,7 +88,8 @@ Notes:
 [TheMarker](https://www.themarker.com)\
 [Vanity Fair](https://www.vanityfair.com)\
 [Winston-Salem Journal](https://journalnow.com)\
-[Wired](https://www.wired.com)
+[Wired](https://www.wired.com)\
+[Zeit Online](https://www.zeit.de)
 
 ### New site requests:
 Only large or major sites will be considered.
