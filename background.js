@@ -68,6 +68,7 @@ var defaultSites = {
   'The Seattle Times': 'seattletimes.com',
   'The Spectator': 'spectator.co.uk',
   'The Sydney Morning Herald': 'smh.com.au',
+  'The Telegraph': 'telegraph.co.uk',
   'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
@@ -144,6 +145,7 @@ const remove_cookies = [
 const use_google_bot = [
 'theaustralian.com.au',
 'barrons.com',
+'telegraph.co.uk',
 ]
 
 function setDefaultOptions() {
