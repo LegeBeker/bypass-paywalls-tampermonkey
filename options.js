@@ -19,7 +19,6 @@ var defaultSites = {
   'Examiner': 'examiner.com.au',
   'Financial News': 'fnlondon.com',
   'Financial Times': 'ft.com',
-  'Foreign Affairs': 'foreignaffairs.com',
   'Foreign Policy': 'foreignpolicy.com',
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',

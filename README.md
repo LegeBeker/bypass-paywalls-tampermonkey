@@ -34,7 +34,6 @@
 [Examiner](https://examiner.com.au)\
 [Financial News](https://fnlondon.com)\
 [Financial Times](https://www.ft.com)\
-[Foreign Affairs](https://foreignaffairs.com)\
 [Foreign Policy](https://www.foreignpolicy.com)\
 [Glassdoor](https://www.glassdoor.com)\
 [Haaretz.co.il](https://www.haaretz.co.il)\
@@ -111,6 +110,7 @@ Usually premium articles cannot be bypassed as they are behind a hard paywall.
 ### Troubleshooting
 * This extension works best alongside [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm).
 * If a site doesn't work try turning off uBlock and refreshing.
+* Make sure the site is checked under Options (on macOS sometimes the sites are unselected).
 
 ### Pull Requesets
 * PRs are welcome.
