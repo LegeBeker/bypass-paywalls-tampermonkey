@@ -44,6 +44,7 @@ var defaultSites = {
   'Quora': 'quora.com',
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
+  'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
   'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
