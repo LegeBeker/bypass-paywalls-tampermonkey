@@ -49,6 +49,7 @@ var defaultSites = {
   'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
+  'The Atlantic': 'theatlantic.com',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review (javascript disabled)': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
