@@ -65,3 +65,10 @@ if (window.location.href.indexOf("sloanreview.mit.edu") !== -1) {
   document.querySelector('#cboxClose').click();
 }
 
+if (window.location.href.indexOf("the-american-interest.com") !== -1) {
+  const counter = document.getElementById('article-counter') || false;
+  if (counter) {
+    counter.remove();
+    counter = false; 
+  }
+}
