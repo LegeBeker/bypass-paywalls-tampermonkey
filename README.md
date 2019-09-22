@@ -50,6 +50,7 @@
 [MIT Sloan Management Review](https://sloanreview.mit.edu)\
 [MIT Technology Review](https://www.technologyreview.com)\
 [Medium](https://www.medium.com)\
+[Mexicon News Daily](mexiconewsdaily.com)\
 [NRC](https://www.nrc.nl)\
 [New York Magazine](https://www.nymag.com)\
 [Newsrep](https://thenewsrep.com)\
@@ -64,6 +65,7 @@
 [Telegraaf](https://telegraaf.nl)\
 [The Advocate](https://www.theadvocate.com.au)\
 [The Age](https://www.theage.com.au)\
+[The American Interest](https://www.the-american-interest.com)\
 [The Atlantic](https://theatlantic.com)\
 [The Australian Financial Review](https://www.afr.com)\
 [The Australian](https://www.theaustralian.com.au)\
