@@ -66,6 +66,7 @@
 [The Advocate](https://www.theadvocate.com.au)\
 [The Age](https://www.theage.com.au)\
 [The American Interest](https://www.the-american-interest.com)\
+[The Atlantic](https://theatlantic.com)\
 [The Australian Financial Review](https://www.afr.com)\
 [The Australian](https://www.theaustralian.com.au)\
 [The Boston Globe](https://www.bostonglobe.com)\

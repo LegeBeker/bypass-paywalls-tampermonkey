@@ -51,6 +51,7 @@ var defaultSites = {
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
   'The American Interest': 'the-american-interest.com',
+  'The Atlantic': 'theatlantic.com',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review (javascript disabled)': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
