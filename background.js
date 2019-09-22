@@ -52,6 +52,7 @@ var defaultSites = {
   'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
+  'The American Interest': 'the-american-interest.com',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
@@ -105,7 +106,8 @@ const allow_cookies = [
 'theaustralian.com.au',
 'telegraaf.nl', // keep accept cookies
 'demorgen.be',
-'mexiconewsdaily.com'
+'mexiconewsdaily.com',
+'the-american-interest.com'
 ]
 
 // Removes cookies after page load

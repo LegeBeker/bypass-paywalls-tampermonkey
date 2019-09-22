@@ -76,14 +76,16 @@ if (window.location.href.indexOf("mexiconewsdaily.com") !== -1) {
 	});
 }
 
-
-/**
- * Functions bellow 
- */
+if (window.location.href.indexOf("the-american-interest.com") !== -1) {
+  const counter = document.getElementById('article-counter') || false;
+  if (counter) {
+    counter.remove();
+    counter = false; 
+  }
+}
 
 function removeDOMElement(...elements) {
-	console.log('im in function', elements);
 	for (let element of elements) {
-		if(element) element.remove();
+		if (element) element.remove();
 	}
 }
