@@ -54,7 +54,7 @@ var defaultSites = {
   'The Atlantic': 'theatlantic.com',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review (javascript disabled)': 'afr.com',
-  'The Boston Globe': 'bostonglobe.com',
+  'The Boston Globe (javascript disabled)': 'bostonglobe.com',
   'The Business Journals (javascript disabled)': 'bizjournals.com',
   'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',
   'The Japan Times': 'japantimes.co.jp',
