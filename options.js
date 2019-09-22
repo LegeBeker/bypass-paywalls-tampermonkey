@@ -4,7 +4,6 @@ var defaultSites = {
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
   'Business Insider (javascript disabled)': 'businessinsider.com',
-  'Caixin': 'caixinglobal.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
   'Corriere Della Sera': 'corriere.it',

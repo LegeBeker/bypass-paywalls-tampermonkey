@@ -6,7 +6,6 @@ var defaultSites = {
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
   'Business Insider': 'businessinsider.com',
-  'Caixin': 'caixinglobal.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
   'Corriere Della Sera': 'corriere.it',
@@ -155,7 +154,7 @@ const use_google_bot = [
 'barrons.com',
 'telegraph.co.uk',
 'zeit.de',
-'mexiconewsdaily.com'
+'mexiconewsdaily.com',
 ]
 
 function setDefaultOptions() {

@@ -20,7 +20,6 @@
 [Barron's](https://www.barrons.com)\
 [Bloomberg](https://www.bloomberg.com)\
 [Business Insider](https://www.businessinsider.com)\
-[Caixin](https://www.caixinglobal.com)\
 [Chicago Tribune](https://www.chicagotribune.com)\
 [Corriere Della Sera](https://www.corriere.it)\
 [Crain's Chicago Business](https://www.chicagobusiness.com)\
