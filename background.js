@@ -35,6 +35,7 @@ var defaultSites = {
   'Liberation': 'liberation.fr',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
+  'Mexico News Daily': 'mexiconewsdaily.com',
   'MIT Sloan Management Review': 'sloanreview.mit.edu',
   'MIT Technology Review': 'technologyreview.com',
   'Newsrep': 'thenewsrep.com',
@@ -105,6 +106,7 @@ const allow_cookies = [
 'theaustralian.com.au',
 'telegraaf.nl', // keep accept cookies
 'demorgen.be',
+'mexiconewsdaily.com',
 'the-american-interest.com'
 ]
 
@@ -128,6 +130,7 @@ const remove_cookies = [
 'liberation.fr',
 'hbr.org',
 'medium.com',
+'mexiconewsdaily.com',
 'foreignpolicy.com',
 'wsj.com',
 'seattletimes.com',
@@ -149,7 +152,8 @@ const use_google_bot = [
 'theaustralian.com.au',
 'barrons.com',
 'telegraph.co.uk',
-'zeit.de'
+'zeit.de',
+'mexiconewsdaily.com'
 ]
 
 function setDefaultOptions() {
