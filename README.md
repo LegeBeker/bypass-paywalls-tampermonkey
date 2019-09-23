@@ -20,7 +20,6 @@
 [Barron's](https://www.barrons.com)\
 [Bloomberg](https://www.bloomberg.com)\
 [Business Insider](https://www.businessinsider.com)\
-[Caixin](https://www.caixinglobal.com)\
 [Chicago Tribune](https://www.chicagotribune.com)\
 [Corriere Della Sera](https://www.corriere.it)\
 [Crain's Chicago Business](https://www.chicagobusiness.com)\
@@ -32,6 +31,7 @@
 [Eindhovens Dagblad](https://ed.nl)\
 [Encyclopedia Britannica](https://britannica.com)\
 [Examiner](https://examiner.com.au)\
+[First Things](https://www.firstthings.com)\
 [Financial News](https://fnlondon.com)\
 [Financial Times](https://www.ft.com)\
 [Foreign Policy](https://www.foreignpolicy.com)\
@@ -50,8 +50,10 @@
 [MIT Sloan Management Review](https://sloanreview.mit.edu)\
 [MIT Technology Review](https://www.technologyreview.com)\
 [Medium](https://www.medium.com)\
+[Mexicon News Daily](mexiconewsdaily.com)\
 [NRC](https://www.nrc.nl)\
 [New York Magazine](https://www.nymag.com)\
+[New Zealand Herald](https://www.nzherald.co.nz)\
 [Newsrep](https://thenewsrep.com)\
 [Nikkei Asian Review](https://asia.nikkei.com)\
 [Orlando Sentinel](https://www.orlandosentinel.com)\
@@ -59,10 +61,13 @@
 [Quora](https://www.quora.com)\
 [San Francisco Chronicle](https://sfchronicle.com)\
 [Scientific American](https://scientificamerican.com)\
+[Statista](https://statista.com)\
 [SunSentinel](https://www.sun-sentinel.com)\
 [Telegraaf](https://telegraaf.nl)\
 [The Advocate](https://www.theadvocate.com.au)\
 [The Age](https://www.theage.com.au)\
+[The American Interest](https://www.the-american-interest.com)\
+[The Atlantic](https://theatlantic.com)\
 [The Australian Financial Review](https://www.afr.com)\
 [The Australian](https://www.theaustralian.com.au)\
 [The Boston Globe](https://www.bostonglobe.com)\
@@ -81,6 +86,7 @@
 [The Spectator](https://www.spectator.co.uk)\
 [The Sydney Morning Herald](https://www.smh.com.au)\
 [The Telegraph](https://www.telegraph.co.uk)\
+[The Times](https://www.thetimes.co.uk)\
 [The Toronto Star](https://www.thestar.com)\
 [The Wall Street Journal](https://www.wsj.com)\
 [The Washington Post](https://www.washingtonpost.com)\

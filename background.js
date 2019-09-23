@@ -6,7 +6,6 @@ var defaultSites = {
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
   'Business Insider': 'businessinsider.com',
-  'Caixin': 'caixinglobal.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
   'Corriere Della Sera': 'corriere.it',
@@ -20,6 +19,7 @@ var defaultSites = {
   'Eindhovens Dagblad': 'ed.nl',
   'Encyclopedia Britannica': 'britannica.com',
   'Examiner': 'examiner.com.au',
+  'First Things': 'firstthings.com',
   'Financial News': 'fnlondon.com',
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
@@ -35,21 +35,26 @@ var defaultSites = {
   'Liberation': 'liberation.fr',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
+  'Mexico News Daily': 'mexiconewsdaily.com',
   'MIT Sloan Management Review': 'sloanreview.mit.edu',
   'MIT Technology Review': 'technologyreview.com',
   'Newsrep': 'thenewsrep.com',
   'New York Magazine': 'nymag.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
+  'New Zealand Herald': 'nzherald.co.nz',
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
   'SunSentinel': 'sun-sentinel.com',
+  'Statista':'statista.com',
   'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
+  'The American Interest': 'the-american-interest.com',
+  'The Atlantic': 'theatlantic.com',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
@@ -68,6 +73,7 @@ var defaultSites = {
   'The Spectator': 'spectator.co.uk',
   'The Sydney Morning Herald': 'smh.com.au',
   'The Telegraph': 'telegraph.co.uk',
+  'The Times': 'thetimes.co.uk',
   'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
@@ -103,6 +109,8 @@ const allow_cookies = [
 'theaustralian.com.au',
 'telegraaf.nl', // keep accept cookies
 'demorgen.be',
+'mexiconewsdaily.com',
+'the-american-interest.com'
 ]
 
 // Removes cookies after page load
@@ -124,7 +132,9 @@ const remove_cookies = [
 'lesechos.fr',
 'liberation.fr',
 'hbr.org',
+'theatlantic.com',
 'medium.com',
+'mexiconewsdaily.com',
 'foreignpolicy.com',
 'wsj.com',
 'seattletimes.com',
@@ -139,6 +149,7 @@ const remove_cookies = [
 'demorgen.be',
 'sloanreview.mit.edu',
 'zeit.de',
+'firstthings.com'
 ]
 
 // Override User-Agent with Googlebot
@@ -146,7 +157,9 @@ const use_google_bot = [
 'theaustralian.com.au',
 'barrons.com',
 'telegraph.co.uk',
-'zeit.de'
+'zeit.de',
+'mexiconewsdaily.com',
+'thetimes.co.uk',
 ]
 
 function setDefaultOptions() {
@@ -161,7 +174,8 @@ function setDefaultOptions() {
 var blockedRegexes = [
 /.+:\/\/.+\.tribdss\.com\//,
 /thenation\.com\/.+\/paywall-script\.php/,
-/haaretz\.co\.il\/htz\/js\/inter\.js/
+/haaretz\.co\.il\/htz\/js\/inter\.js/,
+/nzherald\.co\.nz\/.+\/headjs\/.+\.js/
 ];
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -233,7 +247,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.businessinsider.com/*"],
+    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.businessinsider.com/*", "*://*.bostonglobe.com/*"],
     types: ["script"]
   },
   ["blocking"]
