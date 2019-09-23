@@ -84,6 +84,7 @@
 [The Spectator](https://www.spectator.co.uk)\
 [The Sydney Morning Herald](https://www.smh.com.au)\
 [The Telegraph](https://www.telegraph.co.uk)\
+[The Times](https://www.thetimes.co.uk)\
 [The Toronto Star](https://www.thestar.com)\
 [The Wall Street Journal](https://www.wsj.com)\
 [The Washington Post](https://www.washingtonpost.com)\
