@@ -52,6 +52,7 @@
 [Mexicon News Daily](mexiconewsdaily.com)\
 [NRC](https://www.nrc.nl)\
 [New York Magazine](https://www.nymag.com)\
+[New Zealand Herald](https://www.nzherald.co.nz)\
 [Newsrep](https://thenewsrep.com)\
 [Nikkei Asian Review](https://asia.nikkei.com)\
 [Orlando Sentinel](https://www.orlandosentinel.com)\

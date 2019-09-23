@@ -84,6 +84,25 @@ if (window.location.href.indexOf("the-american-interest.com") !== -1) {
   }
 }
 
+if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
+  const paywall = document.getElementById(
+    "article-content"
+  );
+    if (paywall) {
+      paywall.classList.remove('premium-content');
+      paywall.classList.add('full-content');
+      var paras = paywall.querySelectorAll("p, span, h2, div");
+	  var delClass = "";
+	  for (var i = paras.length; i--;) {
+	    if (delClass == "") {
+		  delClass = paras[i].className;
+		}
+        paras[i].classList.remove(delClass);
+        paras[i].removeAttribute('style');
+      }
+  }
+}
+
 function removeDOMElement(...elements) {
 	for (let element of elements) {
 		if (element) element.remove();

@@ -39,6 +39,7 @@ var defaultSites = {
   'New York Magazine': 'nymag.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
+  'New Zealand Herald': 'nzherald.co.nz',
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',

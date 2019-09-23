@@ -41,6 +41,7 @@ var defaultSites = {
   'New York Magazine': 'nymag.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
+  'New Zealand Herald': 'nzherald.co.nz',
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
@@ -171,7 +172,8 @@ function setDefaultOptions() {
 var blockedRegexes = [
 /.+:\/\/.+\.tribdss\.com\//,
 /thenation\.com\/.+\/paywall-script\.php/,
-/haaretz\.co\.il\/htz\/js\/inter\.js/
+/haaretz\.co\.il\/htz\/js\/inter\.js/,
+/nzherald\.co\.nz\/.+\/headjs\/.+\.js/
 ];
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
