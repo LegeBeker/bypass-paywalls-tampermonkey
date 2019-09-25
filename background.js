@@ -80,6 +80,7 @@ var defaultSites = {
   'The Wall Street Journal': 'wsj.com',
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
+  'Vrij Nederland': 'vn.nl',
   'Wired': 'wired.com',
   'Zeit Online': 'zeit.de'
 };
