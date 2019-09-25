@@ -58,7 +58,7 @@
 [New Zealand Herald](https://www.nzherald.co.nz)\
 [Newsrep](https://thenewsrep.com)\
 [Nikkei Asian Review](https://asia.nikkei.com)\
-[Orlando Sentinel](https://www.orlandosentinel.com
+[Orlando Sentinel](https://www.orlandosentinel.com)\
 [Parool](https://www.parool.nl)\
 [Quartz](https://qz.com)\
 [Quora](https://www.quora.com)\
