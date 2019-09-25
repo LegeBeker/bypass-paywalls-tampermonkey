@@ -1,6 +1,7 @@
 'use strict';
 
 var defaultSites = {
+  'Algemeen Dagblad': 'ad.nl',
   'American Banker': 'americanbanker.com',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
@@ -11,6 +12,7 @@ var defaultSites = {
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
   'Dagens Nyheter': 'dn.se',
+  'De Groene Amsterdammer': 'groene.nl',
   'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
   'Dynamed Plus': 'dynamed.com',
@@ -42,7 +44,7 @@ var defaultSites = {
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'New Zealand Herald': 'nzherald.co.nz',
-  'OrlandoSentinel': 'orlandosentinel.com',
+  'OrlandoSentinel': 'orlandosentinel.com',  
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'San Francisco Chronicle': 'sfchronicle.com',
@@ -92,7 +94,12 @@ const allow_cookies = [
 'nytimes.com',
 'wsj.com',
 'ft.com',
-'fd.nl',
+'ad.nl',
+'ed.nl',
+'parool.nl',
+'trouw.nl',
+'vn.nl',
+'volkskrant.nl',
 'mercurynews.com',
 'theage.com.au',
 'economist.com',
@@ -115,9 +122,10 @@ const allow_cookies = [
 // Removes cookies after page load
 const remove_cookies = [
 'asia.nikkei.com',
+'ad.nl',
 'ed.nl',
+'vn.nl',
 'ft.com',
-'fd.nl',
 'mercurynews.com',
 'theage.com.au',
 'economist.com',
@@ -245,7 +253,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.businessinsider.com/*", "*://*.bostonglobe.com/*"],
+    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.businessinsider.com/*", "*://*.bostonglobe.com/*", "*://*.trouw.nl/*", "*://*.parool.nl/*", "*://*.volkskrant.nl/*"],
     types: ["script"]
   },
   ["blocking"]

@@ -1,5 +1,6 @@
 var defaultSites = {
-  'American Banker': 'americanbanker.com',
+  'Algemeen Dagblad': 'ad.nl', 
+ 'American Banker': 'americanbanker.com',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
@@ -9,6 +10,8 @@ var defaultSites = {
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
   'Dagens Nyheter': 'dn.se',
+  'De Groene Amsterdammer': 'groene.nl',
+  'De Volkskrant (javascript disabled)': 'volkskrant.nl',
   'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
   'Dynamed Plus': 'dynamed.com',
@@ -41,6 +44,7 @@ var defaultSites = {
   'NRC': 'nrc.nl',
   'New Zealand Herald': 'nzherald.co.nz',
   'OrlandoSentinel': 'orlandosentinel.com',
+  'Parool (javascript disabled)': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'San Francisco Chronicle': 'sfchronicle.com',
@@ -74,8 +78,10 @@ var defaultSites = {
   'The Toronto Star (javascript disabled)': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
+  'Trouw (javascript disabled)': 'trouw.nl',
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
+  'Vrij Nederland': 'vn.nl',
   'Wired': 'wired.com',
   'Zeit Online': 'zeit.de'
 };

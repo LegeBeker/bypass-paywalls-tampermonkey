@@ -15,6 +15,7 @@
 
 ### Bypass the following sites' paywalls with this extension
 
+[Algemeen Dagblad](https://www.ad.nl)\
 [American Banker](https://americanbanker.com)\
 [Baltimore Sun](https://www.baltimoresun.com)\
 [Barron's](https://www.barrons.com)\
@@ -25,6 +26,8 @@
 [Crain's Chicago Business](https://www.chicagobusiness.com)\
 [Dagens Nyheter](https://dn.se)\
 [Daily Press](https://www.dailypress.com)\
+[De Groene Amsterdammer](https://www.groene.nl)\
+[De Volkskrant](https://www.volkskrant.nl)\
 [DeMorgen](https://demorgen.be)\
 [Denver Post](https://www.denverpost.com)\
 [Dynamed Plus](https://dynamed.com)\
@@ -55,7 +58,8 @@
 [New Zealand Herald](https://www.nzherald.co.nz)\
 [Newsrep](https://thenewsrep.com)\
 [Nikkei Asian Review](https://asia.nikkei.com)\
-[Orlando Sentinel](https://www.orlandosentinel.com)\
+[Orlando Sentinel](https://www.orlandosentinel.com
+[Parool](https://www.parool.nl)\
 [Quartz](https://qz.com)\
 [Quora](https://www.quora.com)\
 [San Francisco Chronicle](https://sfchronicle.com)\
@@ -90,6 +94,7 @@
 [The Wall Street Journal](https://www.wsj.com)\
 [The Washington Post](https://www.washingtonpost.com)\
 [TheMarker](https://www.themarker.com)\
+[Trouw](https://www.trouw.nl)\
 [Vanity Fair](https://www.vanityfair.com)\
 [Winston-Salem Journal](https://journalnow.com)\
 [Wired](https://www.wired.com)\
