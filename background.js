@@ -44,7 +44,7 @@ var defaultSites = {
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'New Zealand Herald': 'nzherald.co.nz',
-  'OrlandoSentinel': 'orlandosentinel.com',  
+  'OrlandoSentinel': 'orlandosentinel.com',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'San Francisco Chronicle': 'sfchronicle.com',
