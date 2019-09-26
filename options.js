@@ -1,6 +1,6 @@
 var defaultSites = {
   'Algemeen Dagblad': 'ad.nl', 
- 'American Banker': 'americanbanker.com',
+  'American Banker': 'americanbanker.com',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
