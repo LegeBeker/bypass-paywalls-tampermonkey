@@ -98,6 +98,7 @@
 [Trouw](https://www.trouw.nl)\
 [Vanity Fair](https://www.vanityfair.com)\
 [Winston-Salem Journal](https://journalnow.com)\
+[Vrij Nederland](https://vn.nl)\
 [Wired](https://www.wired.com)\
 [Zeit Online](https://www.zeit.de)
 
