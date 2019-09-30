@@ -1,6 +1,7 @@
 'use strict';
 
 var defaultSites = {
+  'Algemeen Dagblad': 'ad.nl',
   'American Banker': 'americanbanker.com',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
@@ -11,6 +12,8 @@ var defaultSites = {
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
   'Dagens Nyheter': 'dn.se',
+  'De Groene Amsterdammer': 'groene.nl',
+  'De Volkskrant': 'volkskrant.nl',
   'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
   'Dynamed Plus': 'dynamed.com',
@@ -44,6 +47,7 @@ var defaultSites = {
   'NRC': 'nrc.nl',
   'New Zealand Herald': 'nzherald.co.nz',
   'OrlandoSentinel': 'orlandosentinel.com',
+  'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'San Francisco Chronicle': 'sfchronicle.com',
@@ -77,8 +81,10 @@ var defaultSites = {
   'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
+  'Trouw': 'trouw.nl',
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
+  'Vrij Nederland': 'vn.nl',
   'Wired': 'wired.com',
   'Zeit Online': 'zeit.de'
 };
@@ -93,7 +99,12 @@ const allow_cookies = [
 'nytimes.com',
 'wsj.com',
 'ft.com',
-'fd.nl',
+'ad.nl',
+'ed.nl',
+'parool.nl',
+'trouw.nl',
+'vn.nl',
+'volkskrant.nl',
 'mercurynews.com',
 'theage.com.au',
 'economist.com',
@@ -116,9 +127,10 @@ const allow_cookies = [
 // Removes cookies after page load
 const remove_cookies = [
 'asia.nikkei.com',
+'ad.nl',
 'ed.nl',
+'vn.nl',
 'ft.com',
-'fd.nl',
 'mercurynews.com',
 'theage.com.au',
 'economist.com',

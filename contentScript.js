@@ -103,6 +103,15 @@ if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
   }
 }
 
+if (window.location.href.indexOf("parool.nl") !== -1 ||
+	window.location.href.indexOf("trouw.nl") !== -1 || 
+	window.location.href.indexOf("volkskrant.nl") !== -1) {
+	document.addEventListener('DOMContentLoaded', () => {
+		const paywall = document.querySelector('div[data-temptation-position="ARTICLE_BOTTOM"]');
+		const hidden_section = document.querySelector('div[data-temptation-position="ARTICLE_INLINE"]');
+		removeDOMElement(paywall, hidden_section);
+	});
+
 if (window.location.href.indexOf("firstthings.com") !== -1) {
 	const paywall = document.getElementsByClassName('paywall')[0];
 
