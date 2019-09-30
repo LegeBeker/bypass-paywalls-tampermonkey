@@ -31,6 +31,7 @@
 [Eindhovens Dagblad](https://ed.nl)\
 [Encyclopedia Britannica](https://britannica.com)\
 [Examiner](https://examiner.com.au)\
+[First Things](https://www.firstthings.com)\
 [Financial News](https://fnlondon.com)\
 [Financial Times](https://www.ft.com)\
 [Foreign Policy](https://www.foreignpolicy.com)\

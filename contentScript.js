@@ -103,6 +103,12 @@ if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
   }
 }
 
+if (window.location.href.indexOf("firstthings.com") !== -1) {
+	const paywall = document.getElementsByClassName('paywall')[0];
+
+	if(paywall) removeDOMElement(paywall);
+}
+
 function removeDOMElement(...elements) {
 	for (let element of elements) {
 		if (element) element.remove();

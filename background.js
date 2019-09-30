@@ -19,6 +19,7 @@ var defaultSites = {
   'Eindhovens Dagblad': 'ed.nl',
   'Encyclopedia Britannica': 'britannica.com',
   'Examiner': 'examiner.com.au',
+  'First Things': 'firstthings.com',
   'Financial News': 'fnlondon.com',
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
@@ -148,6 +149,7 @@ const remove_cookies = [
 'demorgen.be',
 'sloanreview.mit.edu',
 'zeit.de',
+'firstthings.com'
 ]
 
 // Override User-Agent with Googlebot
