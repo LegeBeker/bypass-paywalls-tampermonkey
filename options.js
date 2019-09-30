@@ -19,6 +19,7 @@ var defaultSites = {
   'Encyclopedia Britannica': 'britannica.com',
   'Eindhovens Dagblad': 'ed.nl',
   'Examiner': 'examiner.com.au',
+  'First Things': 'firstthings.com',
   'Financial News': 'fnlondon.com',
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',

@@ -111,6 +111,11 @@ if (window.location.href.indexOf("parool.nl") !== -1 ||
 		const hidden_section = document.querySelector('div[data-temptation-position="ARTICLE_INLINE"]');
 		removeDOMElement(paywall, hidden_section);
 	});
+
+if (window.location.href.indexOf("firstthings.com") !== -1) {
+	const paywall = document.getElementsByClassName('paywall')[0];
+
+	if(paywall) removeDOMElement(paywall);
 }
 
 function removeDOMElement(...elements) {
