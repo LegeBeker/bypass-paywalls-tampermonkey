@@ -117,6 +117,12 @@ if (window.location.href.indexOf("firstthings.com") !== -1) {
 	if(paywall) removeDOMElement(paywall);
 }
 
+if (window.location.href.indexOf("bloomberg.com") !== -1) {
+	console.log('inside bloom');
+	const paywall = document.getElementById('paywall-banner');
+	removeDOMElement(paywall);
+}
+
 function removeDOMElement(...elements) {
 	for (let element of elements) {
 		if (element) element.remove();
