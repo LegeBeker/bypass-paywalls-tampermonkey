@@ -118,7 +118,6 @@ if (window.location.href.indexOf("firstthings.com") !== -1) {
 }
 
 if (window.location.href.indexOf("bloomberg.com") !== -1) {
-	console.log('inside bloom');
 	const paywall = document.getElementById('paywall-banner');
 	removeDOMElement(paywall);
 }
