@@ -6,6 +6,7 @@ var defaultSites = {
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
+  'Bloomberg Qunit': 'bloombergquint.com',
   'Business Insider': 'businessinsider.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
@@ -161,7 +162,8 @@ const remove_cookies = [
 'demorgen.be',
 'sloanreview.mit.edu',
 'zeit.de',
-'firstthings.com'
+'firstthings.com',
+'bloombergquint.com'
 ]
 
 // Override User-Agent with Googlebot
