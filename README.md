@@ -20,6 +20,7 @@
 [Baltimore Sun](https://www.baltimoresun.com)\
 [Barron's](https://www.barrons.com)\
 [Bloomberg](https://www.bloomberg.com)\
+[Bloomberg Quint](https://bloombergquint.com)\
 [Business Insider](https://www.businessinsider.com)\
 [Chicago Tribune](https://www.chicagotribune.com)\
 [Corriere Della Sera](https://www.corriere.it)\
