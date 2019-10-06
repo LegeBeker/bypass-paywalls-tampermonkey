@@ -120,7 +120,7 @@ if (window.location.href.indexOf("firstthings.com") !== -1) {
 if (window.location.href.indexOf("bloombergquint.com") !== -1) {
 	const articlesLeftModal = document.getElementsByClassName('paywall-meter-module__story-paywall-container__1UgCE')[0];
 	const paywall = document.getElementById('paywallDmp');
-	removeDOMElement(articlesLeftModal,	paywall);
+	removeDOMElement(articlesLeftModal, paywall);
 }
 
 function removeDOMElement(...elements) {
