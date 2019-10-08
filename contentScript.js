@@ -79,27 +79,27 @@ if (window.location.href.indexOf("mexiconewsdaily.com") !== -1) {
 if (window.location.href.indexOf("the-american-interest.com") !== -1) {
   const counter = document.getElementById('article-counter') || false;
   if (counter) {
-    counter.remove();
-    counter = false; 
+	counter.remove();
+	counter = false; 
   }
 }
 
 if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
   const paywall = document.getElementById(
-    "article-content"
+	"article-content"
   );
-    if (paywall) {
-      paywall.classList.remove('premium-content');
-      paywall.classList.add('full-content');
-      var paras = paywall.querySelectorAll("p, span, h2, div");
+	if (paywall) {
+	  paywall.classList.remove('premium-content');
+	  paywall.classList.add('full-content');
+	  var paras = paywall.querySelectorAll("p, span, h2, div");
 	  var delClass = "";
 	  for (var i = paras.length; i--;) {
-	    if (delClass == "") {
+		if (delClass == "") {
 		  delClass = paras[i].className;
 		}
-        paras[i].classList.remove(delClass);
-        paras[i].removeAttribute('style');
-      }
+		paras[i].classList.remove(delClass);
+		paras[i].removeAttribute('style');
+	  }
   }
 }
 
@@ -117,8 +117,23 @@ if (window.location.href.indexOf("firstthings.com") !== -1) {
 	if(paywall) removeDOMElement(paywall);
 }
 
+if (window.location.href.indexOf("medium.com") !== -1) {
+	const bottomMessageText = 'Get one more story in your member preview when you sign up. It’s free.';
+	const DOMElementsToTextDiv = contains('div', bottomMessageText);
+
+	if(DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
+}
+
 function removeDOMElement(...elements) {
 	for (let element of elements) {
 		if (element) element.remove();
 	}
+}
+
+function contains(selector, text) {
+	let elements = document.querySelectorAll(selector);
+
+	return Array.prototype.filter.call(elements, function(element){
+		return RegExp(text).test(element.textContent);
+	});
 }
