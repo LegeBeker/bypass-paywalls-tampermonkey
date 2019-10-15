@@ -172,6 +172,7 @@ const use_google_bot = [
 'barrons.com',
 'telegraph.co.uk',
 'zeit.de',
+'nytimes.com',
 'mexiconewsdaily.com',
 'thetimes.co.uk',
 ]
