@@ -34,6 +34,7 @@ var defaultSites = {
   'La Repubblica': 'repubblica.it',
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
+  'Loeb Classical Library': 'loebclassics.com',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
   'Mexico News Daily': 'mexiconewsdaily.com',
