@@ -50,6 +50,7 @@
 [La Repubblica](https://www.repubblica.it)\
 [Les Échos](https://lesechos.fr)\
 [Libération](https://liberation.fr)\
+[Loeb Classical Library](https://www.loebclassics.com)\
 [Los Angeles Times](https://www.latimes.com)\
 [MIT Sloan Management Review](https://sloanreview.mit.edu)\
 [MIT Technology Review](https://www.technologyreview.com)\

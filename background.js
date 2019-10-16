@@ -37,6 +37,7 @@ var defaultSites = {
   'Irish Times': 'irishtimes.com',
   'La Repubblica': 'repubblica.it',
   'Liberation': 'liberation.fr',
+  'Loeb Classical Library': 'loebclassics.com',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
   'Mexico News Daily': 'mexiconewsdaily.com',
@@ -144,6 +145,7 @@ const remove_cookies = [
 'examiner.com.au',
 'lesechos.fr',
 'liberation.fr',
+'loebclassics.com',
 'hbr.org',
 'theatlantic.com',
 'medium.com',
@@ -172,6 +174,7 @@ const use_google_bot = [
 'barrons.com',
 'telegraph.co.uk',
 'zeit.de',
+'nytimes.com',
 'mexiconewsdaily.com',
 'thetimes.co.uk',
 ]
