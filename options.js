@@ -76,7 +76,7 @@ var defaultSites = {
   'The New Statesman': 'newstatesman.com',
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
-  'The Philadelphia Inquirer', 'inquirer.com',
+  'The Philadelphia Inquirer': 'inquirer.com',
   'The Seattle Times': 'seattletimes.com',
   'The Spectator': 'spectator.co.uk',
   'The Sydney Morning Herald': 'smh.com.au',
