@@ -49,7 +49,7 @@
 [Irish Times](https://www.irishtimes.com)\
 [LA Business Journal](labusinessjournal.com)\
 [La Repubblica](https://www.repubblica.it)\
-[La Tercera]:(latercera.com)\
+[La Tercera](latercera.com)\
 [Les Échos](https://lesechos.fr)\
 [Libération](https://liberation.fr)\
 [Loeb Classical Library](https://www.loebclassics.com)\
