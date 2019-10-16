@@ -147,7 +147,6 @@ const remove_cookies = [
 'harpers.org',
 'theadvocate.com.au',
 'examiner.com.au',
-'labusinessjournal.com',
 'lesechos.fr',
 'liberation.fr',
 'hbr.org',
