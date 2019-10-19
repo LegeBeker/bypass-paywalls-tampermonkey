@@ -18,10 +18,12 @@ if (location.hostname.endsWith('rep.repubblica.it')) {
 }
 
 if (window.location.href.indexOf("americanbanker.com") !== -1) {
-    const paywall = document.getElementsByClassName('embargo-content');
-    if (paywall && paywall.length > 0) {
-        paywall[0].className = "";
-    }
+	const paywall = document.getElementsByClassName(
+		"embargo-content"
+	);
+	if (paywall && paywall.length > 0) {
+		paywall[0].className = "";
+	}
 }
 
 if (window.location.href.indexOf('telegraaf.nl') !== -1) {
@@ -32,11 +34,11 @@ if (window.location.href.indexOf('telegraaf.nl') !== -1) {
 }
 
 if (window.location.href.indexOf('ed.nl') !== -1) {
-    const paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
-    if (paywall) {
-        paywall.remove();
-        paywall = null;
-    }
+	let paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
+	if (paywall) {
+		paywall.remove();
+		paywall = null;
+	}
 }
 
 if (window.location.href.indexOf("washingtonpost.com") !== -1) {
@@ -79,42 +81,44 @@ if (window.location.href.indexOf("mexiconewsdaily.com") !== -1) {
 }
 
 if (window.location.href.indexOf("the-american-interest.com") !== -1) {
-    const counter = document.getElementById('article-counter') || false;
-    if (counter) {
-        counter.remove();
-        counter = false;
-    }
+	let counter = document.getElementById('article-counter') || false;
+	if (counter) {
+		counter.remove();
+		counter = false;
+	}
 }
 
 if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
-    const paywall = document.getElementById(
-            "article-content");
-    if (paywall) {
-        paywall.classList.remove('premium-content');
-        paywall.classList.add('full-content');
-        var paras = paywall.querySelectorAll("p, span, h2, div");
-        var delClass = "";
-        for (var i = paras.length; i--; ) {
-            if (delClass == "") {
-                delClass = paras[i].className;
-            }
-            paras[i].classList.remove(delClass);
-            paras[i].removeAttribute('style');
-        }
-    }
+	const paywall = document.getElementById(
+		"article-content"
+	);
+	if (paywall) {
+		paywall.classList.remove('premium-content');
+		paywall.classList.add('full-content');
+		var paras = paywall.querySelectorAll("p, span, h2, div");
+		var delClass = "";
+		for (var i = paras.length; i--;) {
+			if (delClass == "") {
+				delClass = paras[i].className;
+			}
+			paras[i].classList.remove(delClass);
+			paras[i].removeAttribute('style');
+		}
+	}
 }
 
 if (window.location.href.indexOf("parool.nl") !== -1 || window.location.href.indexOf("trouw.nl") !== -1 || window.location.href.indexOf("volkskrant.nl") !== -1) {
-    document.addEventListener('DOMContentLoaded', () => {
-        const paywall = document.querySelector('div[data-temptation-position="ARTICLE_BOTTOM"]');
-        const hidden_section = document.querySelector('div[data-temptation-position="ARTICLE_INLINE"]');
-        removeDOMElement(paywall, hidden_section);
-    });
+	document.addEventListener('DOMContentLoaded', () => {
+		const paywall = document.querySelector('div[data-temptation-position="ARTICLE_BOTTOM"]');
+		const hidden_section = document.querySelector('div[data-temptation-position="ARTICLE_INLINE"]');
+		removeDOMElement(paywall, hidden_section);
+	});
 }
 
 if (window.location.href.indexOf("firstthings.com") !== -1) {
     const paywall = document.getElementsByClassName('paywall')[0];
-    if (paywall)
+
+  if (paywall)
         removeDOMElement(paywall);
 }
 

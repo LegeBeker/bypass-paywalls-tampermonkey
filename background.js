@@ -6,6 +6,7 @@ var defaultSites = {
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
+  'Bloomberg Quint': 'bloombergquint.com',
   'Business Insider': 'businessinsider.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
@@ -36,6 +37,7 @@ var defaultSites = {
   'Irish Times': 'irishtimes.com',
   'La Repubblica': 'repubblica.it',
   'Liberation': 'liberation.fr',
+  'Loeb Classical Library': 'loebclassics.com',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
   'Mexico News Daily': 'mexiconewsdaily.com',
@@ -143,6 +145,7 @@ const remove_cookies = [
 'examiner.com.au',
 'lesechos.fr',
 'liberation.fr',
+'loebclassics.com',
 'hbr.org',
 'theatlantic.com',
 'medium.com',
@@ -161,7 +164,8 @@ const remove_cookies = [
 'demorgen.be',
 'sloanreview.mit.edu',
 'zeit.de',
-'firstthings.com'
+'firstthings.com',
+'bloombergquint.com'
 ]
 
 // Override User-Agent with Googlebot
@@ -170,7 +174,9 @@ const use_google_bot = [
 'barrons.com',
 'telegraph.co.uk',
 'zeit.de',
+'nytimes.com',
 'mexiconewsdaily.com',
+'nytimes.com',
 'thetimes.co.uk',
 ]
 

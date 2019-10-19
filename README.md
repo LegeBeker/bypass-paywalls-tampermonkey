@@ -20,6 +20,7 @@
 [Baltimore Sun](https://www.baltimoresun.com)\
 [Barron's](https://www.barrons.com)\
 [Bloomberg](https://www.bloomberg.com)\
+[Bloomberg Quint](https://bloombergquint.com)\
 [Business Insider](https://www.businessinsider.com)\
 [Chicago Tribune](https://www.chicagotribune.com)\
 [Corriere Della Sera](https://www.corriere.it)\
@@ -49,6 +50,7 @@
 [La Repubblica](https://www.repubblica.it)\
 [Les Échos](https://lesechos.fr)\
 [Libération](https://liberation.fr)\
+[Loeb Classical Library](https://www.loebclassics.com)\
 [Los Angeles Times](https://www.latimes.com)\
 [MIT Sloan Management Review](https://sloanreview.mit.edu)\
 [MIT Technology Review](https://www.technologyreview.com)\
@@ -98,6 +100,7 @@
 [Trouw](https://www.trouw.nl)\
 [Vanity Fair](https://www.vanityfair.com)\
 [Winston-Salem Journal](https://journalnow.com)\
+[Vrij Nederland](https://vn.nl)\
 [Wired](https://www.wired.com)\
 [Zeit Online](https://www.zeit.de)
 
