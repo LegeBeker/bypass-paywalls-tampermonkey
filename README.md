@@ -47,7 +47,9 @@
 [Harvard Business Review](https://www.hbr.org)\
 [Inc.com](https://www.inc.com)\
 [Irish Times](https://www.irishtimes.com)\
+[LA Business Journal](labusinessjournal.com)\
 [La Repubblica](https://www.repubblica.it)\
+[La Tercera](latercera.com)\
 [Les Échos](https://lesechos.fr)\
 [Libération](https://liberation.fr)\
 [Loeb Classical Library](https://www.loebclassics.com)\
@@ -65,6 +67,7 @@
 [Parool](https://www.parool.nl)\
 [Quartz](https://qz.com)\
 [Quora](https://www.quora.com)\
+[San Diego Union Tribune](sandiegouniontribune.com)\
 [San Francisco Chronicle](https://sfchronicle.com)\
 [Scientific American](https://scientificamerican.com)\
 [Statista](https://statista.com)\
@@ -88,6 +91,7 @@
 [The New York Times](https://www.nytimes.com)\
 [The New Yorker](https://www.newyorker.com)\
 [The News-Gazette](https://www.news-gazette.com)\
+[The Philadelphia Inquirer](inquirer.com)\
 [The Seattle Times](https://www.seattletimes.com)\
 [The Spectator](https://www.spectator.co.uk)\
 [The Sydney Morning Herald](https://www.smh.com.au)\
