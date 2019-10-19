@@ -18,8 +18,7 @@ if (location.hostname.endsWith('rep.repubblica.it')) {
 }
 
 if (window.location.href.indexOf("americanbanker.com") !== -1) {
-    const paywall = document.getElementsByClassName(
-            "embargo-content");
+    const paywall = document.getElementsByClassName('embargo-content');
     if (paywall && paywall.length > 0) {
         paywall[0].className = "";
     }
@@ -33,7 +32,7 @@ if (window.location.href.indexOf('telegraaf.nl') !== -1) {
 }
 
 if (window.location.href.indexOf('ed.nl') !== -1) {
-    let paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
+    const paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
     if (paywall) {
         paywall.remove();
         paywall = null;
@@ -80,7 +79,7 @@ if (window.location.href.indexOf("mexiconewsdaily.com") !== -1) {
 }
 
 if (window.location.href.indexOf("the-american-interest.com") !== -1) {
-    let counter = document.getElementById('article-counter') || false;
+    const counter = document.getElementById('article-counter') || false;
     if (counter) {
         counter.remove();
         counter = false;
@@ -115,7 +114,6 @@ if (window.location.href.indexOf("parool.nl") !== -1 || window.location.href.ind
 
 if (window.location.href.indexOf("firstthings.com") !== -1) {
     const paywall = document.getElementsByClassName('paywall')[0];
-
     if (paywall)
         removeDOMElement(paywall);
 }
@@ -134,7 +132,7 @@ if (window.location.href.indexOf("bloombergquint.com") !== -1) {
 }
 
 function removeDOMElement(elements) {
-    for (let element of elements) {
+    for (var element of elements) {
         if (element)
             element.remove();
     }
