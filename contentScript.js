@@ -135,7 +135,7 @@ if (window.location.href.indexOf("bloombergquint.com") !== -1) {
     removeDOMElement(articlesLeftModal, paywall);
 }
 
-function removeDOMElement(elements) {
+function removeDOMElement(...elements) {
     for (var element of elements) {
         if (element)
             element.remove();
