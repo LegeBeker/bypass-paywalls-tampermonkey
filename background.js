@@ -38,6 +38,7 @@ var defaultSites = {
   'LA Business Journal': 'labusinessjournal.com',
   'La Repubblica': 'repubblica.it',
   'La Tercera': 'latercera.com',
+  'Le Monde': 'lemonde.fr',  
   'Liberation': 'liberation.fr',
   'Loeb Classical Library': 'loebclassics.com',
   'Los Angeles Times': 'latimes.com',
@@ -112,6 +113,7 @@ const allow_cookies = [
 'examiner.com.au',
 'ft.com',
 'hbr.org',
+'lemonde.fr',
 'medium.com',
 'mercurynews.com',
 'mexiconewsdaily.com',
@@ -164,7 +166,6 @@ const use_google_bot = [
 'zeit.de',
 'nytimes.com',
 'mexiconewsdaily.com',
-'nytimes.com',
 'thetimes.co.uk',
 ]
 

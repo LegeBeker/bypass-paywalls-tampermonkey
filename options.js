@@ -35,6 +35,7 @@ var defaultSites = {
   'LA Business Journal': 'labusinessjournal.com',
   'La Repubblica': 'repubblica.it',
   'La Tercera': 'latercera.com',
+  'Le Monde': 'lemonde.fr',
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
   'Loeb Classical Library': 'loebclassics.com',
