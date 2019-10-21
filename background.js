@@ -6,6 +6,7 @@ var defaultSites = {
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
+  'Bloomberg Quint': 'bloombergquint.com',
   'Business Insider': 'businessinsider.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
@@ -34,8 +35,11 @@ var defaultSites = {
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
   'Irish Times': 'irishtimes.com',
+  'LA Business Journal': 'labusinessjournal.com',
   'La Repubblica': 'repubblica.it',
+  'La Tercera': 'latercera.com',
   'Liberation': 'liberation.fr',
+  'Loeb Classical Library': 'loebclassics.com',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
   'Mexico News Daily': 'mexiconewsdaily.com',
@@ -50,6 +54,7 @@ var defaultSites = {
   'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
+  'San Diego Union Tribune': 'sandiegouniontribune.com',
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
   'SunSentinel': 'sun-sentinel.com',
@@ -73,6 +78,7 @@ var defaultSites = {
   'The New Statesman': 'newstatesman.com',
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
+  'The Philadelphia Inquirer': 'inquirer.com',
   'The Seattle Times': 'seattletimes.com',
   'The Spectator': 'spectator.co.uk',
   'The Sydney Morning Herald': 'smh.com.au',
@@ -161,7 +167,8 @@ const remove_cookies = [
 'demorgen.be',
 'sloanreview.mit.edu',
 'zeit.de',
-'firstthings.com'
+'firstthings.com',
+'bloombergquint.com'
 ]
 
 // Override User-Agent with Googlebot
@@ -170,7 +177,9 @@ const use_google_bot = [
 'barrons.com',
 'telegraph.co.uk',
 'zeit.de',
+'nytimes.com',
 'mexiconewsdaily.com',
+'nytimes.com',
 'thetimes.co.uk',
 ]
 
