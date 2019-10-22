@@ -160,13 +160,14 @@ const remove_cookies = [
 
 // Override User-Agent with Googlebot
 const use_google_bot = [
-'theaustralian.com.au',
 'barrons.com',
-'telegraph.co.uk',
-'zeit.de',
-'nytimes.com',
 'mexiconewsdaily.com',
+'nytimes.com',
+'telegraph.co.uk',
+'theaustralian.com.au',
 'thetimes.co.uk',
+'wsj.com',
+'zeit.de',
 ]
 
 function setDefaultOptions() {
@@ -223,6 +224,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
   }
 });
 
+/**
 // WSJ bypass
 chrome.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
@@ -245,6 +247,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
 {urls:["*://*.wsj.com/*"], types:["main_frame"]},
 ["blocking"]
 );
+**/
 
 // Disable javascript for these sites
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
