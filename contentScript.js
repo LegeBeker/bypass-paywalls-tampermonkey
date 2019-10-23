@@ -137,7 +137,7 @@ if (window.location.href.indexOf("bloombergquint.com") !== -1) {
 
 if (window.location.href.indexOf("medium.com") !== -1) {
 	const bottomMessageText = 'Get one more story in your member preview when you sign up. It’s free.';
-	const DOMElementsToTextDiv = pageContaints('div', bottomMessageText);
+	const DOMElementsToTextDiv = pageContains('div', bottomMessageText);
 
 	if(DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
 }
@@ -149,7 +149,7 @@ function removeDOMElement(...elements) {
     }
 }
 
-function pageContaints(selector, text) {
+function pageContains(selector, text) {
 	let elements = document.querySelectorAll(selector);
 
 	return Array.prototype.filter.call(elements, function(element){
