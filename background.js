@@ -1,5 +1,8 @@
+/* Please respect alphabetical order when adding a site in any list */
+
 'use strict';
 
+// Cookies from this list are blocked by default
 var defaultSites = {
   'Algemeen Dagblad': 'ad.nl',
   'American Banker': 'americanbanker.com',
@@ -18,8 +21,6 @@ var defaultSites = {
   'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
   'Dynamed Plus': 'dynamed.com',
-  'The Economist': 'economist.com',
-  'Les Echos': 'lesechos.fr',
   'Eindhovens Dagblad': 'ed.nl',
   'Encyclopedia Britannica': 'britannica.com',
   'Examiner': 'examiner.com.au',
@@ -35,12 +36,15 @@ var defaultSites = {
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
   'Irish Times': 'irishtimes.com',
-  'LA Business Journal': 'labusinessjournal.com',
+  'La Nacion': 'lanacion.com.ar',
   'La Repubblica': 'repubblica.it',
   'La Tercera': 'latercera.com',
+  'L\'Echo': 'lecho.be',
   'Le Monde': 'lemonde.fr',  
+  'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
   'Loeb Classical Library': 'loebclassics.com',
+  'Los Angeles Business Journal': 'labusinessjournal.com',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
   'Mexico News Daily': 'mexiconewsdaily.com',
@@ -69,6 +73,7 @@ var defaultSites = {
   'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
+  'The Economist': 'economist.com',
   'The Globe and Mail': 'theglobeandmail.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
