@@ -16,7 +16,6 @@ var defaultSites = {
   'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
   'Dynamed Plus': 'dynamed.com',
-  'The Economist (javascript disabled)': 'economist.com',
   'Encyclopedia Britannica': 'britannica.com',
   'Eindhovens Dagblad': 'ed.nl',
   'Examiner': 'examiner.com.au',
@@ -32,12 +31,15 @@ var defaultSites = {
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
   'Irish Times': 'irishtimes.com',
-  'LA Business Journal': 'labusinessjournal.com',
+  'La Nacion': 'lanacion.com.ar',
   'La Repubblica': 'repubblica.it',
   'La Tercera': 'latercera.com',
+  'L\'Echo': 'lecho.be',
+  'Le Monde': 'lemonde.fr',
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
   'Loeb Classical Library': 'loebclassics.com',
+  'Los Angeles Business Journal': 'labusinessjournal.com',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
   'Mexico News Daily': 'mexiconewsdaily.com',
@@ -66,6 +68,7 @@ var defaultSites = {
   'The Australian Financial Review (javascript disabled)': 'afr.com',
   'The Boston Globe (javascript disabled)': 'bostonglobe.com',
   'The Business Journals (javascript disabled)': 'bizjournals.com',
+  'The Economist (javascript disabled)': 'economist.com',
   'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
@@ -165,4 +168,3 @@ document.addEventListener('DOMContentLoaded', renderOptions);
 document.getElementById('save').addEventListener('click', save_options);
 document.getElementById('select-all').addEventListener('click', selectAll);
 document.getElementById('select-none').addEventListener('click', selectNone);
-
