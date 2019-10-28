@@ -155,6 +155,19 @@ if (window.location.href.indexOf('lemonde.fr') !== -1) {
     });
 }
 
+if (window.location.href.indexOf("leparisien.fr") !== -1) {
+		window.removeEventListener('scroll', this.scrollListener);
+
+        const paywall = document.querySelector('.relative.piano-paywall.below_nav.sticky');
+        removeDOMElement(paywall);
+
+        setTimeout(function () {
+			var content = document.getElementsByClassName('content');
+			for (var i = 0; i < content.length; i++) {
+				content[i].removeAttribute("style");
+			}
+		}, 300); // Delay (in milliseconds)
+}
 
 function removeDOMElement(...elements) {
     for (let element of elements) {
