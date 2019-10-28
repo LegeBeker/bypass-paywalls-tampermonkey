@@ -214,7 +214,6 @@ var blockedRegexes = [
 /haaretz\.co\.il\/htz\/js\/inter\.js/,
 /nzherald\.co\.nz\/.+\/headjs\/.+\.js/
 ];
-///leparisien\.fr\/pf\/resources\/dist\/base\.js\?d\=103/
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
 const userAgentMobile = "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
