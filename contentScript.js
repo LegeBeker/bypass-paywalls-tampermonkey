@@ -169,6 +169,18 @@ if (window.location.href.indexOf("canberratimes.com.au") !== -1) {
     }
 }
 
+if (window.location.href.indexOf("ledevoir.com") !== -1) {
+
+        const counter = document.querySelector('.full.hidden-print.popup-msg');
+        removeDOMElement(counter);
+}
+
+if (window.location.href.indexOf("thehindu.com") !== -1) {
+
+        const counter = document.querySelector('.hidden-xs.row.entryCommonSubDiv');
+        removeDOMElement(counter);
+}
+
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element)
