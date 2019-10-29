@@ -16,6 +16,7 @@ var defaultSites = {
   'De Volkskrant': 'volkskrant.nl',
   'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
+  'Die Zeit': 'zeit.de'
   'Dynamed Plus': 'dynamed.com',
   'Encyclopedia Britannica': 'britannica.com',
   'Eindhovens Dagblad': 'ed.nl',
@@ -31,7 +32,6 @@ var defaultSites = {
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
-  'Irish Times': 'irishtimes.com',
   'La Nacion': 'lanacion.com.ar',
   'La Repubblica': 'repubblica.it',
   'La Tercera': 'latercera.com',
@@ -74,6 +74,7 @@ var defaultSites = {
   'The Economist (javascript disabled)': 'economist.com',
   'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',
   'The Hindu': 'thehindu.com',
+  'The Irish Times': 'irishtimes.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',
@@ -96,8 +97,7 @@ var defaultSites = {
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
   'Vrij Nederland': 'vn.nl',
-  'Wired': 'wired.com',
-  'Zeit Online': 'zeit.de'
+  'Wired': 'wired.com'
 };
 
 // Saves options to chrome.storage
