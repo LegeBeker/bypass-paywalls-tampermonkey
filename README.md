@@ -113,7 +113,7 @@
 [Vanity Fair](https://www.vanityfair.com)\
 [Winston-Salem Journal](https://journalnow.com)\
 [Vrij Nederland](https://vn.nl)\
-[Wired](https://www.wired.com)\
+[Wired](https://www.wired.com)
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.*
