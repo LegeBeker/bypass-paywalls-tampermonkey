@@ -32,6 +32,7 @@
 [De Volkskrant](https://www.volkskrant.nl)\
 [DeMorgen](https://demorgen.be)\
 [Denver Post](https://www.denverpost.com)\
+[Die Zeit](https://www.zeit.de)\
 [Dynamed Plus](https://dynamed.com)\
 [Eindhovens Dagblad](https://ed.nl)\
 [Encyclopedia Britannica](https://britannica.com)\
@@ -47,12 +48,12 @@
 [Hartford Courant](https://www.courant.com)\
 [Harvard Business Review](https://www.hbr.org)\
 [Inc.com](https://www.inc.com)\
-[Irish Times](https://www.irishtimes.com)\
 [L.A. Business Journal](https://labusinessjournal.com)\
 [La Nación](https://www.lanacion.com.ar)\
 [La Repubblica](https://www.repubblica.it)\
 [La Tercera](https://latercera.com)\
 [L'Écho](https://lecho.be)\
+[Le Devoir](https://www.ledevoir.com)\
 [Le Monde](https://www.lemonde.fr)\
 [Les Échos](https://lesechos.fr)\
 [Libération](https://liberation.fr)\
@@ -88,6 +89,7 @@
 [The Canberra Times](https://www.canberratimes.com.au)\
 [The Economist](https://www.economist.com)\
 [The Globe and Mail](https://www.theglobeandmail.com)\
+[The Irish Times](https://www.irishtimes.com)\
 [The Japan Times](https://www.japantimes.co.jp)\
 [The Mercury News](https://www.mercurynews.com)\
 [The Morning Call](https://www.mcall.com)\
@@ -111,7 +113,6 @@
 [Winston-Salem Journal](https://journalnow.com)\
 [Vrij Nederland](https://vn.nl)\
 [Wired](https://www.wired.com)\
-[Zeit Online](https://www.zeit.de)
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.*
