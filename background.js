@@ -192,6 +192,7 @@ const use_google_bot = [
 'barrons.com',
 'mexiconewsdaily.com',
 'nytimes.com',
+'quora.com',
 'telegraph.co.uk',
 'theaustralian.com.au',
 'thetimes.co.uk',
