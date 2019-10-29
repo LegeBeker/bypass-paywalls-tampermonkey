@@ -16,7 +16,7 @@ var defaultSites = {
   'De Volkskrant': 'volkskrant.nl',
   'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
-  'Die Zeit': 'zeit.de'
+  'Die Zeit': 'zeit.de',
   'Dynamed Plus': 'dynamed.com',
   'Encyclopedia Britannica': 'britannica.com',
   'Eindhovens Dagblad': 'ed.nl',
