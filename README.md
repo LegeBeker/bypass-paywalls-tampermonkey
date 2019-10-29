@@ -63,7 +63,7 @@
 [MIT Technology Review](https://www.technologyreview.com)\
 [Medium](https://www.medium.com)\
 [Mexicon News Daily](https://mexiconewsdaily.com)\
-[NRC](https://www.nrc.nl)\
+[NRC Handelsblad](https://www.nrc.nl)\
 [New York Magazine](https://www.nymag.com)\
 [New Zealand Herald](https://www.nzherald.co.nz)\
 [Newsrep](https://thenewsrep.com)\
