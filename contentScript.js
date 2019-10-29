@@ -177,8 +177,8 @@ if (window.location.href.indexOf("ledevoir.com") !== -1) {
 
 if (window.location.href.indexOf("thehindu.com") !== -1) {
 
-        const counter = document.querySelector('.hidden-xs.row.entryCommonSubDiv');
-        removeDOMElement(counter);
+        const paywall = document.getElementById('test');
+        removeDOMElement(paywall);
 }
 
 function removeDOMElement(...elements) {
