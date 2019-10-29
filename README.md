@@ -89,6 +89,7 @@
 [The Canberra Times](https://www.canberratimes.com.au)\
 [The Economist](https://www.economist.com)\
 [The Globe and Mail](https://www.theglobeandmail.com)\
+[The Hindu](https://www.thehindu.com)\
 [The Irish Times](https://www.irishtimes.com)\
 [The Japan Times](https://www.japantimes.co.jp)\
 [The Mercury News](https://www.mercurynews.com)\
