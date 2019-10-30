@@ -27,7 +27,6 @@
 [Crain's Chicago Business](https://www.chicagobusiness.com)\
 [Dagens Nyheter](https://dn.se)\
 [Daily Press](https://www.dailypress.com)\
-[Dark Reading](https://www.darkreading.com)\
 [De Groene Amsterdammer](https://www.groene.nl)\
 [De Volkskrant](https://www.volkskrant.nl)\
 [DeMorgen](https://demorgen.be)\
