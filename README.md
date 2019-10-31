@@ -47,9 +47,12 @@
 [Harvard Business Review](https://www.hbr.org)\
 [Inc.com](https://www.inc.com)\
 [Irish Times](https://www.irishtimes.com)\
-[LA Business Journal](labusinessjournal.com)\
+[L.A. Business Journal](https://labusinessjournal.com)\
+[La Nación](https://www.lanacion.com.ar)\
 [La Repubblica](https://www.repubblica.it)\
-[La Tercera](latercera.com)\
+[La Tercera](https://latercera.com)\
+[L'Écho](https://lecho.be)\
+[Le Monde](https://www.lemonde.fr)\
 [Les Échos](https://lesechos.fr)\
 [Libération](https://liberation.fr)\
 [Loeb Classical Library](https://www.loebclassics.com)\
@@ -57,7 +60,7 @@
 [MIT Sloan Management Review](https://sloanreview.mit.edu)\
 [MIT Technology Review](https://www.technologyreview.com)\
 [Medium](https://www.medium.com)\
-[Mexicon News Daily](mexiconewsdaily.com)\
+[Mexicon News Daily](https://mexiconewsdaily.com)\
 [NRC](https://www.nrc.nl)\
 [New York Magazine](https://www.nymag.com)\
 [New Zealand Herald](https://www.nzherald.co.nz)\
@@ -67,7 +70,7 @@
 [Parool](https://www.parool.nl)\
 [Quartz](https://qz.com)\
 [Quora](https://www.quora.com)\
-[San Diego Union Tribune](sandiegouniontribune.com)\
+[San Diego Union Tribune](https://sandiegouniontribune.com)\
 [San Francisco Chronicle](https://sfchronicle.com)\
 [Scientific American](https://scientificamerican.com)\
 [Statista](https://statista.com)\
@@ -130,7 +133,7 @@ Usually premium articles cannot be bypassed as they are behind a hard paywall.
 * If a site doesn't work try turning off uBlock and refreshing.
 * Make sure the site is checked under Options (on macOS sometimes the sites are unselected).
 
-### Pull Requesets
+### Pull Requests
 * PRs are welcome.
 
 ### Show your support
