@@ -1,24 +1,145 @@
 {
-	"background": {
-		"scripts": ["background.js"]
-	},
-	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-	"browser_action": {
-		"default_popup": "popup.html"
-	},
-	"description": "Bypass News Sites' Paywalls",
-	"icons": {
-		"128": "bypass.png"
-	},
-	"manifest_version": 2,
-	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3PRmcRnHFZwHUlCgoTAdBjc9nUjmJo8l8kvkl/OZV6biZFAGUQGdxF1xoGhRccWA7qfQrZdPwcM1VQoVS/1F+87XiutKTe/HNsTAFvOcVS0tjCSH6DOHpewkMUBZujwTIeo7UXUVmCPQ1UbVd6m8KmHYtSHYlaX0uXRcguWhLmO5hASxw4onvAD0uql/t/ntxsIATwn4hVApg0VZhy0QAbMany8/5ByKPa19mCQwsIdRkcpG+PNHTLWPDgeGoDL7S0DxIduraRhTlrDX/zy5ETu6NWq6r+/jRzmXAjx+vSDCU5Ps2YG8QwdCL4Zl+CNVdQrnqz4X1zfPFJ1FFmUSpwIDAQAB",
-	"name": "Bypass Paywalls",
-	"update_url": "https://raw.githubusercontent.com/iamadamdev/bypass-paywalls-chrome/master/updates.xml",
-	"short_name": "Bypass Paywall",
-	"options_ui": {
-		"chrome_style": true,
-		"page": "options.html"
-	},
-    "permissions": [ "cookies", "<all_urls>", "storage", "webRequest", "webRequestBlocking"],
-	"version": "1.5.6"
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+		"*://*.bizjournals.com/*",
+		"*://*.bloomberg.com/*",
+		"*://*.businessinsider.com/*",
+		"*://*.ed.nl/*",
+		"*://*.haaretz.co.il/*",
+		"*://*.lemonde.fr/*",		
+		"*://*.nzherald.co.nz/*",
+		"*://*.parool.nl/*",
+		"*://*.repubblica.it/*",
+		"*://*.telegraaf.nl/*",
+		"*://*.trouw.nl/*",
+		"*://*.volkskrant.nl/*",
+		"*://*.washingtonpost.com/*"
+      ],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "bypasspaywalls@bypasspaywalls.weebly.com",
+      "update_url": "https://raw.githubusercontent.com/iamadamdev/bypass-paywalls-firefox/master/updates.json"
+    }
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "bypass.png"
+    },
+    "theme_icons": [
+      {
+        "light": "bypass-dark.png",
+        "dark": "bypass.png",
+        "size": 128
+      }
+    ]
+  },
+  "description": "Bypass News Sites' Paywalls",
+  "icons": {
+    "128": "bypass.png"
+  },
+  "manifest_version": 2,
+  "name": "Bypass Paywalls",
+  "short_name": "Bypass Paywall",
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": [
+    "cookies",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.baltimoresun.com/*",
+    "*://*.barrons.com/*",
+    "*://*.bloomberg.com/*",
+    "*://*.businessinsider.com/*",
+    "*://*.caixinglobal.com/*",
+    "*://*.cen.acs.org/*",
+    "*://*.chicagotribune.com/*",
+    "*://*.centralwesterndaily.com.au/*",
+    "*://*.chicagobusiness.com/*",
+    "*://*.corriere.it/*",
+    "*://*.dailypress.com/*",
+    "*://*.denverpost.com/*",
+    "*://*.tijd.be/*",
+    "*://*.volkskrant.nl/*",
+    "*://*.economist.com/*",
+    "*://*.examiner.com.au/*",
+    "*://*.ft.com/*",
+    "*://*.foreignpolicy.com/*",
+    "*://*.glassdoor.com/*",
+    "*://*.haaretz.co.il/*",
+    "*://*.haaretz.com/*",
+    "*://*.handelsblatt.com/*",
+    "*://*.courant.com/*",
+    "*://*.hbr.org/*",
+    "*://*.inc.com/*",
+    "*://*.investorschronicle.co.uk/*",
+    "*://*.repubblica.it/*",
+    "*://*.letemps.ch/*",
+    "*://*.latimes.com/*",
+    "*://*.medium.com/*",
+    "*://*.medscape.com/*",
+    "*://*.technologyreview.com/*",
+    "*://*.mv-voice.com/*",
+    "*://*.nationalpost.com/*",
+    "*://*.newstatesman.com/*",
+    "*://*.nymag.com/*",
+    "*://*.nzherald.co.nz/*",
+    "*://*.asia.nikkei.com/*",
+    "*://*.nrc.nl/*",
+    "*://*.ocregister.com/*",
+    "*://*.orlandosentinel.com/*",
+    "*://*.paloaltoonline.com/*",
+    "*://*.quora.com/*",
+    "*://*.sun-sentinel.com/*",
+    "*://*.theadvocate.com.au/*",
+    "*://*.theage.com.au/*",
+    "*://*.theaustralian.com.au/*",
+    "*://*.afr.com/*",
+    "*://*.bostonglobe.com/*",
+    "*://*.bizjournals.com/*",
+    "*://*.theglobeandmail.com/*",
+    "*://*.theherald.com.au/*",
+    "*://*.japantimes.co.jp/*",
+    "*://*.themarker.com/*",
+    "*://*.mercurynews.com/*",
+    "*://*.mcall.com/*",
+    "*://*.thenation.com/*",
+    "*://*.nytimes.com/*",
+    "*://*.newyorker.com/*",
+    "*://*.news-gazette.com/*",
+    "*://*.thesaturdaypaper.com.au/*",
+    "*://*.spectator.co.uk/*",
+    "*://*.seattletimes.com/*",
+    "*://*.smh.com.au/*",
+    "*://*.telegraph.co.uk/*",
+    "*://*.thetimes.co.uk/*",
+    "*://*.thestar.com/*",
+    "*://*.washingtonpost.com/*",
+    "*://*.wsj.com/*",
+    "*://*.towardsdatascience.com/*",
+    "*://*.vanityfair.com/*",
+    "*://*.wired.com/*",
+    "*://*.thediplomat.com/*",
+    "*://*.theatlantic.com/*",
+    "*://*.qz.com/*",
+    "*://*.ad.nl/*",
+    "*://*.ed.nl/*",
+    "*://*.groene.nl/*",
+    "*://*.parool.nl/*",
+    "*://*.telegraaf.nl/*",
+    "*://*.trouw.nl/*",
+    "*://*.vn.nl/*",
+    "*://*.lemonde.fr/*",
+	"*://*.scientificamerican.com/*"
+  ],
+  "version": "1.6.0"
 }

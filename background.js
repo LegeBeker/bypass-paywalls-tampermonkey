@@ -1,105 +1,91 @@
-/* Please respect alphabetical order when adding a site in any list */
-
 'use strict';
 
-// Cookies from this list are blocked by default
 var defaultSites = {
   'Algemeen Dagblad': 'ad.nl',
-  'American Banker': 'americanbanker.com',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
-  'Bloomberg Quint': 'bloombergquint.com',
   'Business Insider': 'businessinsider.com',
-  'Crain\'s Chicago Business': 'chicagobusiness.com',
+  'Caixin': 'caixinglobal.com',
+  'Chemical & Engineering News': 'cen.acs.org',
   'Chicago Tribune': 'chicagotribune.com',
+  'Central Western Daily': 'centralwesterndaily.com.au',
+  'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
-  'Dagens Nyheter': 'dn.se',
-  'De Groene Amsterdammer': 'groene.nl',
-  'De Volkskrant': 'volkskrant.nl',
-  'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
-  'Dynamed Plus': 'dynamed.com',
+  'De Tijd': 'tijd.be',
+  'De Groene Amsterdammer': 'groene.nl',
+  'de Volkskrant': 'volkskrant.nl',
+  'The Economist': 'economist.com',
   'Eindhovens Dagblad': 'ed.nl',
-  'Encyclopedia Britannica': 'britannica.com',
   'Examiner': 'examiner.com.au',
-  'First Things': 'firstthings.com',
-  'Financial News': 'fnlondon.com',
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
+  'Handelsblatt': 'handelsblatt.com',
   'Hartford Courant': 'courant.com',
-  'Harper\'s Magazine': 'harpers.org',
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
-  'Irish Times': 'irishtimes.com',
-  'La Nacion': 'lanacion.com.ar',
+  'Investors Chronicle': 'investorschronicle.co.uk',
   'La Repubblica': 'repubblica.it',
-  'La Tercera': 'latercera.com',
-  'L\'Echo': 'lecho.be',
   'Le Monde': 'lemonde.fr',  
-  'Le Parisien': 'leparisien.fr',
-  'Les Echos': 'lesechos.fr',
-  'Liberation': 'liberation.fr',
-  'Loeb Classical Library': 'loebclassics.com',
-  'Los Angeles Business Journal': 'labusinessjournal.com',
+  'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
-  'Mexico News Daily': 'mexiconewsdaily.com',
-  'MIT Sloan Management Review': 'sloanreview.mit.edu',
+  'Medscape': 'medscape.com',
   'MIT Technology Review': 'technologyreview.com',
-  'Newsrep': 'thenewsrep.com',
+  'Mountain View Voice': 'mv-voice.com',
+  'National Post': 'nationalpost.com',
+  'New Statesman': 'newstatesman.com',
   'New York Magazine': 'nymag.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'New Zealand Herald': 'nzherald.co.nz',
-  'OrlandoSentinel': 'orlandosentinel.com',
+  'Orange County Register': 'ocregister.com',
+  'Orlando Sentinel': 'orlandosentinel.com',
+  'Palo Alto Online': 'paloaltoonline.com',
   'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
-  'San Diego Union Tribune': 'sandiegouniontribune.com',
-  'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
+  'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
-  'Statista':'statista.com',
   'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
-  'The American Interest': 'the-american-interest.com',
   'The Atlantic': 'theatlantic.com',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
-  'The Economist': 'economist.com',
+  'The Diplomat': 'thediplomat.com',
   'The Globe and Mail': 'theglobeandmail.com',
+  'The Herald': 'theherald.com.au',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
   'The Nation': 'thenation.com',
-  'The News-Gazette': 'news-gazette.com',
-  'The New Statesman': 'newstatesman.com',
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
-  'The Philadelphia Inquirer': 'inquirer.com',
-  'The Seattle Times': 'seattletimes.com',
+  'The News-Gazette': 'news-gazette.com',
+  'The Saturday Paper': 'thesaturdaypaper.com.au',
   'The Spectator': 'spectator.co.uk',
+  'The Seattle Times': 'seattletimes.com',
   'The Sydney Morning Herald': 'smh.com.au',
-  'The Telegraph': 'telegraph.co.uk',
+  'The Telegraph': 'telegraph.co.uk',  
   'The Times': 'thetimes.co.uk',
   'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
+  'Towards Data Science': 'towardsdatascience.com',
   'Trouw': 'trouw.nl',
-  'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
   'Vrij Nederland': 'vn.nl',
-  'Wired': 'wired.com',
-  'Zeit Online': 'zeit.de'
+  'Wired': 'wired.com'
 };
 
 const restrictions = {
@@ -111,37 +97,39 @@ const allow_cookies = [
 'ad.nl',
 'asia.nikkei.com',
 'bostonglobe.com',
+'cen.acs.org',
 'chicagobusiness.com',
-'demorgen.be',
 'denverpost.com',
 'economist.com',
 'ed.nl',
 'examiner.com.au',
 'ft.com',
-'harpers.org',
+'hacked.com',
 'hbr.org',
 'lemonde.fr',
-'lesechos.fr',
+'letemps.ch',
 'medium.com',
 'mercurynews.com',
-'mexiconewsdaily.com',
-'nrc.nl',
+'newstatesman.com',
 'nymag.com',
 'nytimes.com',
+'ocregister.com',
 'parool.nl',
 'qz.com',
 'scientificamerican.com',
-'seattletimes.com',
+'spectator.co.uk',
 'telegraaf.nl',
-'the-american-interest.com',
 'theadvocate.com.au',
 'theage.com.au',
 'theaustralian.com.au',
+'thediplomat.com',
+'thestar.com',
+'towardsdatascience.com',
 'trouw.nl',
 'vn.nl',
 'volkskrant.nl',
 'washingtonpost.com',
-'wsj.com'
+'wsj.com',
 ]
 
 // Removes cookies after page load
@@ -149,30 +137,34 @@ const remove_cookies = [
 'ad.nl',
 'asia.nikkei.com',
 'bostonglobe.com',
+'cen.acs.org',
 'chicagobusiness.com',
-'demorgen.be',
 'denverpost.com',
 'economist.com',
 'ed.nl',
 'examiner.com.au',
 'ft.com',
-'harpers.org',
+'hacked.com',
 'hbr.org',
-'lesechos.fr',
+'letemps.ch',
 'medium.com',
 'mercurynews.com',
-'mexiconewsdaily.com',
-'nrc.nl',
+'newstatesman.com',
 'nymag.com',
+'nytimes.com',
+'ocregister.com',
 'qz.com',
 'scientificamerican.com',
-'seattletimes.com',
+'spectator.co.uk',
 'telegraaf.nl',
 'theadvocate.com.au',
 'theage.com.au',
+'thediplomat.com',
+'thestar.com',
+'towardsdatascience.com',
 'vn.nl',
 'washingtonpost.com',
-'wsj.com'
+'wsj.com',
 ]
 
 // select specific cookie(s) to hold from remove_cookies domains
@@ -190,26 +182,23 @@ const remove_cookies_select_drop = {
 // Override User-Agent with Googlebot
 const use_google_bot = [
 'barrons.com',
-'mexiconewsdaily.com',
 'nytimes.com',
 'quora.com',
 'telegraph.co.uk',
 'theaustralian.com.au',
 'thetimes.co.uk',
 'wsj.com',
-'zeit.de',
 ]
 
 function setDefaultOptions() {
-  chrome.storage.sync.set({
+  browser.storage.sync.set({
     sites: defaultSites
   }, function() {
-    chrome.tabs.create({ 'url': 'chrome://extensions/?options=' + chrome.runtime.id });
+    browser.runtime.openOptionsPage();
   });
 }
 
-
-var blockedRegexes = [
+const blockedRegexes = [
 /.+:\/\/.+\.tribdss\.com\//,
 /thenation\.com\/.+\/paywall-script\.php/,
 /haaretz\.co\.il\/htz\/js\/inter\.js/,
@@ -222,7 +211,7 @@ const userAgentMobile = "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; 
 var enabledSites = [];
 
 // Get the enabled sites
-chrome.storage.sync.get({
+browser.storage.sync.get({
   sites: {}
 }, function(items) {
   var sites = items.sites;
@@ -232,7 +221,7 @@ chrome.storage.sync.get({
 });
 
 // Listen for changes to options
-chrome.storage.onChanged.addListener(function(changes, namespace) {
+browser.storage.onChanged.addListener(function(changes, namespace) {
   var key;
   for (key in changes) {
     var storageChange = changes[key];
@@ -246,7 +235,7 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
 });
 
 // Set and show default options on install
-chrome.runtime.onInstalled.addListener(function (details) {
+browser.runtime.onInstalled.addListener(function(details) {
   if (details.reason == "install") {
     setDefaultOptions();
   } else if (details.reason == "update") {
@@ -256,8 +245,8 @@ chrome.runtime.onInstalled.addListener(function (details) {
 
 /**
 // WSJ bypass
-chrome.webRequest.onBeforeRequest.addListener(function (details) {
-  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
+browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
+  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1 || details.url.indexOf("/print-edition/") !== -1) {
     return;
   }
 
@@ -284,16 +273,16 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
     return;
   }
-  return {cancel: true}; 
+  return {cancel: true};
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.businessinsider.com/*", "*://*.bostonglobe.com/*"],
+    urls: ["*://*.theglobeandmail.com/*", "*://*.economist.com/*", "*://*.thestar.com/*", "*://*.newstatesman.com/*", "*://*.bostonglobe.com/*", "*://*.afr.com/*"],
     types: ["script"]
   },
   ["blocking"]
 );
 
-chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
+browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
   if (!isSiteEnabled(details)) {
     return;
   }
@@ -309,9 +298,13 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var setReferer = false;
 
   // if referer exists, set it to google
-  requestHeaders = requestHeaders.map(function (requestHeader) {
+  requestHeaders = requestHeaders.map(function(requestHeader) {
     if (requestHeader.name === 'Referer') {
-      if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1) {
+      if (details.url.indexOf("cooking.nytimes.com/api/v1/users/bootstrap") !== -1) {
+        // this fixes images not being loaded on cooking.nytimes.com main page
+        // referrer has to be *nytimes.com otherwise returns 403
+        requestHeader.value = 'https://cooking.nytimes.com';
+      } else if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1) {
         requestHeader.value = 'https://www.facebook.com/';
       } else {
         requestHeader.value = 'https://www.google.com/';
@@ -338,12 +331,11 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
         value: 'https://www.google.com/'
       });
     }
-
   }
 
   // override User-Agent to use Googlebot
   var useGoogleBot = use_google_bot.filter(function(item) {
-    return typeof item == 'string' && details.url.indexOf(item) > -1;            
+    return typeof item == 'string' && details.url.indexOf(item) > -1;
   }).length > 0;
 
   if (useGoogleBot) {
@@ -372,11 +364,11 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   if (tabId !== -1) {
     // run contentScript inside tab
-    chrome.tabs.executeScript(tabId, {
+    browser.tabs.executeScript(tabId, {
       file: 'contentScript.js',
       runAt: 'document_start'
     }, function(res) {
-      if (chrome.runtime.lastError || res[0]) {
+      if (browser.runtime.lastError || res[0]) {
         return;
       }
     });
@@ -385,43 +377,43 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   return { requestHeaders: requestHeaders };
 }, {
   urls: ['<all_urls>']
-}, ['blocking', 'requestHeaders', 'extraHeaders']);
+}, ['blocking', 'requestHeaders']);
 
 // remove cookies after page load
-chrome.webRequest.onCompleted.addListener(function(details) {
+browser.webRequest.onCompleted.addListener(function(details) {
   for (var domainIndex in remove_cookies) {
     var domainVar = remove_cookies[domainIndex];
     if (!enabledSites.includes(domainVar) || details.url.indexOf(domainVar) === -1) {
       continue; // don't remove cookies
     }
-    chrome.cookies.getAll({domain: domainVar}, function(cookies) {
-		for (var i=0; i<cookies.length; i++) {
-			var cookie_domain = cookies[i].domain;
-			// hold specific cookie(s) from remove_cookies domains
-			if ((cookie_domain in remove_cookies_select_hold) && remove_cookies_select_hold[cookie_domain].includes(cookies[i].name)){
-				continue; // don't remove specific cookie
-			}
-			// drop only specific cookie(s) from remove_cookies domains
-			if ((cookie_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[cookie_domain].includes(cookies[i].name))){
-				continue; // only remove specific cookie
-			}
-			chrome.cookies.remove({url: (cookies[i].secure ? "https://" : "http://") + cookies[i].domain + cookies[i].path, name: cookies[i].name});
+    browser.cookies.getAll({domain: domainVar}, function(cookies) {
+      for (var i=0; i<cookies.length; i++) {
+        var cookie = {
+          url: (cookies[i].secure ? "https://" : "http://") + cookies[i].domain + cookies[i].path,
+          name: cookies[i].name,
+          storeId: cookies[i].storeId
+        };
+        if (cookies[i].firstPartyDomain !== undefined) {
+          cookie.firstPartyDomain = cookies[i].firstPartyDomain;
+        }
+
+		var cookie_domain = cookies[i].domain;
+		// hold specific cookie(s) from remove_cookies domains
+		if ((cookie_domain in remove_cookies_select_hold) && remove_cookies_select_hold[cookie_domain].includes(cookies[i].name)){
+			continue; // don't remove specific cookie
 		}
+		// drop only specific cookie(s) from remove_cookies domains
+		if ((cookie_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[cookie_domain].includes(cookies[i].name))){
+			continue; // only remove specific cookie
+		}
+
+        browser.cookies.remove(cookie);
+      }
     });
   }
 }, {
   urls: ["<all_urls>"]
 });
-
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-69824169-2']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = 'https://ssl.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
 
 function isSiteEnabled(details) {
   var isEnabled = enabledSites.some(function(enabledSite) {

@@ -1,144 +1,121 @@
-# Bypass Paywalls for Chrome
+# Bypass Paywalls for Firefox
 
-### Installation Instructions
-**Google Chrome**
-1. Download this repo as a [ZIP file from GitHub](https://github.com/iamadamdev/bypass-paywalls-chrome/archive/master.zip).
-1. Unzip the file and you should have a folder named `bypass-paywalls-chrome-master`.
-1. In Chrome go to the extensions page (`chrome://extensions`).
-1. Enable Developer Mode.
-1. Drag the `bypass-paywalls-chrome-master` folder anywhere on the page to import it.
-
-**Notes**
-* Every time you open Chrome it may warn you about running extensions in developer mode, just click 🗙 to keep the extension enabled.
-* You will be logged out for any site you have checked.
-* This extension works best along side the adblocker uBlock Origin.
+## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.6.0/bypass_paywalls-1.6.0-an+fx.xpi)
 
 ### Bypass the following sites' paywalls with this extension
 
 [Algemeen Dagblad](https://www.ad.nl)\
-[American Banker](https://americanbanker.com)\
 [Baltimore Sun](https://www.baltimoresun.com)\
 [Barron's](https://www.barrons.com)\
 [Bloomberg](https://www.bloomberg.com)\
-[Bloomberg Quint](https://bloombergquint.com)\
 [Business Insider](https://www.businessinsider.com)\
+[Caixin](https://www.caixinglobal.com)\
+[Chemical & Engineering News](https://cen.acs.org)\
+[Central Western Daily](https://www.centralwesterndaily.com.au)\
 [Chicago Tribune](https://www.chicagotribune.com)\
-[Corriere Della Sera](https://www.corriere.it)\
 [Crain's Chicago Business](https://www.chicagobusiness.com)\
-[Dagens Nyheter](https://dn.se)\
+[Corriere Della Sera](https://www.corriere.it)\
 [Daily Press](https://www.dailypress.com)\
-[De Groene Amsterdammer](https://www.groene.nl)\
-[De Volkskrant](https://www.volkskrant.nl)\
-[DeMorgen](https://demorgen.be)\
 [Denver Post](https://www.denverpost.com)\
-[Dynamed Plus](https://dynamed.com)\
+[De Groene Amsterdammer](https://www.groene.nl)\
+[De Tijd](https://www.tijd.be)\
+[de Volkskrant](https://www.volkskrant.nl)\
+[The Economist](https://www.economist.com)\
 [Eindhovens Dagblad](https://ed.nl)\
-[Encyclopedia Britannica](https://britannica.com)\
-[Examiner](https://examiner.com.au)\
-[First Things](https://www.firstthings.com)\
-[Financial News](https://fnlondon.com)\
+[Examiner](https://www.examiner.com.au)\
 [Financial Times](https://www.ft.com)\
 [Foreign Policy](https://www.foreignpolicy.com)\
 [Glassdoor](https://www.glassdoor.com)\
 [Haaretz.co.il](https://www.haaretz.co.il)\
 [Haaretz.com](https://www.haaretz.com)\
-[Harper's Magazine](https://harpers.org)\
+[Handelsblatt](https://www.handelsblatt.com)\
 [Hartford Courant](https://www.courant.com)\
 [Harvard Business Review](https://www.hbr.org)\
 [Inc.com](https://www.inc.com)\
-[Irish Times](https://www.irishtimes.com)\
-[L.A. Business Journal](https://labusinessjournal.com)\
-[La Nación](https://www.lanacion.com.ar)\
+[Investors Chronicle](https://www.investorschronicle.co.uk)\
 [La Repubblica](https://www.repubblica.it)\
-[La Tercera](https://latercera.com)\
-[L'Écho](https://lecho.be)\
 [Le Monde](https://www.lemonde.fr)\
-[Le Parisien](http://www.leparisien.fr)\
-[Les Échos](https://lesechos.fr)\
-[Libération](https://liberation.fr)\
-[Loeb Classical Library](https://www.loebclassics.com)\
+[Le Temps](https://www.letemps.ch)\
 [Los Angeles Times](https://www.latimes.com)\
-[MIT Sloan Management Review](https://sloanreview.mit.edu)\
-[MIT Technology Review](https://www.technologyreview.com)\
 [Medium](https://www.medium.com)\
-[Mexicon News Daily](https://mexiconewsdaily.com)\
-[NRC](https://www.nrc.nl)\
+[Medscape](https://www.medscape.com)\
+[MIT Technology Review](https://www.technologyreview.com)\
+[Mountain View Voice](https://www.mv-voice.com)\
+[National Post](https://www.nationalpost.com)\
+[New Statesman](https://www.newstatesman.com)\
 [New York Magazine](https://www.nymag.com)\
 [New Zealand Herald](https://www.nzherald.co.nz)\
-[Newsrep](https://thenewsrep.com)\
 [Nikkei Asian Review](https://asia.nikkei.com)\
+[NRC](https://www.nrc.nl)\
+[Orange County Register](https://www.ocregister.com)\
 [Orlando Sentinel](https://www.orlandosentinel.com)\
+[Palo Alto Online](https://www.paloaltoonline.com)\
 [Parool](https://www.parool.nl)\
 [Quartz](https://qz.com)\
 [Quora](https://www.quora.com)\
-[San Diego Union Tribune](https://sandiegouniontribune.com)\
-[San Francisco Chronicle](https://sfchronicle.com)\
 [Scientific American](https://scientificamerican.com)\
-[Statista](https://statista.com)\
+[Statista](https://www.statista.com)\
 [SunSentinel](https://www.sun-sentinel.com)\
 [Telegraaf](https://telegraaf.nl)\
 [The Advocate](https://www.theadvocate.com.au)\
 [The Age](https://www.theage.com.au)\
-[The American Interest](https://www.the-american-interest.com)\
-[The Atlantic](https://theatlantic.com)\
-[The Australian Financial Review](https://www.afr.com)\
+[The Atlantic](https://www.theatlantic.com)\
 [The Australian](https://www.theaustralian.com.au)\
+[The Australian Financial Review](https://www.afr.com)\
 [The Boston Globe](https://www.bostonglobe.com)\
 [The Business Journals](https://www.bizjournals.com)\
-[The Economist](https://www.economist.com)\
+[The Diplomat](https://www.thediplomat.com)\
 [The Globe and Mail](https://www.theglobeandmail.com)\
+[The Herald](https://www.theherald.com.au)\
 [The Japan Times](https://www.japantimes.co.jp)\
+[TheMarker](https://www.themarker.com)\
 [The Mercury News](https://www.mercurynews.com)\
 [The Morning Call](https://www.mcall.com)\
 [The Nation](https://www.thenation.com)\
-[The New Statesman](https://newstatesman.com)\
 [The New York Times](https://www.nytimes.com)\
 [The New Yorker](https://www.newyorker.com)\
 [The News-Gazette](https://www.news-gazette.com)\
-[The Philadelphia Inquirer](inquirer.com)\
-[The Seattle Times](https://www.seattletimes.com)\
+[The Saturday Paper](https://www.thesaturdaypaper.com.au)\
 [The Spectator](https://www.spectator.co.uk)\
+[The Seattle Times](https://www.seattletimes.com)\
 [The Sydney Morning Herald](https://www.smh.com.au)\
 [The Telegraph](https://www.telegraph.co.uk)\
 [The Times](https://www.thetimes.co.uk)\
 [The Toronto Star](https://www.thestar.com)\
-[The Wall Street Journal](https://www.wsj.com)\
 [The Washington Post](https://www.washingtonpost.com)\
-[TheMarker](https://www.themarker.com)\
+[The Wall Street Journal](https://www.wsj.com)\
+[Towards Data Science](https://www.towardsdatascience.com)\
 [Trouw](https://www.trouw.nl)\
 [Vanity Fair](https://www.vanityfair.com)\
-[Winston-Salem Journal](https://journalnow.com)\
-[Vrij Nederland](https://vn.nl)\
-[Wired](https://www.wired.com)\
-[Zeit Online](https://www.zeit.de)
+[Vrij Nederland](https://www.vn.nl)\
+[Wired](https://www.wired.com)
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.*
 
-Install the [Cookie Remover](https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce) extension.
+Install the [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/) Add-on.
 
 When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
 
 _*May not always succeed_
 
 ### New site requests
-Only large or major sites will be considered.
+Only large or major sites will be considered. No small sites or local newspapers.
 1. Visit an article on the site you want to bypass the paywall for and copy the article title.
-2. Open up a new incognito window (Ctrl+Shift+N) and paste the article title into Google.
-3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-chrome/issues/new) to add the site, otherwise my extension cannot bypass it either.
+2. Open up a new Private window (Ctrl+Shift+P) and paste the article title into Google.
+3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-firefox/issues/new) to add the site, otherwise my extension cannot bypass it either.
 
 Usually premium articles cannot be bypassed as they are behind a hard paywall.
 
 ### Troubleshooting
-* This extension works best alongside [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm).
+* This add-on works best alongside [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
 * If a site doesn't work try turning off uBlock and refreshing.
-* Make sure the site is checked under Options (on macOS sometimes the sites are unselected).
 
-### Pull Requests
+### Pull Requesets
 * PRs are welcome.
 
 ### Show your support
 * I am not asking for donations or anything like that, all I ask is that you star this repo.
 
 ### License
-Bypass Paywalls is [MIT-licensed](https://github.com/iamadamdev/bypass-paywalls-chrome/blob/master/LICENSE).
+Bypass Paywalls is [MIT-licensed](https://github.com/iamadamdev/bypass-paywalls-firefox/blob/master/LICENSE).
