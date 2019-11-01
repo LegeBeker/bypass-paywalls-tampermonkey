@@ -181,6 +181,13 @@ if (window.location.href.indexOf("thehindu.com") !== -1) {
         removeDOMElement(paywall);
 }
 
+if (window.location.href.indexOf("nytimes.com") !== -1) {
+
+    const preview_button = document.querySelector('.css-3s1ce0');
+        if (preview_button)
+            preview_button.click();
+}
+
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element)
