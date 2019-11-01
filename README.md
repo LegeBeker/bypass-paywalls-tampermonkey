@@ -133,8 +133,10 @@ Usually premium articles cannot be bypassed as they are behind a hard paywall.
 
 ### Troubleshooting
 * This extension works best alongside [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm).
-* If a site doesn't work try turning off uBlock and refreshing.
+* If a site doesn't work, try turning off uBlock and refreshing. Also try reinstalling the extension.
 * Make sure the site is checked under Options (on macOS sometimes the sites are unselected).
+* Make sure you're running the last version of Bypass Paywalls. 
+* If none of these work, you can submit an issue [here](https://github.com/iamadamdev/bypass-paywalls-chrome/issues).
 
 ### Pull Requests
 * PRs are welcome.
