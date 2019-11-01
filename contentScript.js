@@ -155,6 +155,10 @@ if (window.location.href.indexOf('lemonde.fr') !== -1) {
     });
 }
 
+if (window.location.href.includes('ft.com')) {
+    const cookie_banner = document.querySelector('.n-messaging-banner__outer');
+    removeDOMElement(cookie_banner);
+}
 
 function removeDOMElement(...elements) {
     for (let element of elements) {
