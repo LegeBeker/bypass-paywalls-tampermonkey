@@ -142,7 +142,7 @@ function renderOptions() {
       inputEl.type = 'checkbox';
       inputEl.dataset.key = key;
       inputEl.dataset.value = value;
-      inputEl.checked = key.replace(/\s\(.*\)/, '') in sites;
+      inputEl.checked = (key in sites) || (key.replace(/\s\(.*\)/, '') in sites);
 
       labelEl.appendChild(inputEl);
       labelEl.appendChild(document.createTextNode(' '+key));
