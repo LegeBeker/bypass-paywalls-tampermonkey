@@ -91,23 +91,21 @@ if (window.location.href.indexOf("the-american-interest.com") !== -1) {
 }
 
 if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
-	const paywall = document.getElementById(
-		"article-content"
-	);
+	const paywall = document.getElementById('article-content');
 	if (paywall) {
+		const premium = document.getElementsByClassName('premium-sub')[0];
+		removeDOMElement(premium);
 		paywall.classList.remove('premium-content');
 		paywall.classList.add('full-content');
+		removeClassesByPrefix(paywall, 'QUnW');
 		var paras = paywall.querySelectorAll("p, span, h2, div");
-		var delClass = "";
-		for (var i = paras.length; i--;) {
-			if (delClass == "") {
-				delClass = paras[i].className;
-			}
-			paras[i].classList.remove(delClass);
+		for (var i = 0; i < paras.length; i++){		
+			removeClassesByPrefix(paras[i], 'QUnW');
+			paras[i].classList.remove("ellipsis");
 			paras[i].removeAttribute('style');
 		}
 	}
-}
+} 
 
 if (window.location.href.indexOf("parool.nl") !== -1 || window.location.href.indexOf("trouw.nl") !== -1 || window.location.href.indexOf("volkskrant.nl") !== -1) {
 	document.addEventListener('DOMContentLoaded', () => {
@@ -173,5 +171,13 @@ function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element)
             element.remove();
+    }
+}
+
+function removeClassesByPrefix(el, prefix) {
+	for (var i = 0; i < el.classList.length; i++){
+        if(el.classList[i].startsWith(prefix)) {
+            el.classList.remove(el.classList[i]);
+        }
     }
 }
