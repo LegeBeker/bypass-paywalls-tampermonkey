@@ -91,23 +91,21 @@ if (window.location.href.indexOf("the-american-interest.com") !== -1) {
 }
 
 if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
-  const paywall = document.getElementById(
-	"article-content"
-  );
+	const paywall = document.getElementById('article-content');
 	if (paywall) {
-	  paywall.classList.remove('premium-content');
-	  paywall.classList.add('full-content');
-	  var paras = paywall.querySelectorAll("p, span, h2, div");
-	  var delClass = "";
-	  for (var i = paras.length; i--;) {
-		if (delClass == "") {
-		  delClass = paras[i].className;
+		const premium = document.getElementsByClassName('premium-sub')[0];
+		removeDOMElement(premium);
+		paywall.classList.remove('premium-content');
+		paywall.classList.add('full-content');
+		removeClassesByPrefix(paywall, 'QUnW');
+		var paras = paywall.querySelectorAll("p, span, h2, div");
+		for (var i = 0; i < paras.length; i++){		
+			removeClassesByPrefix(paras[i], 'QUnW');
+			paras[i].classList.remove("ellipsis");
+			paras[i].removeAttribute('style');
 		}
-		paras[i].classList.remove(delClass);
-		paras[i].removeAttribute('style');
-	  }
-  }
-}
+	}
+} 
 
 if (window.location.href.indexOf("parool.nl") !== -1 || window.location.href.indexOf("trouw.nl") !== -1 || window.location.href.indexOf("volkskrant.nl") !== -1) {
 	document.addEventListener('DOMContentLoaded', () => {
@@ -195,6 +193,20 @@ if (window.location.href.indexOf("nytimes.com") !== -1) {
             preview_button.click();
 }
 
+if (window.location.href.indexOf("leparisien.fr") !== -1) {
+		window.removeEventListener('scroll', this.scrollListener);
+
+        const paywall = document.querySelector('.relative.piano-paywall.below_nav.sticky');
+        removeDOMElement(paywall);
+
+        setTimeout(function () {
+			var content = document.getElementsByClassName('content');
+			for (var i = 0; i < content.length; i++) {
+				content[i].removeAttribute("style");
+			}
+		}, 300); // Delay (in milliseconds)
+}
+
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element)
@@ -202,9 +214,15 @@ function removeDOMElement(...elements) {
     }
 }
 
+function removeClassesByPrefix(el, prefix) {
+	for (var i = 0; i < el.classList.length; i++){
+        if(el.classList[i].startsWith(prefix)) {
+            el.classList.remove(el.classList[i]);
+        }
+    }
+
 function pageContains(selector, text) {
 	let elements = document.querySelectorAll(selector);
-
 	return Array.prototype.filter.call(elements, function(element){
 		return RegExp(text).test(element.textContent);
 	});

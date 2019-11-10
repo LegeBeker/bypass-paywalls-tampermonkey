@@ -27,7 +27,7 @@ var defaultSites = {
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
-  'Harper\'s Mag': 'harpers.org',
+  'Harper\'s Magazine': 'harpers.org',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
@@ -37,6 +37,7 @@ var defaultSites = {
   'L\'Echo': 'lecho.be',
   'Le Devoir': 'ledevoir.com',
   'Le Monde': 'lemonde.fr',
+  'Le Parisien': 'leparisien.fr',
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
   'Loeb Classical Library': 'loebclassics.com',
@@ -144,7 +145,7 @@ function renderOptions() {
       inputEl.type = 'checkbox';
       inputEl.dataset.key = key;
       inputEl.dataset.value = value;
-      inputEl.checked = key in sites;
+      inputEl.checked = (key in sites) || (key.replace(/\s\(.*\)/, '') in sites);
 
       labelEl.appendChild(inputEl);
       labelEl.appendChild(document.createTextNode(' '+key));

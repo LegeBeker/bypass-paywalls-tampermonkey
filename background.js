@@ -42,6 +42,7 @@ var defaultSites = {
   'L\'Echo': 'lecho.be',
   'Le Devoir': 'ledevoir.com',
   'Le Monde': 'lemonde.fr',  
+  'Le Parisien': 'leparisien.fr',
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
   'Loeb Classical Library': 'loebclassics.com',
@@ -194,8 +195,10 @@ const remove_cookies_select_drop = {
 // Override User-Agent with Googlebot
 const use_google_bot = [
 'barrons.com',
+'lemonde.fr',
 'mexiconewsdaily.com',
 'nytimes.com',
+'quora.com',
 'telegraph.co.uk',
 'theaustralian.com.au',
 'thetimes.co.uk',

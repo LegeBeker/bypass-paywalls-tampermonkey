@@ -54,6 +54,7 @@
 [L'Écho](https://lecho.be)\
 [Le Devoir](https://www.ledevoir.com)\
 [Le Monde](https://www.lemonde.fr)\
+[Le Parisien](http://www.leparisien.fr)\
 [Les Échos](https://lesechos.fr)\
 [Libération](https://liberation.fr)\
 [Loeb Classical Library](https://www.loebclassics.com)\
