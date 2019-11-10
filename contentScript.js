@@ -83,11 +83,11 @@ if (window.location.href.indexOf("mexiconewsdaily.com") !== -1) {
 }
 
 if (window.location.href.indexOf("the-american-interest.com") !== -1) {
-	let counter = document.getElementById('article-counter') || false;
-	if (counter) {
-		counter.remove();
-		counter = false;
-	}
+  const counter = document.getElementById('article-counter') || false;
+  if (counter) {
+	counter.remove();
+	counter = false; 
+  }
 }
 
 if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
@@ -135,6 +135,13 @@ if (window.location.href.indexOf("bloombergquint.com") !== -1) {
     removeDOMElement(articlesLeftModal, paywall);
 }
 
+if (window.location.href.indexOf("medium.com") !== -1) {
+	const bottomMessageText = 'Get one more story in your member preview when you sign up. It’s free.';
+	const DOMElementsToTextDiv = pageContains('div', bottomMessageText);
+
+	if (DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
+}
+
 if (window.location.href.indexOf('lemonde.fr') !== -1) {
     document.addEventListener('DOMContentLoaded', () => {
 		const hidden_section = document.getElementsByClassName('article__content--restricted-media')[0];
@@ -180,4 +187,10 @@ function removeClassesByPrefix(el, prefix) {
             el.classList.remove(el.classList[i]);
         }
     }
+
+function pageContains(selector, text) {
+	let elements = document.querySelectorAll(selector);
+	return Array.prototype.filter.call(elements, function(element){
+		return RegExp(text).test(element.textContent);
+	});
 }
