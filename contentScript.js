@@ -83,30 +83,30 @@ if (window.location.href.indexOf("mexiconewsdaily.com") !== -1) {
 }
 
 if (window.location.href.indexOf("the-american-interest.com") !== -1) {
-	let counter = document.getElementById('article-counter') || false;
-	if (counter) {
-		counter.remove();
-		counter = false;
-	}
+  const counter = document.getElementById('article-counter') || false;
+  if (counter) {
+	counter.remove();
+	counter = false; 
+  }
 }
 
 if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
-	const paywall = document.getElementById(
-		"article-content"
-	);
+  const paywall = document.getElementById(
+	"article-content"
+  );
 	if (paywall) {
-		paywall.classList.remove('premium-content');
-		paywall.classList.add('full-content');
-		var paras = paywall.querySelectorAll("p, span, h2, div");
-		var delClass = "";
-		for (var i = paras.length; i--;) {
-			if (delClass == "") {
-				delClass = paras[i].className;
-			}
-			paras[i].classList.remove(delClass);
-			paras[i].removeAttribute('style');
+	  paywall.classList.remove('premium-content');
+	  paywall.classList.add('full-content');
+	  var paras = paywall.querySelectorAll("p, span, h2, div");
+	  var delClass = "";
+	  for (var i = paras.length; i--;) {
+		if (delClass == "") {
+		  delClass = paras[i].className;
 		}
-	}
+		paras[i].classList.remove(delClass);
+		paras[i].removeAttribute('style');
+	  }
+  }
 }
 
 if (window.location.href.indexOf("parool.nl") !== -1 || window.location.href.indexOf("trouw.nl") !== -1 || window.location.href.indexOf("volkskrant.nl") !== -1) {
@@ -137,6 +137,13 @@ if (window.location.href.indexOf("bloombergquint.com") !== -1) {
     removeDOMElement(articlesLeftModal, paywall);
 }
 
+if (window.location.href.indexOf("medium.com") !== -1) {
+	const bottomMessageText = 'Get one more story in your member preview when you sign up. It’s free.';
+	const DOMElementsToTextDiv = pageContains('div', bottomMessageText);
+
+	if (DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
+}
+
 if (window.location.href.indexOf('lemonde.fr') !== -1) {
     document.addEventListener('DOMContentLoaded', () => {
 		const hidden_section = document.getElementsByClassName('article__content--restricted-media')[0];
@@ -155,10 +162,17 @@ if (window.location.href.indexOf('lemonde.fr') !== -1) {
     });
 }
 
-
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element)
             element.remove();
     }
+}
+
+function pageContains(selector, text) {
+	let elements = document.querySelectorAll(selector);
+
+	return Array.prototype.filter.call(elements, function(element){
+		return RegExp(text).test(element.textContent);
+	});
 }
