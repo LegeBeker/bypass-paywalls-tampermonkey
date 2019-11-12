@@ -15,6 +15,7 @@ var defaultSites = {
   'De Volkskrant': 'volkskrant.nl',
   'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
+  'Die Zeit': 'zeit.de',
   'Dynamed Plus': 'dynamed.com',
   'Encyclopedia Britannica': 'britannica.com',
   'Eindhovens Dagblad': 'ed.nl',
@@ -26,16 +27,17 @@ var defaultSites = {
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
-  'Harper\'s Mag': 'harpers.org',
+  'Harper\'s Magazine': 'harpers.org',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
-  'Irish Times': 'irishtimes.com',
   'La Nacion': 'lanacion.com.ar',
   'La Repubblica': 'repubblica.it',
   'La Tercera': 'latercera.com',
   'L\'Echo': 'lecho.be',
+  'Le Devoir': 'ledevoir.com',
   'Le Monde': 'lemonde.fr',
+  'Le Parisien': 'leparisien.fr',
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
   'Loeb Classical Library': 'loebclassics.com',
@@ -68,8 +70,11 @@ var defaultSites = {
   'The Australian Financial Review (javascript disabled)': 'afr.com',
   'The Boston Globe (javascript disabled)': 'bostonglobe.com',
   'The Business Journals (javascript disabled)': 'bizjournals.com',
+  'The Canberra Times': 'canberratimes.com.au',
   'The Economist (javascript disabled)': 'economist.com',
   'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',
+  'The Hindu': 'thehindu.com',
+  'The Irish Times': 'irishtimes.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',
@@ -92,8 +97,7 @@ var defaultSites = {
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
   'Vrij Nederland': 'vn.nl',
-  'Wired': 'wired.com',
-  'Zeit Online': 'zeit.de'
+  'Wired': 'wired.com'
 };
 
 // Saves options to chrome.storage
@@ -141,7 +145,7 @@ function renderOptions() {
       inputEl.type = 'checkbox';
       inputEl.dataset.key = key;
       inputEl.dataset.value = value;
-      inputEl.checked = key in sites;
+      inputEl.checked = (key in sites) || (key.replace(/\s\(.*\)/, '') in sites);
 
       labelEl.appendChild(inputEl);
       labelEl.appendChild(document.createTextNode(' '+key));
