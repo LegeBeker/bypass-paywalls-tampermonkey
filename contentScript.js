@@ -183,6 +183,7 @@ if (window.location.href.indexOf("ledevoir.com") !== -1) {
 if (window.location.href.includes('ft.com')) {
     const cookie_banner = document.querySelector('.n-messaging-banner__outer');
     removeDOMElement(cookie_banner);
+}
 
 if (window.location.href.indexOf("thehindu.com") !== -1) {
   
