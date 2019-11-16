@@ -140,6 +140,7 @@ const allow_cookies = [
 'the-american-interest.com',
 'theadvocate.com.au',
 'theage.com.au',
+'theatlantic.com',
 'theaustralian.com.au',
 'trouw.nl',
 'vn.nl',
@@ -175,6 +176,7 @@ const remove_cookies = [
 'telegraaf.nl',
 'theadvocate.com.au',
 'theage.com.au',
+'theatlantic.com',
 'vn.nl',
 'washingtonpost.com',
 'wsj.com'
@@ -189,6 +191,12 @@ const remove_cookies_select_hold = {
 
 // select only specific cookie(s) to drop from remove_cookies domains
 const remove_cookies_select_drop = {
+	'.ad.nl': ['temptationTrackingId'],
+	'.www.ad.nl': ['none'],
+	'www.ad.nl': ['none'],
+	'.ed.nl': ['temptationTrackingId'],
+	'.www.ed.nl': ['none'],
+	'www.ed.nl': ['none'],
 	'www.nrc.nl': ['counter']
 }
 
@@ -213,7 +221,6 @@ function setDefaultOptions() {
     chrome.tabs.create({ 'url': 'chrome://extensions/?options=' + chrome.runtime.id });
   });
 }
-
 
 var blockedRegexes = [
 /.+:\/\/.+\.tribdss\.com\//,
