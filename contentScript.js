@@ -170,6 +170,11 @@ if (window.location.href.indexOf("ledevoir.com") !== -1) {
         removeDOMElement(counter);
 }
 
+if (window.location.href.includes('ft.com')) {
+    const cookie_banner = document.querySelector('.n-messaging-banner__outer');
+    removeDOMElement(cookie_banner);
+}
+
 if (window.location.href.indexOf("thehindu.com") !== -1) {
         const paywall = document.getElementById('test');
         removeDOMElement(paywall);
