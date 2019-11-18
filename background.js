@@ -140,6 +140,7 @@ const allow_cookies = [
 'the-american-interest.com',
 'theadvocate.com.au',
 'theage.com.au',
+'theatlantic.com',
 'theaustralian.com.au',
 'trouw.nl',
 'vn.nl',
@@ -175,6 +176,7 @@ const remove_cookies = [
 'telegraaf.nl',
 'theadvocate.com.au',
 'theage.com.au',
+'theatlantic.com',
 'vn.nl',
 'washingtonpost.com',
 'wsj.com'
@@ -182,14 +184,17 @@ const remove_cookies = [
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'.nrc.nl': ['nmt_closed_cookiebar'],
-	'.washingtonpost.com': ['wp_gdpr'],
-	'.wsj.com': ['wsjregion']
+	'nrc.nl': ['nmt_closed_cookiebar'],
+	'washingtonpost.com': ['wp_gdpr'],
+	'wsj.com': ['wsjregion']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
 const remove_cookies_select_drop = {
-	'www.nrc.nl': ['counter']
+	'ad.nl': ['temptationTrackingId'],
+	'demorgen.be': ['TID_ID'],
+	'ed.nl': ['temptationTrackingId'],
+	'nrc.nl': ['counter']
 }
 
 // Override User-Agent with Googlebot
@@ -213,7 +218,6 @@ function setDefaultOptions() {
     chrome.tabs.create({ 'url': 'chrome://extensions/?options=' + chrome.runtime.id });
   });
 }
-
 
 var blockedRegexes = [
 /.+:\/\/.+\.tribdss\.com\//,
@@ -403,12 +407,13 @@ chrome.webRequest.onCompleted.addListener(function(details) {
     chrome.cookies.getAll({domain: domainVar}, function(cookies) {
 		for (var i=0; i<cookies.length; i++) {
 			var cookie_domain = cookies[i].domain;
+			var rc_domain = cookie_domain.replace(/^(\.?www\.|\.)/, '');
 			// hold specific cookie(s) from remove_cookies domains
-			if ((cookie_domain in remove_cookies_select_hold) && remove_cookies_select_hold[cookie_domain].includes(cookies[i].name)){
+			if ((rc_domain in remove_cookies_select_hold) && remove_cookies_select_hold[rc_domain].includes(cookies[i].name)){
 				continue; // don't remove specific cookie
 			}
 			// drop only specific cookie(s) from remove_cookies domains
-			if ((cookie_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[cookie_domain].includes(cookies[i].name))){
+			if ((rc_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[rc_domain].includes(cookies[i].name))){
 				continue; // only remove specific cookie
 			}
 			chrome.cookies.remove({url: (cookies[i].secure ? "https://" : "http://") + cookies[i].domain + cookies[i].path, name: cookies[i].name});
