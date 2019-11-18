@@ -219,12 +219,13 @@ function setDefaultOptions() {
   });
 }
 
-var blockedRegexes = [
-/.+:\/\/.+\.tribdss\.com\//,
-/thenation\.com\/.+\/paywall-script\.php/,
-/haaretz\.co\.il\/htz\/js\/inter\.js/,
-/nzherald\.co\.nz\/.+\/headjs\/.+\.js/
-];
+var blockedRegexes = {
+'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
+'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
+'haaretz.co.il': /haaretz\.co\.il\/htz\/js\/inter\.js/,
+'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
+'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/
+};
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
 const userAgentMobile = "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
@@ -297,22 +298,36 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.businessinsider.com/*", "*://*.bostonglobe.com/*"],
+    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.bostonglobe.com/*"],
     types: ["script"]
   },
   ["blocking"]
 );
 
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
+  var requestHeaders = details.requestHeaders;
+
+  var header_referer = '';
+  for (var n in requestHeaders){
+	  if (requestHeaders[n].name.toLowerCase() == 'referer'){
+		  header_referer = requestHeaders[n].value;
+		  continue;
+	  }
+  }
+  
+  // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
+  for (var domain in blockedRegexes){
+	  if (isSiteEnabled({url: '.'+ domain}) && details.url.match(blockedRegexes[domain])){
+			if (details.url.indexOf(domain) !== -1 || header_referer.indexOf(domain) !== -1){
+				return { cancel: true };
+			}
+	  }
+  }
+
   if (!isSiteEnabled(details)) {
     return;
   }
 
-  if (blockedRegexes.some(function(regex) { return regex.test(details.url); })) {
-    return { cancel: true };
-  }
-
-  var requestHeaders = details.requestHeaders;
   var tabId = details.tabId;
 
   var useUserAgentMobile = false;
