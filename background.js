@@ -224,7 +224,8 @@ var blockedRegexes = {
 'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
 'haaretz.co.il': /haaretz\.co\.il\/htz\/js\/inter\.js/,
 'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
-'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/
+'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
+'economist.com': /.+\.tinypass\.com\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -298,7 +299,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.economist.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.bostonglobe.com/*"],
+    urls: ["*://*.thestar.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.bostonglobe.com/*"],
     types: ["script"]
   },
   ["blocking"]

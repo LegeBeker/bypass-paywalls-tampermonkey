@@ -71,7 +71,7 @@ var defaultSites = {
   'The Boston Globe (javascript disabled)': 'bostonglobe.com',
   'The Business Journals (javascript disabled)': 'bizjournals.com',
   'The Canberra Times': 'canberratimes.com.au',
-  'The Economist (javascript disabled)': 'economist.com',
+  'The Economist': 'economist.com',
   'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',
   'The Hindu': 'thehindu.com',
   'The Irish Times': 'irishtimes.com',

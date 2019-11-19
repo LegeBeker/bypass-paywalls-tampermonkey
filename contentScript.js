@@ -200,6 +200,11 @@ if (window.location.href.indexOf("leparisien.fr") !== -1) {
 		}, 300); // Delay (in milliseconds)
 }
 
+if (window.location.href.indexOf("economist.com") !== -1) {
+  const wrapper = document.getElementById('bottom-page-wrapper');
+  removeDOMElement(wrapper);
+}
+
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element)
