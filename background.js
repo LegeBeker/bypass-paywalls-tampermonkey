@@ -299,7 +299,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bizjournals.com/*", "*://*.bostonglobe.com/*"],
+    urls: ["*://*.thestar.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bostonglobe.com/*", "*://*.tinypass.com/*"],
     types: ["script"]
   },
   ["blocking"]

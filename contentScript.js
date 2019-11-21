@@ -205,6 +205,18 @@ if (window.location.href.indexOf("economist.com") !== -1) {
   removeDOMElement(wrapper);
 }
 
+if (window.location.href.indexOf("bizjournals.com") !== -1) {
+		const sheet_overlay = document.querySelector('.sheet-overlay');
+		const chunk_paywall = document.querySelector('.chunk--paywall');
+		removeDOMElement(sheet_overlay, chunk_paywall);
+		const overlaid = document.querySelectorAll('.is-overlaid');
+		for (var i = 0; i < overlaid.length; i++) {
+			overlaid[i].classList.remove('is-overlaid');
+		}
+		const body_hidden = document.querySelector('.js-pre-chunks__story-body');
+		body_hidden.removeAttribute('style');
+}
+
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element)
