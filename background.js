@@ -4,7 +4,7 @@
 
 // Cookies from this list are blocked by default
 var defaultSites = {
-  'Algemeen Dagblad': 'ad.nl',
+  'Algemeen Dagblad': 'ad.nl', 
   'American Banker': 'americanbanker.com',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
@@ -20,6 +20,7 @@ var defaultSites = {
   'De Volkskrant': 'volkskrant.nl',
   'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
+  'Die Zeit': 'zeit.de',
   'Dynamed Plus': 'dynamed.com',
   'Eindhovens Dagblad': 'ed.nl',
   'Encyclopedia Britannica': 'britannica.com',
@@ -31,17 +32,16 @@ var defaultSites = {
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
-  'Hartford Courant': 'courant.com',
   'Harper\'s Magazine': 'harpers.org',
+  'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
-  'Irish Times': 'irishtimes.com',
   'La Nacion': 'lanacion.com.ar',
   'La Repubblica': 'repubblica.it',
   'La Tercera': 'latercera.com',
   'L\'Echo': 'lecho.be',
   'Le Devoir': 'ledevoir.com',
-  'Le Monde': 'lemonde.fr',  
+  'Le Monde': 'lemonde.fr',
   'Le Parisien': 'leparisien.fr',
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
@@ -64,8 +64,8 @@ var defaultSites = {
   'San Diego Union Tribune': 'sandiegouniontribune.com',
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
+  'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
-  'Statista':'statista.com',
   'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
@@ -79,6 +79,7 @@ var defaultSites = {
   'The Economist': 'economist.com',
   'The Globe and Mail': 'theglobeandmail.com',
   'The Hindu': 'thehindu.com',
+  'The Irish Times': 'irishtimes.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',
@@ -101,8 +102,7 @@ var defaultSites = {
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
   'Vrij Nederland': 'vn.nl',
-  'Wired': 'wired.com',
-  'Zeit Online': 'zeit.de'
+  'Wired': 'wired.com'
 };
 
 const restrictions = {
