@@ -309,17 +309,17 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var requestHeaders = details.requestHeaders;
 
   var header_referer = '';
-  for (var n in requestHeaders){
-	  if (requestHeaders[n].name.toLowerCase() == 'referer'){
+  for (var n in requestHeaders) {
+	  if (requestHeaders[n].name.toLowerCase() == 'referer') {
 		  header_referer = requestHeaders[n].value;
 		  continue;
 	  }
   }
   
   // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
-  for (var domain in blockedRegexes){
-	  if (isSiteEnabled({url: '.'+ domain}) && details.url.match(blockedRegexes[domain])){
-			if (details.url.indexOf(domain) !== -1 || header_referer.indexOf(domain) !== -1){
+  for (var domain in blockedRegexes) {
+	  if (isSiteEnabled({url: '.'+ domain}) && details.url.match(blockedRegexes[domain])) {
+			if (details.url.indexOf(domain) !== -1 || header_referer.indexOf(domain) !== -1) {
 				return { cancel: true };
 			}
 	  }
@@ -425,11 +425,11 @@ chrome.webRequest.onCompleted.addListener(function(details) {
 			var cookie_domain = cookies[i].domain;
 			var rc_domain = cookie_domain.replace(/^(\.?www\.|\.)/, '');
 			// hold specific cookie(s) from remove_cookies domains
-			if ((rc_domain in remove_cookies_select_hold) && remove_cookies_select_hold[rc_domain].includes(cookies[i].name)){
+			if ((rc_domain in remove_cookies_select_hold) && remove_cookies_select_hold[rc_domain].includes(cookies[i].name)) {
 				continue; // don't remove specific cookie
 			}
 			// drop only specific cookie(s) from remove_cookies domains
-			if ((rc_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[rc_domain].includes(cookies[i].name))){
+			if ((rc_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[rc_domain].includes(cookies[i].name))) {
 				continue; // only remove specific cookie
 			}
 			chrome.cookies.remove({url: (cookies[i].secure ? "https://" : "http://") + cookies[i].domain + cookies[i].path, name: cookies[i].name});
