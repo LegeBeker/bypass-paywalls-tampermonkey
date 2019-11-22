@@ -1,4 +1,11 @@
-window.localStorage.clear();
+var arr_localstorage_hold = ['sfchronicle.com'];
+var localstorage_hold = arr_localstorage_hold.some(function(url) {
+	return window.location.href.indexOf(url) !== -1;
+});
+
+if (!localstorage_hold){
+	window.localStorage.clear();
+}
 
 if (location.hostname.endsWith('rep.repubblica.it')) {
     if (location.href.includes('/pwa/')) {
@@ -196,6 +203,23 @@ if (window.location.href.indexOf("leparisien.fr") !== -1) {
 				content[i].removeAttribute("style");
 			}
 		}, 300); // Delay (in milliseconds)
+}
+
+if (window.location.href.indexOf("economist.com") !== -1) {
+  const wrapper = document.getElementById('bottom-page-wrapper');
+  removeDOMElement(wrapper);
+}
+
+if (window.location.href.indexOf("bizjournals.com") !== -1) {
+		const sheet_overlay = document.querySelector('.sheet-overlay');
+		const chunk_paywall = document.querySelector('.chunk--paywall');
+		removeDOMElement(sheet_overlay, chunk_paywall);
+		const overlaid = document.querySelectorAll('.is-overlaid');
+		for (var i = 0; i < overlaid.length; i++) {
+			overlaid[i].classList.remove('is-overlaid');
+		}
+		const body_hidden = document.querySelector('.js-pre-chunks__story-body');
+		body_hidden.removeAttribute('style');
 }
 
 function removeDOMElement(...elements) {
