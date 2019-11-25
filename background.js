@@ -98,6 +98,7 @@ var defaultSites = {
   'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
+  'Towards Data Science': 'towardsdatascience.com',
   'Trouw': 'trouw.nl',
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
@@ -122,6 +123,7 @@ const allow_cookies = [
 'ed.nl',
 'examiner.com.au',
 'ft.com',
+'haaretz.com',
 'harpers.org',
 'hbr.org',
 'lemonde.fr',
@@ -142,6 +144,7 @@ const allow_cookies = [
 'theage.com.au',
 'theatlantic.com',
 'theaustralian.com.au',
+'towardsdatascience.com',
 'trouw.nl',
 'vn.nl',
 'volkskrant.nl',
@@ -162,6 +165,7 @@ const remove_cookies = [
 'ed.nl',
 'examiner.com.au',
 'ft.com',
+'haaretz.com',
 'harpers.org',
 'hbr.org',
 'lesechos.fr',
@@ -177,6 +181,7 @@ const remove_cookies = [
 'theadvocate.com.au',
 'theage.com.au',
 'theatlantic.com',
+'towardsdatascience.com',
 'vn.nl',
 'washingtonpost.com',
 'wsj.com'
@@ -184,7 +189,6 @@ const remove_cookies = [
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'nrc.nl': ['nmt_closed_cookiebar'],
 	'washingtonpost.com': ['wp_gdpr'],
 	'wsj.com': ['wsjregion']
 }
@@ -200,12 +204,14 @@ const remove_cookies_select_drop = {
 // Override User-Agent with Googlebot
 const use_google_bot = [
 'barrons.com',
+'haaretz.co.il',
 'lemonde.fr',
 'mexiconewsdaily.com',
 'nytimes.com',
 'quora.com',
 'telegraph.co.uk',
 'theaustralian.com.au',
+'themarker.com',
 'thetimes.co.uk',
 'wsj.com',
 'zeit.de',
@@ -299,7 +305,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bostonglobe.com/*", "*://*.tinypass.com/*"],
+    urls: ["*://*.thestar.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bostonglobe.com/*"],
     types: ["script"]
   },
   ["blocking"]
@@ -364,7 +370,6 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
         value: 'https://www.google.com/'
       });
     }
-
   }
 
   // override User-Agent to use Googlebot

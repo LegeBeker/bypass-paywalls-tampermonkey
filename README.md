@@ -109,6 +109,7 @@
 [The Wall Street Journal](https://www.wsj.com)\
 [The Washington Post](https://www.washingtonpost.com)\
 [TheMarker](https://www.themarker.com)\
+[Towards Data Science](https://www.towardsdatascience.com)\
 [Trouw](https://www.trouw.nl)\
 [Vanity Fair](https://www.vanityfair.com)\
 [Winston-Salem Journal](https://journalnow.com)\
