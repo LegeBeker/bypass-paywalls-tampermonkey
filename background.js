@@ -123,7 +123,6 @@ const allow_cookies = [
 'ed.nl',
 'examiner.com.au',
 'ft.com',
-'haaretz.com',
 'harpers.org',
 'hbr.org',
 'lemonde.fr',
@@ -165,7 +164,6 @@ const remove_cookies = [
 'ed.nl',
 'examiner.com.au',
 'ft.com',
-'haaretz.com',
 'harpers.org',
 'hbr.org',
 'lesechos.fr',
@@ -229,6 +227,7 @@ var blockedRegexes = {
 'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
 'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
 'haaretz.co.il': /haaretz\.co\.il\/htz\/js\/inter\.js/,
+'haaretz.com': /haaretz\.com\/hdc\/web\/js\/minified\/header-scripts-int.js.+/,
 'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
 'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
 'economist.com': /.+\.tinypass\.com\/.+/
