@@ -43,6 +43,7 @@
 [Glassdoor](https://www.glassdoor.com)\
 [Haaretz.co.il](https://www.haaretz.co.il)\
 [Haaretz.com](https://www.haaretz.com)\
+[Handelsblatt](https://www.handelsblatt.com)\
 [Harper's Magazine](https://harpers.org)\
 [Hartford Courant](https://www.courant.com)\
 [Harvard Business Review](https://www.hbr.org)\
@@ -63,11 +64,12 @@
 [MIT Technology Review](https://www.technologyreview.com)\
 [Medium](https://www.medium.com)\
 [Mexicon News Daily](https://mexiconewsdaily.com)\
-[NRC Handelsblad](https://www.nrc.nl)\
+[National Post](https://www.nationalpost.com)\
 [New York Magazine](https://www.nymag.com)\
 [New Zealand Herald](https://www.nzherald.co.nz)\
 [Newsrep](https://thenewsrep.com)\
 [Nikkei Asian Review](https://asia.nikkei.com)\
+[NRC Handelsblad](https://www.nrc.nl)\
 [Orlando Sentinel](https://www.orlandosentinel.com)\
 [Parool](https://www.parool.nl)\
 [Quartz](https://qz.com)\
@@ -87,6 +89,7 @@
 [The Boston Globe](https://www.bostonglobe.com)\
 [The Business Journals](https://www.bizjournals.com)\
 [The Canberra Times](https://www.canberratimes.com.au)\
+[The Diplomat](https://www.thediplomat.com)\
 [The Economist](https://www.economist.com)\
 [The Globe and Mail](https://www.theglobeandmail.com)\
 [The Hindu](https://www.thehindu.com)\

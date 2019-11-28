@@ -4,7 +4,7 @@
 
 // Cookies from this list are blocked by default
 var defaultSites = {
-  'Algemeen Dagblad': 'ad.nl', 
+  'Algemeen Dagblad': 'ad.nl',
   'American Banker': 'americanbanker.com',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
@@ -32,6 +32,7 @@ var defaultSites = {
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
+  'Handelsblatt': 'handelsblatt.com',
   'Harper\'s Magazine': 'harpers.org',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
@@ -52,6 +53,7 @@ var defaultSites = {
   'Mexico News Daily': 'mexiconewsdaily.com',
   'MIT Sloan Management Review': 'sloanreview.mit.edu',
   'MIT Technology Review': 'technologyreview.com',
+  'National Post': 'nationalpost.com',
   'Newsrep': 'thenewsrep.com',
   'New York Magazine': 'nymag.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
@@ -76,6 +78,7 @@ var defaultSites = {
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Canberra Times': 'canberratimes.com.au',
+  'The Diplomat': 'thediplomat.com',
   'The Economist': 'economist.com',
   'The Globe and Mail': 'theglobeandmail.com',
   'The Hindu': 'thehindu.com',
@@ -143,6 +146,7 @@ const allow_cookies = [
 'theage.com.au',
 'theatlantic.com',
 'theaustralian.com.au',
+'thediplomat.com',
 'towardsdatascience.com',
 'trouw.nl',
 'vn.nl',
@@ -179,6 +183,7 @@ const remove_cookies = [
 'theadvocate.com.au',
 'theage.com.au',
 'theatlantic.com',
+'thediplomat.com',
 'towardsdatascience.com',
 'vn.nl',
 'washingtonpost.com',
