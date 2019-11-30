@@ -303,7 +303,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
 
 // Disable javascript for these sites
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
-  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
+  if (!isSiteEnabled(details)) {
     return;
   }
   return {cancel: true}; 
@@ -324,6 +324,16 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 		  header_referer = requestHeaders[n].value;
 		  continue;
 	  }
+  }
+  
+  // remove cookies for sites using medium platform (mainfest.json needs in permissions: <all_urls>)
+  if (isSiteEnabled({url: '.medium.com'}) && details.url.indexOf('medium.com') !== -1 && header_referer.indexOf('medium.com') === -1){
+		var domainVar = new URL(header_referer).hostname;
+		chrome.cookies.getAll({domain: domainVar}, function(cookies) {
+			for (var i=0; i<cookies.length; i++) {
+				chrome.cookies.remove({url: (cookies[i].secure ? "https://" : "http://") + cookies[i].domain + cookies[i].path, name: cookies[i].name});
+			}
+	    });  
   }
   
   // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
@@ -347,7 +357,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   // if referer exists, set it to google
   requestHeaders = requestHeaders.map(function (requestHeader) {
     if (requestHeader.name === 'Referer') {
-      if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1) {
+      if (details.url.indexOf("ft.com") !== -1) {
         requestHeader.value = 'https://www.facebook.com/';
       } else {
         requestHeader.value = 'https://www.google.com/';
@@ -363,7 +373,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   // otherwise add it
   if (!setReferer) {
-    if (details.url.indexOf("wsj.com") !== -1) {
+    if (details.url.indexOf("ft.com") !== -1) {
       requestHeaders.push({
         name: 'Referer',
         value: 'https://www.facebook.com/'
