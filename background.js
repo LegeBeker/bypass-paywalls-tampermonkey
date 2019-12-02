@@ -152,6 +152,7 @@ const allow_cookies = [
 'vn.nl',
 'volkskrant.nl',
 'washingtonpost.com',
+'wired.com',
 'wsj.com'
 ]
 
@@ -187,6 +188,7 @@ const remove_cookies = [
 'towardsdatascience.com',
 'vn.nl',
 'washingtonpost.com',
+'wired.com',
 'wsj.com'
 ]
 
@@ -326,7 +328,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 	  }
   }
   
-  // remove cookies for sites using medium platform (mainfest.json needs in permissions: <all_urls>)
+  // remove cookies for sites medium platform (mainfest.json needs in permissions: <all_urls>)
   if (isSiteEnabled({url: '.medium.com'}) && details.url.indexOf('medium.com') !== -1 && header_referer.indexOf('medium.com') === -1){
 		var domainVar = new URL(header_referer).hostname;
 		chrome.cookies.getAll({domain: domainVar}, function(cookies) {
