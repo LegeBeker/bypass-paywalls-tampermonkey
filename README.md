@@ -59,6 +59,7 @@
 [Les Échos](https://lesechos.fr)\
 [Libération](https://liberation.fr)\
 [Loeb Classical Library](https://www.loebclassics.com)\
+[London Review of Books] (https://lrb.co.uk)\
 [Los Angeles Times](https://www.latimes.com)\
 [MIT Sloan Management Review](https://sloanreview.mit.edu)\
 [MIT Technology Review](https://www.technologyreview.com)\

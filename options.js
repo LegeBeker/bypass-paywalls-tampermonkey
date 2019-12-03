@@ -42,6 +42,7 @@ var defaultSites = {
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
   'Loeb Classical Library': 'loebclassics.com',
+  'London Review of Books': 'lrb.co.uk',
   'Los Angeles Business Journal': 'labusinessjournal.com',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',

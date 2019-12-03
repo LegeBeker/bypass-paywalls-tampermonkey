@@ -47,6 +47,7 @@ var defaultSites = {
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
   'Loeb Classical Library': 'loebclassics.com',
+  'London Review of Books': 'lrb.co.uk',
   'Los Angeles Business Journal': 'labusinessjournal.com',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
@@ -237,7 +238,8 @@ var blockedRegexes = {
 'haaretz.com': /haaretz\.com\/hdc\/web\/js\/minified\/header-scripts-int.js.+/,
 'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
 'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
-'economist.com': /.+\.tinypass\.com\/.+/
+'economist.com': /.+\.tinypass\.com\/.+/,
+'lrb.co.uk': /.+\.tinypass\.com\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
