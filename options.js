@@ -97,6 +97,7 @@ var defaultSites = {
   'The Toronto Star (javascript disabled)': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
+  'Times Literary Supplement': 'the-tls.co.uk',
   'Towards Data Science': 'towardsdatascience.com',
   'Trouw': 'trouw.nl',
   'Winston-Salem Journal': 'journalnow.com',

@@ -222,6 +222,11 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
         body_hidden.removeAttribute('style');
 }
 
+if (window.location.href.indexOf("the-tls.co.uk") !== -1) {
+        const paywall = document.querySelector('.tls-subscriptions-banner__closed-skin');
+        removeDOMElement(paywall);
+}
+
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element)
