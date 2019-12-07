@@ -4,7 +4,7 @@
 
 // Cookies from this list are blocked by default
 var defaultSites = {
-  'Algemeen Dagblad': 'ad.nl', 
+  'Algemeen Dagblad': 'ad.nl',
   'American Banker': 'americanbanker.com',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
@@ -32,6 +32,7 @@ var defaultSites = {
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
+  'Handelsblatt': 'handelsblatt.com',
   'Harper\'s Magazine': 'harpers.org',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
@@ -46,12 +47,14 @@ var defaultSites = {
   'Les Echos': 'lesechos.fr',
   'Liberation': 'liberation.fr',
   'Loeb Classical Library': 'loebclassics.com',
+  'London Review of Books': 'lrb.co.uk',
   'Los Angeles Business Journal': 'labusinessjournal.com',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
   'Mexico News Daily': 'mexiconewsdaily.com',
   'MIT Sloan Management Review': 'sloanreview.mit.edu',
   'MIT Technology Review': 'technologyreview.com',
+  'National Post': 'nationalpost.com',
   'Newsrep': 'thenewsrep.com',
   'New York Magazine': 'nymag.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
@@ -76,6 +79,7 @@ var defaultSites = {
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Canberra Times': 'canberratimes.com.au',
+  'The Diplomat': 'thediplomat.com',
   'The Economist': 'economist.com',
   'The Globe and Mail': 'theglobeandmail.com',
   'The Hindu': 'thehindu.com',
@@ -98,6 +102,8 @@ var defaultSites = {
   'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
+  'Times Literary Supplement': 'the-tls.co.uk',
+  'Towards Data Science': 'towardsdatascience.com',
   'Trouw': 'trouw.nl',
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
@@ -142,10 +148,13 @@ const allow_cookies = [
 'theage.com.au',
 'theatlantic.com',
 'theaustralian.com.au',
+'thediplomat.com',
+'towardsdatascience.com',
 'trouw.nl',
 'vn.nl',
 'volkskrant.nl',
 'washingtonpost.com',
+'wired.com',
 'wsj.com'
 ]
 
@@ -177,14 +186,16 @@ const remove_cookies = [
 'theadvocate.com.au',
 'theage.com.au',
 'theatlantic.com',
+'thediplomat.com',
+'towardsdatascience.com',
 'vn.nl',
 'washingtonpost.com',
+'wired.com',
 'wsj.com'
 ]
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'nrc.nl': ['nmt_closed_cookiebar'],
 	'washingtonpost.com': ['wp_gdpr'],
 	'wsj.com': ['wsjregion']
 }
@@ -192,7 +203,9 @@ const remove_cookies_select_hold = {
 // select only specific cookie(s) to drop from remove_cookies domains
 const remove_cookies_select_drop = {
 	'ad.nl': ['temptationTrackingId'],
+	'bostonglobe.com': ['FMPaywall'],
 	'demorgen.be': ['TID_ID'],
+	'economist.com': ['rvuuid'],
 	'ed.nl': ['temptationTrackingId'],
 	'nrc.nl': ['counter']
 }
@@ -200,12 +213,14 @@ const remove_cookies_select_drop = {
 // Override User-Agent with Googlebot
 const use_google_bot = [
 'barrons.com',
+'haaretz.co.il',
 'lemonde.fr',
 'mexiconewsdaily.com',
 'nytimes.com',
 'quora.com',
 'telegraph.co.uk',
 'theaustralian.com.au',
+'themarker.com',
 'thetimes.co.uk',
 'wsj.com',
 'zeit.de',
@@ -226,9 +241,12 @@ var blockedRegexes = {
 'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
 'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
 'haaretz.co.il': /haaretz\.co\.il\/htz\/js\/inter\.js/,
+'haaretz.com': /haaretz\.com\/hdc\/web\/js\/minified\/header-scripts-int.js.+/,
 'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
 'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
-'economist.com': /.+\.tinypass\.com\/.+/
+'economist.com': /.+\.tinypass\.com\/.+/,
+'lrb.co.uk': /.+\.tinypass\.com\/.+/,
+'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -296,13 +314,13 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
 
 // Disable javascript for these sites
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
-  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
+  if (!isSiteEnabled(details)) {
     return;
   }
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bostonglobe.com/*", "*://*.tinypass.com/*"],
+    urls: ["*://*.thestar.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*"],
     types: ["script"]
   },
   ["blocking"]
@@ -317,6 +335,16 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 		  header_referer = requestHeaders[n].value;
 		  continue;
 	  }
+  }
+  
+  // remove cookies for sites medium platform (mainfest.json needs in permissions: <all_urls>)
+  if (isSiteEnabled({url: '.medium.com'}) && details.url.indexOf('medium.com') !== -1 && header_referer.indexOf('medium.com') === -1){
+		var domainVar = new URL(header_referer).hostname;
+		chrome.cookies.getAll({domain: domainVar}, function(cookies) {
+			for (var i=0; i<cookies.length; i++) {
+				chrome.cookies.remove({url: (cookies[i].secure ? "https://" : "http://") + cookies[i].domain + cookies[i].path, name: cookies[i].name});
+			}
+	    });  
   }
   
   // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
@@ -340,7 +368,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   // if referer exists, set it to google
   requestHeaders = requestHeaders.map(function (requestHeader) {
     if (requestHeader.name === 'Referer') {
-      if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1) {
+      if (details.url.indexOf("ft.com") !== -1) {
         requestHeader.value = 'https://www.facebook.com/';
       } else {
         requestHeader.value = 'https://www.google.com/';
@@ -356,7 +384,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   // otherwise add it
   if (!setReferer) {
-    if (details.url.indexOf("wsj.com") !== -1) {
+    if (details.url.indexOf("ft.com") !== -1) {
       requestHeaders.push({
         name: 'Referer',
         value: 'https://www.facebook.com/'
@@ -367,7 +395,6 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
         value: 'https://www.google.com/'
       });
     }
-
   }
 
   // override User-Agent to use Googlebot
