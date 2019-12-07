@@ -59,7 +59,7 @@
 [Les Échos](https://lesechos.fr)\
 [Libération](https://liberation.fr)\
 [Loeb Classical Library](https://www.loebclassics.com)\
-[London Review of Books] (https://lrb.co.uk)\
+[London Review of Books](https://lrb.co.uk)\
 [Los Angeles Times](https://www.latimes.com)\
 [MIT Sloan Management Review](https://sloanreview.mit.edu)\
 [MIT Technology Review](https://www.technologyreview.com)\
@@ -124,7 +124,7 @@
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.*
 
-Install the [Cookie Remover](https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce) extension.
+Install the [Cookie Remover](https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce) extension. Please rate it 5 stars if you find it useful.
 
 When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
 
