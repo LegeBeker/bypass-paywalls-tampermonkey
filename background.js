@@ -162,7 +162,6 @@ const allow_cookies = [
 const remove_cookies = [
 'ad.nl',
 'asia.nikkei.com',
-'bostonglobe.com',
 'canberratimes.com.au',
 'chicagobusiness.com',
 'demorgen.be',
@@ -203,6 +202,7 @@ const remove_cookies_select_hold = {
 // select only specific cookie(s) to drop from remove_cookies domains
 const remove_cookies_select_drop = {
 	'ad.nl': ['temptationTrackingId'],
+	'bostonglobe.com': ['FMPaywall'],
 	'demorgen.be': ['TID_ID'],
 	'economist.com': ['rvuuid'],
 	'ed.nl': ['temptationTrackingId'],
@@ -241,7 +241,8 @@ var blockedRegexes = {
 'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
 'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
 'economist.com': /.+\.tinypass\.com\/.+/,
-'lrb.co.uk': /.+\.tinypass\.com\/.+/
+'lrb.co.uk': /.+\.tinypass\.com\/.+/,
+'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -315,7 +316,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*", "*://*.bostonglobe.com/*"],
+    urls: ["*://*.thestar.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*"],
     types: ["script"]
   },
   ["blocking"]
