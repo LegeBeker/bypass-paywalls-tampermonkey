@@ -244,7 +244,8 @@ var blockedRegexes = {
 'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
 'economist.com': /.+\.tinypass\.com\/.+/,
 'lrb.co.uk': /.+\.tinypass\.com\/.+/,
-'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/
+'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
+'foreignpolicy.com': /.+\.tinypass\.com\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
