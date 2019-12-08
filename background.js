@@ -191,13 +191,11 @@ const remove_cookies = [
 'vn.nl',
 'washingtonpost.com',
 'wired.com',
-'wsj.com'
 ]
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'washingtonpost.com': ['wp_gdpr'],
-	'wsj.com': ['wsjregion']
+	'washingtonpost.com': ['wp_gdpr']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
