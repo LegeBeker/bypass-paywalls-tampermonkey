@@ -112,7 +112,8 @@ var defaultSites = {
 };
 
 const restrictions = {
-  'barrons.com': 'barrons.com/articles'
+  'barrons.com': 'barrons.com/articles',
+  'wsj.com': 'wsj.com/articles'
 }
 
 // Don't remove cookies before page load
