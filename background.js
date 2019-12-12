@@ -196,7 +196,8 @@ const remove_cookies = [
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'washingtonpost.com': ['wp_gdpr']
+	'washingtonpost.com': ['wp_gdpr'],
+	'qz.com': ['gdpr']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
@@ -488,7 +489,7 @@ _gaq.push(['_trackPageview']);
 
 function isSiteEnabled(details) {
   var isEnabled = enabledSites.some(function(enabledSite) {
-    var useSite = details.url.indexOf("." + enabledSite) !== -1;
+    var useSite = (details.url.indexOf("." + enabledSite) !== -1 || details.url.indexOf("/" + enabledSite) !== -1);
     if (enabledSite in restrictions) {
       return useSite && details.url.indexOf(restrictions[enabledSite]) !== -1;
     }
