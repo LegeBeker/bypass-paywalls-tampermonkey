@@ -24,6 +24,7 @@ var defaultSites = {
   'Dynamed Plus': 'dynamed.com',
   'Eindhovens Dagblad': 'ed.nl',
   'Encyclopedia Britannica': 'britannica.com',
+  'ET Prime': 'prime.economictimes.indiatimes.com',
   'Examiner': 'examiner.com.au',
   'First Things': 'firstthings.com',
   'Financial News': 'fnlondon.com',
@@ -229,6 +230,7 @@ const use_google_bot = [
 'haaretz.co.il',
 'haaretz.com',
 'themarker.com',
+'prime.economictimes.indiatimes.com',
 ]
 
 function setDefaultOptions() {

@@ -19,6 +19,7 @@ var defaultSites = {
   'Dynamed Plus': 'dynamed.com',
   'Encyclopedia Britannica': 'britannica.com',
   'Eindhovens Dagblad': 'ed.nl',
+  'ET Prime': 'prime.economictimes.indiatimes.com',
   'Examiner': 'examiner.com.au',
   'First Things': 'firstthings.com',
   'Financial News': 'fnlondon.com',

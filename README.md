@@ -35,6 +35,7 @@
 [Dynamed Plus](https://www.dynamed.com)\
 [Eindhovens Dagblad](https://www.ed.nl)\
 [Encyclopedia Britannica](https://www.britannica.com)\
+[ET Prime](https://prime.economictimes.indiatimes.com/)\
 [Examiner](https://www.examiner.com.au)\
 [First Things](https://www.firstthings.com)\
 [Financial News](https://www.fnlondon.com)\
