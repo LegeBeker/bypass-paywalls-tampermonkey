@@ -345,7 +345,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   }
   
   // remove cookies for sites medium platform (mainfest.json needs in permissions: <all_urls>)
-  if (isSiteEnabled({url: '.medium.com'}) && details.url.indexOf('medium.com') !== -1 && header_referer.indexOf('medium.com') === -1){
+  if (isSiteEnabled({url: '.medium.com'}) && details.url.indexOf('.medium.com') !== -1 && header_referer.indexOf('.medium.com') === -1 && header_referer.indexOf('outlook.live.com') ===-1){
+	  console.log(details.url);
 		var domainVar = new URL(header_referer).hostname;
 		chrome.cookies.getAll({domain: domainVar}, function(cookies) {
 			for (var i=0; i<cookies.length; i++) {
