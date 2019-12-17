@@ -113,8 +113,9 @@ var defaultSites = {
 };
 
 const restrictions = {
-  'barrons.com': 'barrons.com/articles',
-  'wsj.com': 'wsj.com/articles'
+  'barrons.com': /.+barrons\.com\/articles\/.+/,
+  'prime.economictimes.indiatimes.com': /.+prime\.economictimes\.indiatimes\.com\/news\/[0-9]{8}\/.+/,
+  'wsj.com': /.+wsj\.com\/articles\/.+/
 }
 
 // Don't remove cookies before page load
@@ -496,7 +497,7 @@ function isSiteEnabled(details) {
   var isEnabled = enabledSites.some(function(enabledSite) {
     var useSite = (details.url.indexOf("." + enabledSite) !== -1 || details.url.indexOf("/" + enabledSite) !== -1);
     if (enabledSite in restrictions) {
-      return useSite && details.url.indexOf(restrictions[enabledSite]) !== -1;
+      return useSite && details.url.match(restrictions[enabledSite]);
     }
     return useSite;
   });
