@@ -246,7 +246,7 @@ var blockedRegexes = {
 'haaretz.com': /haaretz\.com\/hdc\/web\/js\/minified\/header-scripts-int.js.+/,
 'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
 'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
-'economist.com': /.+\.tinypass\.com\/.+/,
+'economist.com': /(.+\.tinypass\.com\/.+|economist\.com\/_next\/static\/runtime\/main.+\.js)/,
 'lrb.co.uk': /.+\.tinypass\.com\/.+/,
 'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
 'foreignpolicy.com': /.+\.tinypass\.com\/.+/,
