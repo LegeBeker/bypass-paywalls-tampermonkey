@@ -251,7 +251,8 @@ var blockedRegexes = {
 'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
 'foreignpolicy.com': /.+\.tinypass\.com\/.+/,
 'inquirer.com': /.+\.tinypass\.com\/.+/,
-'spectator.co.uk': /.+\.tinypass\.com\/.+/
+'spectator.co.uk': /.+\.tinypass\.com\/.+/,
+'theglobeandmail.com': /theglobeandmail\.com\/pb\/resources\/scripts\/build\/chunk-bootstraps\/.+\.js/,
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -325,7 +326,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.theglobeandmail.com/*", "*://*.afr.com/*"],
+    urls: ["*://*.thestar.com/*", "*://*.afr.com/*"],
     types: ["script"]
   },
   ["blocking"]
@@ -360,7 +361,10 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 				if (details.url.indexOf('meter.bostonglobe.com/js/') !== -1 && (header_referer === 'https://www.bostonglobe.com/' 
 						|| header_referer.indexOf('/?p1=BGHeader_') !== -1  || header_referer.indexOf('/?p1=BGMenu_') !== -1)) {
 					break;
-				}
+				} else if (header_referer.indexOf('theglobeandmail.com') !== -1 && !(header_referer.indexOf('/article-') !== -1)) {
+          chrome.webRequest.handlerBehaviorChanged(function () {});
+          break;
+        }
 				return { cancel: true };
 			}
 	  }

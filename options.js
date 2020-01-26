@@ -75,7 +75,7 @@ var defaultSites = {
   'The Canberra Times': 'canberratimes.com.au',
   'The Diplomat': 'thediplomat.com',
   'The Economist': 'economist.com',
-  'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',
+  'The Globe and Mail': 'theglobeandmail.com',
   'The Hindu': 'thehindu.com',
   'The Irish Times (free articles only)': 'irishtimes.com',
   'The Japan Times': 'japantimes.co.jp',
