@@ -164,6 +164,16 @@ if (window.location.href.indexOf("theglobeandmail.com") !== -1) {
     });
 }
 
+if (window.location.href.indexOf("examiner.com.au") !== -1) {
+  const subscribe_truncate = document.querySelector('.subscribe-truncate');
+  if (subscribe_truncate)
+      subscribe_truncate.classList.remove('subscribe-truncate');
+  const subscriber_hider = document.querySelectorAll('.subscriber-hider');
+  for (let i = 0; i < subscriber_hider.length; i++) {
+      subscriber_hider[i].classList.remove('subscriber-hider');
+  }
+}
+
 if (window.location.href.indexOf('lemonde.fr') !== -1) {
     document.addEventListener('DOMContentLoaded', () => {
         const hidden_section = document.getElementsByClassName('article__content--restricted-media')[0];
