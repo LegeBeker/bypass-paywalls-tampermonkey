@@ -1,8 +1,8 @@
 ---
 name: New site request template
 about: New site request
-title: "[New site request] Your site here"
-labels: ''
+title: "[Requested site here]"
+labels: new site request
 assignees: ''
 
 ---
