@@ -205,7 +205,6 @@ const remove_cookies_select_hold = {
 // select only specific cookie(s) to drop from remove_cookies domains
 const remove_cookies_select_drop = {
 	'ad.nl': ['temptationTrackingId'],
-	'bostonglobe.com': ['FMPaywall'],
 	'demorgen.be': ['TID_ID'],
 	'economist.com': ['rvuuid'],
 	'ed.nl': ['temptationTrackingId'],
@@ -357,10 +356,10 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   for (var domain in blockedRegexes) {
 	  if ((isSiteEnabled({url: '.'+ domain}) || isSiteEnabled({url: header_referer})) && details.url.match(blockedRegexes[domain])) {
 			if (details.url.indexOf(domain) !== -1 || header_referer.indexOf(domain) !== -1) {
-				// allow BG paywall-script to set cookies in homepage/sections (else no article-text)
-				if (details.url.indexOf('meter.bostonglobe.com/js/') !== -1 && (header_referer === 'https://www.bostonglobe.com/' 
-						|| header_referer.indexOf('/?p1=BGHeader_') !== -1  || header_referer.indexOf('/?p1=BGMenu_') !== -1)) {
-					break;
+        if (details.url.indexOf('meter.bostonglobe.com/js/') !== -1 && (header_referer === 'https://www.bostonglobe.com/'
+            || header_referer.indexOf('/?p1=BGHeader_') !== -1  || header_referer.indexOf('/?p1=BGMenu_') !== -1)) {
+          chrome.webRequest.handlerBehaviorChanged(function () {});
+          break;
 				} else if (header_referer.indexOf('theglobeandmail.com') !== -1 && !(header_referer.indexOf('/article-') !== -1)) {
           chrome.webRequest.handlerBehaviorChanged(function () {});
           break;
