@@ -113,7 +113,7 @@ var defaultSites = {
 const restrictions = {
   'barrons.com': /.+barrons\.com\/articles\/.+/,
   'prime.economictimes.indiatimes.com': /.+prime\.economictimes\.indiatimes\.com\/news\/[0-9]{8}\/.+/,
-  'wsj.com': /.+wsj\.com\/articles\/.+/
+  'wsj.com': /(.+wsj\.com\/articles\/.+|.+blogs\.wsj\.com\/.+)/
 }
 
 // Don't remove cookies before page load
