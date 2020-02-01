@@ -157,7 +157,8 @@ const allow_cookies = [
 'volkskrant.nl',
 'washingtonpost.com',
 'wired.com',
-'wsj.com'
+'wsj.com',
+'lrb.co.uk',
 ]
 
 // Removes cookies after page load
