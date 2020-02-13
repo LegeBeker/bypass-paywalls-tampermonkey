@@ -32,6 +32,7 @@ var defaultSites = {
   'Harper\'s Magazine': 'harpers.org',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
+  'Het Financieele Dagblad': 'fd.nl',
   'Inc.com': 'inc.com',
   'La Nacion': 'lanacion.com.ar',
   'La Repubblica': 'repubblica.it',

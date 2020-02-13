@@ -37,6 +37,7 @@ var defaultSites = {
   'Harper\'s Magazine': 'harpers.org',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
+  'Het Financieele Dagblad': 'fd.nl',
   'Inc.com': 'inc.com',
   'La Nacion': 'lanacion.com.ar',
   'La Repubblica': 'repubblica.it',
@@ -163,6 +164,7 @@ const allow_cookies = [
 'wsj.com',
 'lrb.co.uk',
 'theathletic.com',
+'fd.nl',
 ]
 
 // Removes cookies after page load
@@ -233,7 +235,8 @@ const use_google_bot = [
 'haaretz.com',
 'themarker.com',
 'prime.economictimes.indiatimes.com',
-'theathletic.com'
+'theathletic.com',
+'fd.nl',
 ]
 
 function setDefaultOptions() {

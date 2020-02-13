@@ -48,6 +48,7 @@
 [Harper's Magazine](https://harpers.org)\
 [Hartford Courant](https://www.courant.com)\
 [Harvard Business Review](https://www.hbr.org)\
+[Het Financieel Dagblad](https://fd.nl)\
 [Inc.com](https://www.inc.com)\
 [L.A. Business Journal](https://labusinessjournal.com)\
 [La Nación](https://www.lanacion.com.ar)\
