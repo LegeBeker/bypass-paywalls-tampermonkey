@@ -1,4 +1,5 @@
 var defaultSites = {
+  'Adweek': 'adweek.com',
   'Algemeen Dagblad': 'ad.nl',
   'American Banker': 'americanbanker.com',
   'Baltimore Sun': 'baltimoresun.com',

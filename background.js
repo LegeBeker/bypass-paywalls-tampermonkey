@@ -4,6 +4,7 @@
 
 // Cookies from this list are blocked by default
 var defaultSites = {
+  'Adweek': 'adweek.com',
   'Algemeen Dagblad': 'ad.nl',
   'American Banker': 'americanbanker.com',
   'Baltimore Sun': 'baltimoresun.com',
@@ -258,6 +259,7 @@ var blockedRegexes = {
 'spectator.co.uk': /.+\.tinypass\.com\/.+/,
 'spectator.com.au': /.+\.tinypass\.com\/.+/,
 'theglobeandmail.com': /theglobeandmail\.com\/pb\/resources\/scripts\/build\/chunk-bootstraps\/.+\.js/,
+'adweek.com': /.+\.lightboxcdn\.com\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
