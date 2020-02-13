@@ -91,6 +91,7 @@ var defaultSites = {
   'The Philadelphia Inquirer': 'inquirer.com',
   'The Seattle Times': 'seattletimes.com',
   'The Spectator': 'spectator.co.uk',
+  'The Spectator Australia': 'spectator.com.au',
   'The Sydney Morning Herald': 'smh.com.au',
   'The Telegraph': 'telegraph.co.uk',
   'The Times': 'thetimes.co.uk',

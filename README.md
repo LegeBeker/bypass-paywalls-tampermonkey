@@ -106,6 +106,7 @@
 [The Philadelphia Inquirer](https://www.inquirer.com)\
 [The Seattle Times](https://www.seattletimes.com)\
 [The Spectator](https://www.spectator.co.uk)\
+[The Spectator Australia](https://www.spectator.com.au)\
 [The Sydney Morning Herald](https://www.smh.com.au)\
 [The Telegraph](https://www.telegraph.co.uk)\
 [The Times](https://www.thetimes.co.uk)\
