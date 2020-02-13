@@ -264,7 +264,8 @@ var blockedRegexes = {
 'spectator.com.au': /.+\.tinypass\.com\/.+/,
 'theglobeandmail.com': /theglobeandmail\.com\/pb\/resources\/scripts\/build\/chunk-bootstraps\/.+\.js/,
 'adweek.com': /.+\.lightboxcdn\.com\/.+/,
-'thecourier.com.au': /.+cdn-au\.piano\.io\/api\/tinypass.+\.js/
+'thecourier.com.au': /.+cdn-au\.piano\.io\/api\/tinypass.+\.js/,
+'afr.com': /afr\.com\/assets\/vendorsReactRedux_client.+\.js/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -338,7 +339,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.thestar.com/*", "*://*.afr.com/*"],
+    urls: ["*://*.tinypass.com/*", "*://*.poool.fr/*", "*://*.piano.io/*", "*://*.outbrain.com/*"],
     types: ["script"]
   },
   ["blocking"]
