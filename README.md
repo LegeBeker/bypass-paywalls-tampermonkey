@@ -92,6 +92,7 @@
 [The Boston Globe](https://www.bostonglobe.com)\
 [The Business Journals](https://www.bizjournals.com)\
 [The Canberra Times](https://www.canberratimes.com.au)\
+[The Courier](https://www.thecourier.com.au)\
 [The Diplomat](https://www.thediplomat.com)\
 [The Economist](https://www.economist.com)\
 [The Globe and Mail](https://www.theglobeandmail.com)\

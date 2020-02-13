@@ -76,6 +76,7 @@ var defaultSites = {
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Canberra Times': 'canberratimes.com.au',
+  'The Courier': 'thecourier.com.au',
   'The Diplomat': 'thediplomat.com',
   'The Economist': 'economist.com',
   'The Globe and Mail': 'theglobeandmail.com',

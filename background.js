@@ -81,6 +81,7 @@ var defaultSites = {
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Canberra Times': 'canberratimes.com.au',
+  'The Courier': 'thecourier.com.au',
   'The Diplomat': 'thediplomat.com',
   'The Economist': 'economist.com',
   'The Globe and Mail': 'theglobeandmail.com',
@@ -262,7 +263,8 @@ var blockedRegexes = {
 'spectator.co.uk': /.+\.tinypass\.com\/.+/,
 'spectator.com.au': /.+\.tinypass\.com\/.+/,
 'theglobeandmail.com': /theglobeandmail\.com\/pb\/resources\/scripts\/build\/chunk-bootstraps\/.+\.js/,
-'adweek.com': /.+\.lightboxcdn\.com\/.+/
+'adweek.com': /.+\.lightboxcdn\.com\/.+/,
+'thecourier.com.au': /.+cdn-au\.piano\.io\/api\/tinypass.+\.js/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
