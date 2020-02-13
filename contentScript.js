@@ -85,6 +85,14 @@ if (window.location.href.indexOf("mexiconewsdaily.com") !== -1) {
     });
 }
 
+if (window.location.href.indexOf("theathletic.com") !== -1) {
+    const landing_banner = document.querySelector('.logged-out-landing-banner');
+    const sample_banner = document.querySelector('.main-sample-banner');
+    const bottom_banner = document.querySelector('.border-bottom-cc');
+    const subscribe = document.querySelector('.subscribe-ad-text');
+    removeDOMElement(landing_banner, sample_banner, bottom_banner, subscribe);
+}
+
 if (window.location.href.indexOf("the-american-interest.com") !== -1) {
   const counter = document.getElementById('article-counter');
   removeDOMElement(counter);

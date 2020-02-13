@@ -72,6 +72,7 @@ var defaultSites = {
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
   'The American Interest': 'the-american-interest.com',
+  'The Athletic': 'theathletic.com',
   'The Atlantic': 'theatlantic.com',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review': 'afr.com',
@@ -159,6 +160,7 @@ const allow_cookies = [
 'wired.com',
 'wsj.com',
 'lrb.co.uk',
+'theathletic.com',
 ]
 
 // Removes cookies after page load
@@ -229,6 +231,7 @@ const use_google_bot = [
 'haaretz.com',
 'themarker.com',
 'prime.economictimes.indiatimes.com',
+'theathletic.com'
 ]
 
 function setDefaultOptions() {
