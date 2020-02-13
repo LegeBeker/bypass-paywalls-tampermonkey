@@ -107,7 +107,8 @@ var defaultSites = {
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
   'Vrij Nederland': 'vn.nl',
-  'Wired': 'wired.com'
+  'Wired': 'wired.com',
+  '*General Paywall Bypass*': 'generalpaywallbypass'
 };
 
 // Saves options to chrome.storage

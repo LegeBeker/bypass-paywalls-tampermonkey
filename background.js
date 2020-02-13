@@ -112,7 +112,8 @@ var defaultSites = {
   'Winston-Salem Journal': 'journalnow.com',
   'Vanity Fair': 'vanityfair.com',
   'Vrij Nederland': 'vn.nl',
-  'Wired': 'wired.com'
+  'Wired': 'wired.com',
+  '*General Paywall Bypass*': 'generalpaywallbypass'
 };
 
 const restrictions = {
@@ -333,7 +334,9 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
 
 // Disable javascript for these sites
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
-  if (!isSiteEnabled(details)) {
+  if (!isSiteEnabled(details) && !enabledSites.some(function(enabledSite) {
+    return enabledSite.indexOf("generalpaywallbypass") !== -1
+  })) {
     return;
   }
   return {cancel: true}; 
