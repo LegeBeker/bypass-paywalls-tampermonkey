@@ -173,7 +173,6 @@ const allow_cookies = [
 const remove_cookies = [
 'ad.nl',
 'asia.nikkei.com',
-'bostonglobe.com',
 'canberratimes.com.au',
 'chicagobusiness.com',
 'demorgen.be',
