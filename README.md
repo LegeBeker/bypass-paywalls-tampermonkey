@@ -34,6 +34,7 @@
 [Denver Post](https://www.denverpost.com)\
 [Dynamed Plus](https://www.dynamed.com)\
 [Eindhovens Dagblad](https://www.ed.nl)\
+[El Pais](https://www.elpais.com/)\
 [Encyclopedia Britannica](https://www.britannica.com)\
 [ET Prime](https://prime.economictimes.indiatimes.com/)\
 [Examiner](https://www.examiner.com.au)\

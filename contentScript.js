@@ -301,6 +301,16 @@ if (window.location.href.indexOf("the-tls.co.uk") !== -1) {
         removeDOMElement(paywall);
 }
 
+if (window.location.href.indexOf("elpais.com") !== -1) {
+    setTimeout(function () {
+        const paywall = document.querySelector('.fc-ab-root');
+        const body = document.querySelector('.salida_articulo');
+
+        removeDOMElement(paywall);
+        body.removeAttribute('style');
+    }, 500); // Delay (in milliseconds)
+}
+
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element)
