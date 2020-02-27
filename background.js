@@ -67,6 +67,7 @@ var defaultSites = {
   'San Diego Union Tribune': 'sandiegouniontribune.com',
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
+  'Seeking Alpha': 'seekingalpha.com',
   'SOFREP': 'sofrep.com',
   'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
@@ -167,6 +168,7 @@ const allow_cookies = [
 'lrb.co.uk',
 'theathletic.com',
 'fd.nl',
+'seekingalpha.com',
 ]
 
 // Removes cookies after page load
@@ -238,6 +240,7 @@ const use_google_bot = [
 'prime.economictimes.indiatimes.com',
 'theathletic.com',
 'fd.nl',
+'seekingalpha.com',
 ]
 
 function setDefaultOptions() {
