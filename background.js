@@ -23,6 +23,7 @@ var defaultSites = {
   'Denver Post': 'denverpost.com',
   'Dynamed Plus': 'dynamed.com',
   'Eindhovens Dagblad': 'ed.nl',
+  'El Pais': 'elpais.com',
   'Encyclopedia Britannica': 'britannica.com',
   'ET Prime': 'prime.economictimes.indiatimes.com',
   'Examiner': 'examiner.com.au',
