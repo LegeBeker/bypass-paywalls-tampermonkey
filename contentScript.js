@@ -107,7 +107,7 @@ if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
         paywall.classList.add('full-content');
         removeClassesByPrefix(paywall, 'QUnW');
         var paras = paywall.querySelectorAll("p, span, h2, div");
-        for (var i = 0; i < paras.length; i++){     
+        for (var i = 0; i < paras.length; i++){
             removeClassesByPrefix(paras[i], 'QUnW');
             paras[i].classList.remove("ellipsis");
             paras[i].removeAttribute('style');
@@ -212,19 +212,19 @@ if (window.location.href.indexOf('lemonde.fr') !== -1) {
         const hidden_section = document.getElementsByClassName('article__content--restricted-media')[0];
         if (hidden_section)
             hidden_section.classList.remove('article__content--restricted-media');
-        const longform_article_restricted = document.getElementsByClassName('article__content--restricted')[0];     
+        const longform_article_restricted = document.getElementsByClassName('article__content--restricted')[0];
         if (longform_article_restricted)
-            longform_article_restricted.classList.remove('article__content--restricted');   
-        const longform_paywall = document.getElementsByClassName('paywall--longform')[0];       
+            longform_article_restricted.classList.remove('article__content--restricted');
+        const longform_paywall = document.getElementsByClassName('paywall--longform')[0];
         if (longform_paywall)
-            longform_paywall.classList.remove('paywall--longform'); 
+            longform_paywall.classList.remove('paywall--longform');
         const paywall = document.getElementById('js-paywall-content');
         const friend_paywall = document.getElementsByClassName('friend--paywall')[0];
         const cookie_banner = document.getElementById('cookie-banner');
         removeDOMElement(paywall, friend_paywall, cookie_banner);
     });
 }
-    
+
 if (window.location.href.indexOf("canberratimes.com.au") !== -1) {
         const paywall = document.querySelector('.subscribe-article.news-article-body.article__body');
         paywall.classList.remove('subscribe-article');
@@ -242,7 +242,7 @@ if (window.location.href.indexOf("ledevoir.com") !== -1) {
 }
 
 if (window.location.href.includes('ft.com')) {
-    const cookie_banner = document.querySelector('.n-messaging-banner__outer');
+    const cookie_banner = document.querySelector('.cookie-banner');
     removeDOMElement(cookie_banner);
 }
 
