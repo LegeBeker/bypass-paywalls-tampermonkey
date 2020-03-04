@@ -236,6 +236,11 @@ if (window.location.href.indexOf("canberratimes.com.au") !== -1) {
     }
 }
 
+if (window.location.href.includes('asia.nikkei.com')) {
+    const cookie_banner = document.querySelector('.pw-widget');
+    removeDOMElement(cookie_banner);
+}
+
 if (window.location.href.indexOf("ledevoir.com") !== -1) {
         const counter = document.querySelector('.full.hidden-print.popup-msg');
         removeDOMElement(counter);
