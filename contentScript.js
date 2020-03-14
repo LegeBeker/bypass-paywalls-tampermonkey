@@ -273,15 +273,28 @@ if (window.location.href.indexOf("economist.com") !== -1) {
     document.addEventListener('DOMContentLoaded', () => {
         const subscribe = document.querySelector('.subscription-proposition');
         const advert = document.querySelector('.advert');
-		const wrapper = document.getElementById('bottom-page-wrapper');
-		removeDOMElement(subscribe, advert, wrapper);
-		setTimeout(function () {
-			const paywall = document.querySelector('.layout-article-regwall');;
-			if (paywall) {
-				window.location.reload(true);
-			}
-		}, 500); // Delay (in milliseconds)
-	});
+        const wrapper = document.getElementById('bottom-page-wrapper');
+        removeDOMElement(subscribe, advert, wrapper);
+        setTimeout(function () {
+            const paywall = document.querySelector('.layout-article-regwall'); ;
+            if (paywall) {
+                window.location.reload(true);
+            }
+        }, 500); // Delay (in milliseconds)
+        const p_article = document.querySelectorAll('p.article__body-text');
+        var href;
+        for (let i = 0; i < p_article.length; i++) {
+            const anchor = document.querySelectorAll('a');
+            href = '';
+            for (let j = 0; j < anchor.length; j++) {
+                if (anchor[j].href) {
+                    href = anchor[j].href;
+                } else {
+                    anchor[j].href = href;
+                }
+            }
+        }
+    });
 }
 
 if (window.location.href.indexOf("bizjournals.com") !== -1) {
