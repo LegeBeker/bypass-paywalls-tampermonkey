@@ -9,7 +9,7 @@
 1. Drag the `bypass-paywalls-chrome-master` folder anywhere on the page to import it (do not delete the folder afterwards).
 
 **Mozilla Firefox**
-1. [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.6.6/bypass_paywalls-1.6.6-an+fx.xpi)
+1. [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.7.0/bypass_paywalls-1.7.0-an+fx.xpi)
 
 **Notes**
 * Every time you open Chrome it may warn you about running extensions in developer mode, just click 🗙 to keep the extension enabled.
