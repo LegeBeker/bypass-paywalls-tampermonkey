@@ -165,7 +165,6 @@ const allow_cookies = [
 'volkskrant.nl',
 'washingtonpost.com',
 'wired.com',
-'wsj.com',
 'lrb.co.uk',
 'theathletic.com',
 'fd.nl',
@@ -210,7 +209,8 @@ const remove_cookies = [
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
 	'washingtonpost.com': ['wp_gdpr'],
-	'qz.com': ['gdpr']
+	'qz.com': ['gdpr'],
+  'wsj.com': ['wsjregion']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
