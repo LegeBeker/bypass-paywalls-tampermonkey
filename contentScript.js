@@ -324,6 +324,16 @@ if (window.location.href.indexOf("elpais.com") !== -1) {
     }, 500); // Delay (in milliseconds)
 }
 
+if (window.location.href.indexOf("techinasia.com") !== -1) {
+    const paywall = document.querySelector('.paywall-content');
+    if (paywall) {
+        paywall.classList.remove('paywall-content');
+    }
+    const splash_subscribe = document.querySelector('.splash-subscribe');
+    const paywall_hard = document.querySelector('.paywall-hard');
+    removeDOMElement(splash_subscribe, paywall_hard);
+}
+
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element)

@@ -72,6 +72,7 @@ var defaultSites = {
   'SOFREP': 'sofrep.com',
   'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
+  'Tech in Asia':'techinasia.com',
   'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
@@ -169,6 +170,7 @@ const allow_cookies = [
 'theathletic.com',
 'fd.nl',
 'seekingalpha.com',
+'techinasia.com',
 ]
 
 // Removes cookies after page load

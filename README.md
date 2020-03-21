@@ -83,6 +83,7 @@
 [SOFREP](https://sofrep.com)\
 [Statista](https://www.statista.com)\
 [SunSentinel](https://www.sun-sentinel.com)\
+[Tech in Asia](https://www.techinasia.com)\
 [Telegraaf](https://www.telegraaf.nl)\
 [The Advocate](https://www.theadvocate.com.au)\
 [The Age](https://www.theage.com.au)\
