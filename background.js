@@ -31,6 +31,7 @@ var defaultSites = {
   'Financial News': 'fnlondon.com',
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
+  'Fortune': 'fortune.com',
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
