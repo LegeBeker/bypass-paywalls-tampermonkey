@@ -153,6 +153,27 @@ if (window.location.href.indexOf("firstthings.com") !== -1) {
     removeDOMElement(paywall);
 }
 
+if (window.location.href.indexOf("fortune.com") !== -1) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const paywall = document.getElementById('freestar-instream-content');
+        if (paywall){
+            paywall.classList.remove('tp-container-inner');
+        }
+        const paywallJunk = document.getElementById('article_overlay');
+        if (paywallJunk){
+            paywallJunk.classList.remove('ntv-moap');
+        }
+        const ptags = paywallJunk.getElementsByTagName('p');
+        const h3tags = paywallJunk.getElementsByTagName('h3');
+        for (let i = 0; i < ptags.length; i++) {
+          ptags[i].removeAttribute('style');
+        }
+        for (let i = 0; i < h3tags.length; i++) {
+          h3tags[i].removeAttribute('style');
+        }
+    });
+}
+
 if (window.location.href.indexOf("bloomberg.com") !== -1) {
     document.addEventListener('DOMContentLoaded', () => {
         const fence = document.querySelector('.fence-body');
