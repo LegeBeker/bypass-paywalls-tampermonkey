@@ -48,6 +48,7 @@
 [Financial Times](https://www.ft.com)\
 [First Things](https://www.firstthings.com)\
 [Foreign Policy](https://www.foreignpolicy.com)\
+[Fortune](https://www.fortune.com)\
 [Glassdoor](https://www.glassdoor.com)\
 [Haaretz.co.il](https://www.haaretz.co.il)\
 [Haaretz.com](https://www.haaretz.com)\

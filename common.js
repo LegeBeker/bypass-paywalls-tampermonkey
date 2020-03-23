@@ -39,6 +39,7 @@ const defaultSites = {
     'Financial Times': 'ft.com',
     'First Things': 'firstthings.com',
     'Foreign Policy': 'foreignpolicy.com',
+    'Fortune': 'fortune.com',
     'Glassdoor': 'glassdoor.com',
     'Haaretz English': 'haaretz.com',
     'Haaretz': 'haaretz.co.il',
