@@ -43,6 +43,7 @@ const allow_cookies = [
 'seekingalpha.com',
 'sofrep.com',
 'spectator.co.uk',
+'techinasia.com',
 'telegraaf.nl',
 'the-american-interest.com',
 'theadvocate.com.au',
