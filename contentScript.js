@@ -173,7 +173,8 @@ if (window.location.href.indexOf("afr.com") !== -1) {
     });
 }
 
-if (window.location.href.indexOf("parool.nl") !== -1 || window.location.href.indexOf("trouw.nl") !== -1 || window.location.href.indexOf("volkskrant.nl") !== -1) {
+if (window.location.href.indexOf("parool.nl") !== -1 || window.location.href.indexOf("trouw.nl") !== -1 || window.location.href.indexOf("volkskrant.nl") !== -1
+    || window.location.href.indexOf("demorgen.be") !== -1) {
     document.addEventListener('DOMContentLoaded', () => {
         const paywall = document.querySelector('div[data-temptation-position="ARTICLE_BOTTOM"]');
         const hidden_section = document.querySelector('div[data-temptation-position="ARTICLE_INLINE"]');

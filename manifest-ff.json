@@ -7,7 +7,7 @@
   },
   "content_scripts": [
     {
-      "matches": [
+    "matches": [
     "*://*.ad.nl/*",
     "*://*.afr.com/*",
     "*://*.americanbanker.com/*",
@@ -49,7 +49,7 @@
     "*://*.volkskrant.nl/*",
     "*://*.washingtonpost.com/*",
     "*://*.wsj.com/*"
-      ],
+    ],
       "js": ["contentScript.js"]
     }
   ],
@@ -121,6 +121,7 @@
     "*://*.fd.nl/*",
     "*://*.fnlondon.com/*",
     "*://*.foreignpolicy.com/*",
+    "*://*.fortune.com/*",
     "*://*.ft.com/*",
     "*://*.glassdoor.com/*",
     "*://*.groene.nl/*",
@@ -184,6 +185,7 @@
     "*://*.the-tls.co.uk/*",
     "*://*.theadvocate.com.au/*",
     "*://*.theage.com.au/*",
+    "*://*.theathletic.com/*",
     "*://*.theatlantic.com/*",
     "*://*.theaustralian.com.au/*",
     "*://*.thediplomat.com/*",
