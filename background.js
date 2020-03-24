@@ -261,6 +261,10 @@ extension_api.webRequest.onBeforeRequest.addListener(function(details) {
   ["blocking"]
 );
 
+var extraInfoSpec = ['blocking', 'requestHeaders'];
+if (extension_api.webRequest.OnBeforeSendHeadersOptions.hasOwnProperty('EXTRA_HEADERS'))
+  extraInfoSpec.push('extraHeaders');
+
 extension_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var requestHeaders = details.requestHeaders;
 
@@ -389,7 +393,7 @@ extension_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   return { requestHeaders: requestHeaders };
 }, {
   urls: ['<all_urls>']
-}, ['blocking', 'requestHeaders', 'extraHeaders']);
+}, extraInfoSpec);
 
 // remove cookies after page load
 extension_api.webRequest.onCompleted.addListener(function(details) {
