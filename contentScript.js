@@ -147,16 +147,6 @@ if (window.location.href.indexOf("thestar.com") !== -1) {
     }
 }
 
-if (window.location.href.indexOf("techinasia.com") !== -1) {
-    const paywall = document.querySelector('.paywall-content');
-    if (paywall){
-        paywall.classList.remove('paywall-content');
-    }
-    const splash_subscribe = document.querySelector('.splash-subscribe');
-    const paywall_hard = document.querySelector('.paywall-hard');
-    removeDOMElement(splash_subscribe, paywall_hard);
-}
-
 if (window.location.href.indexOf("afr.com") !== -1) {
     document.addEventListener('DOMContentLoaded', () => {
         const hidden_image = document.querySelectorAll('img');
