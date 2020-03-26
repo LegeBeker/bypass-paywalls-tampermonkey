@@ -62,31 +62,8 @@ if (window.location.href.indexOf("washingtonpost.com") !== -1) {
     }
 }
 
-// if (window.location.href.indexOf("businessinsider.com") !== -1) {
-//     const paywall = document.getElementsByClassName('tp-modal');
-//     while (paywall.length > 0) {
-//         paywall[0].parentNode.removeChild(paywall[0]);
-//     }
-// }
-
-// if (window.location.hostname.endsWith('haaretz.co.il')) {
-//     const html = document.getElementsByTagName('html');
-//     if (html && html.length > 0) {
-//         html[0].style['overflow-y'] = 'auto';
-//     }
-//     const msg = document.getElementById('article-wrapper');
-//     if (msg) {
-//         msg.style['display'] = 'none';
-//     }
-// }
-
 if (window.location.href.indexOf("wsj.com") !== -1) {
     if (window.location.href.includes('/articles/')) {
-//      document.addEventListener('DOMContentLoaded', () => {
-//          const paywall = document.getElementById('cx-scrim');
-//          const candybar = document.getElementById('cx-candybar');
-//          removeDOMElement(paywall, candybar);
-//      });
         const close_button = document.querySelector('.close-btn');
         if (close_button)
             close_button.click();
