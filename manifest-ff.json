@@ -60,19 +60,20 @@
     }
   },
   "browser_action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "128": "bypass.png"
-    },
     "theme_icons": [
       {
         "light": "bypass-dark.png",
         "dark": "bypass.png",
         "size": 128
       }
-    ]
+    ],
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "bypass.png"
+    }
   },
   "description": "Bypass News Sites' Paywalls",
+  "homepage_url": "https://github.com/iamadamdev/bypass-paywalls-chrome/blob/master/README.md",
   "icons": {
     "128": "bypass.png"
   },
