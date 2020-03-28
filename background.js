@@ -431,6 +431,8 @@ extension_api.webRequest.onCompleted.addListener(function(details) {
   urls: ["<all_urls>"]
 });
 
+// Google Analytics to track Daily Average Users
+
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-69824169-2']);
 _gaq.push(['_trackPageview']);
@@ -439,7 +441,7 @@ _gaq.push(['_trackPageview']);
   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
   ga.src = 'https://ssl.google-analytics.com/ga.js';
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+})(); // End-GA
 
 function isSiteEnabled(details) {
   var isEnabled = enabledSites.some(function(enabledSite) {
