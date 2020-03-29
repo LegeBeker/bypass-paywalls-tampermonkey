@@ -39,7 +39,6 @@
 [DeMorgen](https://www.demorgen.be)\
 [Denver Post](https://www.denverpost.com)\
 [Dynamed Plus](https://www.dynamed.com)\
-[ET Prime](https://prime.economictimes.indiatimes.com/)\
 [Eindhovens Dagblad](https://www.ed.nl)\
 [El Pais](https://www.elpais.com/)\
 [Encyclopedia Britannica](https://www.britannica.com)\
