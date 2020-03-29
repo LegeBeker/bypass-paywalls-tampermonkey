@@ -39,7 +39,6 @@
 [DeMorgen](https://www.demorgen.be)\
 [Denver Post](https://www.denverpost.com)\
 [Dynamed Plus](https://www.dynamed.com)\
-[ET Prime](https://prime.economictimes.indiatimes.com/)\
 [Eindhovens Dagblad](https://www.ed.nl)\
 [El Pais](https://www.elpais.com/)\
 [Encyclopedia Britannica](https://www.britannica.com)\
@@ -142,7 +141,7 @@
 [Vanity Fair](https://www.vanityfair.com)\
 [Vrij Nederland](https://www.vn.nl)\
 [Winston-Salem Journal](https://journalnow.com)\
-[Wired](https://www.wired.com)\
+[Wired](https://www.wired.com)
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.*

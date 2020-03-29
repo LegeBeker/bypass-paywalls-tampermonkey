@@ -86,6 +86,7 @@
   "permissions": [
     "cookies",
     "storage",
+    "tabs",
     "webRequest",
     "webRequestBlocking",
     "*://*.outbrain.com/*",
@@ -132,7 +133,6 @@
     "*://*.harpers.org/*",
     "*://*.hbr.org/*",
     "*://*.inc.com/*",
-    "*://*.indiatimes.com/*",
     "*://*.inquirer.com/*",
     "*://*.investorschronicle.co.uk/*",
     "*://*.irishtimes.com/*",

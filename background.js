@@ -4,7 +4,6 @@
 
 const restrictions = {
   'barrons.com': /.+barrons\.com\/articles\/.+/,
-  'prime.economictimes.indiatimes.com': /.+prime\.economictimes\.indiatimes\.com\/news\/[0-9]{8}\/.+/,
   'wsj.com': /(.+wsj\.com\/articles\/.+|.+blogs\.wsj\.com\/.+)/
 }
 
@@ -133,7 +132,6 @@ const use_google_bot = [
 'lemonde.fr',
 'mexiconewsdaily.com',
 'nytimes.com',
-'prime.economictimes.indiatimes.com',
 'quora.com',
 'seekingalpha.com',
 'telegraph.co.uk',

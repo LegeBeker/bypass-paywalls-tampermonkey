@@ -33,7 +33,6 @@ const defaultSites = {
     'Eindhovens Dagblad': 'ed.nl',
     'El Pais': 'elpais.com',
     'Encyclopedia Britannica': 'britannica.com',
-    'ET Prime': 'prime.economictimes.indiatimes.com',
     'Examiner': 'examiner.com.au',
     'Financial News': 'fnlondon.com',
     'Financial Times': 'ft.com',
