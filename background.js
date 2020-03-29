@@ -194,7 +194,9 @@ extension_api.storage.sync.get({
   enabledSites = Object.keys(items.sites).map(function(key) {
     return items.sites[key];
   });
-  init_GA();
+  if (extension_api === chrome) {
+    init_GA();
+  }
 });
 
 // Listen for changes to options
@@ -219,6 +221,27 @@ extension_api.runtime.onInstalled.addListener(function (details) {
     // User updated extension
   }
 });
+
+extension_api.tabs.onUpdated.addListener(updateBadge);
+extension_api.tabs.onActivated.addListener(updateBadge);
+
+function updateBadge() {
+    extension_api.tabs.query({
+        active: true,
+        currentWindow: true
+    }, function (arrayOfTabs) {
+        var activeTab = arrayOfTabs[0];
+        if (!activeTab)
+            return;
+        var badgeText = getBadgeText(activeTab.url);
+        extension_api.browserAction.setBadgeBackgroundColor({color: "blue"});
+        extension_api.browserAction.setBadgeText({text: badgeText});
+    });
+}
+
+function getBadgeText(currentUrl) {
+  return currentUrl && isSiteEnabled({url: currentUrl}) ? 'ON' : '';
+}
 
 /**
 // WSJ bypass
