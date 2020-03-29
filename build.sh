@@ -16,10 +16,6 @@ rm -f $NAME.crx $NAME.xpi
 7z a -tzip -mx9 $NAME.crx $CH_FILES
 7z rn $NAME.crx manifest-ch.json manifest.json  # doesn't exist yet; fails harmlessly
 
-# Firefox .xpi extension package
-# Differences from .crx: use FF manifest; omit Google Analytics code
-sed '/Google Analytics/,/End-GA/d' < background.js > background-ff.js
-FF_FILES=$(echo $FF_FILES | sed 's/background/background-ff/')
+# Firefox .xpi extension package (different manifest & update metadata)
 7z a -tzip -mx9 $NAME.xpi $FF_FILES
-rm -f background-ff.js
-7z rn $NAME.xpi background-ff.js background.js manifest-ff.json manifest.json
+7z rn $NAME.xpi manifest-ff.json manifest.json

@@ -146,8 +146,13 @@ const use_google_bot = [
 ]
 
 function setDefaultOptions() {
+  var initSites = defaultSites;
+  // Disable Daily Average User tracking by default on FF
+  if (typeof browser === 'object' && extension_api === browser)
+    Object.keys(initSites).forEach(key => initSites[key] == 'allowDAU' && delete initSites[key]);
+
   extension_api.storage.sync.set({
-    sites: defaultSites
+    sites: initSites,
   }, function() {
     extension_api.runtime.openOptionsPage();
   });
@@ -189,6 +194,7 @@ extension_api.storage.sync.get({
   enabledSites = Object.keys(items.sites).map(function(key) {
     return items.sites[key];
   });
+  if (enabledSites.indexOf("allowDAU") !== -1) init_GA();
 });
 
 // Listen for changes to options
@@ -431,17 +437,19 @@ extension_api.webRequest.onCompleted.addListener(function(details) {
   urls: ["<all_urls>"]
 });
 
-// Google Analytics to track Daily Average Users
+// Google Analytics to track Daily Average Users, if enabled
 
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-69824169-2']);
-_gaq.push(['_trackPageview']);
+function init_GA() {
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-69824169-2']);
+  _gaq.push(['_trackPageview']);
 
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = 'https://ssl.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})(); // End-GA
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://ssl.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+}
 
 function isSiteEnabled(details) {
   var isEnabled = enabledSites.some(function(enabledSite) {

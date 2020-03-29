@@ -135,4 +135,5 @@ const defaultSites = {
     'Winston-Salem Journal': 'journalnow.com',
     'Wired': 'wired.com',
     '*General Paywall Bypass*': 'generalpaywallbypass',
+    '*Track Usage w/Google Analytics*': 'allowDAU',
 };
