@@ -194,7 +194,7 @@ extension_api.storage.sync.get({
   enabledSites = Object.keys(items.sites).map(function(key) {
     return items.sites[key];
   });
-  if (enabledSites.indexOf("allowDAU") !== -1) init_GA();
+  init_GA();
 });
 
 // Listen for changes to options
@@ -437,11 +437,11 @@ extension_api.webRequest.onCompleted.addListener(function(details) {
   urls: ["<all_urls>"]
 });
 
-// Google Analytics to track Daily Average Users, if enabled
-
+// Google Analytics to track DAU
 function init_GA() {
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-69824169-2']);
+  _gaq.push (['_gat._anonymizeIp']);
   _gaq.push(['_trackPageview']);
 
   (function() {
