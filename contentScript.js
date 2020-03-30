@@ -7,7 +7,7 @@ if (!localstorage_hold){
     window.localStorage.clear();
 }
 
-if (window.location.hostname.endsWith('rep.repubblica.it')) {
+if (matchDomain('rep.repubblica.it')) {
     if (window.location.href.includes('/pwa/')) {
         window.location.href = window.location.href.replace('/pwa/', '/ws/detail/');
     }
