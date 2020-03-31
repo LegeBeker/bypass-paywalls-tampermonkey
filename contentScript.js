@@ -67,7 +67,7 @@ if (matchDomain('telegraaf.nl')) {
     }
 }
 
-if (matchDomain(['ad.nl', 'ed.nl']) {
+if (matchDomain(['ad.nl', 'ed.nl'])) {
     let paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
     removeDOMElement(paywall);
 }
@@ -168,7 +168,7 @@ if (matchDomain('afr.com')) {
     });
 }
 
-if (matchDomain(['parool.nl', 'trouw.nl', 'volkskrant.nl', 'demorgen.be']) {
+if (matchDomain(['parool.nl', 'trouw.nl', 'volkskrant.nl', 'demorgen.be'])) {
     document.addEventListener('DOMContentLoaded', () => {
         const paywall = document.querySelector('div[data-temptation-position="ARTICLE_BOTTOM"]');
         const hidden_section = document.querySelector('div[data-temptation-position="ARTICLE_INLINE"]');
@@ -246,7 +246,7 @@ if (matchDomain('theglobeandmail.com')) {
     });
 }
 
-if (matchDomain(['examiner.com.au', 'thecourier.com.au', 'theadvocate.com.au']) {
+if (matchDomain(['examiner.com.au', 'thecourier.com.au', 'theadvocate.com.au'])) {
   const subscribe_truncate = document.querySelector('.subscribe-truncate');
   if (subscribe_truncate)
       subscribe_truncate.classList.remove('subscribe-truncate');
