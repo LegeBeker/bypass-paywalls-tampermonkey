@@ -8,10 +8,11 @@ if (!localstorage_hold){
 }
 
 if (matchDomain('rep.repubblica.it')) {
-    if (window.location.href.includes('/pwa/')) {
-        window.location.href = window.location.href.replace('/pwa/', '/ws/detail/');
+    if (location.href.includes('/pwa/')) {
+        setTimeout(function () {
+            window.location.href = window.location.href.replace('/pwa/', '/ws/detail/');
+        }, 400);
     }
-
     if (window.location.href.includes('/ws/detail/')) {
         const paywall = document.querySelector('.paywall[subscriptions-section="content"]');
         if (paywall) {
