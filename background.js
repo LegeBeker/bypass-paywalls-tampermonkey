@@ -20,7 +20,6 @@ const allow_cookies = [
 'economist.com',
 'ed.nl',
 'examiner.com.au',
-'fd.nl',
 'ft.com',
 'harpers.org',
 'hbr.org',
@@ -115,10 +114,11 @@ const remove_cookies_select_hold = {
 // select only specific cookie(s) to drop from remove_cookies domains
 const remove_cookies_select_drop = {
   'ad.nl': ['temptationTrackingId'],
+  'ed.nl': ['temptationTrackingId'],
   'bostonglobe.com': ['FMPaywall'],
   'demorgen.be': ['TID_ID'],
   'economist.com': ['rvuuid'],
-  'ed.nl': ['temptationTrackingId'],
+  'fd.nl': ['socialread'],
   'nrc.nl': ['counter'],
 }
 
@@ -347,7 +347,7 @@ extension_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
         // this fixes images not being loaded on cooking.nytimes.com main page
         // referrer has to be *nytimes.com otherwise returns 403
         requestHeader.value = 'https://cooking.nytimes.com';
-      } else if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1) {
+      } else if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1 || details.url.indexOf("fd.nl") !== -1) {
         requestHeader.value = 'https://www.facebook.com/';
       } else {
         requestHeader.value = 'https://www.google.com/';
@@ -363,7 +363,7 @@ extension_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   // otherwise add it
   if (!setReferer) {
-    if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1) {
+    if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1 || details.url.indexOf("fd.nl") !== -1) {
       requestHeaders.push({
         name: 'Referer',
         value: 'https://www.facebook.com/'
