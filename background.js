@@ -141,6 +141,7 @@ const use_google_bot = [
 'themercury.com.au',
 'thetimes.co.uk',
 'wsj.com',
+'kansascity.com',
 ]
 
 function setDefaultOptions() {
