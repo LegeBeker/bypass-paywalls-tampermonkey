@@ -46,7 +46,6 @@ const defaultSites = {
     'La Tercera': 'latercera.com',
     'L\'Echo': 'lecho.be',
     'Le Devoir': 'ledevoir.com',
-    'Le Monde': 'lemonde.fr',
     'Le Parisien': 'leparisien.fr',
     'Les Echos': 'lesechos.fr',
     'Loeb Classical Library': 'loebclassics.com',

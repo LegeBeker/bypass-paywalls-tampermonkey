@@ -69,7 +69,6 @@
 [La Stampa](https://www.lastampa.it)\
 [La Tercera](https://www.latercera.com)\
 [Le Devoir](https://www.ledevoir.com)\
-[Le Monde](https://www.lemonde.fr)\
 [Le Parisien](http://www.leparisien.fr)\
 [Les Échos](https://www.lesechos.fr)\
 [Loeb Classical Library](https://www.loebclassics.com)\
