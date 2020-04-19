@@ -1,4 +1,8 @@
-# Bypass Paywalls browser extension
+<p align="center">
+  <img src="https://github.com/iamadamdev/bypass-paywalls-chrome/blob/master/src/icons/bypass.png" width="75" height="75"/>
+</p>
+
+<h1 align="center">Bypass Paywalls</h1>
 
 ### Installation Instructions
 **Google Chrome**
@@ -175,6 +179,3 @@ Usually premium articles cannot be bypassed as they are behind a hard paywall.
 
 ### Show your support
 * I am not asking for donations or anything like that, all I ask is that you star this repo.
-
-### License
-Bypass Paywalls is [MIT-licensed](https://github.com/iamadamdev/bypass-paywalls-chrome/blob/master/LICENSE).

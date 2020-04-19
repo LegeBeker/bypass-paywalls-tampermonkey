@@ -1,8 +1,9 @@
 {
   "background": {
     "scripts": [
-      "common.js",
-      "background.js"
+      "src/js/common.js",
+      "src/js/sites.js",
+      "src/js/background.js"
     ]
   },
   "content_scripts": [
@@ -50,7 +51,7 @@
     "*://*.washingtonpost.com/*",
     "*://*.wsj.com/*"
     ],
-      "js": ["contentScript.js"]
+      "js": ["src/js/contentScript.js"]
     }
   ],
   "applications": {
@@ -62,26 +63,26 @@
   "browser_action": {
     "theme_icons": [
       {
-        "light": "bypass-dark.png",
-        "dark": "bypass.png",
+        "light": "src/icons/bypass-dark.png",
+        "dark": "src/icons/bypass.png",
         "size": 128
       }
     ],
-    "default_popup": "popup.html",
+    "default_popup": "src/html/popup.html",
     "default_icon": {
-      "128": "bypass.png"
+      "128": "src/icons/bypass.png"
     }
   },
   "description": "Bypass News Sites' Paywalls",
   "homepage_url": "https://github.com/iamadamdev/bypass-paywalls-chrome/blob/master/README.md",
   "icons": {
-    "128": "bypass.png"
+    "128": "src/icon/bypass.png"
   },
   "manifest_version": 2,
   "name": "Bypass Paywalls",
   "short_name": "Bypass Paywall",
   "options_ui": {
-    "page": "options.html"
+    "page": "src/html/options.html"
   },
   "permissions": [
     "cookies",

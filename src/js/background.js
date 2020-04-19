@@ -1,5 +1,3 @@
-/* Please respect alphabetical order when adding a site in any list */
-
 'use strict';
 
 const restrictions = {
@@ -459,7 +457,7 @@ extension_api.webRequest.onCompleted.addListener(function(details) {
   urls: ["<all_urls>"]
 });
 
-// Google Analytics to track DAU
+// Google Analytics to track DAU (Chrome only)
 function init_GA() {
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-69824169-2']);
