@@ -1,23 +1,21 @@
-// Saves options to extension_api.storage
-function save_options() {
-  var gh_url = document.getElementById('bypass_sites').value;
+// Saves options to extensionApi.storage
+function saveOptions () {
   var inputEls = document.querySelectorAll('#bypass_sites input');
-  var sites = {};
 
-  var sites = Array.from(inputEls).reduce(function(memo, inputEl) {
+  var sites = Array.from(inputEls).reduce(function (memo, inputEl) {
     if (inputEl.checked) {
       memo[inputEl.dataset.key] = inputEl.dataset.value;
     }
     return memo;
   }, {});
 
-  extension_api.storage.sync.set({
+  extensionApi.storage.sync.set({
     sites: sites
-  }, function() {
+  }, function () {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
     status.textContent = 'Options saved.';
-    setTimeout(function() {
+    setTimeout(function () {
       status.textContent = '';
       window.close();
     }, 800);
@@ -25,15 +23,15 @@ function save_options() {
 }
 
 // Restores checkbox input states using the preferences
-// stored in extension_api.storage.
-function renderOptions() {
-  extension_api.storage.sync.get({
+// stored in extensionApi.storage.
+function renderOptions () {
+  extensionApi.storage.sync.get({
     sites: {}
-  }, function(items) {
+  }, function (items) {
     var sites = items.sites;
     var sitesEl = document.getElementById('bypass_sites');
     for (var key in defaultSites) {
-      if (!defaultSites.hasOwnProperty(key)) {
+      if (!Object.prototype.hasOwnProperty.call(defaultSites, key)) {
         continue;
       }
 
@@ -46,27 +44,27 @@ function renderOptions() {
       inputEl.checked = (key in sites) || (key.replace(/\s\(.*\)/, '') in sites);
 
       labelEl.appendChild(inputEl);
-      labelEl.appendChild(document.createTextNode(' '+key));
+      labelEl.appendChild(document.createTextNode(' ' + key));
       sitesEl.appendChild(labelEl);
     }
   });
 }
 
-function selectAll() {
+function selectAll () {
   var inputEls = Array.from(document.querySelectorAll('input'));
-  inputEls.forEach(function(inputEl) {
+  inputEls.forEach(function (inputEl) {
     inputEl.checked = true;
   });
 }
 
-function selectNone() {
+function selectNone () {
   var inputEls = Array.from(document.querySelectorAll('input'));
-  inputEls.forEach(function(inputEl) {
+  inputEls.forEach(function (inputEl) {
     inputEl.checked = false;
   });
 }
 
 document.addEventListener('DOMContentLoaded', renderOptions);
-document.getElementById('save').addEventListener('click', save_options);
+document.getElementById('save').addEventListener('click', saveOptions);
 document.getElementById('select-all').addEventListener('click', selectAll);
 document.getElementById('select-none').addEventListener('click', selectNone);

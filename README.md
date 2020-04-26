@@ -4,7 +4,7 @@
 
 <h1 align="center">Bypass Paywalls</h1>
 
-*Bypass Paywalls is a web browser extension to help bypass paywalls on a list of selected sites.*
+*Bypass Paywalls is a web browser extension to help bypass paywalls for selected sites.*
 
 ### Installation Instructions
 **Google Chrome**
