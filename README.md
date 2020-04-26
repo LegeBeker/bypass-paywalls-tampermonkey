@@ -4,6 +4,8 @@
 
 <h1 align="center">Bypass Paywalls</h1>
 
+*Bypass Paywalls is a web browser extension to help bypass paywalls on a list of selected sites.*
+
 ### Installation Instructions
 **Google Chrome**
 1. Download this repo as a [ZIP file from GitHub](https://github.com/iamadamdev/bypass-paywalls-chrome/archive/master.zip).
@@ -20,7 +22,7 @@
 * You will be logged out for any site you have checked.
 * This extension works best alongside the adblocker uBlock Origin.
 
-### Bypass the following sites' paywalls with this extension
+### Bypass the following sites' paywalls with this extension:
 
 [Adweek](https://www.adweek.com)\
 [Algemeen Dagblad](https://www.ad.nl)\
@@ -166,13 +168,14 @@ _*May not always succeed_
 
 ### New site requests
 Only large or major sites will be considered.
-1. First search 'Issues' to see if the site has been requested already.
-2. Visit an article on the site you want to bypass the paywall for and copy the article title.
-3. Open up a new incognito window (Ctrl+Shift+N on Chrome) or Private window (Ctrl+Shift+P on Firefox), and paste the article title into Google.
-4. Click on the same article from the Google search results page.
-5. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-chrome/issues/new/choose) to add the site, otherwise my extension cannot bypass it either.
-
 Usually premium articles cannot be bypassed as they are behind a hard paywall.
+
+1. Make sure you have the uBlock Origin extension installed.
+2. First search 'Issues' to see if the site has been requested already.
+3. Visit an article on the site you want to bypass the paywall for and copy the article title.
+4. Open up a new incognito window (Ctrl+Shift+N on Chrome) or Private window (Ctrl+Shift+P on Firefox), and paste the article title into Google.
+5. Click on the same article from the Google search results page.
+6. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-chrome/issues/new/choose) to add the site, otherwise my extension cannot bypass it either.
 
 ### Troubleshooting
 * This extension works best alongside uBlock Origin [for Google Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) or [for Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
