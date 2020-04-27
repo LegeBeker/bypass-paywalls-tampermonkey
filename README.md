@@ -185,8 +185,12 @@ Usually premium articles cannot be bypassed as they are behind a hard paywall.
 * If a site is having problems try unchecking "\*General Paywall Bypass\*" in Options.
 * If none of these work, you can submit an issue [here](https://github.com/iamadamdev/bypass-paywalls-chrome/issues/new/choose).
 
-### Pull Requests
-* PRs are welcome.
+### Contributing - Pull Requests
+PRs are welcome. 
+1. If making a PR to add a new site, confirm your changes actually bypass the paywall.
+2. At a minimum these files need to be updated: `README.md`, `manifest-ff.json`, `src/js/sites.js`, and possibly `src/js/background.js`, and/or `src/js/contentScript.js`.
+3. Follow existing code-style and use camelCase.
+4. Use [JavaScript Semi-Standard Style linter](https://github.com/standard/semistandard). Don't need to follow it exactly. There will be some errors (e.g., do not use it on `sites.js`).
 
 ### Show your support
 * I am not asking for donations or anything like that, all I ask is that you star this repo.

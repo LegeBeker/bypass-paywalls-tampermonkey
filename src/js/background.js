@@ -382,7 +382,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
   if (tabId !== -1) {
     // run contentScript inside tab
     extensionApi.tabs.executeScript(tabId, {
-      file: 'contentScript.js',
+      file: 'src/js/contentScript.js',
       runAt: 'document_start'
     }, function (res) {
       if (extensionApi.runtime.lastError || res[0]) {
