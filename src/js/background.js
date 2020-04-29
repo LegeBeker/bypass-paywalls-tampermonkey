@@ -9,7 +9,6 @@ const restrictions = {
 const allowCookies = [
   'ad.nl',
   'asia.nikkei.com',
-  'bostonglobe.com',
   'canberratimes.com.au',
   'cen.acs.org',
   'chicagobusiness.com',
@@ -63,7 +62,6 @@ const removeCookies = [
   'ad.nl',
   'asia.nikkei.com',
   'bloombergquint.com',
-  'bostonglobe.com',
   'canberratimes.com.au',
   'cen.acs.org',
   'chicagobusiness.com',
@@ -113,7 +111,6 @@ const removeCookiesSelectHold = {
 const removeCookiesSelectDrop = {
   'ad.nl': ['temptationTrackingId'],
   'ed.nl': ['temptationTrackingId'],
-  'bostonglobe.com': ['FMPaywall'],
   'demorgen.be': ['TID_ID'],
   'economist.com': ['rvuuid'],
   'fd.nl': ['socialread'],
@@ -160,7 +157,6 @@ function setDefaultOptions () {
 const blockedRegexes = {
   'adweek.com': /.+\.lightboxcdn\.com\/.+/,
   'afr.com': /afr\.com\/assets\/vendorsReactRedux_client.+\.js/,
-  'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
   'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
   'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
   'economist.com': /(.+\.tinypass\.com\/.+|economist\.com\/_next\/static\/runtime\/main.+\.js)/,

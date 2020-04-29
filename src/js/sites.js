@@ -91,7 +91,6 @@ const defaultSites = {
   'The Atlantic': 'theatlantic.com',
   'The Australian Financial Review': 'afr.com',
   'The Australian': 'theaustralian.com.au',
-  'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Canberra Times': 'canberratimes.com.au',
   'The Courier': 'thecourier.com.au',
