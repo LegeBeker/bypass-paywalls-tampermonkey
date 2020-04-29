@@ -258,58 +258,29 @@ extensionApi.webRequest.onBeforeRequest.addListener(function (details) {
 ['blocking']
 );
 
-var extraInfoSpec = ['blocking', 'requestHeaders'];
+const extraInfoSpec = ['blocking', 'requestHeaders'];
 if (Object.prototype.hasOwnProperty.call(extensionApi.webRequest.OnBeforeSendHeadersOptions, 'EXTRA_HEADERS')) {
   extraInfoSpec.push('extraHeaders');
 }
 
 extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
-  var requestHeaders = details.requestHeaders;
-
-  var headerReferer = '';
-  for (const n in requestHeaders) {
-    if (requestHeaders[n].name.toLowerCase() === 'referer') {
-      headerReferer = requestHeaders[n].value;
-      continue;
-    }
+  if (!isSiteEnabled(details)) {
+    return;
   }
 
-  // remove cookies for sites medium platform (mainfest.json needs in permissions: <all_urls>)
-  if (isSiteEnabled({ url: '.medium.com' }) && details.url.indexOf('cdn-client.medium.com') !== -1 && headerReferer.indexOf('.medium.com') === -1) {
-    var domainVar = new URL(headerReferer).hostname;
-    extensionApi.cookies.getAll({ domain: domainVar }, function (cookies) {
-      for (let i = 0; i < cookies.length; i++) {
-        extensionApi.cookies.remove({ url: (cookies[i].secure ? 'https://' : 'http://') + cookies[i].domain + cookies[i].path, name: cookies[i].name });
-      }
-    });
-  }
-
+  let requestHeaders = details.requestHeaders;
   // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
   for (const domain in blockedRegexes) {
-    if ((isSiteEnabled({ url: '.' + domain }) || isSiteEnabled({ url: headerReferer })) && details.url.match(blockedRegexes[domain])) {
-      // allow BG paywall-script to set cookies in homepage/sections (else no article-text)
-      if (details.url.indexOf(domain) !== -1 || headerReferer.indexOf(domain) !== -1) {
-        if (details.url.indexOf('meter.bostonglobe.com/js/') !== -1 && (headerReferer === 'https://www.bostonglobe.com/' ||
-            headerReferer.indexOf('/?p1=BGHeader_') !== -1 || headerReferer.indexOf('/?p1=BGMenu_') !== -1)) {
-          extensionApi.webRequest.handlerBehaviorChanged(function () {});
-          break;
-        } else if (headerReferer.indexOf('theglobeandmail.com') !== -1 && !(headerReferer.indexOf('/article-') !== -1)) {
-          extensionApi.webRequest.handlerBehaviorChanged(function () {});
-          break;
-        }
+    if (isSiteEnabled({ url: '.' + domain }) && details.url.match(blockedRegexes[domain])) {
+      if (details.url.indexOf(domain) !== -1) {
         return { cancel: true };
       }
     }
   }
 
-  if (!isSiteEnabled(details)) {
-    return;
-  }
-
-  var tabId = details.tabId;
-
-  var useUserAgentMobile = false;
-  var setReferer = false;
+  const tabId = details.tabId;
+  let useUserAgentMobile = false;
+  let setReferer = false;
 
   // if referer exists, set it to google
   requestHeaders = requestHeaders.map(function (requestHeader) {
