@@ -132,6 +132,7 @@ const useGoogleBotSites = [
   'haaretz.com',
   'heraldsun.com.au',
   'mexiconewsdaily.com',
+  'miamiherald.com',
   'ntnews.com.au',
   'nytimes.com',
   'quora.com',
