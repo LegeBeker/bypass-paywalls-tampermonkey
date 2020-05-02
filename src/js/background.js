@@ -221,8 +221,8 @@ function updateBadge (activeTab) {
   const badgeText = getBadgeText(activeTab.url);
   if (cachedBadgeText === badgeText) { return; }
   cachedBadgeText = badgeText;
-  extensionApi.browserAction.setBadgeBackgroundColor({color: 'blue'});
-  extensionApi.browserAction.setBadgeText({text: badgeText});
+  extensionApi.browserAction.setBadgeBackgroundColor({ color: 'blue' });
+  extensionApi.browserAction.setBadgeText({ text: badgeText });
 }
 
 function getBadgeText (currentUrl) {
@@ -242,6 +242,7 @@ extensionApi.webRequest.onBeforeRequest.addListener(function (details) {
     '*://*.outbrain.com/*',
     '*://*.piano.io/*',
     '*://*.poool.fr/*',
+    '*://*.economist.com/*',
     '*://*.tinypass.com/*'
   ],
   types: ['script']
@@ -358,7 +359,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
 // remove cookies after page load
 extensionApi.webRequest.onCompleted.addListener(function (details) {
   let domainToRemove;
-  for (let domain of removeCookies) {
+  for (const domain of removeCookies) {
     if (enabledSites.includes(domain) && details.url.includes(domain)) {
       domainToRemove = domain;
       break;
