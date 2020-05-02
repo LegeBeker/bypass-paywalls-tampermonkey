@@ -263,8 +263,8 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
   let requestHeaders = details.requestHeaders;
   // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
   for (const domain in blockedRegexes) {
-    if (isSiteEnabled({ url: '.' + domain }) && details.url.match(blockedRegexes[domain])) {
-      if (details.url.includes(domain)) {
+    if (isSiteEnabled({ url: domain }) && details.url.match(blockedRegexes[domain])) {
+      if (isSameDomain(details.url, domain)) {
         return { cancel: true };
       }
     }
@@ -281,7 +281,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
         // this fixes images not being loaded on cooking.nytimes.com main page
         // referrer has to be *nytimes.com otherwise returns 403
         requestHeader.value = 'https://cooking.nytimes.com';
-      } else if (details.url.includes('wsj.com') || details.url.includes('ft.com') || details.url.includes('fd.nl')) {
+      } else if (isSameDomain(details.url, 'wsj.com') || isSameDomain(details.url, 'ft.com') || isSameDomain(details.url, 'fd.nl')) {
         requestHeader.value = 'https://www.facebook.com/';
       } else {
         requestHeader.value = 'https://www.google.com/';
@@ -297,7 +297,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
 
   // otherwise add it
   if (!setReferer) {
-    if (details.url.includes('wsj.com') || details.url.includes('ft.com') || details.url.includes('fd.nl')) {
+    if (isSameDomain(details.url, 'wsj.com') || isSameDomain(details.url, 'ft.com') || isSameDomain(details.url, 'fd.nl')) {
       requestHeaders.push({
         name: 'Referer',
         value: 'https://www.facebook.com/'
@@ -312,7 +312,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
 
   // override User-Agent to use Googlebot
   const useGoogleBot = useGoogleBotSites.some(function (item) {
-    return typeof item === 'string' && details.url.includes(item);
+    return typeof item === 'string' && isSameDomain(details.url, item);
   });
 
   if (useGoogleBot) {
@@ -328,7 +328,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
 
   // remove cookies before page load
   const enabledCookies = allowCookies.some(function (site) {
-    return details.url.includes(site);
+    return isSameDomain(details.url, site);
   });
   if (!enabledCookies) {
     requestHeaders = requestHeaders.map(function (requestHeader) {
@@ -360,7 +360,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
 extensionApi.webRequest.onCompleted.addListener(function (details) {
   let domainToRemove;
   for (const domain of removeCookies) {
-    if (enabledSites.includes(domain) && details.url.includes(domain)) {
+    if (enabledSites.includes(domain) && isSameDomain(details.url, domain)) {
       domainToRemove = domain;
       break;
     }
@@ -416,11 +416,21 @@ function initGA () {
 
 function isSiteEnabled (details) {
   const isEnabled = enabledSites.some(function (enabledSite) {
-    const useSite = (details.url.includes('.' + enabledSite) || details.url.includes('/' + enabledSite));
+    const useSite = isSameDomain(details.url, enabledSite);
     if (enabledSite in restrictions) {
       return useSite && details.url.match(restrictions[enabledSite]);
     }
     return useSite;
   });
   return isEnabled;
+}
+
+function isSameDomain (url, domain) {
+  if (url.indexOf('http') !== 0) {
+    // Not start with http or https, add a prefix
+    url = 'http://' + url;
+  }
+  const urlObj = new URL(url);
+  const hostname = urlObj.hostname;
+  return hostname === domain || hostname.endsWith('.' + domain);
 }
