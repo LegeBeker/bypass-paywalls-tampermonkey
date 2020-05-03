@@ -51,7 +51,8 @@
     "*://*.trouw.nl/*",
     "*://*.volkskrant.nl/*",
     "*://*.washingtonpost.com/*",
-    "*://*.wsj.com/*"
+    "*://*.wsj.com/*",
+    "*://*.hbr.org/*"
     ],
       "js": ["src/js/contentScript.js"]
     }

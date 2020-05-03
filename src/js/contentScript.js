@@ -312,6 +312,9 @@ if (matchDomain('rep.repubblica.it')) {
     removeDOMElement(container);
     embed.classList.remove('d-none');
   }
+} else if (matchDomain('hbr.org')) {
+  const banner = document.querySelector('.persistent-banner');
+  removeDOMElement(banner);
 }
 
 function matchDomain (domains) {
