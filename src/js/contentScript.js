@@ -1,6 +1,6 @@
 var localStorageHoldArray = ['sfchronicle.com', 'cen.acs.org'];
 var localStorageHold = localStorageHoldArray.some(function (url) {
-  return window.location.href.indexOf(url) !== -1;
+  return window.location.href.includes(url);
 });
 
 if (!localStorageHold) {
@@ -25,12 +25,12 @@ if (matchDomain('rep.repubblica.it')) {
   }
 }
 
-if (matchDomain('americanbanker.com')) {
+else if (matchDomain('americanbanker.com')) {
   const paywall = document.getElementsByClassName('embargo-content')[0];
   if (paywall) { paywall.classList.remove('embargo-content'); }
 }
 
-if (matchDomain('telegraaf.nl')) {
+else if (matchDomain('telegraaf.nl')) {
   if (window.location.href.startsWith('https://www.telegraaf.nl/error?ref=/')) {
     window.location.href = window.location.href.split('&')[0].replace('error?ref=/', '');
   }
@@ -67,12 +67,12 @@ if (matchDomain('telegraaf.nl')) {
   }
 }
 
-if (matchDomain(['ad.nl', 'ed.nl'])) {
+else if (matchDomain(['ad.nl', 'ed.nl'])) {
   const paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
   removeDOMElement(paywall);
 }
 
-if (matchDomain('washingtonpost.com')) {
+else if (matchDomain('washingtonpost.com')) {
   if (window.location.href.includes('/gdpr-consent/')) {
     const freeButton = document.querySelector('.gdpr-consent-container .continue-btn.button.free');
     if (freeButton) { freeButton.click(); }
@@ -89,18 +89,18 @@ if (matchDomain('washingtonpost.com')) {
   }
 }
 
-if (matchDomain('wsj.com')) {
+else if (matchDomain('wsj.com')) {
   if (window.location.href.includes('/articles/')) {
     const closeButton = document.querySelector('.close-btn');
     if (closeButton) { closeButton.click(); }
   }
 }
 
-if (matchDomain('sloanreview.mit.edu')) {
+else if (matchDomain('sloanreview.mit.edu')) {
   document.querySelector('#cboxClose').click();
 }
 
-if (matchDomain('mexiconewsdaily.com')) {
+else if (matchDomain('mexiconewsdaily.com')) {
   document.addEventListener('DOMContentLoaded', () => {
     const sideNotification = document.querySelector('.pigeon-widget-prompt');
     const subMessage = document.querySelector('.sub_message_container');
@@ -111,7 +111,7 @@ if (matchDomain('mexiconewsdaily.com')) {
   });
 }
 
-if (matchDomain('miamiherald.com')) {
+else if (matchDomain('miamiherald.com')) {
   // Accept cookie to close the banner
   const acceptBtn = document.querySelector('#onetrust-accept-btn-handler');
   if (acceptBtn) {
@@ -119,7 +119,7 @@ if (matchDomain('miamiherald.com')) {
   }
 }
 
-if (matchDomain('theathletic.com') || matchDomain('theathletic.co.uk')) {
+else if (matchDomain('theathletic.com') || matchDomain('theathletic.co.uk')) {
   const landingBanner = document.querySelector('.logged-out-landing-banner');
   const sampleBanner = document.querySelector('.main-sample-banner');
   const bottomBanner = document.querySelector('.border-bottom-cc');
@@ -127,12 +127,12 @@ if (matchDomain('theathletic.com') || matchDomain('theathletic.co.uk')) {
   removeDOMElement(landingBanner, sampleBanner, bottomBanner, subscribe);
 }
 
-if (matchDomain('the-american-interest.com')) {
+else if (matchDomain('the-american-interest.com')) {
   const counter = document.getElementById('article-counter');
   removeDOMElement(counter);
 }
 
-if (matchDomain('nzherald.co.nz')) {
+else if (matchDomain('nzherald.co.nz')) {
   const paywall = document.getElementById('article-content');
   if (paywall) {
     const premium = document.getElementsByClassName('premium-sub')[0];
@@ -140,34 +140,36 @@ if (matchDomain('nzherald.co.nz')) {
     paywall.classList.remove('premium-content');
     paywall.classList.add('full-content');
     removeClassesByPrefix(paywall, 'QUnW');
-    var paras = paywall.querySelectorAll('p, span, h2, div');
-    for (let i = 0; i < paras.length; i++) {
-      removeClassesByPrefix(paras[i], 'QUnW');
-      paras[i].classList.remove('ellipsis');
-      paras[i].removeAttribute('style');
+    const paras = paywall.querySelectorAll('p, span, h2, div');
+    for (const el of paras) {
+      removeClassesByPrefix(el, 'QUnW');
+      el.classList.remove('ellipsis');
+      el.removeAttribute('style');
     }
   }
 }
 
-if (matchDomain('thestar.com')) {
+else if (matchDomain('thestar.com')) {
   setTimeout(function () {
     const paywall = document.querySelector('.basic-paywall-new');
     removeDOMElement(paywall);
     const tbc = document.querySelectorAll('.text-block-container');
-    for (let i = 0; i < tbc.length; i++) {
-      tbc[i].removeAttribute('style');
+    for (const el of tbc) {
+      el.removeAttribute('style');
     }
   }, 1000); // Delay (in milliseconds)
 }
 
-if (matchDomain('afr.com')) {
+else if (matchDomain('afr.com')) {
   document.addEventListener('DOMContentLoaded', () => {
     const hiddenImage = document.querySelectorAll('img');
-    for (let i = 0; i < hiddenImage.length; i++) {
-      var src = hiddenImage[i].src;
+    for (const image of hiddenImage) {
+      const src = image.src;
       if ('src: ' + src.indexOf('.gif') !== -1) {
-        var dataSrc = hiddenImage[i].getAttribute('data-src');
-        if (dataSrc) { hiddenImage[i].setAttribute('src', dataSrc); }
+        const dataSrc = image.getAttribute('data-src');
+        if (dataSrc) {
+          image.setAttribute('src', dataSrc);
+        }
       }
     }
     const plista = document.querySelector('div[data-plista-placement="underArticle_Group"]');
@@ -175,7 +177,7 @@ if (matchDomain('afr.com')) {
   });
 }
 
-if (matchDomain(['parool.nl', 'trouw.nl', 'volkskrant.nl', 'demorgen.be'])) {
+else if (matchDomain(['parool.nl', 'trouw.nl', 'volkskrant.nl', 'demorgen.be'])) {
   document.addEventListener('DOMContentLoaded', () => {
     const paywall = document.querySelector('div[data-temptation-position="ARTICLE_BOTTOM"]');
     const hiddenSection = document.querySelector('div[data-temptation-position="ARTICLE_INLINE"]');
@@ -183,12 +185,12 @@ if (matchDomain(['parool.nl', 'trouw.nl', 'volkskrant.nl', 'demorgen.be'])) {
   });
 }
 
-if (matchDomain('firstthings.com')) {
+else if (matchDomain('firstthings.com')) {
   const paywall = document.getElementsByClassName('paywall')[0];
   removeDOMElement(paywall);
 }
 
-if (matchDomain('fortune.com')) {
+else if (matchDomain('fortune.com')) {
   document.addEventListener('DOMContentLoaded', () => {
     const paywall = document.getElementById('freestar-instream-content');
     if (paywall) {
@@ -200,16 +202,16 @@ if (matchDomain('fortune.com')) {
     }
     const ptags = paywallJunk.getElementsByTagName('p');
     const h3tags = paywallJunk.getElementsByTagName('h3');
-    for (let i = 0; i < ptags.length; i++) {
-      ptags[i].removeAttribute('style');
+    for (const ptag of ptags) {
+      ptag.removeAttribute('style');
     }
-    for (let i = 0; i < h3tags.length; i++) {
-      h3tags[i].removeAttribute('style');
+    for (const h3tag of h3tags) {
+      h3tag.removeAttribute('style');
     }
   });
 }
 
-if (matchDomain('bloomberg.com')) {
+else if (matchDomain('bloomberg.com')) {
   document.addEventListener('DOMContentLoaded', () => {
     const fence = document.querySelector('.fence-body');
     if (fence) {
@@ -220,115 +222,119 @@ if (matchDomain('bloomberg.com')) {
   });
 }
 
-if (matchDomain('bloombergquint.com')) {
+else if (matchDomain('bloombergquint.com')) {
   const articlesLeftModal = document.getElementsByClassName('paywall-meter-module__story-paywall-container__1UgCE')[0];
   const paywall = document.getElementById('paywallDmp');
   removeDOMElement(articlesLeftModal, paywall);
 }
 
-if (matchDomain('medium.com')) {
+else if (matchDomain('medium.com')) {
   const bottomMessageText = 'Get one more story in your member preview when you sign up. It’s free.';
   const DOMElementsToTextDiv = pageContains('div', bottomMessageText);
   if (DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
 }
 
-if (matchDomain('theglobeandmail.com')) {
+else if (matchDomain('theglobeandmail.com')) {
   document.addEventListener('DOMContentLoaded', () => {
-    const lazyImage = document.querySelectorAll('.js-lazyimage');
-    for (let i = 0; i < lazyImage.length; i++) {
-      lazyImage[i].classList.remove('js-lazyimage');
+    const lazyImages = document.querySelectorAll('.js-lazyimage');
+    for (const lazyImage of lazyImages) {
+      lazyImage.classList.remove('js-lazyimage');
     }
-    const hiddenImage = document.querySelectorAll('img');
-    for (let i = 0; i < hiddenImage.length; i++) {
-      var src = hiddenImage[i].src;
+    const hiddenImages = document.querySelectorAll('img');
+    for (const hiddenImage of hiddenImages) {
+      const src = hiddenImage.src;
       if (src.indexOf('data:image/gif') !== -1) {
-        var dataSrc = hiddenImage[i].getAttribute('data-src');
-        if (dataSrc) { hiddenImage[i].setAttribute('src', dataSrc); }
-        var dataBg = hiddenImage[i].getAttribute('data-bg');
-        if (dataBg) { hiddenImage[i].setAttribute('src', dataBg); }
+        const dataSrc = hiddenImage.getAttribute('data-src');
+        if (dataSrc) {
+          hiddenImage.setAttribute('src', dataSrc);
+        }
+        const dataBg = hiddenImage.getAttribute('data-bg');
+        if (dataBg) {
+          hiddenImage.setAttribute('src', dataBg);
+        }
       }
     }
   });
 }
 
-if (matchDomain(['examiner.com.au', 'thecourier.com.au', 'theadvocate.com.au'])) {
+else if (matchDomain(['examiner.com.au', 'thecourier.com.au', 'theadvocate.com.au'])) {
   const subscribeTruncate = document.querySelector('.subscribe-truncate');
   if (subscribeTruncate) { subscribeTruncate.classList.remove('subscribe-truncate'); }
   const subscriberHider = document.querySelectorAll('.subscriber-hider');
-  for (let i = 0; i < subscriberHider.length; i++) {
-    subscriberHider[i].classList.remove('subscriber-hider');
+  for (const el of subscriberHider) {
+    el.classList.remove('subscriber-hider');
   }
 }
 
-if (matchDomain('canberratimes.com.au')) {
+else if (matchDomain('canberratimes.com.au')) {
   const paywall = document.querySelector('.subscribe-article.news-article-body.article__body');
   paywall.classList.remove('subscribe-article');
-  var subscribe = document.getElementsByClassName('subscriber-container')[0];
+  const subscribe = document.getElementsByClassName('subscriber-container')[0];
   removeDOMElement(subscribe);
-  var content = document.getElementsByClassName('subscriber-hider');
-  for (let i = 0; i < content.length; i++) {
-    content[i].classList.remove('subscriber-hider');
+  const content = document.getElementsByClassName('subscriber-hider');
+  for (const el of content) {
+    el.classList.remove('subscriber-hider');
   }
 }
 
-if (matchDomain('asia.nikkei.com')) {
+else if (matchDomain('asia.nikkei.com')) {
   const cookieBanner = document.querySelector('.pw-widget');
   removeDOMElement(cookieBanner);
 }
 
-if (matchDomain('ledevoir.com')) {
+else if (matchDomain('ledevoir.com')) {
   const counter = document.querySelector('.full.hidden-print.popup-msg');
   removeDOMElement(counter);
 }
 
-if (matchDomain('ft.com')) {
+else if (matchDomain('ft.com')) {
   const cookieBanner = document.querySelector('.cookie-banner');
   removeDOMElement(cookieBanner);
 }
 
-if (matchDomain('thehindu.com')) {
+else if (matchDomain('thehindu.com')) {
   const paywall = document.getElementById('test');
   removeDOMElement(paywall);
 }
 
-if (matchDomain('nytimes.com')) {
+else if (matchDomain('nytimes.com')) {
   const previewButton = document.querySelector('.css-3s1ce0');
   if (previewButton) { previewButton.click(); }
 }
 
-if (matchDomain('technologyreview.com')) {
+else if (matchDomain('technologyreview.com')) {
   // The class of banner is like 'overlayFooter__wrapper--3DhFn', which is hard to select exactly
   const subscribeBanner = document.querySelector('[class*=overlayFooter__wrapper]');
   removeDOMElement(subscribeBanner);
 }
 
-if (matchDomain('leparisien.fr')) {
+else if (matchDomain('leparisien.fr')) {
   window.removeEventListener('scroll', this.scrollListener);
   const paywall = document.querySelector('.relative.piano-paywall.below_nav.sticky');
   removeDOMElement(paywall);
   setTimeout(function () {
-    var content = document.getElementsByClassName('content');
-    for (let i = 0; i < content.length; i++) {
-      content[i].removeAttribute('style');
+    const content = document.getElementsByClassName('content');
+    for (const el of content) {
+      el.removeAttribute('style');
     }
   }, 300); // Delay (in milliseconds)
 }
 
-if (matchDomain('caixinglobal.com')) {
-  const payTip = document.querySelectorAll('.cons-pay-tip');
-  for (let i = 0; i < payTip.length; i++) {
-    payTip[i].removeAttribute('style');
+else if (matchDomain('caixinglobal.com')) {
+  const payTips = document.querySelectorAll('.cons-pay-tip');
+  for (const payTip of payTips) {
+    payTip.removeAttribute('style');
   }
   const appContent = document.getElementById('appContent');
   if (appContent) {
     const pHidden = document.querySelectorAll('p:not([style="display:block;"]');
-    for (let i = 0; i < pHidden.length; i++) {
-      pHidden[i].setAttribute('style', 'display:block;');
+    for (const el of pHidden) {
+      el.setAttribute('style', 'display:block;');
     }
   }
 }
 
-if (matchDomain('economist.com')) {
+else if (matchDomain('economist.com')) {
   document.addEventListener('DOMContentLoaded', () => {
     const subscribe = document.querySelector('.subscription-proposition');
     const advert = document.querySelector('.advert');
@@ -340,45 +346,45 @@ if (matchDomain('economist.com')) {
         window.location.reload(true);
       }
     }, 500); // Delay (in milliseconds)
-    const pArticle = document.querySelectorAll('p.article__body-text');
-    var href;
-    for (let i = 0; i < pArticle.length; i++) {
-      const anchor = document.querySelectorAll('a');
+    const pArticles = document.querySelectorAll('p.article__body-text');
+    let href;
+    for (const pArticle of pArticles) {
+      const anchors = document.querySelectorAll('a');
       href = '';
-      for (let j = 0; j < anchor.length; j++) {
-        if (anchor[j].href) {
-          href = anchor[j].href;
+      for (const anchor of anchors) {
+        if (anchor.href) {
+          href = anchor.href;
         } else {
-          anchor[j].href = href;
+          anchor.href = href;
         }
       }
     }
   });
 }
 
-if (matchDomain('bizjournals.com')) {
+else if (matchDomain('bizjournals.com')) {
   const sheetOverlay = document.querySelector('.sheet-overlay');
   const chunkPaywall = document.querySelector('.chunk--paywall');
   removeDOMElement(sheetOverlay, chunkPaywall);
   const overlaid = document.querySelectorAll('.is-overlaid');
-  for (let i = 0; i < overlaid.length; i++) {
-    overlaid[i].classList.remove('is-overlaid');
+  for (const el of overlaid) {
+    el.classList.remove('is-overlaid');
   }
   const bodyHidden = document.querySelector('.js-pre-chunks__story-body');
   bodyHidden.removeAttribute('style');
 }
 
-if (matchDomain('the-tls.co.uk')) {
+else if (matchDomain('the-tls.co.uk')) {
   const paywall = document.querySelector('.tls-subscriptions-banner__closed-skin');
   removeDOMElement(paywall);
 }
 
-if (matchDomain('cen.acs.org')) {
+else if (matchDomain('cen.acs.org')) {
   const paywall = document.querySelector('.meteredBar');
   removeDOMElement(paywall);
 }
 
-if (matchDomain('elpais.com')) {
+else if (matchDomain('elpais.com')) {
   setTimeout(function () {
     const paywall = document.querySelector('.fc-ab-root');
     const body = document.querySelector('.salida_articulo');
@@ -388,7 +394,7 @@ if (matchDomain('elpais.com')) {
   }, 500); // Delay (in milliseconds)
 }
 
-if (matchDomain('techinasia.com')) {
+else if (matchDomain('techinasia.com')) {
   const paywall = document.querySelector('.paywall-content');
   if (paywall) {
     paywall.classList.remove('paywall-content');
@@ -398,7 +404,7 @@ if (matchDomain('techinasia.com')) {
   removeDOMElement(splashSubscribe, paywallHard);
 }
 
-if (matchDomain('thewrap.com')) {
+else if (matchDomain('thewrap.com')) {
   const embed = document.querySelector('.embed');
   if (embed) {
     // Display feature video
@@ -409,7 +415,7 @@ if (matchDomain('thewrap.com')) {
 }
 
 function matchDomain (domains) {
-  var hostname = window.location.hostname;
+  const hostname = window.location.hostname;
   if (typeof domains === 'string') { domains = [domains]; }
   return domains.some(domain => hostname === domain || hostname.endsWith('.' + domain));
 }
@@ -421,9 +427,9 @@ function removeDOMElement (...elements) {
 }
 
 function removeClassesByPrefix (el, prefix) {
-  for (let i = 0; i < el.classList.length; i++) {
-    if (el.classList[i].startsWith(prefix)) {
-      el.classList.remove(el.classList[i]);
+  for (const clazz of el.classList) {
+    if (clazz.startsWith(prefix)) {
+      el.classList.remove(clazz);
     }
   }
 }
