@@ -1,9 +1,4 @@
-var localStorageHoldArray = ['sfchronicle.com', 'cen.acs.org'];
-var localStorageHold = localStorageHoldArray.some(function (url) {
-  return window.location.href.includes(url);
-});
-
-if (!localStorageHold) {
+if (!matchDomain(['sfchronicle.com', 'cen.acs.org'])) {
   window.localStorage.clear();
 }
 
@@ -101,7 +96,7 @@ if (matchDomain('rep.repubblica.it')) {
   if (acceptBtn) {
     acceptBtn.click();
   }
-} else if (matchDomain('theathletic.com') || matchDomain('theathletic.co.uk')) {
+} else if (matchDomain(['theathletic.com','theathletic.co.uk'])) {
   const landingBanner = document.querySelector('.logged-out-landing-banner');
   const sampleBanner = document.querySelector('.main-sample-banner');
   const bottomBanner = document.querySelector('.border-bottom-cc');
