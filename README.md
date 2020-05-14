@@ -170,12 +170,12 @@ _*May not always succeed_
 Only large or major sites will be considered.
 Usually premium articles cannot be bypassed as they are behind a hard paywall.
 
-1. Make sure you have the uBlock Origin extension installed.
-2. First search 'Issues' to see if the site has been requested already.
+1. Install the uBlock Origin extension if it hasn't been installed already. See if you are still getting a paywall. If so, continue to the next step.
+2. First search [Issues](https://github.com/iamadamdev/bypass-paywalls-chrome/issues) to see if the site has been requested already.
 3. Visit an article on the site you want to bypass the paywall for and copy the article title.
 4. Open up a new incognito window (Ctrl+Shift+N on Chrome) or Private window (Ctrl+Shift+P on Firefox), and paste the article title into Google.
 5. Click on the same article from the Google search results page.
-6. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-chrome/issues/new/choose) to add the site, otherwise my extension cannot bypass it either.
+6. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-chrome/issues/new/choose) and replace the entire template text with the word "Confirmed". Otherwise please do not submit an issue as this extension cannot bypass it either.
 
 ### Troubleshooting
 * This extension works best alongside uBlock Origin [for Google Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) or [for Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
