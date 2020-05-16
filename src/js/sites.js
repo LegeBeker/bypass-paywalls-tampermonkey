@@ -61,6 +61,7 @@ const defaultSites = {
   'MIT Technology Review': 'technologyreview.com',
   'Mountain View Voice': 'mv-voice.com',
   'National Post': 'nationalpost.com',
+  'Neue Zürcher Zeitung': 'nzz.ch',
   'New Statesman': 'newstatesman.com',
   'New York Magazine': 'nymag.com',
   'New Zealand Herald': 'nzherald.co.nz',

@@ -218,7 +218,8 @@
     "*://*.volkskrant.nl/*",
     "*://*.washingtonpost.com/*",
     "*://*.wired.com/*",
-    "*://*.wsj.com/*"
+    "*://*.wsj.com/*",
+    "*://*.nzz.ch/*"
   ],
   "version": "1.7.1"
 }

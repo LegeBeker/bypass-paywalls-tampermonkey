@@ -87,6 +87,7 @@
 [NRC Handelsblad](https://www.nrc.nl)\
 [NT News](https://www.ntnews.com.au)\
 [National Post](https://www.nationalpost.com)\
+[Neue Zürcher Zeitung](https://www.nzz.ch)\
 [New York Magazine](https://www.nymag.com)\
 [New Zealand Herald](https://www.nzherald.co.nz)\
 [Nikkei Asian Review](https://asia.nikkei.com)\
