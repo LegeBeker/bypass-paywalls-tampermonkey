@@ -21,6 +21,7 @@
 * Every time you open Chrome it may warn you about running extensions in developer mode, just click 🗙 to keep the extension enabled.
 * You will be logged out for any site you have checked.
 * This extension works best alongside the adblocker uBlock Origin.
+* With the Firefox version you get automatic updates.
 
 ### Bypass the following sites' paywalls with this extension:
 
@@ -194,4 +195,5 @@ PRs are welcome.
 4. Use [JavaScript Semi-Standard Style linter](https://github.com/standard/semistandard). Don't need to follow it exactly. There will be some errors (e.g., do not use it on `sites.js`).
 
 ### Show your support
+* Follow me on Twitter [@iamadamdev](https://twitter.com/iamadamdev) for updates.
 * I am not asking for donations or anything like that, all I ask is that you star this repo.
