@@ -147,25 +147,6 @@ if (matchDomain('rep.repubblica.it')) {
 } else if (matchDomain('firstthings.com')) {
   const paywall = document.getElementsByClassName('paywall')[0];
   removeDOMElement(paywall);
-} else if (matchDomain('fortune.com')) {
-  document.addEventListener('DOMContentLoaded', () => {
-    const paywall = document.getElementById('freestar-instream-content');
-    if (paywall) {
-      paywall.classList.remove('tp-container-inner');
-    }
-    const paywallJunk = document.getElementById('article_overlay');
-    if (paywallJunk) {
-      paywallJunk.classList.remove('ntv-moap');
-    }
-    const ptags = paywallJunk.getElementsByTagName('p');
-    const h3tags = paywallJunk.getElementsByTagName('h3');
-    for (const ptag of ptags) {
-      ptag.removeAttribute('style');
-    }
-    for (const h3tag of h3tags) {
-      h3tag.removeAttribute('style');
-    }
-  });
 } else if (matchDomain('bloomberg.com')) {
   document.addEventListener('DOMContentLoaded', () => {
     const fence = document.querySelector('.fence-body');
