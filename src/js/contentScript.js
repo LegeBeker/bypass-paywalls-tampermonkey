@@ -140,9 +140,11 @@ if (matchDomain('rep.repubblica.it')) {
   });
 } else if (matchDomain(['parool.nl', 'trouw.nl', 'volkskrant.nl', 'demorgen.be'])) {
   document.addEventListener('DOMContentLoaded', () => {
+    const topBanner = document.querySelector('div[data-temptation-position="PAGE_TOP"]');
     const paywall = document.querySelector('div[data-temptation-position="ARTICLE_BOTTOM"]');
     const hiddenSection = document.querySelector('div[data-temptation-position="ARTICLE_INLINE"]');
-    removeDOMElement(paywall, hiddenSection);
+    const overlay = document.querySelector('div[data-temptation-position="PAGE_BOTTOM"]');
+    removeDOMElement(topBanner, paywall, hiddenSection, overlay);
   });
 } else if (matchDomain('firstthings.com')) {
   const paywall = document.getElementsByClassName('paywall')[0];
