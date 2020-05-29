@@ -90,7 +90,7 @@ if (matchDomain('rep.repubblica.it')) {
 
     removeDOMElement(sideNotification, subMessage, popup, bgFocusRemoverId);
   });
-} else if (matchDomain(['theathletic.com','theathletic.co.uk'])) {
+} else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
   const landingBanner = document.querySelector('.logged-out-landing-banner');
   const sampleBanner = document.querySelector('.main-sample-banner');
   const bottomBanner = document.querySelector('.border-bottom-cc');
@@ -304,6 +304,13 @@ if (matchDomain('rep.repubblica.it')) {
 } else if (matchDomain('hbr.org')) {
   const banner = document.querySelector('.persistent-banner');
   removeDOMElement(banner);
+} else if (matchDomain('spectator.co.uk')) {
+  const container = document.querySelector('.HardPayWallContainer-module__overlay');
+  window.setTimeout(function () {
+    if (container && window.location.href.includes('/www.spectator.co.uk/')) {
+      window.location.href = window.location.href + '/amp';
+    }
+  }, 500);
 }
 
 function matchDomain (domains) {
