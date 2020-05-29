@@ -1,4 +1,4 @@
-if (!matchDomain(['sfchronicle.com', 'cen.acs.org'])) {
+if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org'])) {
   window.localStorage.clear();
 }
 

@@ -2,7 +2,8 @@
 
 const restrictions = {
   'barrons.com': /.+barrons\.com\/articles\/.+/,
-  'wsj.com': /(.+wsj\.com\/(articles|graphics)\/.+|.+blogs\.wsj\.com\/.+)/
+  'wsj.com': /(.+wsj\.com\/(articles|graphics)\/.+|.+blogs\.wsj\.com\/.+)/,
+  'seekingalpha.com': /.+seekingalpha\.com\/article\/.+/
 };
 
 // Don't remove cookies before page load
