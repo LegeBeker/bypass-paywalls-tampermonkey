@@ -221,7 +221,8 @@
     "*://*.wired.com/*",
     "*://*.worldpoliticsreview.com/*",
     "*://*.wsj.com/*",
-    "*://*.nzz.ch/*"
+    "*://*.nzz.ch/*",
+    "*://*.republic.ru/*"
   ],
   "version": "1.7.3"
 }

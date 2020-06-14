@@ -74,6 +74,7 @@ const defaultSites = {
   'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
+  'Republic.ru': 'republic.ru',
   'San Diego Union Tribune': 'sandiegouniontribune.com',
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',

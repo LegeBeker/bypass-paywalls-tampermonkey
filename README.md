@@ -98,11 +98,12 @@
 [Parool](https://www.parool.nl)\
 [Quartz](https://qz.com)\
 [Quora](https://www.quora.com)\
-[SOFREP](https://sofrep.com)\
+[Republic.ru](https://republic.ru)\
 [San Diego Union Tribune](https://www.sandiegouniontribune.com)\
 [San Francisco Chronicle](https://www.sfchronicle.com)\
 [Scientific American](https://www.scientificamerican.com)\
 [Seeking Alpha](https://seekingalpha.com)\
+[SOFREP](https://sofrep.com)\
 [Statista](https://www.statista.com)\
 [SunSentinel](https://www.sun-sentinel.com)\
 [Tech in Asia](https://www.techinasia.com)\

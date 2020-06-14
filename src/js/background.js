@@ -139,7 +139,8 @@ const useGoogleBotSites = [
   'themercury.com.au',
   'thetimes.co.uk',
   'wsj.com',
-  'kansascity.com'
+  'kansascity.com',
+  'republic.ru'
 ];
 
 function setDefaultOptions () {
