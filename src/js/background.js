@@ -2,7 +2,6 @@
 
 const restrictions = {
   'barrons.com': /.+barrons\.com\/articles\/.+/,
-  'wsj.com': /(.+wsj\.com\/(articles|graphics)\/.+|.+blogs\.wsj\.com\/.+)/,
   'seekingalpha.com': /.+seekingalpha\.com\/article\/.+/
 };
 
@@ -119,7 +118,7 @@ const removeCookiesSelectDrop = {
 };
 
 // Override User-Agent with Googlebot
-let useGoogleBotSites = [
+const useGoogleBotSites = [
   'adelaidenow.com.au',
   'barrons.com',
   'couriermail.com.au',
@@ -178,7 +177,8 @@ const blockedRegexes = {
   'thecourier.com.au': /.+cdn-au\.piano\.io\/api\/tinypass.+\.js/,
   'theglobeandmail.com': /theglobeandmail\.com\/pb\/resources\/scripts\/build\/chunk-bootstraps\/.+\.js/,
   'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
-  'thewrap.com': /thewrap\.com\/.+\/wallkit\.js/
+  'thewrap.com': /thewrap\.com\/.+\/wallkit\.js/,
+  'wsj.com': /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
 };
 
 // Allowed external scripts
