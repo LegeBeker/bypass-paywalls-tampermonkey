@@ -2,6 +2,7 @@
 
 const restrictions = {
   'barrons.com': /.+barrons\.com\/articles\/.+/,
+  'economist.com': /.+economist\.com\/.+\/\d{1,4}\/\d{1,2}\/\d{2}\/.+/,
   'seekingalpha.com': /.+seekingalpha\.com\/article\/.+/
 };
 
@@ -15,7 +16,6 @@ const allowCookies = [
   'chicagobusiness.com',
   'demorgen.be',
   'denverpost.com',
-  'economist.com',
   'ed.nl',
   'examiner.com.au',
   'ft.com',
@@ -68,7 +68,6 @@ const removeCookies = [
   'chicagobusiness.com',
   'demorgen.be',
   'denverpost.com',
-  'economist.com',
   'ed.nl',
   'examiner.com.au',
   'ft.com',
@@ -112,7 +111,6 @@ const removeCookiesSelectDrop = {
   'ad.nl': ['temptationTrackingId'],
   'ed.nl': ['temptationTrackingId'],
   'demorgen.be': ['TID_ID'],
-  'economist.com': ['rvuuid'],
   'fd.nl': ['socialread'],
   'nrc.nl': ['counter']
 };
@@ -161,7 +159,7 @@ const blockedRegexes = {
   'afr.com': /afr\.com\/assets\/vendorsReactRedux_client.+\.js/,
   'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
   'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
-  'economist.com': /(.+\.tinypass\.com\/.+|economist\.com\/_next\/static\/runtime\/main.+\.js)/,
+  'economist.com': /(.+\.tinypass\.com\/.+|economist\.com\/engassets\/_next\/static\/chunks\/framework.+\.js)/,
   'foreignpolicy.com': /.+\.tinypass\.com\/.+/,
   'fortune.com': /.+\.tinypass\.com\/.+/,
   'haaretz.co.il': /haaretz\.co\.il\/htz\/js\/inter\.js/,
@@ -263,7 +261,6 @@ extensionApi.webRequest.onBeforeRequest.addListener(function (details) {
     '*://*.outbrain.com/*',
     '*://*.piano.io/*',
     '*://*.poool.fr/*',
-    '*://*.economist.com/*',
     '*://*.qiota.com/*',
     '*://*.tinypass.com/*'
   ],
