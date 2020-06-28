@@ -80,9 +80,15 @@ if (matchDomain('rep.repubblica.it')) {
     if (closeButton) { closeButton.click(); }
   }
   document.addEventListener('DOMContentLoaded', () => {
-    const wsjLogin = document.querySelector('.wsj-snippet-login, .wsjpro-label');
-    if (wsjLogin) {
-      window.location.href = window.location.href.replace('wsj.com', 'wsj.com/amp');
+    const url = window.location.href;
+    const snippet = document.querySelector('.snippet-promotion');
+    const wsjPro = document.querySelector('meta[name="page.site"][content="wsjpro"]');
+    if (snippet || wsjPro) {
+      if (!window.location.hash) {
+        if (url.includes('?')) {
+          window.location.href = url.replace('?', '#refreshed?');
+        } else { window.location.href = url + '#refreshed'; }
+      } else { window.location.href = window.location.href.replace('wsj.com', 'wsj.com/amp').replace('#refreshed', ''); }
     }
   });
 } else if (matchDomain('sloanreview.mit.edu')) {
