@@ -179,7 +179,8 @@ const blockedRegexes = {
   'theglobeandmail.com': /theglobeandmail\.com\/pb\/resources\/scripts\/build\/chunk-bootstraps\/.+\.js/,
   'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
   'thewrap.com': /thewrap\.com\/.+\/wallkit\.js/,
-  'wsj.com': /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
+  'wsj.com': /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
+  'historyextra.com': /.+\.evolok\.net\/.+\/authorize\/.+/
 };
 
 // Allowed external scripts

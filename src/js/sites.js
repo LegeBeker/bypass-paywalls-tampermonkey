@@ -41,6 +41,7 @@ const defaultSites = {
   'Harvard Business Review': 'hbr.org',
   'Herald Sun': 'heraldsun.com.au',
   'Het Financieele Dagblad': 'fd.nl',
+  'History Extra': 'historyextra.com',
   'Il Manifesto': 'ilmanifesto.it',
   'Inc.com': 'inc.com',
   'Investors Chronicle': 'investorschronicle.co.uk',

@@ -223,7 +223,8 @@
     "*://*.worldpoliticsreview.com/*",
     "*://*.wsj.com/*",
     "*://*.nzz.ch/*",
-    "*://*.republic.ru/*"
+    "*://*.republic.ru/*",
+    "*://*.historyextra.com*"
   ],
   "version": "1.7.3"
 }
