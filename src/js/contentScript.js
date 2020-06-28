@@ -306,6 +306,27 @@ if (matchDomain('rep.repubblica.it')) {
       window.location.href = window.location.href + '/amp';
     }
   }, 500);
+} else if (matchDomain('barrons.com')) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const bodyContinuous = document.querySelector('body.is-continuous');
+    const snippet = document.querySelector('meta[content="snippet"]');
+    if (bodyContinuous && snippet) {
+      window.location.href = window.location.href.replace('barrons.com', 'barrons.com/amp');
+    }
+  });
+  if (!window.location.href.includes('barrons.com/amp/')) {
+    let href = '';
+    const signinLinks = document.querySelectorAll('a.primary-button--link');
+    for (const signinLink of signinLinks) {
+      href = signinLink.href;
+      if (href.includes('target=')) {
+        href = href.split('target')[1].split('%3F')[0];
+        href = href.replace('=', '').replace('%3A', ':').replace(/%2F/g, '/');
+        signinLink.href = href;
+        signinLink.text = 'Click';
+      }
+    }
+  }
 }
 
 function matchDomain (domains) {

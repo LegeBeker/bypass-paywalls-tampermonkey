@@ -1,7 +1,7 @@
 'use strict';
 
 const restrictions = {
-  'barrons.com': /.+barrons\.com\/articles\/.+/,
+  'barrons.com': /.+barrons\.com\/(amp\/)?article(s)?\/.+/,
   'economist.com': /.+economist\.com\/.+\/\d{1,4}\/\d{1,2}\/\d{2}\/.+/,
   'seekingalpha.com': /.+seekingalpha\.com\/article\/.+/
 };
@@ -180,7 +180,8 @@ const blockedRegexes = {
   'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
   'thewrap.com': /thewrap\.com\/.+\/wallkit\.js/,
   'wsj.com': /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
-  'historyextra.com': /.+\.evolok\.net\/.+\/authorize\/.+/
+  'historyextra.com': /.+\.evolok\.net\/.+\/authorize\/.+/,
+  'barrons.com': /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
 };
 
 // Allowed external scripts
