@@ -255,7 +255,7 @@ extensionApi.webRequest.onBeforeRequest.addListener(function (details) {
   }
   // Don't block allowed scripts
   for (const domain in allowedRegexes) {
-    if (isSameDomain(details.url, domain) && details.url.match(allowedRegexes[domain])) {
+    if (matchUrlDomain(domain, details.url) && details.url.match(allowedRegexes[domain])) {
       return;
     }
   }
@@ -281,18 +281,25 @@ if (Object.prototype.hasOwnProperty.call(extensionApi.webRequest.OnBeforeSendHea
 }
 
 extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
-  if (!isSiteEnabled(details)) {
-    return;
+  let requestHeaders = details.requestHeaders;
+
+  let headerReferer = '';
+  for (const n in requestHeaders) {
+    if (requestHeaders[n].name.toLowerCase() === 'referer') {
+      headerReferer = requestHeaders[n].value;
+      continue;
+    }
   }
 
-  let requestHeaders = details.requestHeaders;
   // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
-  for (const domain in blockedRegexes) {
-    if (isSiteEnabled({ url: domain }) && details.url.match(blockedRegexes[domain])) {
-      if (isSameDomain(details.url, domain)) {
-        return { cancel: true };
-      }
-    }
+  const blockedDomains = Object.keys(blockedRegexes);
+  const domain = matchUrlDomain(blockedDomains, headerReferer);
+  if (domain && details.url.match(blockedRegexes[domain]) && isSiteEnabled({ url: headerReferer })) {
+    return { cancel: true };
+  }
+
+  if (!isSiteEnabled(details)) {
+    return;
   }
 
   const tabId = details.tabId;
@@ -306,7 +313,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
         // this fixes images not being loaded on cooking.nytimes.com main page
         // referrer has to be *nytimes.com otherwise returns 403
         requestHeader.value = 'https://cooking.nytimes.com';
-      } else if (isSameDomain(details.url, 'fd.nl')) {
+      } else if (matchUrlDomain('fd.nl', details.url)) {
         requestHeader.value = 'https://www.facebook.com/';
       } else {
         requestHeader.value = 'https://www.google.com/';
@@ -322,7 +329,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
 
   // otherwise add it
   if (!setReferer) {
-    if (isSameDomain(details.url, 'fd.nl')) {
+    if (matchUrlDomain('fd.nl', details.url)) {
       requestHeaders.push({
         name: 'Referer',
         value: 'https://www.facebook.com/'
@@ -337,7 +344,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
 
   // override User-Agent to use Googlebot
   const useGoogleBot = _useGoogleBotSites.some(function (item) {
-    return typeof item === 'string' && isSameDomain(details.url, item);
+    return typeof item === 'string' && matchUrlDomain(item, details.url);
   });
 
   if (useGoogleBot) {
@@ -353,7 +360,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
 
   // remove cookies before page load
   const enabledCookies = allowCookies.some(function (site) {
-    return isSameDomain(details.url, site);
+    return matchUrlDomain(site, details.url);
   });
   if (!enabledCookies) {
     requestHeaders = requestHeaders.map(function (requestHeader) {
@@ -390,7 +397,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
 extensionApi.webRequest.onCompleted.addListener(function (details) {
   let domainToRemove;
   for (const domain of _removeCookies) {
-    if (enabledSites.includes(domain) && isSameDomain(details.url, domain)) {
+    if (enabledSites.includes(domain) && matchUrlDomain(domain, details.url)) {
       domainToRemove = domain;
       break;
     }
@@ -444,26 +451,32 @@ function initGA () {
 }
 
 function isSiteEnabled (details) {
-  const isEnabled = enabledSites.some(function (enabledSite) {
-    const useSite = isSameDomain(details.url, enabledSite);
-    if (enabledSite in restrictions) {
-      return useSite && details.url.match(restrictions[enabledSite]);
-    }
-    return useSite;
-  });
-  return isEnabled;
+  const enabledSite = matchUrlDomain(enabledSites, details.url);
+  if (enabledSite in restrictions) {
+    return restrictions[enabledSite].test(details.url);
+  }
+  return !!enabledSite;
 }
 
-function isSameDomain (url, domain) {
-  if (url.indexOf('http') !== 0) {
-    // Not start with http or https, add a prefix
-    url = 'http://' + url;
+function matchUrlDomain (domains, url) {
+  return matchDomain(domains, urlHost(url));
+}
+
+function matchDomain (domains, hostname) {
+  let matchedDomain = false;
+  if (!hostname) { hostname = window.location.hostname; }
+  if (typeof domains === 'string') { domains = [domains]; }
+  domains.some(domain => (hostname === domain || hostname.endsWith('.' + domain)) && (matchedDomain = domain));
+  return matchedDomain;
+}
+
+function urlHost (url) {
+  if (url && url.startsWith('http')) {
+    try {
+      return new URL(url).hostname;
+    } catch (e) {
+      console.log(`url not valid: ${url} error: ${e}`);
+    }
   }
-  try {
-    const urlObj = new URL(url);
-    const hostname = urlObj.hostname;
-    return hostname === domain || hostname.endsWith('.' + domain);
-  } catch (err) {
-    return false;
-  }
+  return url;
 }
