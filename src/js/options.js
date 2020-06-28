@@ -49,7 +49,7 @@ function saveOptions () {
       chrome.runtime.reload();
 
       window.close();
-    }, 1200);
+    }, 800);
   });
 }
 

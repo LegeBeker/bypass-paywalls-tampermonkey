@@ -26,6 +26,7 @@
       display: none;
       background-color: #ccc;
     }
+
     #tabs button {
       flex-grow: 1;
       background: #ddd;
@@ -38,14 +39,20 @@
       border-right: solid 1px #ccc;
       border-radius: 0;
     }
+
     #tabs button:last-of-type {
       border-right: none;
     }
+
     #tabs button.active {
       background-color: #fff;
       color: black;
       padding-bottom: 0;
       border-bottom: solid blue 4px;
+    }
+
+    .tab-cell {
+      height: 2em;
     }
 
     .pane {
@@ -106,8 +113,8 @@
 </head>
 <body>
   <div id="tabs">
-    <button data-pane="sites">Supported Sites</button>
-    <button data-pane="custom">Custom Sites</button>
+    <button data-pane="sites" class="tab-cell">Supported Sites</button>
+    <button data-pane="custom" class="tab-cell">Custom Sites</button>
   </div>
 
   <div id="sites" class="pane">
@@ -121,15 +128,13 @@
 
   <div id="custom" class="pane">
     <p>
-      To try bypassing other sites, enter domain names here (one domain per line).
+      To try bypassing other sites enter domain names here (one domain per line). Sites below will be have their cookies removed and attempted to be browsed as the Googlebot.
     </p>
     <p>
-    <span style="color: #900; font-weight: bold">This feature is provided "as
-      is", and will not work with many sites.</span>
-    Please do not report issues with sites entered here.  Support for new sites
-    is not being added at this time and requests for support will be ignored.
+    <span style="color: #900; font-weight: bold">This feature is provided "as is" and will not work with many sites.</span>
+    Do not report issues with sites entered here.
     </p>
-    <textarea id="custom_sites" placeholder="e.g.&#10;dailybeast.com&#10;quohogherald.com&#10;blagdonbugle.com&#10;etc..." /></textarea>
+    <textarea id="custom_sites" placeholder="e.g.,&#10;campaignlive.co.uk&#10;cincinnati.com&#10;hk.appledaily.com&#10;" /></textarea>
   </div>
 
   <div id="controls">

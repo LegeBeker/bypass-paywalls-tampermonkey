@@ -99,6 +99,9 @@ const removeCookies = [
   'wsj.com'
 ];
 
+// Contains remove cookie sites above plus any custom sites
+let _removeCookies = removeCookies;
+
 // select specific cookie(s) to hold from removeCookies domains
 const removeCookiesSelectHold = {
   'qz.com': ['gdpr'],
@@ -142,7 +145,7 @@ const useGoogleBotSites = [
   'republic.ru'
 ];
 
-// Contains google bot sites, above, plus any custom sites
+// Contains google bot sites above plus any custom sites
 let _useGoogleBotSites = useGoogleBotSites;
 
 function setDefaultOptions () {
@@ -198,6 +201,9 @@ extensionApi.storage.sync.get({
 
   // Use googlebot UA for custom sites
   _useGoogleBotSites = useGoogleBotSites.concat(items.customSites);
+
+  // Remove cookies for custom sites
+  _removeCookies = removeCookies.concat(items.customSites);
 
   if (extensionApi === chrome) {
     initGA();
@@ -383,7 +389,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
 // remove cookies after page load
 extensionApi.webRequest.onCompleted.addListener(function (details) {
   let domainToRemove;
-  for (const domain of removeCookies) {
+  for (const domain of _removeCookies) {
     if (enabledSites.includes(domain) && isSameDomain(details.url, domain)) {
       domainToRemove = domain;
       break;
