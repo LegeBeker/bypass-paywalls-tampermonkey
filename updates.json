@@ -48,7 +48,9 @@
         { "version": "1.7.2",
             "update_link": "https://github.com/iamadamdev/bypass-paywalls-chrome/releases/download/v1.7.2/bypass-paywalls-firefox.xpi" },
         { "version": "1.7.3",
-            "update_link": "https://github.com/iamadamdev/bypass-paywalls-chrome/releases/download/v1.7.3/bypass-paywalls-firefox.xpi" }
+            "update_link": "https://github.com/iamadamdev/bypass-paywalls-chrome/releases/download/v1.7.3/bypass-paywalls-firefox.xpi" },
+        { "version": "1.7.4",
+            "update_link": "https://github.com/iamadamdev/bypass-paywalls-chrome/releases/download/v1.7.4/bypass-paywalls-firefox.xpi" }
         ]
     }
   }

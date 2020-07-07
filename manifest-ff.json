@@ -225,7 +225,7 @@
     "*://*.wsj.com/*",
     "*://*.nzz.ch/*",
     "*://*.republic.ru/*",
-    "*://*.historyextra.com*"
+    "*://*.historyextra.com/*"
   ],
-  "version": "1.7.3"
+  "version": "1.7.4"
 }
