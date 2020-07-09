@@ -335,6 +335,9 @@ if (matchDomain('estadao.com.br')) {
       }
     }
   }
+} else if (matchDomain('nzz.ch')) {
+  const paywall = document.querySelector('.dynamic-regwall');
+  removeDOMElement(paywall);
 }
 
 function matchDomain (domains) {

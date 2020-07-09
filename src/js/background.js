@@ -54,7 +54,8 @@ const allowCookies = [
   'vn.nl',
   'volkskrant.nl',
   'washingtonpost.com',
-  'wired.com'
+  'wired.com',
+  'nzz.ch'
 ];
 
 // Removes cookies after page load
@@ -142,7 +143,8 @@ const useGoogleBotSites = [
   'thetimes.co.uk',
   'wsj.com',
   'kansascity.com',
-  'republic.ru'
+  'republic.ru',
+  'nzz.ch'
 ];
 
 // Contains google bot sites above plus any custom sites
