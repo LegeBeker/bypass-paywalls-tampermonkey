@@ -55,7 +55,8 @@ const allowCookies = [
   'volkskrant.nl',
   'washingtonpost.com',
   'wired.com',
-  'nzz.ch'
+  'nzz.ch',
+  'handelsblatt.com'
 ];
 
 // Removes cookies after page load
@@ -144,7 +145,8 @@ const useGoogleBotSites = [
   'wsj.com',
   'kansascity.com',
   'republic.ru',
-  'nzz.ch'
+  'nzz.ch',
+  'handelsblatt.com'
 ];
 
 // Contains google bot sites above plus any custom sites
