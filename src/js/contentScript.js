@@ -188,25 +188,21 @@ if (matchDomain('estadao.com.br')) {
   if (DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
 } else if (matchDomain('theglobeandmail.com')) {
   document.addEventListener('DOMContentLoaded', () => {
-    const lazyImages = document.querySelectorAll('.js-lazyimage');
-    for (const lazyImage of lazyImages) {
-      lazyImage.classList.remove('js-lazyimage');
-    }
-    const hiddenImages = document.querySelectorAll('img');
-    for (const hiddenImage of hiddenImages) {
-      const src = hiddenImage.src;
-      if (src.indexOf('data:image/gif') !== -1) {
-        const dataSrc = hiddenImage.getAttribute('data-src');
-        if (dataSrc) {
-          hiddenImage.setAttribute('src', dataSrc);
-        }
-        const dataBg = hiddenImage.getAttribute('data-bg');
-        if (dataBg) {
-          hiddenImage.setAttribute('src', dataBg);
-        }
-      }
+    const subscribed = document.querySelector('html.story-subscribed');
+    if (subscribed && !window.location.href.includes('?ref=premium')) {
+      window.setTimeout(function () {
+        window.location.href = new URL(window.location.href).pathname + '?ref=premium';
+      }, 100);
     }
   });
+  const cCards = document.querySelectorAll('div.c-card');
+  for (const cCard of cCards) {
+    const aLink = cCard.querySelector('a');
+    const key = cCard.querySelector('span.c-indicator-icon--key');
+    if (key && aLink && !aLink.href.includes('?ref=premium')) {
+      aLink.href = aLink.href + '?ref=premium';
+    }
+  }
 } else if (matchDomain(['examiner.com.au', 'thecourier.com.au', 'theadvocate.com.au'])) {
   const subscribeTruncate = document.querySelector('.subscribe-truncate');
   if (subscribeTruncate) { subscribeTruncate.classList.remove('subscribe-truncate'); }
