@@ -334,6 +334,12 @@ if (matchDomain('estadao.com.br')) {
 } else if (matchDomain('nzz.ch')) {
   const paywall = document.querySelector('.dynamic-regwall');
   removeDOMElement(paywall);
+} else if (matchDomain('irishtimes.com')) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const stubArticleMsg = document.querySelector('div.stub-article-msg');
+    const url = window.location.href;
+    if (url.includes('mode=sample') || stubArticleMsg) { window.location.href = new URL(url).pathname + '?mode=amp'; }
+  });
 }
 
 function matchDomain (domains) {

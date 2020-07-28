@@ -184,7 +184,8 @@ const blockedRegexes = {
   'thewrap.com': /thewrap\.com\/.+\/wallkit\.js/,
   'wsj.com': /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
   'historyextra.com': /.+\.evolok\.net\/.+\/authorize\/.+/,
-  'barrons.com': /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
+  'barrons.com': /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
+  'irishtimes.com': /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
