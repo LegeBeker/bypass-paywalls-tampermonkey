@@ -109,7 +109,10 @@ if (matchDomain('elmercurio.com')) {
     }
   });
 } else if (matchDomain('sloanreview.mit.edu')) {
-  document.querySelector('#cboxClose').click();
+  const readMore = document.querySelector('.btn-read-more');
+  if (readMore) {
+    readMore.click();
+  }
 } else if (matchDomain('mexiconewsdaily.com')) {
   document.addEventListener('DOMContentLoaded', () => {
     const sideNotification = document.querySelector('.pigeon-widget-prompt');
