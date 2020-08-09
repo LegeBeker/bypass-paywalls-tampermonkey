@@ -237,12 +237,9 @@ extensionApi.tabs.onActivated.addListener(function (activeInfo) {
   extensionApi.tabs.get(activeInfo.tabId, updateBadge);
 });
 
-let cachedBadgeText = '';
 function updateBadge (activeTab) {
   if (!activeTab) { return; }
   const badgeText = getBadgeText(activeTab.url);
-  if (cachedBadgeText === badgeText) { return; }
-  cachedBadgeText = badgeText;
   extensionApi.browserAction.setBadgeBackgroundColor({ color: 'blue' });
   extensionApi.browserAction.setBadgeText({ text: badgeText });
 }
