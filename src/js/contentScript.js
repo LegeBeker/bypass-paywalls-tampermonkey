@@ -352,6 +352,9 @@ if (matchDomain('elmercurio.com')) {
     const url = window.location.href;
     if (url.includes('mode=sample') || stubArticleMsg) { window.location.href = new URL(url).pathname + '?mode=amp'; }
   });
+} else if (matchDomain('thesaturdaypaper.com.au')) {
+  const paywall = document.querySelector('div.paywall-hard-always-show');
+  removeDOMElement(paywall);
 }
 
 function matchDomain (domains) {
