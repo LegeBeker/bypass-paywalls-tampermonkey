@@ -10,8 +10,9 @@ assignees: ''
 
 ###
 1. Make sure uBlock Origin is installed.
-2. Paste the article URL for the site you are having issues with.
-3. Describe the issue.
+2. Chrome or Firefox?
+3. Paste the article URL for the site you are having issues with.
+4. Describe the issue.
 
 Requests not following these instructions will be ignored.
 ###
