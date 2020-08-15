@@ -91,7 +91,7 @@ if (matchDomain('elmercurio.com')) {
       }
     }, 300); // Delay (in milliseconds)
   }
-} else if (matchDomain('wsj.com')) {
+} else if (matchDomain('wsj.com') && !matchDomain('cn.wsj.com')) {
   if (window.location.href.includes('/articles/')) {
     const closeButton = document.querySelector('div.close-btn[role="button"]');
     if (closeButton) { closeButton.click(); }
