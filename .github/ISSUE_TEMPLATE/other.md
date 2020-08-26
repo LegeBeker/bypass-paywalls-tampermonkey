@@ -10,9 +10,10 @@ assignees: ''
 
 ###
 1. Make sure uBlock Origin is installed.
-2. Chrome or Firefox?
-3. Paste the article URL for the site you are having issues with.
-4. Describe the issue.
+2. Bypass Paywalls version?
+3. Chrome or Firefox?
+4. Paste the article URL for the site you are having issues with.
+5. Describe the issue.
 
 Requests not following these instructions will be ignored.
 ###
