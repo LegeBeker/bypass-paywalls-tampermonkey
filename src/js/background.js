@@ -188,7 +188,8 @@ const blockedRegexes = {
   'irishtimes.com': /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
   'elmercurio.com': /(merreader\.emol\.cl\/assets\/js\/merPramV2.js|staticmer\.emol\.cl\/js\/inversiones\/PramModal.+\.js)/,
   'sloanreview.mit.edu': /(.+\.tinypass\.com\/.+|.+\.netdna-ssl\.com\/wp-content\/themes\/smr\/assets\/js\/libs\/welcome-ad\.js)/,
-  'latercera.com': /.+\.cxense\.com\/+/
+  'latercera.com': /.+\.cxense\.com\/+/,
+  'lesechos.fr': /.+\.tinypass\.com\/.+/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
