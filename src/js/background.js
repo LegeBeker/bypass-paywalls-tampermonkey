@@ -96,7 +96,6 @@ const removeCookies = [
   'thestar.com',
   'towardsdatascience.com',
   'vn.nl',
-  'washingtonpost.com',
   'wired.com',
   'wsj.com'
 ];
@@ -107,7 +106,6 @@ let _removeCookies = removeCookies;
 // select specific cookie(s) to hold from removeCookies domains
 const removeCookiesSelectHold = {
   'qz.com': ['gdpr'],
-  'washingtonpost.com': ['wp_gdpr'],
   'wsj.com': ['wsjregion']
 };
 
@@ -146,7 +144,8 @@ const useGoogleBotSites = [
   'kansascity.com',
   'republic.ru',
   'nzz.ch',
-  'handelsblatt.com'
+  'handelsblatt.com',
+  'washingtonpost.com'
 ];
 
 // Contains google bot sites above plus any custom sites
@@ -189,7 +188,8 @@ const blockedRegexes = {
   'elmercurio.com': /(merreader\.emol\.cl\/assets\/js\/merPramV2.js|staticmer\.emol\.cl\/js\/inversiones\/PramModal.+\.js)/,
   'sloanreview.mit.edu': /(.+\.tinypass\.com\/.+|.+\.netdna-ssl\.com\/wp-content\/themes\/smr\/assets\/js\/libs\/welcome-ad\.js)/,
   'latercera.com': /.+\.cxense\.com\/+/,
-  'lesechos.fr': /.+\.tinypass\.com\/.+/
+  'lesechos.fr': /.+\.tinypass\.com\/.+/,
+  'washingtonpost.com': /.+\.washingtonpost\.com\/dr\/resources\/dist\/washpost\/pwapi-proxy\.min\.js/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
