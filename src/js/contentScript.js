@@ -77,6 +77,14 @@ if (matchDomain('elmercurio.com')) {
   const paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
   removeDOMElement(paywall);
 } else if (matchDomain('washingtonpost.com')) {
+		//Remove all elements with the id contains 'paywall'
+		document.querySelectorAll('div[data-qa="paywall"]').forEach(function (el) {
+			removeDOMElement(el);
+		});
+		const html = document.querySelector('html');
+		html.removeAttribute('style');
+		const body = document.querySelector('body');
+		body.removeAttribute('style');
   if (window.location.href.includes('/gdpr-consent/')) {
     const freeButton = document.querySelector('.gdpr-consent-container .continue-btn.button.free');
     if (freeButton) { freeButton.click(); }
@@ -396,6 +404,39 @@ if (matchDomain('elmercurio.com')) {
     const aboBanner = document.querySelector('[class^="pgxf3b"]');
     removeDOMElement(aboBanner);
   }, 500); // Delay (in milliseconds)
+} else if (matchDomain('startribune.com')) {
+	// remove active class from all elements
+	document.querySelectorAll('div.ReactModalPortal').forEach(function (el) {
+		removeDOMElement(el);
+	});
+	//Enable Scroll. Reveal Hiddlen Paragraph
+	document.getElementsByTagName('body')[0].removeAttribute('class');
+} else if (matchDomain('seattletimes.com')) {
+	window.setTimeout(function () {
+		// remove modal class from all elements
+		document.querySelectorAll('div.modal').forEach(function (el) {
+			removeDOMElement(el);
+		});
+		// Remove Blurred Style from all matching Divs
+		document.getElementById("container").removeAttribute("style");
+		document.querySelectorAll('div[style~="filter"]').forEach(function (el) {
+			el.removeAttribute('style');
+		});
+		document
+			.querySelectorAll('div[class~="NewsletterSignupSplash"]')
+			.forEach(function (el) {
+				el.removeAttribute('class');
+			});
+	}, 2000); // Delay (in milliseconds)
+} else if (matchDomain("theatlantic.com")) {
+	//Remove all nudge elements
+	document.querySelectorAll('div[class*="c-nudge"]').forEach(function (el) {
+		removeDOMElement(el);
+	});
+	//Remove all FancyBox ads
+	document.querySelectorAll('div[class*="fancybox"]').forEach(function (el) {
+		removeDOMElement(el);
+	});
 }
 
 function matchDomain (domains) {
