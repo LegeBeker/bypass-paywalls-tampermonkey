@@ -1,5 +1,5 @@
 ---
-name: New site request template
+name: New site request
 about: New site request
 title: 'New site request: [site here]'
 labels: new site request
