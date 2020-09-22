@@ -35,6 +35,7 @@ const defaultSites = {
   'Fortune': 'fortune.com',
   'Genomeweb': 'genomeweb.com',
   'Glassdoor': 'glassdoor.com',
+  'Globes': 'globes.co.il',
   'Haaretz English': 'haaretz.com',
   'Haaretz': 'haaretz.co.il',
   'Handelsblatt': 'handelsblatt.com',

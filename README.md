@@ -60,6 +60,7 @@
 [Fortune](https://www.fortune.com)\
 [Genomeweb](https://www.genomeweb.com)\
 [Glassdoor](https://www.glassdoor.com)\
+[Globes](https://www.globes.co.il)\
 [Haaretz.co.il](https://www.haaretz.co.il)\
 [Haaretz.com](https://www.haaretz.com)\
 [Handelsblatt](https://www.handelsblatt.com)\

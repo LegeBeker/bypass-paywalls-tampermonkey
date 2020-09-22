@@ -141,6 +141,7 @@
     "*://*.ft.com/*",
     "*://*.genomeweb.com/*",
     "*://*.glassdoor.com/*",
+    "*://*.globes.co.il/*",
     "*://*.groene.nl/*",
     "*://*.haaretz.co.il/*",
     "*://*.haaretz.com/*",
@@ -238,5 +239,5 @@
     "*://*.netdna-ssl.com/*",
     "*://*.startribune.com/*"
   ],
-  "version": "1.7.5"
+  "version": "1.7.6"
 }

@@ -73,6 +73,7 @@ const removeCookies = [
   'ed.nl',
   'examiner.com.au',
   'ft.com',
+  'globes.co.il',
   'harpers.org',
   'hbr.org',
   'lesechos.fr',
