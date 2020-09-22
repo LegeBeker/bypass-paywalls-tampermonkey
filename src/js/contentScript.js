@@ -226,9 +226,9 @@ if (matchDomain('elmercurio.com')) {
       decoyArticle.classList.add('decoy-article');
       decoyArticle.hidden = true;
       realArticle.parentElement.insertBefore(decoyArticle, realArticle);
-      for(var child=realArticle.firstChild; child !== null; child=child.nextSibling) {
+      for (var child = realArticle.firstChild; child !== null; child = child.nextSibling) {
         if (child.style) {
-          child.style.display = "block";
+          child.style.display = 'block';
         }
       }
     }
