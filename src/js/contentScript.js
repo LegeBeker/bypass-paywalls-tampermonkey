@@ -130,12 +130,6 @@ if (matchDomain('elmercurio.com')) {
 
     removeDOMElement(sideNotification, subMessage, popup, bgFocusRemoverId);
   });
-} else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
-  const landingBanner = document.querySelector('.logged-out-landing-banner');
-  const sampleBanner = document.querySelector('.main-sample-banner');
-  const bottomBanner = document.querySelector('.border-bottom-cc');
-  const subscribe = document.querySelector('.subscribe-ad-text');
-  removeDOMElement(landingBanner, sampleBanner, bottomBanner, subscribe);
 } else if (matchDomain('the-american-interest.com')) {
   const counter = document.getElementById('article-counter');
   removeDOMElement(counter);
