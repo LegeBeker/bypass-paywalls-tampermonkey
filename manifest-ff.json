@@ -235,5 +235,5 @@
     "*://*.netdna-ssl.com/*",
     "*://*.startribune.com/*"
   ],
-  "version": "1.7.5"
+  "version": "1.7.6"
 }
