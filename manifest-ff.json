@@ -233,7 +233,8 @@
     "*://*.republic.ru/*",
     "*://*.historyextra.com/*",
     "*://*.netdna-ssl.com/*",
-    "*://*.startribune.com/*"
+    "*://*.startribune.com/*",
+    "*://*.df.cl/*"
   ],
   "version": "1.7.6"
 }

@@ -46,6 +46,7 @@
 [De Volkskrant](https://www.volkskrant.nl)\
 [DeMorgen](https://www.demorgen.be)\
 [Denver Post](https://www.denverpost.com)\
+[Diario Financiero](https://www.df.cl)\
 [Dynamed Plus](https://www.dynamed.com)\
 [Eindhovens Dagblad](https://www.ed.nl)\
 [El Mercurio](https://www.elmercurio.com)\

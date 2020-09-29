@@ -144,7 +144,8 @@ const useGoogleBotSites = [
   'republic.ru',
   'nzz.ch',
   'handelsblatt.com',
-  'washingtonpost.com'
+  'washingtonpost.com',
+  'df.cl'
 ];
 
 // Contains google bot sites above plus any custom sites
