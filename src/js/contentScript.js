@@ -273,8 +273,12 @@ if (matchDomain('elmercurio.com')) {
   const cookieBanner = document.querySelector('.cookie-banner');
   removeDOMElement(cookieBanner);
 } else if (matchDomain('thehindu.com')) {
-  const paywall = document.getElementById('test');
-  removeDOMElement(paywall);
+  document.addEventListener('DOMContentLoaded', () => {
+    const counter = document.querySelector('#test');
+    const coBanner = document.querySelector('.co-banner');
+    const support = document.querySelector('div.support-jlm');
+    removeDOMElement(counter, coBanner, support);
+  });
 } else if (matchDomain('nytimes.com')) {
   const previewButton = document.querySelector('.css-3s1ce0');
   if (previewButton) { previewButton.click(); }
