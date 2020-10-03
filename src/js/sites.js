@@ -30,6 +30,7 @@ const defaultSites = {
   'Estadão': 'estadao.com.br',
   'Examiner': 'examiner.com.au',
   'Financial News': 'fnlondon.com',
+  'Financial Post':'financialpost.com',
   'Financial Times': 'ft.com',
   'First Things': 'firstthings.com',
   'Foreign Policy': 'foreignpolicy.com',

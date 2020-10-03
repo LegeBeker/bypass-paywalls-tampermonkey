@@ -55,7 +55,8 @@ const allowCookies = [
   'wired.com',
   'nzz.ch',
   'handelsblatt.com',
-  'thehindu.com'
+  'thehindu.com',
+  'financialpost.com'
 ];
 
 // Removes cookies after page load

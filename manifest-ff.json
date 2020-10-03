@@ -55,7 +55,8 @@
     "*://*.volkskrant.nl/*",
     "*://*.washingtonpost.com/*",
     "*://*.wsj.com/*",
-    "*://*.hbr.org/*"
+    "*://*.hbr.org/*",
+    "*://*.financialpost.com/*"
     ],
       "js": ["src/js/contentScript.js"]
     }
@@ -235,6 +236,7 @@
     "*://*.netdna-ssl.com/*",
     "*://*.startribune.com/*",
     "*://*.df.cl/*"
+    "*://*.financialpost.com/*"
   ],
   "version": "1.7.6"
 }

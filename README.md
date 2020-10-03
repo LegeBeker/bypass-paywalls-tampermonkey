@@ -55,6 +55,7 @@
 [Estadão](https://www.estadao.com.br)\
 [Examiner](https://www.examiner.com.au)\
 [Financial News](https://www.fnlondon.com)\
+[Financial Post](https://www.financialpost.com)\
 [Financial Times](https://www.ft.com)\
 [First Things](https://www.firstthings.com)\
 [Foreign Policy](https://www.foreignpolicy.com)\
