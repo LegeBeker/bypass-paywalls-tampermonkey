@@ -39,7 +39,7 @@ rm -f $NAME.crx $NAME.xpi
 7z a -tzip -mx9 $NAME.crx $CH_FILES
 7z rn $NAME.crx temp-chrome-manifest.json manifest.json temp-background.js background.js temp-options.html options.html temp-popup.html popup.html
 
-# Generate Firefox .xpi extension package (Firefox manifest)
+# Generate Firefox .xpi extension package (firefox manifest)
 7z a -tzip -mx9 $NAME.xpi $FF_FILES
 7z rn $NAME.xpi temp-ff-manifest.json manifest.json temp-background.js background.js temp-options.html options.html temp-popup.html popup.html
 
