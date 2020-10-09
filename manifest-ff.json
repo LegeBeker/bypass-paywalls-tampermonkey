@@ -20,7 +20,7 @@
     "*://*.canberratimes.com.au/*",
     "*://*.economist.com/*",
     "*://*.ed.nl/*",
-    "*://*.editorialedomani.it/*"
+    "*://*.editorialedomani.it/*",
     "*://*.elmercurio.com/*",
     "*://*.elpais.com/*",
     "*://*.estadao.com.br/*",
@@ -237,7 +237,7 @@
     "*://*.historyextra.com/*",
     "*://*.netdna-ssl.com/*",
     "*://*.startribune.com/*",
-    "*://*.df.cl/*"
+    "*://*.df.cl/*",
     "*://*.financialpost.com/*"
   ],
   "version": "1.7.6"
