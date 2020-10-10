@@ -137,11 +137,11 @@ if (matchDomain('elmercurio.com')) {
   const childItems = document.querySelector('.article__body').getElementsByTagName('*');
   let classHidden = '';
   for (const el of childItems) {
-    if (el.getAttribute('class')!=null && classHidden=='') {
-        classHidden = el.getAttribute('class');
+    if (el.getAttribute('class') !== null && classHidden === '') {
+      classHidden = el.getAttribute('class');
     }
   }
-  if (classHidden!='') {
+  if (classHidden !== '') {
     for (const el of childItems) {
       el.classList.remove(classHidden);
       el.removeAttribute('style');
