@@ -134,20 +134,21 @@ if (matchDomain('elmercurio.com')) {
   const counter = document.getElementById('article-counter');
   removeDOMElement(counter);
 } else if (matchDomain('nzherald.co.nz')) {
-  const paywall = document.getElementById('article-content');
-  if (paywall) {
-    const premium = document.getElementsByClassName('premium-sub')[0];
-    removeDOMElement(premium);
-    paywall.classList.remove('premium-content');
-    paywall.classList.add('full-content');
-    removeClassesByPrefix(paywall, 'QUnW');
-    const paras = paywall.querySelectorAll('p, span, h2, div');
-    for (const el of paras) {
-      removeClassesByPrefix(el, 'QUnW');
-      el.classList.remove('ellipsis');
+  const childItems = document.querySelector('.article__body').getElementsByTagName('*');
+  let classHidden = '';
+  for (const el of childItems) {
+    if (el.getAttribute('class')!=null && classHidden=='') {
+        classHidden = el.getAttribute('class');
+    }
+  }
+  if (classHidden!='') {
+    for (const el of childItems) {
+      el.classList.remove(classHidden);
       el.removeAttribute('style');
     }
   }
+  const overlay = document.querySelector('#premium-toaster');
+  removeDOMElement(overlay);
 } else if (matchDomain('interest.co.nz')) {
   const wrapper = document.getElementById('pp-ablock-banner-wrapper');
   const overlay = document.querySelector('.black-overlay');
