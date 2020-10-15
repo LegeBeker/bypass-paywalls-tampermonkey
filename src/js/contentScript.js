@@ -495,7 +495,7 @@ function pageContains (selector, text) {
   });
 }
 
-function NZHerald() {
+function NZHerald () {
   window.setTimeout(function () {
     const articleBody = document.querySelector('.article__body');
     if (articleBody) {
@@ -522,27 +522,27 @@ function NZHerald() {
       advert.style.display = 'none';
     }
     const els = document.querySelectorAll('.header__navigation-toggle-button');
-    for (var i = 0; i < els.length; i++) {
-      els[i].addEventListener("click", function(ev) {
+    for (let i = 0; i < els.length; i++) {
+      els[i].addEventListener('click', function (ev) {
         document.querySelector('.container').classList.toggle('container--sidebar-is-active');
         ev.stopImmediatePropagation();
       });
     }
-    const sub_els = document.querySelectorAll('.subnavigation');
-    for (var i = 0; i < sub_els.length; i++) {
-      sub_els[i].addEventListener("mouseover", function() {
+    const subEls = document.querySelectorAll('.subnavigation');
+    for (let i = 0; i < subEls.length; i++) {
+      subEls[i].addEventListener('mouseover', function () {
         this.childNodes[1].classList.add('subnavigation__item-wrapper--is-active');
       });
-      sub_els[i].addEventListener("mouseleave", function() {
+      subEls[i].addEventListener('mouseleave', function () {
         this.childNodes[1].classList.remove('subnavigation__item-wrapper--is-active');
       });
     }
-    const acc_els = document.querySelectorAll('.accordion__button');
-    for (var i = 0; i < acc_els.length; i++) {
-      acc_els[i].addEventListener("click", function(ev) {
+    const accEls = document.querySelectorAll('.accordion__button');
+    for (let i = 0; i < accEls.length; i++) {
+      accEls[i].addEventListener('click', function (ev) {
         this.parentNode.classList.toggle('accordion--is-expanded');
         ev.stopImmediatePropagation();
       });
     }
-  }, 1000);    
+  }, 1000);
 }
