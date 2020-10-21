@@ -94,6 +94,7 @@ const defaultSites = {
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
   'Seeking Alpha': 'seekingalpha.com',
+  'Slate': 'slate.com',
   'SOFREP': 'sofrep.com',
   'Star Tribune': 'startribune.com',
   'Statista': 'statista.com',
