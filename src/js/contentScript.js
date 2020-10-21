@@ -515,7 +515,7 @@ function NZHerald () {
     if (s.src === '') {
       const vId = video.getAttribute('data-account');
       const vPlay = video.getAttribute('data-player');
-      const vScript = document.createElement("script");
+      const vScript = document.createElement('script');
       vScript.type = 'text/javascript';
       vScript.async = true;
       vScript.src = 'https://players.brightcove.net/' + vId + '/' + vPlay + '_default/index.min.js';
@@ -534,7 +534,7 @@ function NZHerald () {
       }
     }
   }
-    
+
   window.setTimeout(function () {
     const articleBody = document.querySelector('.article__body');
     if (articleBody) {
