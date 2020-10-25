@@ -77,24 +77,17 @@ if (matchDomain('elmercurio.com')) {
   const paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
   removeDOMElement(paywall);
 } else if (matchDomain('washingtonpost.com')) {
-  // Remove all elements with the id contains 'paywall'
-  document.querySelectorAll('div[id^="paywall"]').forEach(function (el) {
-    removeDOMElement(el);
-  });
-  const html = document.querySelector('html');
-  html.removeAttribute('style');
-  const body = document.querySelector('body');
-  body.removeAttribute('style');
+  const leaderboard = document.querySelector('#leaderboard-wrapper');
+  const adverts = document.querySelectorAll('div[data-qa="article-body-ad"]');
+  removeDOMElement(leaderboard, ...adverts);
   if (window.location.href.includes('/gdpr-consent/')) {
     const freeButton = document.querySelector('.gdpr-consent-container .continue-btn.button.free');
     if (freeButton) { freeButton.click(); }
-
-    setTimeout(function () {
+    window.setTimeout(function () {
       const gdprcheckbox = document.querySelector('.gdpr-consent-container .consent-page:not(.hide) #agree');
       if (gdprcheckbox) {
         gdprcheckbox.checked = true;
         gdprcheckbox.dispatchEvent(new Event('change'));
-
         document.querySelector('.gdpr-consent-container .consent-page:not(.hide) .continue-btn.button.accept-consent').click();
       }
     }, 300); // Delay (in milliseconds)
@@ -300,11 +293,16 @@ if (matchDomain('elmercurio.com')) {
     }
   });
 } else if (matchDomain('technologyreview.com')) {
-  // The class of banner is like 'overlayFooter__wrapper--3DhFn', which is hard to select exactly
-  const subscribeBanner = document.querySelector('[class*=overlayFooter__wrapper]');
-  removeDOMElement(subscribeBanner);
-  const body = document.querySelector('body');
-  removeClassesByPrefix(body, 'body__obscureContent');
+  window.setTimeout(function () {
+    const bodyObscured = document.querySelector('body[class*="body__obscureContent"]');
+    if (bodyObscured) { removeClassesByPrefix(bodyObscured, 'body__obscureContent'); }
+    const overlay = document.querySelector('div[class*="overlayFooter__wrapper"]');
+    if (overlay) { overlay.setAttribute('style', 'display:none'); }
+    const contentBodyHidden = document.querySelector('div[class*="contentBody__contentHidden"]');
+    if (contentBodyHidden) { removeClassesByPrefix(contentBodyHidden, 'contentBody__contentHidden'); }
+    const contentBodyOverlay = document.querySelector('div[class*="contentBody__overlay"]');
+    if (contentBodyOverlay) { contentBodyOverlay.removeAttribute('class'); }
+  }, 500);
 } else if (matchDomain('leparisien.fr')) {
   window.removeEventListener('scroll', this.scrollListener);
   const paywall = document.querySelector('.relative.piano-paywall.below_nav.sticky');
