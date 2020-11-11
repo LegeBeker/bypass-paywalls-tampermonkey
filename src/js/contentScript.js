@@ -421,7 +421,7 @@ if (matchDomain('elmercurio.com')) {
         }
       }
     } catch (err) {
-      console.warn(err);
+      window.location.reload(true);
     }
     const adBlocks = document.querySelectorAll('.jzxvkd-1');
     for (const adBlock of adBlocks) {
