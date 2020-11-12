@@ -60,7 +60,10 @@ const allowCookies = [
   'nzz.ch',
   'handelsblatt.com',
   'thehindu.com',
-  'financialpost.com'
+  'financialpost.com',
+  'haaretz.co.il',
+  'haaretz.com',
+  'themarker.com'
 ];
 
 // Removes cookies after page load
@@ -136,8 +139,6 @@ const useGoogleBotSites = [
   'dailytelegraph.com.au',
   'fd.nl',
   'genomeweb.com',
-  'haaretz.co.il',
-  'haaretz.com',
   'heraldsun.com.au',
   'mexiconewsdaily.com',
   'ntnews.com.au',
@@ -145,7 +146,6 @@ const useGoogleBotSites = [
   'seekingalpha.com',
   'telegraph.co.uk',
   'theaustralian.com.au',
-  'themarker.com',
   'themercury.com.au',
   'thenational.scot',
   'thetimes.co.uk',
@@ -156,6 +156,13 @@ const useGoogleBotSites = [
   'handelsblatt.com',
   'washingtonpost.com',
   'df.cl'
+];
+
+// Override User-Agent with Bingbot
+const useBingBot = [
+  'haaretz.co.il',
+  'haaretz.com',
+  'themarker.com'
 ];
 
 // Contains google bot sites above plus any custom sites
@@ -210,6 +217,8 @@ const blockedRegexes = {
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
 const userAgentMobile = 'Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)';
+const userAgentDesktopBingBot = 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)';
+const userAgentMobileBingBot = 'Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)';
 
 let enabledSites = [];
 
@@ -367,6 +376,14 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
     requestHeaders.push({
       name: 'X-Forwarded-For',
       value: '66.249.66.1'
+    });
+  }
+
+  // override User-Agent to use Bingbot
+  if (matchUrlDomain(useBingBot, details.url)) {
+    requestHeaders.push({
+      name: 'User-Agent',
+      value: useUserAgentMobile ? userAgentMobileBingBot : userAgentDesktopBingBot
     });
   }
 
