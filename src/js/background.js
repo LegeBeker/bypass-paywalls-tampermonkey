@@ -146,7 +146,7 @@ const removeCookiesSelectDrop = {
   'humo.be': ['TID_ID'],
   'nrc.nl': ['counter'],
   'pzc.nl': ['temptationTrackingId'],
-  'tubantia.nl': ['temptationTrackingId'],
+  'tubantia.nl': ['temptationTrackingId']
 };
 
 // Override User-Agent with Googlebot
@@ -284,7 +284,7 @@ extensionApi.tabs.onActivated.addListener(function (activeInfo) {
 });
 
 function updateBadge (activeTab) {
-  if (!activeTab) { return; }
+  if (extensionApi.runtime.lastError || !activeTab) { return; }
   const badgeText = getBadgeText(activeTab.url);
   extensionApi.browserAction.setBadgeBackgroundColor({ color: 'blue' });
   extensionApi.browserAction.setBadgeText({ text: badgeText });

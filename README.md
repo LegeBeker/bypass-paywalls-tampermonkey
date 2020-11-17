@@ -28,12 +28,12 @@
 [Adweek](https://www.adweek.com)\
 [Algemeen Dagblad](https://www.ad.nl)\
 [American Banker](https://www.americanbanker.com)\
-[BN De Stem](https://www.bndestem.nl)\
 [Baltimore Sun](https://www.baltimoresun.com)\
 [Barron's](https://www.barrons.com)\
 [Bloomberg Quint](https://www.bloombergquint.com)\
 [Bloomberg](https://www.bloomberg.com)\
-[Brabands Dagblad (BD)](https://www.bd.nl)\
+[BN De Stem](https://www.bndestem.nl)\
+[Brabants Dagblad](https://www.bd.nl)\
 [Brisbane Times](https://www.brisbanetimes.com.au)\
 [Business Insider](https://www.businessinsider.com)\
 [Caixin](https://www.caixinglobal.com)\
@@ -210,7 +210,7 @@ Only large or major sites will be considered. Usually premium articles cannot be
 ### Troubleshooting
 * This extension works best alongside uBlock Origin [for Google Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) or [for Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
 * If a site doesn't work, try turning off uBlock and refreshing.
-* Make sure the site is checked under Options (on macOS sometimes the sites get unselected).
+* Try clearing [cookies](https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce).
 * Make sure you're running the latest version of Bypass Paywalls.
 * If a site is having problems try unchecking "\*General Paywall Bypass\*" in Options.
 * If none of these work, you can submit an issue [here](https://github.com/iamadamdev/bypass-paywalls-chrome/issues/new/choose).
@@ -224,4 +224,14 @@ PRs are welcome.
 
 ### Show your support
 * Follow me on Twitter [@iamadamdev](https://twitter.com/iamadamdev) for updates.
-* I am not asking for donations or anything like that, all I ask is that you star this repo.
+* I do not ask for donations, all I ask is that you star this repo.
+
+### Disclaimer
+* This software is provided for educational purposes only.
+* This software is provided "AS IS", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability,
+fitness for a particular purpose and noninfringement. in no event shall the
+authors or copyright holders be liable for any claim, damages or other
+liability, whether in an action of contract, tort or otherwise, arising from,
+out of or in connection with the software or the use or other dealings in the
+software.
