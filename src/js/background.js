@@ -130,7 +130,8 @@ let _removeCookies = removeCookies;
 // select specific cookie(s) to hold from removeCookies domains
 const removeCookiesSelectHold = {
   'qz.com': ['gdpr'],
-  'wsj.com': ['wsjregion']
+  'wsj.com': ['wsjregion'],
+  'seattletimes.com': ['st_newsletter_splash_seen']
 };
 
 // select only specific cookie(s) to drop from removeCookies domains
