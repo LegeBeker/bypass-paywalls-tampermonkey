@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -e
-
 DOC_FILES="../README.md"
 IMG_FILES="../src/icons/bypass.png"
 
