@@ -389,42 +389,45 @@ if (matchDomain('elmercurio.com')) {
   removeDOMElement(paywall);
 } else if (matchDomain('lesechos.fr') && window.location.href.match(/-\d{6,}/)) {
   window.setTimeout(function () {
-    const url = window.location.href;
-    const html = document.documentElement.outerHTML;
-    const split1 = html.split('window.__PRELOADED_STATE__')[1];
-    const split2 = split1.split('</script>')[0].trim();
-    const state = split2.substr(1, split2.length - 2);
-    try {
-      const data = JSON.parse(state);
-      const article = data.article.data.stripes[0].mainContent[0].data.description;
-      const urlLoaded = data.article.data.path;
-      if (!url.includes(urlLoaded)) { document.location.reload(true); }
-      const paywallNode = document.querySelector('.post-paywall');
-      if (paywallNode) {
-        const contentNode = document.createElement('div');
-        const parser = new DOMParser();
-        const articleHtml = parser.parseFromString('<div id="bypass">' + article + '</div>', 'text/html');
-        const articlePar = articleHtml.querySelector('div#bypass');
-        if (articlePar) {
-          contentNode.appendChild(articlePar);
-          contentNode.className = paywallNode.className;
-          paywallNode.parentNode.insertBefore(contentNode, paywallNode);
-          removeDOMElement(paywallNode);
-          const paywallLastChildNode = document.querySelector('.post-paywall  > :last-child');
-          if (paywallLastChildNode) {
-            paywallLastChildNode.setAttribute('style', 'height: auto !important; overflow: hidden !important; max-height: none !important;');
+    const aboBanner = document.querySelector('[class^="pgxf3b"]');
+    const adBlocks = document.querySelectorAll('[class*="jzxvkd"');
+    for (const adBlock of adBlocks) { adBlock.setAttribute('style', 'display:none'); }
+    if (aboBanner) {
+      removeDOMElement(aboBanner);
+      const url = window.location.href;
+      const html = document.documentElement.outerHTML;
+      let state;
+      const split1 = html.split('window.__PRELOADED_STATE__=')[1];
+      const split2 = split1.split('</script>')[0].trim();
+      if (split2.includes('; window.__DATA__=')) { state = split2.split('; window.__DATA__=')[0].trim(); } else { state = split2.substr(0, split2.length - 1); }
+      try {
+        const data = JSON.parse(state);
+        const article = data.article.data.stripes[0].mainContent[0].data.description;
+        const urlLoaded = data.article.data.path;
+        if (!url.includes(urlLoaded)) { window.location.reload(true); }
+        const paywallNode = document.querySelector('.post-paywall');
+        if (paywallNode) {
+          const contentNode = document.createElement('div');
+          const parser = new DOMParser();
+          const articleHtml = parser.parseFromString('<div>' + article + '</div>', 'text/html');
+          const articlePar = articleHtml.querySelector('div');
+          if (articlePar) {
+            contentNode.appendChild(articlePar);
+            contentNode.className = paywallNode.className;
+            paywallNode.parentNode.insertBefore(contentNode, paywallNode);
+            removeDOMElement(paywallNode);
+            const paywallLastChildNode = document.querySelector('.post-paywall  > :last-child');
+            if (paywallLastChildNode) {
+              paywallLastChildNode.setAttribute('style', 'height: auto !important; overflow: hidden !important; max-height: none !important;');
+            }
           }
         }
+        const styleElem = document.head.appendChild(document.createElement('style'));
+        styleElem.innerHTML = '.post-paywall::after {height: auto !important;}';
+      } catch (err) {
+        window.location.reload(true);
       }
-    } catch (err) {
-      window.location.reload(true);
     }
-    const adBlocks = document.querySelectorAll('.jzxvkd-1');
-    for (const adBlock of adBlocks) {
-      adBlock.setAttribute('style', 'display:none');
-    }
-    const aboBanner = document.querySelector('[class^="pgxf3b"]');
-    removeDOMElement(aboBanner);
   }, 500); // Delay (in milliseconds)
 } else if (matchDomain('startribune.com')) {
   // remove active class from all elements
