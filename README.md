@@ -22,8 +22,8 @@
 * You will be logged out for any site you have checked.
 * This extension works best alongside the adblocker uBlock Origin.
 * On the Firefox version automatic updates are enabled.
-<details>
-<summary>Bypass the following sites' paywalls with this extension:</summary>
+
+### Bypass the following sites' paywalls with this extension:
 
 [Adweek](https://www.adweek.com)\
 [Algemeen Dagblad](https://www.ad.nl)\
@@ -187,13 +187,11 @@
 [Winston-Salem Journal](https://journalnow.com)\
 [Wired](https://www.wired.com)\
 [World Politics Review](https://www.worldpoliticsreview.com)
-</details>
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.*
 
 Install the Cookie Remover extension [for Google Chrome](https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce) or [for Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/). Please rate it 5 stars if you find it useful.
-
 
 When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
 
