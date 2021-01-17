@@ -261,7 +261,7 @@ if (matchDomain('elmercurio.com')) {
   // Restore scrolling
   document.onreadystatechange = function () {
     if (document.readyState === 'complete') {
-      document.querySelector('.css-mcm29f')?.setAttribute('style', 'position:relative');
+      document.querySelector('.css-mcm29f').setAttribute('style', 'position:relative');
     }
   };
 } else if (matchDomain('technologyreview.com')) {
@@ -477,6 +477,26 @@ if (matchDomain('elmercurio.com')) {
   const adBlock = document.getElementById('ad-article-inline');
   const adHeader = document.getElementById('sticky-ad-header');
   removeDOMElement(block, adBlock, adHeader);
+} else if (matchDomain('sueddeutsche.de')) {
+  const url = window.location.href;
+  document.addEventListener('DOMContentLoaded', () => {
+    const offerPage = document.querySelector('div.offer-page');
+    if (url.startsWith('https://www.sueddeutsche.de') && (url.includes('reduced=true') || offerPage)) { window.location.href = url.split('?')[0].replace('www.', 'amphtml.'); } else if (url.startsWith('https://sz-magazin.sueddeutsche.de')) {
+      if (url.includes('reduced=true') || offerPage) { window.location.href = new URL(url).pathname + '!amp'; }
+    }
+  });
+  window.setTimeout(function () {
+    if (url.includes('!amp')) {
+      const paragraphReduced = document.querySelector('.paragraph--reduced');
+      if (paragraphReduced) { paragraphReduced.classList.remove('paragraph--reduced'); }
+      const paragraphHidden = document.querySelectorAll('.paragraph--hidden');
+      for (const parHidden of paragraphHidden) { parHidden.classList.remove('paragraph--hidden'); }
+      const paragraphDynamic = document.querySelector('.paragraph--dynamic');
+      if (paragraphDynamic) { paragraphDynamic.classList.remove('paragraph--dynamic'); }
+      const ampOfferpage = document.querySelector('.amp-offerpage');
+      removeDOMElement(ampOfferpage);
+    }
+  }, 500); // Delay (in milliseconds)
 }
 
 function matchDomain (domains) {

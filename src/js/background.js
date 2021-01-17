@@ -69,7 +69,8 @@ const allowCookies = [
   'financialpost.com',
   'haaretz.co.il',
   'haaretz.com',
-  'themarker.com'
+  'themarker.com',
+  'sueddeutsche.de'
 ];
 
 // Removes cookies after page load

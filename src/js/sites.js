@@ -107,6 +107,7 @@ const defaultSites = {
   'Star Tribune': 'startribune.com',
   'Statista': 'statista.com',
   'Stuff': 'stuff.co.nz',
+  "Süddeutsche Zeitung": "sueddeutsche.de",
   'SunSentinel': 'sun-sentinel.com',
   'Tech in Asia': 'techinasia.com',
   'Telegraaf': 'telegraaf.nl',

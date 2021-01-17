@@ -66,7 +66,8 @@
     "*://*.washingtonpost.com/*",
     "*://*.wsj.com/*",
     "*://*.hbr.org/*",
-    "*://*.financialpost.com/*"
+    "*://*.financialpost.com/*",
+    "*://*.sueddeutsche.de/*"
     ],
       "js": ["src/js/contentScript.js"]
     }
@@ -259,7 +260,8 @@
     "*://*.tubantia.nl/*",
     "*://*.pzc.nl/*",
     "*://*.destentor.nl/*",
-    "*://*.ambito/*"
+    "*://*.ambito/*",
+    "*://*.sueddeutsche.de/*"
   ],
   "version": "1.7.8"
 }
