@@ -233,7 +233,8 @@ const blockedRegexes = {
   'lesechos.fr': /.+\.tinypass\.com\/.+/,
   'washingtonpost.com': /.+\.washingtonpost\.com\/.+\/pwapi-proxy\.min\.js/,
   'thehindu.com': /ajax\.cloudflare\.com\/cdn-cgi\/scripts\/.+\/cloudflare-static\/rocket-loader\.min\.js/,
-  'technologyreview.com': /.+\.blueconic\.net\/.+/
+  'technologyreview.com': /.+\.blueconic\.net\/.+/,
+  'spectator.us': /(cdn\.cxense\.com\/.+|\.tinypass\.com\/.+)/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';

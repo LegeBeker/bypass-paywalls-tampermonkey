@@ -261,7 +261,8 @@
     "*://*.pzc.nl/*",
     "*://*.destentor.nl/*",
     "*://*.ambito/*",
-    "*://*.sueddeutsche.de/*"
+    "*://*.sueddeutsche.de/*",
+    "*://*.spectator.us/*"
   ],
   "version": "1.7.8"
 }
