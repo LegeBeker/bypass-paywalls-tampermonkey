@@ -127,7 +127,30 @@ if (matchDomain('elmercurio.com')) {
   const counter = document.getElementById('article-counter');
   removeDOMElement(counter);
 } else if (matchDomain('nzherald.co.nz')) {
-  NZHerald();
+  const articleContent = document.querySelector('.article__content');
+  if (articleContent) {
+    const articleOffer = document.querySelector('.article-offer');
+    if (articleOffer) {
+      const cssSelector = articleContent.querySelectorAll('p')[5].getAttribute('class');
+      const hiddenNotPars = articleContent.querySelectorAll('.' + cssSelector + ':not(p)');
+      for (const hiddenNotPar of hiddenNotPars) {
+        hiddenNotPar.classList.remove(cssSelector);
+        hiddenNotPar.removeAttribute('style');
+      }
+      const hiddenPars = articleContent.querySelectorAll('p.' + cssSelector);
+      const parser = new DOMParser();
+      for (const hiddenPar of hiddenPars) {
+        const parHtml = parser.parseFromString('<div style="margin: 10px 0px; font-size: 17px">' + hiddenPar.innerHTML + '</div>', 'text/html');
+        const parDom = parHtml.querySelector('div');
+        articleContent.insertBefore(parDom, hiddenPar);
+      }
+      const firstSpan = document.querySelector('p > span');
+      if (firstSpan) { firstSpan.removeAttribute('class'); }
+      removeDOMElement(articleOffer);
+    }
+  }
+  const premiumToaster = document.querySelector('#premium-toaster');
+  removeDOMElement(premiumToaster);
 } else if (matchDomain('interest.co.nz')) {
   const wrapper = document.getElementById('pp-ablock-banner-wrapper');
   const overlay = document.querySelector('.black-overlay');
@@ -542,82 +565,4 @@ function blockElement (selector, blockAlways = false) {
       }
     }
   }).observe(document, { subtree: true, childList: true });
-}
-
-function NZHerald () {
-  const video = document.querySelector('.video-js');
-  if (video) {
-    const s = document.getElementsByTagName('script')[0];
-    if (s.src === '') {
-      const vId = video.getAttribute('data-account');
-      const vPlay = video.getAttribute('data-player');
-      const vScript = document.createElement('script');
-      vScript.type = 'text/javascript';
-      vScript.async = true;
-      vScript.src = 'https://players.brightcove.net/' + vId + '/' + vPlay + '_default/index.min.js';
-      s.parentNode.insertBefore(vScript, s);
-      const ticker = document.querySelector('.vcTicker');
-      if (ticker) {
-        ticker.style.display = 'none';
-      }
-      const msg = document.querySelector('.vcMsg');
-      if (msg) {
-        msg.style.display = 'none';
-      }
-      const overlay = document.querySelector('.vcOverlay');
-      if (overlay) {
-        overlay.style.display = 'none';
-      }
-    }
-  }
-
-  window.setTimeout(function () {
-    const articleBody = document.querySelector('.article__body');
-    if (articleBody) {
-      const childItems = articleBody.getElementsByTagName('*');
-      let classHidden = '';
-      for (const el of childItems) {
-        if (el.getAttribute('class') !== null && el.getAttribute('style') !== null && classHidden === '') {
-          classHidden = el.getAttribute('class');
-        }
-      }
-      if (classHidden !== '') {
-        for (const el of childItems) {
-          el.classList.remove(classHidden);
-          el.removeAttribute('style');
-        }
-      }
-    }
-    const overlay = document.querySelector('#premium-toaster');
-    if (overlay) {
-      overlay.style.display = 'none';
-    }
-    const advert = document.querySelector('.section-iframe.both');
-    if (advert) {
-      advert.style.display = 'none';
-    }
-    const els = document.querySelectorAll('.header__navigation-toggle-button');
-    for (let i = 0; i < els.length; i++) {
-      els[i].addEventListener('click', function (ev) {
-        document.querySelector('.container').classList.toggle('container--sidebar-is-active');
-        ev.stopImmediatePropagation();
-      });
-    }
-    const subEls = document.querySelectorAll('.subnavigation');
-    for (let i = 0; i < subEls.length; i++) {
-      subEls[i].addEventListener('mouseover', function () {
-        this.childNodes[1].classList.add('subnavigation__item-wrapper--is-active');
-      });
-      subEls[i].addEventListener('mouseleave', function () {
-        this.childNodes[1].classList.remove('subnavigation__item-wrapper--is-active');
-      });
-    }
-    const accEls = document.querySelectorAll('.accordion__button');
-    for (let i = 0; i < accEls.length; i++) {
-      accEls[i].addEventListener('click', function (ev) {
-        this.parentNode.classList.toggle('accordion--is-expanded');
-        ev.stopImmediatePropagation();
-      });
-    }
-  }, 1000);
 }
