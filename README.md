@@ -15,13 +15,13 @@
 1. Drag the `bypass-paywalls-chrome-master` folder anywhere on the page to import it (do not delete the folder afterwards).
 
 **Mozilla Firefox** (Custom sites not supported)
-* [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-chrome/releases/latest/download/bypass-paywalls-firefox.xpi)
+* [Download the latest version from the Firefox add-ons store](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-firefox/)
 
 **Notes**
 * Every time you open Chrome it may warn you about running extensions in developer mode, just click &#10005; to keep the extension enabled.
 * You will be logged out for any site you have checked.
 * This extension works best alongside the adblocker uBlock Origin.
-* On the Firefox version automatic updates are enabled.
+* The Firefox version supports automatic updates.
 
 ### Bypass the following sites' paywalls with this extension:
 
