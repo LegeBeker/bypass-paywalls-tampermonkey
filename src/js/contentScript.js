@@ -520,6 +520,14 @@ if (matchDomain('elmercurio.com')) {
       removeDOMElement(ampOfferpage);
     }
   }, 500); // Delay (in milliseconds)
+} else if (matchDomain('adweek.com')) {
+  const url = window.location.href;
+  const bodySingle = document.querySelector('body.single');
+  const ampHtml = document.querySelector('link[rel="amphtml"]');
+  if (bodySingle && ampHtml) {
+    bodySingle.classList.remove('single');
+    window.location.href = ampHtml.href;
+  }
 }
 
 function matchDomain (domains) {
