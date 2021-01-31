@@ -262,7 +262,8 @@
     "*://*.destentor.nl/*",
     "*://*.ambito/*",
     "*://*.sueddeutsche.de/*",
-    "*://*.spectator.us/*"
+    "*://*.spectator.us/*",
+    "*://*.humo.be/*"
   ],
   "version": "1.7.8"
 }
