@@ -72,7 +72,8 @@ const allowCookies = [
   'haaretz.co.il',
   'haaretz.com',
   'themarker.com',
-  'sueddeutsche.de'
+  'sueddeutsche.de',
+  'gelocal.it'
 ];
 
 // Removes cookies after page load
@@ -235,7 +236,8 @@ const blockedRegexes = {
   'washingtonpost.com': /.+\.washingtonpost\.com\/.+\/pwapi-proxy\.min\.js/,
   'thehindu.com': /ajax\.cloudflare\.com\/cdn-cgi\/scripts\/.+\/cloudflare-static\/rocket-loader\.min\.js/,
   'technologyreview.com': /.+\.blueconic\.net\/.+/,
-  'spectator.us': /(cdn\.cxense\.com\/.+|\.tinypass\.com\/.+)/
+  'spectator.us': /(cdn\.cxense\.com\/.+|\.tinypass\.com\/.+)/,
+  'gelocal.it': /(\.repstatic\.it\/minify\/sites\/gelocal\/.+\/config\.cache(_\d)?\.php|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
@@ -360,7 +362,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
       } else if (matchUrlDomain('fd.nl', details.url)) {
         requestHeader.value = 'https://www.facebook.com/';
       } else if (matchUrlDomain('medium.com', details.url)) {
-        requestHeader.value = 'https://t.co/x?amp=1'
+        requestHeader.value = 'https://t.co/x?amp=1';
       } else {
         requestHeader.value = 'https://www.google.com/';
       }

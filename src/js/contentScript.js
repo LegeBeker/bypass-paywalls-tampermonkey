@@ -501,7 +501,7 @@ if (matchDomain('elmercurio.com')) {
   const adHeader = document.getElementById('sticky-ad-header');
   removeDOMElement(block, adBlock, adHeader);
 } else if (matchDomain('themarker.com')) {
-  setTimeout(function() {
+  setTimeout(function () {
     const paywall = document.querySelector('[data-test="bottomStrip"]');
     const notifications = document.querySelector('#pwSubscribePopup');
     const banner = document.querySelector('#themarker\\.com\\.billboard\\.desktop');
@@ -513,7 +513,7 @@ if (matchDomain('elmercurio.com')) {
     removeDOMElement(paywall, notifications, banner, topStrip, midBanner, newsBanner, financeBanner, ...otherBanners);
   }, 500);
 } else if (matchDomain('haaretz.co.il')) {
-  setTimeout(function() {
+  setTimeout(function () {
     const notifications = document.querySelector('#pwSubscribePopup');
     const paywall = document.querySelector('[data-test="bottomStrip"]');
     const banner = document.querySelector('#haaretz\\.co\\.il\\.billboard\\.desktop');
@@ -544,7 +544,6 @@ if (matchDomain('elmercurio.com')) {
     }
   }, 500); // Delay (in milliseconds)
 } else if (matchDomain('adweek.com')) {
-  const url = window.location.href;
   const bodySingle = document.querySelector('body.single');
   const ampHtml = document.querySelector('link[rel="amphtml"]');
   if (bodySingle && ampHtml) {
@@ -552,13 +551,14 @@ if (matchDomain('elmercurio.com')) {
     window.location.href = ampHtml.href;
   }
 } else if (matchDomain('gelocal.it')) {
-  const paywallAdagio = document.querySelector('.paywall-adagio');
-  const articleBody = document.getElementById('article-body');
-  if (paywallAdagio) {
+  if (!window.location.href.includes('/amp/')) {
+    const paywallAdagio = document.querySelector('.paywall-adagio');
     removeDOMElement(paywallAdagio);
-  }
-  if (articleBody) {
-    articleBody.style.maxHeight = null;
+  } else {
+    const paywall = document.querySelector('div[amp-access="showContent"]');
+    if (paywall) { paywall.removeAttribute('amp-access-hide'); }
+    const ampAds = document.querySelectorAll('amp-ad');
+    removeDOMElement(...ampAds);
   }
 }
 
