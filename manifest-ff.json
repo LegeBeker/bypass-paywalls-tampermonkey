@@ -69,7 +69,8 @@
     "*://*.wsj.com/*",
     "*://*.hbr.org/*",
     "*://*.financialpost.com/*",
-    "*://*.sueddeutsche.de/*"
+    "*://*.sueddeutsche.de/*",
+    "*://*.elmundo.es/*"
     ],
       "js": ["src/js/contentScript.js"]
     }
@@ -266,7 +267,8 @@
     "*://*.ambito/*",
     "*://*.sueddeutsche.de/*",
     "*://*.spectator.us/*",
-    "*://*.humo.be/*"
+    "*://*.humo.be/*",
+    "*://*.elmundo.es/*"
   ],
   "version": "1.7.8"
 }

@@ -73,7 +73,8 @@ const allowCookies = [
   'haaretz.com',
   'themarker.com',
   'sueddeutsche.de',
-  'gelocal.it'
+  'gelocal.it',
+  'elmundo.es'
 ];
 
 // Removes cookies after page load
@@ -237,7 +238,8 @@ const blockedRegexes = {
   'thehindu.com': /ajax\.cloudflare\.com\/cdn-cgi\/scripts\/.+\/cloudflare-static\/rocket-loader\.min\.js/,
   'technologyreview.com': /.+\.blueconic\.net\/.+/,
   'spectator.us': /(cdn\.cxense\.com\/.+|\.tinypass\.com\/.+)/,
-  'gelocal.it': /(\.repstatic\.it\/minify\/sites\/gelocal\/.+\/config\.cache(_\d)?\.php|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+  'gelocal.it': /(\.repstatic\.it\/minify\/sites\/gelocal\/.+\/config\.cache(_\d)?\.php|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/,
+  'elmundo.es': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';

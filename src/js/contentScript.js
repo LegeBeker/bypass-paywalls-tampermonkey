@@ -1,4 +1,4 @@
-if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org', 'thetimes.co.uk'])) {
+if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org', 'thetimes.co.uk', 'elmundo.es'])) {
   window.localStorage.clear();
 }
 
@@ -346,17 +346,16 @@ if (matchDomain('elmercurio.com')) {
   }, 500); // Delay (in milliseconds)
 } else if (matchDomain('elperiodico.com')) {
   setTimeout(function () {
-    const unavailableArea = document.querySelector(".closed");
-    const infoBox = document.querySelector(".ep-masPeriodico-info");
+    const unavailableArea = document.querySelector('.closed');
+    const infoBox = document.querySelector('.ep-masPeriodico-info');
     if (unavailableArea) {
-      unavailableArea.classList.remove("closed");
+      unavailableArea.classList.remove('closed');
     }
     if (infoBox) {
       infoBox.parentNode.removeChild(infoBox);
-    }  
-}, 2000);
-} 
-  else if (matchDomain('techinasia.com')) {
+    }
+  }, 1000);
+} else if (matchDomain('techinasia.com')) {
   const paywall = document.querySelector('.paywall-content');
   if (paywall) {
     paywall.classList.remove('paywall-content');
@@ -480,7 +479,7 @@ if (matchDomain('elmercurio.com')) {
       .forEach(function (el) {
         el.removeAttribute('class');
       });
-  }, 2000); // Delay (in milliseconds)
+  }, 1000); // Delay (in milliseconds)
 } else if (matchDomain('theatlantic.com')) {
   // Remove all nudge elements
   document.querySelectorAll('div[class*="c-nudge"]').forEach(function (el) {
@@ -571,6 +570,26 @@ if (matchDomain('elmercurio.com')) {
     if (paywall) { paywall.removeAttribute('amp-access-hide'); }
     const ampAds = document.querySelectorAll('amp-ad');
     removeDOMElement(...ampAds);
+  }
+} else if (matchDomain('elmundo.es')) {
+  const premium = document.querySelector('.ue-c-article__premium');
+  const url = window.location.href;
+  if (!url.includes('/amp.' + 'elmundo.es' + '/')) {
+    if (premium) {
+      removeDOMElement(premium);
+      window.location.href = window.location.href.replace('/www.', '/amp.');
+    }
+  } else {
+    const paywall = document.querySelector('div[amp-access="authorized!=true"]');
+    if (paywall) {
+      removeDOMElement(paywall);
+      const divHidden = document.querySelector('div[amp-access="authorized=true"]');
+      if (divHidden) {
+        divHidden.removeAttribute('amp-access-hide');
+      }
+    }
+    const advertising = document.querySelectorAll('.advertising, amp-embed');
+    removeDOMElement(...advertising);
   }
 }
 
