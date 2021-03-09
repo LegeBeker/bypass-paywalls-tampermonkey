@@ -497,8 +497,8 @@ if (matchDomain('elmercurio.com')) {
   removeDOMElement(paywall);
 } else if (matchDomain('delfi.ee')) {
   // Remove 'adblocker-detected' notification overlay
-  document.body.classList.remove('adb-curtain');
-  const el = document.getElementById('ab--notification-header');
+  document.body.classList.remove('U-overflow-hidden');
+  const el = document.getElementsByClassName('C-ad-block-layer')[0];
   removeDOMElement(el);
 } else if (matchDomain(['postimees.ee', 'elu24.ee'])) {
   setTimeout(function () {
