@@ -5,7 +5,8 @@ const restrictions = {
   'barrons.com': /.+barrons\.com\/(amp\/)?article(s)?\/.+/,
   'economist.com': /.+economist\.com\/.+\/\d{1,4}\/\d{1,2}\/\d{2}\/.+/,
   'seekingalpha.com': /.+seekingalpha\.com\/article\/.+/,
-  'techinasia.com': /\.techinasia\.com\/.+/
+  'techinasia.com': /\.techinasia\.com\/.+/,
+  'ft.com': /.+\.ft.com\/content\//
 };
 
 // Don't remove cookies before page load
@@ -23,7 +24,6 @@ const allowCookies = [
   'destentor.nl',
   'ed.nl',
   'examiner.com.au',
-  'ft.com',
   'gelocal.it',
   'gelderlander.nl',
   'grubstreet.com',
@@ -95,7 +95,6 @@ const removeCookies = [
   'destentor.nl',
   'ed.nl',
   'examiner.com.au',
-  'ft.com',
   'gelderlander.nl',
   'globes.co.il',
   'grubstreet.com',
@@ -184,7 +183,8 @@ const useGoogleBotSites = [
   'nzz.ch',
   'handelsblatt.com',
   'washingtonpost.com',
-  'df.cl'
+  'df.cl',
+  'ft.com'
 ];
 
 // Override User-Agent with Bingbot

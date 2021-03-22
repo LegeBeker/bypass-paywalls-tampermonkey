@@ -266,8 +266,10 @@ if (matchDomain('elmercurio.com')) {
   const counter = document.querySelector('.full.hidden-print.popup-msg');
   removeDOMElement(counter);
 } else if (matchDomain('ft.com')) {
-  const cookieBanner = document.querySelectorAll('div[class*="cookie-message"]');
-  removeDOMElement(cookieBanner);
+  const cookieBanner = document.querySelector('.o-banner__outer');
+  const ribbon = document.querySelector('.js-article-ribbon');
+  const ads = document.querySelector('.o-ads');
+  removeDOMElement(cookieBanner, ads, ribbon);
 } else if (matchDomain('thehindu.com')) {
   document.addEventListener('DOMContentLoaded', () => {
     const counter = document.querySelector('#test');
@@ -592,8 +594,8 @@ if (matchDomain('elmercurio.com')) {
     removeDOMElement(...advertising);
   }
 } else if (matchDomain('speld.nl')) {
-    const paywallPopup = document.querySelector('.c-paywall-notice');
-    removeDOMElement(paywallPopup);
+  const paywallPopup = document.querySelector('.c-paywall-notice');
+  removeDOMElement(paywallPopup);
 }
 
 function matchDomain (domains) {
