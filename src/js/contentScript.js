@@ -596,6 +596,32 @@ if (matchDomain('elmercurio.com')) {
 } else if (matchDomain('speld.nl')) {
   const paywallPopup = document.querySelector('.c-paywall-notice');
   removeDOMElement(paywallPopup);
+} else if (matchDomain('lastampa.it')) {
+  const url = window.location.href;
+  if (!url.includes('/amp/')) {
+    const premium = document.querySelector('.paywall-adagio');
+    removeDOMElement(premium);
+    window.setTimeout(function () {
+      if (premium) {
+        window.location.href = url.split('?')[0] + '/amp/';
+      }
+      const articleBody = document.querySelector('div#article-body[style]');
+      if (articleBody) {
+        articleBody.removeAttribute('style');
+      }
+    }, 500);
+  } else {
+    const paywall = document.querySelector('div[id^="paywall-banner"]');
+    removeDOMElement(paywall);
+    const subscriptionSection = document.querySelector('[subscriptions-section="content"]');
+    if (subscriptionSection) {
+      subscriptionSection.removeAttribute('subscriptions-section');
+      const preview = document.querySelector('div[subscriptions-section="content-not-granted"]');
+      removeDOMElement(preview);
+    }
+    const ampAds = document.querySelectorAll('amp-ad, amp-embed');
+    removeDOMElement(...ampAds);
+  }
 }
 
 function matchDomain (domains) {
