@@ -66,7 +66,6 @@ const allowCookies = [
   'volkskrant.nl',
   'vulture.com',
   'washingtonpost.com',
-  'wired.com',
   'nzz.ch',
   'handelsblatt.com',
   'thehindu.com',
@@ -126,7 +125,6 @@ const removeCookies = [
   'tubantia.nl',
   'vn.nl',
   'vulture.com',
-  'wired.com',
   'wsj.com'
 ];
 
@@ -184,7 +182,8 @@ const useGoogleBotSites = [
   'handelsblatt.com',
   'washingtonpost.com',
   'df.cl',
-  'ft.com'
+  'ft.com',
+  'wired.com'
 ];
 
 // Override User-Agent with Bingbot
