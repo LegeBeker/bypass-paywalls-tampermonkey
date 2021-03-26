@@ -181,7 +181,6 @@ const useGoogleBotSites = [
   'republic.ru',
   'nzz.ch',
   'handelsblatt.com',
-  'washingtonpost.com',
   'df.cl',
   'ft.com',
   'wired.com'
