@@ -622,6 +622,11 @@ if (matchDomain('elmercurio.com')) {
     const ampAds = document.querySelectorAll('amp-ad, amp-embed');
     removeDOMElement(...ampAds);
   }
+} else if (matchDomain('time.com')) {
+  const body = document.querySelector('body');
+  if (body) {
+    body.setAttribute('style', 'position:relative !important;');
+  }
 }
 
 function matchDomain (domains) {

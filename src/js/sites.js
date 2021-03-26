@@ -115,6 +115,7 @@ const defaultSites = {
   'SunSentinel': 'sun-sentinel.com',
   'Tech in Asia': 'techinasia.com',
   'Telegraaf': 'telegraaf.nl',
+  'Time': 'time.com',
   'The Advertiser': 'adelaidenow.com.au',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',

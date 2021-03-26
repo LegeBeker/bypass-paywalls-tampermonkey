@@ -70,7 +70,8 @@
     "*://*.hbr.org/*",
     "*://*.financialpost.com/*",
     "*://*.sueddeutsche.de/*",
-    "*://*.elmundo.es/*"
+    "*://*.elmundo.es/*",
+    "*://*.time.com/*"
     ],
       "js": ["src/js/contentScript.js"]
     }
@@ -269,7 +270,8 @@
     "*://*.sueddeutsche.de/*",
     "*://*.spectator.us/*",
     "*://*.humo.be/*",
-    "*://*.elmundo.es/*"
+    "*://*.elmundo.es/*",
+    "*://*.time.com/*"
   ],
   "version": "1.7.8"
 }

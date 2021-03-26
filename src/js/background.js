@@ -75,7 +75,8 @@ const allowCookies = [
   'themarker.com',
   'sueddeutsche.de',
   'gelocal.it',
-  'elmundo.es'
+  'elmundo.es',
+  'time.com'
 ];
 
 // Removes cookies after page load
@@ -242,7 +243,8 @@ const blockedRegexes = {
   'technologyreview.com': /.+\.blueconic\.net\/.+/,
   'spectator.us': /(cdn\.cxense\.com\/.+|\.tinypass\.com\/.+)/,
   'gelocal.it': /(\.repstatic\.it\/minify\/sites\/gelocal\/.+\/config\.cache(_\d)?\.php|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/,
-  'elmundo.es': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/
+  'elmundo.es': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/,
+  'time.com': /\/time\.com\/dist\/meter-wall-client-js\..+\.js/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
