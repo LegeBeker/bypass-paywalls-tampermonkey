@@ -115,14 +115,11 @@ if (matchDomain('elmercurio.com')) {
     readMore.click();
   }
 } else if (matchDomain('mexiconewsdaily.com')) {
-  document.addEventListener('DOMContentLoaded', () => {
-    const sideNotification = document.querySelector('.pigeon-widget-prompt');
-    const subMessage = document.querySelector('.sub_message_container');
-    const popup = document.querySelector('.popupally-pro-outer-full-width-7-fluid_qemskqa');
-    const bgFocusRemoverId = document.getElementById('popup-box-pro-gfcr-7');
-
-    removeDOMElement(sideNotification, subMessage, popup, bgFocusRemoverId);
-  });
+  window.setTimeout(function () {
+    const popup = document.querySelector('div.pigeon-widget-prompt');
+    const cproOverlay = document.querySelector('.cpro-overlay');
+    removeDOMElement(popup, cproOverlay);
+  }, 500); // Delay (in milliseconds)
 } else if (matchDomain('the-american-interest.com')) {
   const counter = document.getElementById('article-counter');
   removeDOMElement(counter);
