@@ -335,14 +335,6 @@ if (matchDomain('elmercurio.com')) {
 } else if (matchDomain('cen.acs.org')) {
   const paywall = document.querySelector('.meteredBar');
   removeDOMElement(paywall);
-} else if (matchDomain('elpais.com')) {
-  setTimeout(function () {
-    const paywall = document.querySelector('.fc-ab-root');
-    const body = document.querySelector('.salida_articulo');
-
-    removeDOMElement(paywall);
-    body.removeAttribute('style');
-  }, 500); // Delay (in milliseconds)
 } else if (matchDomain('elperiodico.com')) {
   setTimeout(function () {
     const unavailableArea = document.querySelector('.closed');
