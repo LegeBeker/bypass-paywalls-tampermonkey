@@ -271,7 +271,8 @@
     "*://*.spectator.us/*",
     "*://*.humo.be/*",
     "*://*.elmundo.es/*",
-    "*://*.time.com/*"
+    "*://*.time.com/*",
+    "*://*.zeit.de/*"
   ],
   "version": "1.7.9"
 }

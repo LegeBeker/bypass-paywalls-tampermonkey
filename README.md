@@ -189,7 +189,8 @@
 [Vulture](https://www.vulture.com/)\
 [Winston-Salem Journal](https://journalnow.com)\
 [Wired](https://www.wired.com)\
-[World Politics Review](https://www.worldpoliticsreview.com)
+[World Politics Review](https://www.worldpoliticsreview.com)\
+[Zeit Online](https://www.zeit.de)
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.*

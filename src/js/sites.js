@@ -169,5 +169,6 @@ const defaultSites = {
   'Winston-Salem Journal': 'journalnow.com',
   'Wired': 'wired.com',
   'World Politics Review': 'worldpoliticsreview.com',
+  'Zeit Online': 'zeit.de',
   '*General Paywall Bypass*': 'generalpaywallbypass'
 };

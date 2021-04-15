@@ -74,7 +74,8 @@ const allowCookies = [
   'sueddeutsche.de',
   'gelocal.it',
   'elmundo.es',
-  'time.com'
+  'time.com',
+  'zeit.de'
 ];
 
 // Removes cookies after page load
@@ -178,7 +179,8 @@ const useGoogleBotSites = [
   'handelsblatt.com',
   'df.cl',
   'ft.com',
-  'wired.com'
+  'wired.com',
+  'zeit.de'
 ];
 
 // Override User-Agent with Bingbot
