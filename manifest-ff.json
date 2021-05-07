@@ -272,7 +272,8 @@
     "*://*.humo.be/*",
     "*://*.elmundo.es/*",
     "*://*.time.com/*",
-    "*://*.zeit.de/*"
+    "*://*.zeit.de/*",
+    "*://*.ampproject.org/*"
   ],
   "version": "1.7.9"
 }
