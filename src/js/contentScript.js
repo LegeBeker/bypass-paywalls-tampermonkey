@@ -36,8 +36,12 @@ if (matchDomain('elmercurio.com')) {
     }
   }
 } else if (matchDomain('americanbanker.com')) {
-  const paywall = document.getElementsByClassName('embargo-content')[0];
-  if (paywall) { paywall.classList.remove('embargo-content'); }
+  const inlineGate = document.querySelector('.inline-gate');
+  if (inlineGate) {
+    inlineGate.classList.remove('inline-gate');
+    const inlineGated = document.querySelectorAll('.inline-gated');
+    for (const elem of inlineGated) { elem.classList.remove('inline-gated'); }
+  }
 } else if (matchDomain('telegraaf.nl')) {
   if (window.location.href.startsWith('https://www.telegraaf.nl/error?ref=/')) {
     window.location.href = window.location.href.split('&')[0].replace('error?ref=/', '');
