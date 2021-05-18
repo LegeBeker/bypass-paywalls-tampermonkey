@@ -125,6 +125,7 @@
 [Quora](https://www.quora.com)\
 [Quotidiani Gelocal](https://quotidiani.gelocal.it)\
 [Republic.ru](https://republic.ru)\
+[Reuters](https://www.reuters.com)\
 [San Diego Union Tribune](https://www.sandiegouniontribune.com)\
 [San Francisco Chronicle](https://www.sfchronicle.com)\
 [Scientific American](https://www.scientificamerican.com)\

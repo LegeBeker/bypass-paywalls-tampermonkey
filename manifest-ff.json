@@ -273,7 +273,8 @@
     "*://*.elmundo.es/*",
     "*://*.time.com/*",
     "*://*.zeit.de/*",
-    "*://*.ampproject.org/*"
+    "*://*.ampproject.org/*",
+    "*://*.reuters.com/*"
   ],
   "version": "1.7.9"
 }

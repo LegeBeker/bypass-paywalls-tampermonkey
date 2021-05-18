@@ -102,6 +102,7 @@ const defaultSites = {
   'Quora': 'quora.com',
   'Quotidiani Gelocal': 'gelocal.it',
   'Republic.ru': 'republic.ru',
+  'Reuters': 'reuters.com',
   'San Diego Union Tribune': 'sandiegouniontribune.com',
   'San Francisco Chronicle': 'sfchronicle.com',
   'Scientific American': 'scientificamerican.com',
