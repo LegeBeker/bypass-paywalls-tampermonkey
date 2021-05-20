@@ -19,20 +19,23 @@ if (matchDomain('elmercurio.com')) {
     removeDOMElement(paywall);
     body.removeAttribute('style');
   }, 300); // Delay (in milliseconds)
-} else if (matchDomain('rep.repubblica.it')) {
-  if (window.location.href.includes('/pwa/')) {
-    setTimeout(function () {
-      window.location.href = window.location.href.replace('/pwa/', '/ws/detail/');
-    }, 400);
-  }
-  if (window.location.href.includes('/ws/detail/')) {
-    const paywall = document.querySelector('.paywall[subscriptions-section="content"]');
-    if (paywall) {
-      paywall.removeAttribute('subscriptions-section');
-      const preview = document.querySelector('div[subscriptions-section="content-not-granted"]');
-      if (preview) {
-        preview.remove();
-      }
+} else if (matchDomain('repubblica.it')) {
+  document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('#paywall')) {
+      var url = window.location.href.split('?')[0];
+      window.location.href = url + 'amp';
+    } else if (window.location.href.includes('/pwa/')) {
+      setTimeout(function () {
+        window.location.href = window.location.href.replace('/pwa/', '/ws/detail/');
+      }, 400);
+    }
+  });
+  const paywall = document.querySelector('[subscriptions-section="content"]');
+  if (paywall) {
+    paywall.removeAttribute('subscriptions-section');
+    const preview = document.querySelector('div[subscriptions-section="content-not-granted"]');
+    if (preview) {
+      preview.remove();
     }
   }
 } else if (matchDomain('americanbanker.com')) {
