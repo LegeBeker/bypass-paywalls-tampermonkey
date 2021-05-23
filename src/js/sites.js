@@ -27,7 +27,6 @@ const defaultSites = {
   'De Stentor': 'destentor.nl',
   'De Tijd': 'tijd.be',
   'de Volkskrant': 'volkskrant.nl',
-  'DELFI': 'delfi.ee',
   'Diario Financiero': 'df.cl',
   'Domani': 'editorialedomani.it',
   'Dynamed Plus': 'dynamed.com',

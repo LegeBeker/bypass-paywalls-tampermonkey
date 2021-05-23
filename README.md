@@ -50,7 +50,6 @@
 [De Speld](https://speld.nl)\
 [De Tijd](https://www.tijd.be)\
 [De Volkskrant](https://www.volkskrant.nl)\
-[DELFI](https://www.delfi.ee)\
 [DeMorgen](https://www.demorgen.be)\
 [Denver Post](https://www.denverpost.com)\
 [Diario Financiero](https://www.df.cl)\
