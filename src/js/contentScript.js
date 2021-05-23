@@ -618,6 +618,26 @@ if (matchDomain('elmercurio.com')) {
   if (body) {
     body.setAttribute('style', 'position:relative !important;');
   }
+} else if (matchDomain('expansion.com')) {
+  const premium = document.querySelector('.ue-c-article__premium');
+  const url = window.location.href;
+  if (!url.includes('/amp.' + 'expansion.com' + '/')) {
+    if (premium) {
+      removeDOMElement(premium);
+      window.location.href = window.location.href.replace('/www.', '/amp.');
+    }
+  } else {
+    const paywall = document.querySelector('div[amp-access="authorized!=true"]');
+    if (paywall) {
+      removeDOMElement(paywall);
+      const divHidden = document.querySelector('div[amp-access="authorized=true"]');
+      if (divHidden) {
+        divHidden.removeAttribute('amp-access-hide');
+      }
+    }
+    const advertising = document.querySelectorAll('.advertising, amp-embed');
+    removeDOMElement(...advertising);
+  }
 }
 
 function matchDomain (domains) {

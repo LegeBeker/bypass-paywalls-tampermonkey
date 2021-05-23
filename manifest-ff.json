@@ -70,7 +70,8 @@
     "*://*.financialpost.com/*",
     "*://*.sueddeutsche.de/*",
     "*://*.elmundo.es/*",
-    "*://*.time.com/*"
+    "*://*.time.com/*",
+    "*://*.expansion.com/*"
     ],
       "js": ["src/js/contentScript.js"]
     }
@@ -273,7 +274,8 @@
     "*://*.time.com/*",
     "*://*.zeit.de/*",
     "*://*.ampproject.org/*",
-    "*://*.reuters.com/*"
+    "*://*.reuters.com/*",
+    "*://*.expansion.com/*"
   ],
   "version": "1.7.9"
 }

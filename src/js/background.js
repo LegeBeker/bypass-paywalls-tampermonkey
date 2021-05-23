@@ -75,7 +75,8 @@ const allowCookies = [
   'gelocal.it',
   'elmundo.es',
   'time.com',
-  'zeit.de'
+  'zeit.de',
+  'expansion.com'
 ];
 
 // Removes cookies after page load
@@ -242,7 +243,8 @@ const blockedRegexes = {
   'elmundo.es': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/,
   'time.com': /\/time\.com\/dist\/meter-wall-client-js\..+\.js/,
   'thestar.com': /\.com\/api\/overlaydata/,
-  'elpais.com': /(\.epimg\.net\/js\/.+\/(noticia|user)\.min\.js|\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|consent)-.+\.js)/
+  'elpais.com': /(\.epimg\.net\/js\/.+\/(noticia|user)\.min\.js|\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|consent)-.+\.js)/,
+  'expansion.com': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';

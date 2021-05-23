@@ -39,6 +39,7 @@ const defaultSites = {
   'Encyclopedia Britannica': 'britannica.com',
   'Estadão': 'estadao.com.br',
   'Examiner': 'examiner.com.au',
+  'Expansión': 'expansion.com',
   'Financial News': 'fnlondon.com',
   'Financial Post':'financialpost.com',
   'Financial Times': 'ft.com',

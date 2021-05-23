@@ -63,6 +63,7 @@
 [Encyclopedia Britannica](https://www.britannica.com)\
 [Estadão](https://www.estadao.com.br)\
 [Examiner](https://www.examiner.com.au)\
+[Expansión](https://www.expansion.com)\
 [Financial News](https://www.fnlondon.com)\
 [Financial Post](https://www.financialpost.com)\
 [Financial Times](https://www.ft.com)\
