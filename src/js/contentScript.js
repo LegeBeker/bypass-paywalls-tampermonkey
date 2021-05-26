@@ -638,6 +638,11 @@ if (matchDomain('elmercurio.com')) {
     const advertising = document.querySelectorAll('.advertising, amp-embed');
     removeDOMElement(...advertising);
   }
+} else if (matchDomain('chicagobusiness.com')) {
+  const body = document.querySelector('body[class]');
+  if (body) {
+    body.removeAttribute('class');
+  }
 }
 
 function matchDomain (domains) {
