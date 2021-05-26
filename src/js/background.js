@@ -179,7 +179,8 @@ const useGoogleBotSites = [
   'df.cl',
   'ft.com',
   'wired.com',
-  'zeit.de'
+  'zeit.de',
+  'washingtonpost.com'
 ];
 
 // Override User-Agent with Bingbot
@@ -233,7 +234,6 @@ const blockedRegexes = {
   'sloanreview.mit.edu': /(.+\.tinypass\.com\/.+|.+\.netdna-ssl\.com\/wp-content\/themes\/smr\/assets\/js\/libs\/welcome-ad\.js)/,
   'latercera.com': /.+\.cxense\.com\/+/,
   'lesechos.fr': /.+\.tinypass\.com\/.+/,
-  'washingtonpost.com': /.+\.washingtonpost\.com\/.+\/pwapi-proxy\.min\.js/,
   'thehindu.com': /ajax\.cloudflare\.com\/cdn-cgi\/scripts\/.+\/cloudflare-static\/rocket-loader\.min\.js/,
   'technologyreview.com': /.+\.blueconic\.net\/.+/,
   'spectator.us': /(cdn\.cxense\.com\/.+|\.tinypass\.com\/.+)/,
