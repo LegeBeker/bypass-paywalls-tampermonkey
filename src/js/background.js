@@ -75,7 +75,8 @@ const allowCookies = [
   'elmundo.es',
   'time.com',
   'zeit.de',
-  'expansion.com'
+  'expansion.com',
+  'dailytelegraph.com.au'
 ];
 
 // Removes cookies after page load
@@ -158,7 +159,6 @@ const useGoogleBotSites = [
   'adelaidenow.com.au',
   'barrons.com',
   'couriermail.com.au',
-  'dailytelegraph.com.au',
   'fd.nl',
   'genomeweb.com',
   'heraldsun.com.au',
@@ -243,7 +243,8 @@ const blockedRegexes = {
   'thestar.com': /\.com\/api\/overlaydata/,
   'elpais.com': /(\.epimg\.net\/js\/.+\/(noticia|user)\.min\.js|\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|consent)-.+\.js)/,
   'expansion.com': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/,
-  'chicagobusiness.com': /(\.tinypass\.com\/|\.chicagobusiness\.com\/.+\/js\/js_.+\.js)/
+  'chicagobusiness.com': /(\.tinypass\.com\/|\.chicagobusiness\.com\/.+\/js\/js_.+\.js)/,
+  'dailytelegraph.com.au': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
@@ -305,6 +306,18 @@ function updateBadge (activeTab) {
 function getBadgeText (currentUrl) {
   return currentUrl && isSiteEnabled({ url: currentUrl }) ? 'ON' : '';
 }
+
+// AMP redirect for dailytelegraph.com.au
+extensionApi.webRequest.onBeforeRequest.addListener(function (details) {
+  if (!isSiteEnabled(details)) {
+    return;
+  }
+  const updatedUrl = decodeURIComponent(details.url.split('&dest=')[1].split('&')[0]).replace('www.', 'amp.');
+  return { redirectUrl: updatedUrl };
+},
+{ urls: ['*://www.dailytelegraph.com.au/subscribe/*'], types: ['main_frame'] },
+['blocking']
+);
 
 // Disable javascript for these sites
 extensionApi.webRequest.onBeforeRequest.addListener(function (details) {
