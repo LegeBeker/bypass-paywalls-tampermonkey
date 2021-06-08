@@ -643,6 +643,17 @@ if (matchDomain('elmercurio.com')) {
   if (body) {
     body.removeAttribute('class');
   }
+} else if (matchDomain('latimes.com')) {
+  const paywall = document.querySelector('metering-modal');
+  const incognitoWall = document.querySelector('metering-toppanel');
+  if (paywall) {
+    removeDOMElement(paywall);
+  } else if (incognitoWall) {
+      removeDOMElement(incognitoWall);
+    }
+  if (paywall || incognitoWall) {
+    document.body.removeAttribute('style');
+  }
 }
 
 function matchDomain (domains) {
