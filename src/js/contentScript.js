@@ -649,10 +649,17 @@ if (matchDomain('elmercurio.com')) {
   if (paywall) {
     removeDOMElement(paywall);
   } else if (incognitoWall) {
-      removeDOMElement(incognitoWall);
-    }
+    removeDOMElement(incognitoWall);
+  }
   if (paywall || incognitoWall) {
     document.body.removeAttribute('style');
+  }
+} else if (matchDomain('foreignpolicy.com')) {
+  const contentUngated = document.querySelector('div.content-ungated');
+  removeDOMElement(contentUngated);
+  const contentGated = document.querySelector('div.content-gated');
+  if (contentGated) {
+    contentGated.classList.remove('content-gated');
   }
 }
 

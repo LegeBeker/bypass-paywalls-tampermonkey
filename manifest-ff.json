@@ -71,7 +71,8 @@
     "*://*.sueddeutsche.de/*",
     "*://*.elmundo.es/*",
     "*://*.time.com/*",
-    "*://*.expansion.com/*"
+    "*://*.expansion.com/*",
+    "*://*.foreignpolicy.com/*"
     ],
       "js": ["src/js/contentScript.js"]
     }
