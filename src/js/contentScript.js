@@ -22,7 +22,7 @@ if (matchDomain('elmercurio.com')) {
 } else if (matchDomain('repubblica.it')) {
   document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('#paywall')) {
-      var url = window.location.href.split('?')[0];
+      const url = window.location.href.split('?')[0];
       window.location.href = url + 'amp';
     } else if (window.location.href.includes('/pwa/')) {
       setTimeout(function () {
@@ -98,6 +98,13 @@ if (matchDomain('elmercurio.com')) {
         document.querySelector('.gdpr-consent-container .consent-page:not(.hide) .continue-btn.button.accept-consent').click();
       }
     }, 300); // Delay (in milliseconds)
+  } else {
+    function defaultPaywall (element) {
+      removeDOMElement(element);
+      const url = window.location.href;
+      if (!url.includes('outputType=amp')) { window.location.href = url.split('?')[0] + '?outputType=amp'; }
+    }
+    waitDOMElement('div[id^="paywall-"]', 'DIV', defaultPaywall, false);
   }
 } else if (matchDomain('wsj.com') && !matchDomain('cn.wsj.com')) {
   if (window.location.href.includes('/articles/')) {
@@ -220,7 +227,7 @@ if (matchDomain('elmercurio.com')) {
       decoyArticle.classList.add('decoy-article');
       decoyArticle.hidden = true;
       realArticle.parentElement.insertBefore(decoyArticle, realArticle);
-      for (var child = realArticle.firstChild; child !== null; child = child.nextSibling) {
+      for (let child = realArticle.firstChild; child !== null; child = child.nextSibling) {
         if (child.style) {
           child.style.display = 'block';
         }
@@ -686,6 +693,24 @@ function matchDomain (domains) {
   const hostname = window.location.hostname;
   if (typeof domains === 'string') { domains = [domains]; }
   return domains.some(domain => hostname === domain || hostname.endsWith('.' + domain));
+}
+
+function waitDOMElement (selector, tagName = '', callback, multiple = false) {
+  new window.MutationObserver(function (mutations) {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (!tagName || (node.tagName === tagName)) {
+          if (node.matches(selector)) {
+            callback(node);
+            if (!multiple) { this.disconnect(); }
+          }
+        }
+      }
+    }
+  }).observe(document, {
+    subtree: true,
+    childList: true
+  });
 }
 
 function removeDOMElement (...elements) {
