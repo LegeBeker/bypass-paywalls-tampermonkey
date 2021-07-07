@@ -99,12 +99,17 @@ if (matchDomain('elmercurio.com')) {
       }
     }, 300); // Delay (in milliseconds)
   } else {
-    function defaultPaywall (element) {
+    const url = window.location.href;
+    function main (element) {
       removeDOMElement(element);
-      const url = window.location.href;
-      if (!url.includes('outputType=amp')) { window.location.href = url.split('?')[0] + '?outputType=amp'; }
+      window.location.href = url.split('?')[0] + '?outputType=amp';
     }
-    waitDOMElement('div[id^="paywall-"]', 'DIV', defaultPaywall, false);
+    if (!url.includes('outputType=amp')) {
+      waitDOMElement('div[id^="paywall-"]', 'DIV', main, false);
+    } else {
+      const subscriptionsSections = document.querySelectorAll('[subscriptions-section="content"]');
+      for (const subscriptionsSection of subscriptionsSections) { subscriptionsSection.removeAttribute('subscriptions-section'); }
+    }
   }
 } else if (matchDomain('wsj.com') && !matchDomain('cn.wsj.com')) {
   if (window.location.href.includes('/articles/')) {
