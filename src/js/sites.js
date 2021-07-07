@@ -156,7 +156,6 @@ const defaultSites = {
   'The Spectator (U.S.)': 'spectator.us',
   'The Sydney Morning Herald': 'smh.com.au',
   'The Telegraph': 'telegraph.co.uk',
-  'The Times': 'thetimes.co.uk',
   'The Toronto Star': 'thestar.com',
   'The Wall Street Journal': 'wsj.com',
   'The Washington Post': 'washingtonpost.com',

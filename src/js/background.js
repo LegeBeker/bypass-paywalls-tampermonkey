@@ -170,7 +170,6 @@ const useGoogleBotSites = [
   'theaustralian.com.au',
   'themercury.com.au',
   'thenational.scot',
-  'thetimes.co.uk',
   'wsj.com',
   'kansascity.com',
   'republic.ru',

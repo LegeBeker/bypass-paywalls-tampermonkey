@@ -1,4 +1,4 @@
-if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org', 'thetimes.co.uk', 'elmundo.es'])) {
+if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org', 'elmundo.es'])) {
   window.localStorage.clear();
 }
 
@@ -506,11 +506,6 @@ if (matchDomain('elmercurio.com')) {
     const adblockNotif = document.querySelector('.adblock-notif');
     removeDOMElement(adblockNotif);
   }, 800); // Delay (in milliseconds)
-} else if (matchDomain('thetimes.co.uk')) {
-  const block = document.querySelector('.subscription-block');
-  const adBlock = document.getElementById('ad-article-inline');
-  const adHeader = document.getElementById('sticky-ad-header');
-  removeDOMElement(block, adBlock, adHeader);
 } else if (matchDomain('themarker.com')) {
   setTimeout(function () {
     const paywall = document.querySelector('[data-test="bottomStrip"]');
