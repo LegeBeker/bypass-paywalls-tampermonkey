@@ -688,7 +688,7 @@ if (matchDomain('elmercurio.com')) {
     }
   }
 } else if (matchDomain('nationalgeographic.com')) {
-  //prevent modal from showing up, then remove scroll-locking, and article blur
+  // prevent modal from showing up, then remove scroll-locking, and article blur
   new window.MutationObserver(function (mutations) {
     for (const mutation of mutations) {
       for (const node of mutation.addedNodes) {
