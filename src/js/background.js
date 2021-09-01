@@ -123,7 +123,8 @@ const removeCookies = [
   'tubantia.nl',
   'vn.nl',
   'vulture.com',
-  'wsj.com'
+  'wsj.com',
+  'medium.com'
 ];
 
 // Contains remove cookie sites above plus any custom sites
