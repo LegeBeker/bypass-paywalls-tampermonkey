@@ -218,10 +218,18 @@ if (matchDomain('elmercurio.com')) {
   const articlesLeftModal = document.getElementsByClassName('paywall-meter-module__story-paywall-container__1UgCE')[0];
   const paywall = document.getElementById('paywallDmp');
   removeDOMElement(articlesLeftModal, paywall);
-} else if (matchDomain('medium.com')) {
-  const bottomMessageText = 'Get one more story in your member preview when you sign up. It’s free.';
-  const DOMElementsToTextDiv = pageContains('div', bottomMessageText);
-  if (DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
+} else if (matchDomain('medium.com') || document.querySelector('script[src^="https://cdn-client.medium.com/"]')) {
+  const paywall = document.querySelector('div#paywall-background-color');
+  removeDOMElement(paywall);
+  if (paywall) {
+    extensionApi.runtime.sendMessage({ request: 'refreshCurrentTab' });
+  }
+  window.setTimeout(function () {
+    const meter = document.querySelector('[id*="highlight-meter-"]');
+    if (meter) {
+      meter.hidden = true;
+    }
+  }, 500); // Delay (in milliseconds)
 } else if (matchDomain('theglobeandmail.com')) {
   document.addEventListener('DOMContentLoaded', () => {
     const realArticle = document.querySelector('.js-c-article-body');
