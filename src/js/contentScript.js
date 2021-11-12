@@ -400,26 +400,30 @@ if (matchDomain('elmercurio.com')) {
     }
   }, 500);
 } else if (matchDomain('barrons.com')) {
-  document.addEventListener('DOMContentLoaded', () => {
+  const url = window.location.href;
+  if (!url.includes('barrons.com/amp/')) {
     const bodyContinuous = document.querySelector('body.is-continuous');
     const snippet = document.querySelector('meta[content="snippet"]');
     if (bodyContinuous && snippet) {
-      window.location.href = window.location.href.replace('barrons.com', 'barrons.com/amp');
+      removeDOMElement(snippet);
+      window.location.href = url.replace('barrons.com', 'barrons.com/amp');
     }
-  });
-  if (!window.location.href.includes('barrons.com/amp/')) {
-    let href = '';
-    const signinLinks = document.querySelectorAll('a.primary-button--link');
+    const signinLinks = document.querySelectorAll('a.primary-button--link[href*="target="]');
     for (const signinLink of signinLinks) {
-      href = signinLink.href;
-      if (href.includes('target=')) {
-        href = href.split('target')[1].split('%3F')[0];
-        href = href.replace('=', '').replace('%3A', ':').replace(/%2F/g, '/');
-        signinLink.href = href;
-        signinLink.text = 'Click';
-      }
+      signinLink.href = decodeURIComponent(signinLink.href.split('target=')[1]).split('?')[0];
+      signinLink.text = 'Click';
+    }
+    const barronsAds = document.querySelectorAll('.barrons-body-ad-placement');
+    removeDOMElement(...barronsAds);
+  } else {
+    const preview = document.querySelector('section[subscriptions-section="content-not-granted"]');
+    removeDOMElement(preview);
+    const subscrSection = document.querySelector('section[subscriptions-section="content"]');
+    if (subscrSection) {
+      subscrSection.removeAttribute('subscriptions-section');
     }
   }
+  removeDOMElement(document.querySelector('.login-section-container'));
 } else if (matchDomain('nzz.ch')) {
   const paywall = document.querySelector('.dynamic-regwall');
   removeDOMElement(paywall);
@@ -754,13 +758,6 @@ function removeClassesByPrefix (el, prefix) {
       el.classList.remove(clazz);
     }
   }
-}
-
-function pageContains (selector, text) {
-  const elements = document.querySelectorAll(selector);
-  return Array.prototype.filter.call(elements, function (element) {
-    return RegExp(text).test(element.textContent);
-  });
 }
 
 // Prevent element from being added the first time to the DOM

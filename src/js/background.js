@@ -2,7 +2,7 @@
 
 const restrictions = {
   'adweek.com': /^((?!\.adweek\.com\/(.+\/)?(amp|agencyspy|tvnewser|tvspy)\/).)*$/,
-  'barrons.com': /.+barrons\.com\/(amp\/)?article(s)?\/.+/,
+  'barrons.com': /.+\.barrons\.com\/(amp\/)?article(s)?\/.+/,
   'economist.com': /.+economist\.com\/.+\/\d{1,4}\/\d{1,2}\/\d{2}\/.+/,
   'seekingalpha.com': /.+seekingalpha\.com\/article\/.+/,
   'techinasia.com': /\.techinasia\.com\/.+/,
@@ -62,7 +62,6 @@ const allowCookies = [
   'vn.nl',
   'volkskrant.nl',
   'vulture.com',
-  'washingtonpost.com',
   'nzz.ch',
   'handelsblatt.com',
   'thehindu.com',
@@ -179,8 +178,7 @@ const useGoogleBotSites = [
   'df.cl',
   'ft.com',
   'wired.com',
-  'zeit.de',
-  'washingtonpost.com'
+  'zeit.de'
 ];
 
 // Override User-Agent with Bingbot
@@ -244,8 +242,7 @@ const blockedRegexes = {
   'elpais.com': /(\.epimg\.net\/js\/.+\/(noticia|user)\.min\.js|\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|consent)-.+\.js)/,
   'expansion.com': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/,
   'chicagobusiness.com': /(\.tinypass\.com\/|\.chicagobusiness\.com\/.+\/js\/js_.+\.js)/,
-  'dailytelegraph.com.au': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/,
-  'washingtonpost.com': /cdn\.ampproject\.org\/.+\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js/
+  'dailytelegraph.com.au': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
@@ -364,7 +361,7 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
     return { cancel: true };
   }
 
-  if (!isSiteEnabled(details)) {
+  if (!isSiteEnabled(details) && !matchUrlDomain('cdn.ampproject.org', details.url)) {
     return;
   }
 
