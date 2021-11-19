@@ -116,7 +116,6 @@
 [Neue Zürcher Zeitung](https://www.nzz.ch)\
 [New York Magazine](https://www.nymag.com)\
 [New Zealand Herald](https://www.nzherald.co.nz)\
-[Nikkei Asian Review](https://asia.nikkei.com)\
 [Orange County Register](https://www.ocregister.com)\
 [Orlando Sentinel](https://www.orlandosentinel.com)\
 [PZC](https://www.pzc.nl)\

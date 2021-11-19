@@ -283,9 +283,6 @@ if (matchDomain('elmercurio.com')) {
   for (const el of content) {
     el.classList.remove('subscriber-hider');
   }
-} else if (matchDomain('asia.nikkei.com')) {
-  const cookieBanner = document.querySelector('.pw-widget');
-  removeDOMElement(cookieBanner);
 } else if (matchDomain('ledevoir.com')) {
   const counter = document.querySelector('.full.hidden-print.popup-msg');
   removeDOMElement(counter);

@@ -91,7 +91,6 @@ const defaultSites = {
   'New York Daily News': 'nydailynews.com',
   'New York Magazine': 'nymag.com',
   'New Zealand Herald': 'nzherald.co.nz',
-  'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'NT News': 'ntnews.com.au',
   'Orange County Register': 'ocregister.com',

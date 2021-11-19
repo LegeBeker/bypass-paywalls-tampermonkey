@@ -12,7 +12,6 @@ const restrictions = {
 // Don't remove cookies before page load
 const allowCookies = [
   'ad.nl',
-  'asia.nikkei.com',
   'bd.nl',
   'bndestem.nl',
   'brisbanetimes.com.au',
@@ -81,7 +80,6 @@ const allowCookies = [
 // Removes cookies after page load
 const removeCookies = [
   'ad.nl',
-  'asia.nikkei.com',
   'bd.nl',
   'bloombergquint.com',
   'bndestem.nl',
