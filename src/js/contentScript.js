@@ -231,41 +231,9 @@ if (matchDomain('elmercurio.com')) {
     }
   }, 500); // Delay (in milliseconds)
 } else if (matchDomain('theglobeandmail.com')) {
-  document.addEventListener('DOMContentLoaded', () => {
-    const realArticle = document.querySelector('.js-c-article-body');
-    let decoyArticle = document.querySelector('.decoy-article');
-    if (realArticle && !decoyArticle) {
-      decoyArticle = document.createElement('div');
-      decoyArticle.classList.add('js-c-article-body');
-      decoyArticle.classList.add('decoy-article');
-      decoyArticle.hidden = true;
-      realArticle.parentElement.insertBefore(decoyArticle, realArticle);
-      for (let child = realArticle.firstChild; child !== null; child = child.nextSibling) {
-        if (child.style) {
-          child.style.display = 'block';
-        }
-      }
-    }
-    const regWall = document.querySelector('#regwall');
-    const lightBox = document.querySelector('.c-lightbox');
-    if (regWall && lightBox) {
-      regWall.hidden = true;
-      lightBox.hidden = true;
-    }
-    const subscribed = document.querySelector('html.story-subscribed');
-    if (subscribed && !window.location.href.includes('?ref=premium')) {
-      window.setTimeout(function () {
-        window.location.href = new URL(window.location.href).pathname + '?ref=premium';
-      }, 100);
-    }
-  });
-  const cCards = document.querySelectorAll('div.c-card');
-  for (const cCard of cCards) {
-    const aLink = cCard.querySelector('a');
-    const key = cCard.querySelector('span.c-indicator-icon--key');
-    if (key && aLink && !aLink.href.includes('?ref=premium')) {
-      aLink.href = aLink.href + '?ref=premium';
-    }
+  const articleBodySubscribed = document.querySelector('.c-article-body--subscribed');
+  if (articleBodySubscribed) {
+    articleBodySubscribed.removeAttribute('class');
   }
 } else if (matchDomain(['examiner.com.au', 'thecourier.com.au', 'theadvocate.com.au'])) {
   const subscribeTruncate = document.querySelector('.subscribe-truncate');
