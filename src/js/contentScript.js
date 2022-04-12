@@ -476,6 +476,21 @@ if (matchDomain('elmercurio.com')) {
   document.querySelectorAll('div[class*="fancybox"]').forEach(function (el) {
     removeDOMElement(el);
   });
+} else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
+  if (!window.location.href.includes('?amp')) {
+    const paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall');
+    const amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall.length && amphtml) {
+      removeDOMElement(...paywall);
+      window.setTimeout(function () {
+        window.location.href = amphtml.href;
+      }, 500);
+    }
+  } else {
+    ampUnhideSubscriptionsSection();
+    const subscriptionsActions = document.querySelectorAll('[subscriptions-actions]');
+    removeDOMElement(...subscriptionsActions);
+  }
 } else if (matchDomain('newyorker.com')) {
   blockElement('.paywall-bar', true);
   blockElement('.paywall-modal');
@@ -742,4 +757,15 @@ function blockElement (selector, blockAlways = false) {
       }
     }
   }).observe(document, { subtree: true, childList: true });
+}
+
+function ampUnhideSubscriptionsSection (ampAdsSel = 'amp-ad, .ad') {
+  const preview = document.querySelector('[subscriptions-section="content-not-granted"]');
+  removeDOMElement(preview);
+  const subscriptionsSection = document.querySelectorAll('[subscriptions-section="content"]');
+  for (const elem of subscriptionsSection) {
+    elem.removeAttribute('subscriptions-section');
+  }
+  const ampAds = document.querySelectorAll(ampAdsSel);
+  removeDOMElement(...ampAds);
 }
