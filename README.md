@@ -6,7 +6,9 @@
 
 *Bypass Paywalls is a web browser extension to help bypass paywalls for selected sites.*
 
-This is a fork from the bypass paywalls extention for chrome and firefox, to use with tampermonkey. The script included can be used in tampermonkey to have almost the same functionality.
+This is a fork from the [bypass paywalls extention for chrome and firefox](https://github.com/iamadamdev/bypass-paywalls-chrome), to use with tampermonkey. The script included can be used in tampermonkey to have almost the same functionality.
+
+You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https://github.com/LegeBeker/bypass-paywalls-tampermonkey/raw/master/bypass-paywalls-tampermonkey.user.js)
 
 ### Bypass the following sites' paywalls with this extension:
 
