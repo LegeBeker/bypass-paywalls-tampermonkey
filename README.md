@@ -6,22 +6,7 @@
 
 *Bypass Paywalls is a web browser extension to help bypass paywalls for selected sites.*
 
-### Installation Instructions
-**Google Chrome / Microsoft Edge** (Custom sites supported)
-1. Download this repo as a [ZIP file from GitHub](https://github.com/iamadamdev/bypass-paywalls-chrome/archive/master.zip).
-1. Unzip the file and you should have a folder named `bypass-paywalls-chrome-master`.
-1. In Chrome/Edge go to the extensions page (`chrome://extensions` or `edge://extensions`).
-1. Enable Developer Mode.
-1. Drag the `bypass-paywalls-chrome-master` folder anywhere on the page to import it (do not delete the folder afterwards).
-
-**Mozilla Firefox** (Custom sites not supported)
-* [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-chrome/releases/latest/download/bypass-paywalls-firefox.xpi)
-
-**Notes**
-* Every time you open Chrome it may warn you about running extensions in developer mode, just click &#10005; to keep the extension enabled.
-* You will be logged out for any site you have checked.
-* This extension works best alongside the adblocker uBlock Origin.
-* The Firefox version supports automatic updates.
+This is a fork from the bypass paywalls extention for chrome and firefox, to use with tampermonkey. The script included can be used in tampermonkey to have almost the same functionality.
 
 ### Bypass the following sites' paywalls with this extension:
 
@@ -222,17 +207,6 @@ Only large or major sites will be considered. Usually premium articles cannot be
 * Make sure you're running the latest version of Bypass Paywalls.
 * If a site is having problems try unchecking "\*General Paywall Bypass\*" in Options.
 * If none of these work, you can submit an issue [here](https://github.com/iamadamdev/bypass-paywalls-chrome/issues/new/choose).
-
-### Contributing - Pull Requests
-PRs are welcome. 
-1. If making a PR to add a new site, confirm your changes actually bypass the paywall.
-2. At a minimum these files need to be updated: `README.md`, `manifest-ff.json`, `src/js/sites.js`, and possibly `src/js/background.js`, and/or `src/js/contentScript.js`.
-3. Follow existing code-style and use camelCase.
-4. Use [JavaScript Semi-Standard Style linter](https://github.com/standard/semistandard). Don't need to follow it exactly. There will be some errors (e.g., do not use it on `sites.js`).
-
-### Show your support
-* Follow me on Twitter [@iamadamdev](https://twitter.com/iamadamdev) for updates.
-* I do not ask for donations, all I ask is that you star this repo.
 
 ### Disclaimer
 * This software is provided for educational purposes only and
