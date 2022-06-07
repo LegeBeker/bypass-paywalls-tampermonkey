@@ -56,6 +56,7 @@ const defaultSites = {
   'Harper\'s Magazine': 'harpers.org',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
+  'Harvard Business Review China': 'hbrchina.org',
   'Herald Sun': 'heraldsun.com.au',
   'Het Financieele Dagblad': 'fd.nl',
   'History Extra': 'historyextra.com',

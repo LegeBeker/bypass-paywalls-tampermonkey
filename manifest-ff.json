@@ -76,7 +76,8 @@
     "*://*.foreignpolicy.com/*",
     "*://*.bostonglobe.com/*",
     "*://*.theathletic.com/*",
-    "*://*.theathletic.co.uk/*"
+    "*://*.theathletic.co.uk/*",
+    "*://*.hbrchina.org/*"
     ],
       "js": ["src/js/contentScript.js"]
     }
@@ -280,7 +281,8 @@
     "*://*.reuters.com/*",
     "*://*.expansion.com/*",
     "*://*.theathletic.com/*",
-    "*://*.theathletic.co.uk/*"
+    "*://*.theathletic.co.uk/*",
+    "*://*.hbrchina.org/*"
   ],
   "version": "1.8.0"
 }

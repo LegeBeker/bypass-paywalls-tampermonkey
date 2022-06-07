@@ -703,6 +703,11 @@ if (matchDomain('elmercurio.com')) {
       }
     }
   }).observe(document, { subtree: true, childList: true });
+} else if (matchDomain('hbrchina.org')) {
+  const hiddenDiv = document.querySelector('div#the_content');
+  if (hiddenDiv) {
+    hiddenDiv.removeAttribute('style');
+  }
 }
 
 function matchDomain (domains) {
