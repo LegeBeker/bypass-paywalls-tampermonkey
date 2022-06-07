@@ -67,6 +67,7 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [Harper's Magazine](https://harpers.org)\
 [Hartford Courant](https://www.courant.com)\
 [Harvard Business Review](https://www.hbr.org)\
+[Harvard Business Review China](https://www.hbrchina.org)\
 [Herald Sun](https://www.heraldsun.com.au)\
 [Het Financieel Dagblad](https://fd.nl)\
 [History Extra](https://www.historyextra.com)\
