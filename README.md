@@ -64,7 +64,6 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [Grubstreet](https://www.grubstreet.com)\
 [Haaretz.co.il](https://www.haaretz.co.il)\
 [Haaretz.com](https://www.haaretz.com)\
-[Handelsblatt](https://www.handelsblatt.com)\
 [Harper's Magazine](https://harpers.org)\
 [Hartford Courant](https://www.courant.com)\
 [Harvard Business Review](https://www.hbr.org)\
