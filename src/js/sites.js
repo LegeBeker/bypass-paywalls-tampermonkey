@@ -53,7 +53,6 @@ const defaultSites = {
   'Grubstreet' : 'grubstreet.com',
   'Haaretz English': 'haaretz.com',
   'Haaretz': 'haaretz.co.il',
-  'Handelsblatt': 'handelsblatt.com',
   'Harper\'s Magazine': 'harpers.org',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
