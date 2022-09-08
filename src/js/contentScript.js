@@ -261,17 +261,8 @@ if (matchDomain('elmercurio.com')) {
     removeDOMElement(counter, coBanner, support);
   });
 } else if (matchDomain('nytimes.com')) {
-  const previewButton = document.querySelector('.css-3s1ce0');
-  if (previewButton) { previewButton.click(); }
-  blockElement('.css-3fbowa'); // Prevent bottom dock from appearing
-  blockElement('#gateway-content'); // Remove paywall
-  blockElement('.css-1bd8bfl'); // Remove filter
-  // Restore scrolling
-  document.onreadystatechange = function () {
-    if (document.readyState === 'complete') {
-      document.querySelector('.css-mcm29f').setAttribute('style', 'position:relative');
-    }
-  };
+  const banners = document.querySelectorAll('div[data-testid="inline-message"], div[id^="ad-"], div.expanded-dock');
+  removeDOMElement(...banners);
 } else if (matchDomain('technologyreview.com')) {
   window.setTimeout(function () {
     const bodyObscured = document.querySelector('body[class*="body__obscureContent"]');
