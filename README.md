@@ -147,6 +147,7 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [The Herald](https://www.theherald.com.au)\
 [The Hindu](https://www.thehindu.com)\
 [The Irish Times](https://www.irishtimes.com)\
+[The Japan Times](https://www.japantimes.co.jp)\
 [The Kansas City Star](https://www.kansascity.com)\
 [The Mercury News](https://www.mercurynews.com)\
 [The Mercury Tasmania](https://www.themercury.com.au)\
