@@ -179,7 +179,6 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [Vulture](https://www.vulture.com)\
 [Winston-Salem Journal](https://journalnow.com)\
 [Wired](https://www.wired.com)\
-[World Politics Review](https://www.worldpoliticsreview.com)\
 [Zeit Online](https://www.zeit.de)
 
 ### Sites with limited number of free articles
