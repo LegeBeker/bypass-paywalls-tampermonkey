@@ -114,6 +114,7 @@ const defaultSites = {
   'Statista': 'statista.com',
   'Stuff': 'stuff.co.nz',
   "Süddeutsche Zeitung": "sueddeutsche.de",
+  "South China Morning Post": "scmp.com",
   'SunSentinel': 'sun-sentinel.com',
   'Tech in Asia': 'techinasia.com',
   'Telegraaf': 'telegraaf.nl',

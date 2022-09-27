@@ -77,7 +77,8 @@
     "*://*.bostonglobe.com/*",
     "*://*.theathletic.com/*",
     "*://*.theathletic.co.uk/*",
-    "*://*.hbrchina.org/*"
+    "*://*.hbrchina.org/*",
+    "*://*.scmp.com/*"
     ],
       "js": ["src/js/contentScript.js"]
     }
@@ -282,7 +283,8 @@
     "*://*.expansion.com/*",
     "*://*.theathletic.com/*",
     "*://*.theathletic.co.uk/*",
-    "*://*.hbrchina.org/*"
+    "*://*.hbrchina.org/*",
+    "*://*.scmp.com/*"
   ],
   "version": "1.8.0"
 }

@@ -247,7 +247,8 @@ const blockedRegexes = {
   'nytimes.com': /(meter-svc\.nytimes\.com\/meter\.js|mwcm\.nyt\.com\/.+\.js|cooking\.nytimes\.com\/api\/.+\/access)/,
   'latimes.com': /(metering\.platform\.latimes\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
   'theathletic.com': /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
-  'japantimes.co.jp': /cdn\.cxense\.com\//
+  'japantimes.co.jp': /cdn\.cxense\.com\//,
+  'scmp.com': /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';

@@ -1,4 +1,4 @@
-if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org', 'elmundo.es'])) {
+if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org', 'elmundo.es', 'scmp.com'])) {
   window.localStorage.clear();
 }
 
@@ -709,6 +709,16 @@ if (matchDomain('elmercurio.com')) {
   const hiddenDiv = document.querySelector('div#the_content');
   if (hiddenDiv) {
     hiddenDiv.removeAttribute('style');
+  }
+} else if (matchDomain('scmp.com')) {
+  if (window.location.href.includes('/amp.')) {
+    const divHidden = document.querySelectorAll('div.article-body[amp-access][amp-access-hide]');
+    for (const elem of divHidden) {
+      elem.removeAttribute('amp-access-hide');
+    }
+    const defaultMeters = document.querySelectorAll('div.default-meter, div#archive-article-meter');
+    const ads = document.querySelectorAll('amp-ad, div.ad-banner, div.advert-fly-carpet-container, div.inline-advert');
+    removeDOMElement(...defaultMeters, ...ads);
   }
 }
 
