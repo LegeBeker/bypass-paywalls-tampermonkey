@@ -73,6 +73,7 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [History Extra](https://www.historyextra.com)\
 [Humo](https://www.humo.be)\
 [Il Manifesto](https://www.ilmanifesto.it)\
+[Il Messaggero](https://www.ilmessaggero.it)\
 [Inc.com](https://www.inc.com)\
 [Interest.co.nz](https://www.interest.co.nz)\
 [Investors Chronicle](https://www.investorschronicle.co.uk)
