@@ -249,7 +249,8 @@ const blockedRegexes = {
   'theathletic.com': /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
   'japantimes.co.jp': /cdn\.cxense\.com\//,
   'scmp.com': /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
-  'ilmessaggero.it': /(utils\.cedsdigital\.it\/js\/PaywallMeter\.js)/
+  'ilmessaggero.it': /(utils\.cedsdigital\.it\/js\/PaywallMeter\.js)/,
+  'washingtonpost.com': /\.washingtonpost\.com\/tetro\/metering\/evaluate/
 };
 
 const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
