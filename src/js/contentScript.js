@@ -343,12 +343,8 @@ if (matchDomain('elmercurio.com')) {
   const banner = document.querySelector('.persistent-banner');
   removeDOMElement(banner);
 } else if (matchDomain('spectator.co.uk')) {
-  const container = document.querySelector('.HardPayWallContainer-module__overlay');
-  window.setTimeout(function () {
-    if (container && window.location.href.includes('/www.spectator.co.uk/')) {
-      window.location.href = window.location.href + '/amp';
-    }
-  }, 500);
+  const banner = document.querySelector('#subscribe-ribbon');
+  removeDOMElement(banner);
 } else if (matchDomain('barrons.com')) {
   const url = window.location.href;
   if (!url.includes('barrons.com/amp/')) {
