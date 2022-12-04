@@ -182,7 +182,9 @@ const useGoogleBotSites = [
 ];
 
 // Override User-Agent with Bingbot
-const useBingBot = [
+const useBingBot = [];
+
+const useGoogleAdsBotMobile = [
   'haaretz.co.il',
   'haaretz.com',
   'themarker.com'
@@ -257,6 +259,7 @@ const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.go
 const userAgentMobile = 'Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)';
 const userAgentDesktopBingBot = 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)';
 const userAgentMobileBingBot = 'Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)';
+const userAgentGoogleAdsBotMobile = 'Mozilla/5.0 (Linux; Android 5.0; SM-G920A) AppleWebKit (KHTML, like Gecko) Chrome Mobile Safari (compatible; AdsBot-Google-Mobile; +http://www.google.com/mobile/adsbot.html)';
 
 let enabledSites = [];
 
@@ -444,6 +447,15 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
       value: useUserAgentMobile ? userAgentMobileBingBot : userAgentDesktopBingBot
     });
   }
+
+  // override User-Agent to use Google AdsBot Mobile Web
+  if (matchUrlDomain(useGoogleAdsBotMobile, details.url)) {
+    requestHeaders.push({
+      name: 'User-Agent',
+      value: userAgentGoogleAdsBotMobile
+    });
+  }
+
 
   // remove cookies before page load
   const enabledCookies = allowCookies.some(function (site) {
