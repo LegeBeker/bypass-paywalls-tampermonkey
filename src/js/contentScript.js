@@ -716,6 +716,13 @@ if (matchDomain('elmercurio.com')) {
     const ads = document.querySelectorAll('amp-ad, div.ad-banner, div.advert-fly-carpet-container, div.inline-advert');
     removeDOMElement(...defaultMeters, ...ads);
   }
+} else if (matchDomain('fortune.com')) {
+  const paywalledArticle = document.querySelector('.paywall.paywallActive');
+  if (paywalledArticle) {
+    for (const clazz of ['paywall', 'paywallActive']) {
+      paywalledArticle.classList.remove(clazz);
+    }
+  }
 }
 
 function matchDomain (domains) {
