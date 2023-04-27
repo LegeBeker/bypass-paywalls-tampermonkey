@@ -4,8 +4,8 @@
 // @author       LegeBeker (https://github.com/LegeBeker), (Fork from https://github.com/iamadamdev/bypass-paywalls-chrome)
 // @namespace    https://github.com/LegeBeker/bypass-paywalls-tampermonkey/
 // @supportURL   https://github.com/LegeBeker/bypass-paywalls-tampermonkey/issues
-// @updateURL    https://github.com/LegeBeker/bypass-paywalls-tampermonkey/raw/master/bypass-paywalls-tampermonkey.js
-// @downloadURL  https://github.com/LegeBeker/bypass-paywalls-tampermonkey/raw/master/bypass-paywalls-tampermonkey.js
+// @updateURL    https://github.com/LegeBeker/bypass-paywalls-tampermonkey/raw/master/bypass-paywalls-tampermonkey.user.js
+// @downloadURL  https://github.com/LegeBeker/bypass-paywalls-tampermonkey/raw/master/bypass-paywalls-tampermonkey.user.js
 // @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAQAAABpN6lAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfkBhAPLAM1PCwiAAABZ0lEQVR42u3aPUoDURiG0bsBU6W2UKLrMQoWrkIY3Yu9INhaBldidBNGrJLXQhS9MYU4guM9TzkzCdyT+flIUookSZIkSVJV/nkAAAAAAABAywC9iw1srgEAAAAAAAAAbF7gd/f3PZn99vsBAAAAAAAAAPoD+PFgMvRBCAAAAAAAAADQG0DzgxAAAAAAAADg+wCTIAAAAAAAAOD/AX4ZAgAAAAAAAP4QwNACAAAAAAAAABiEAAAAAAAAAAAGIQAAmgdYVFu2Ph0+qvYuBr78ej2PJffVpoNPLzis9j4MHKBez7zktt6U8fvh48yrvTeDXv76emYl52uPznmmGWWUw7WzIzkd8Mn/1Xq6kv2s0mrLTEopuWoW4PL15NjNU5PLX2Tn7fqYNngZrHL88RZx1hjBKl19lzxq6EJ4zslXD4rtXGTZwGd/nd3NT8u9dJnlbm1A/g+3vLvM0mVSJEmSJEmSJElSo70AqgAJADOYlfQAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMDYtMTZUMTU6NDM6NTcrMDA6MDAT/mVIAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTA2LTE2VDE1OjQzOjU3KzAwOjAwYqPd9AAAAABJRU5ErkJggg==
 // @run-at       document-end
 // @version      0.1.1
