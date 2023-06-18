@@ -6,7 +6,8 @@ const restrictions = {
   'economist.com': /.+economist\.com\/.+\/\d{1,4}\/\d{1,2}\/\d{2}\/.+/,
   'seekingalpha.com': /.+seekingalpha\.com\/article\/.+/,
   'techinasia.com': /\.techinasia\.com\/.+/,
-  'ft.com': /.+\.ft.com\/content\//
+  'ft.com': /.+\.ft.com\/content\//,
+  'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/
 };
 
 // Don't remove cookies before page load
@@ -108,7 +109,8 @@ const removeCookies = [
   'wsj.com',
   'medium.com',
   'washingtonpost.com',
-  'japantimes.co.jp'
+  'japantimes.co.jp',
+  'nytimes.com'
 ];
 
 // Contains remove cookie sites above plus any custom sites
@@ -222,7 +224,7 @@ const blockedRegexes = {
   'chicagobusiness.com': /(\.tinypass\.com\/|\.chicagobusiness\.com\/.+\/js\/js_.+\.js)/,
   'dailytelegraph.com.au': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/,
   'theglobeandmail.com': /(\.theglobeandmail\.com\/pf\/dist\/engine\/react\.js|smartwall\.theglobeandmail\.com\/)/,
-  'nytimes.com': /(meter-svc\.nytimes\.com\/meter\.js|mwcm\.nyt\.com\/.+\.js|cooking\.nytimes\.com\/api\/.+\/access)/,
+  'nytimes.com': /(\.nytimes\.com\/meter\.js|mwcm\.nyt\.com\/.+\.js|cooking\.nytimes\.com\/api\/.+\/access)/,
   'latimes.com': /(metering\.platform\.latimes\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
   'theathletic.com': /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
   'japantimes.co.jp': /cdn\.cxense\.com\//,
@@ -303,6 +305,24 @@ extensionApi.webRequest.onBeforeRequest.addListener(function (details) {
 { urls: ['*://www.dailytelegraph.com.au/subscribe/*'], types: ['main_frame'] },
 ['blocking']
 );
+
+// nytimes.com
+extensionApi.webRequest.onHeadersReceived.addListener(function (details) {
+  if (!isSiteEnabled(details)) {
+    return;
+  }
+  let headers = details.responseHeaders;
+  headers = headers.map(function (header) {
+    if (header.name === 'x-frame-options') { header.value = 'SAMEORIGIN'; }
+    return header;
+  });
+  return {
+    responseHeaders: headers
+  };
+}, {
+  urls: ['*://*.nytimes.com/*']
+},
+['blocking', 'responseHeaders']);
 
 // Disable javascript for these sites
 extensionApi.webRequest.onBeforeRequest.addListener(function (details) {
@@ -431,7 +451,6 @@ extensionApi.webRequest.onBeforeSendHeaders.addListener(function (details) {
       value: userAgentMsnBot
     });
   }
-
 
   // remove cookies before page load
   const enabledCookies = allowCookies.some(function (site) {

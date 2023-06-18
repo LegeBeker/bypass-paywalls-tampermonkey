@@ -1,4 +1,4 @@
-if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org', 'elmundo.es', 'scmp.com'])) {
+if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org', 'elmundo.es', 'scmp.com', 'nytimes.com'])) {
   window.localStorage.clear();
 }
 
@@ -258,7 +258,7 @@ if (matchDomain('elmercurio.com')) {
     removeDOMElement(counter, coBanner, support);
   });
 } else if (matchDomain('nytimes.com')) {
-  const banners = document.querySelectorAll('div[data-testid="inline-message"], div[id^="ad-"], div.expanded-dock');
+  const banners = document.querySelectorAll('div[data-testid="inline-message"], div[id^="ad-"], div.expanded-dock, div.pz-ad-box');
   removeDOMElement(...banners);
 } else if (matchDomain('technologyreview.com')) {
   window.setTimeout(function () {
