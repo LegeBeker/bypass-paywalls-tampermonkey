@@ -72,7 +72,7 @@
 // @match        *://*.ilmanifesto.it/*
 // @match        *://*.inc.com/*
 // @match        *://*.interest.co.nz/*
-// @match        *://*.investorschronicle.co.uk)
+// @match        *://*.investorschronicle.co.uk/*
 // @match        *://*.lecho.be/*
 // @match        *://*.labusinessjournal.com/*
 // @match        *://*.lanacion.com.ar/*
