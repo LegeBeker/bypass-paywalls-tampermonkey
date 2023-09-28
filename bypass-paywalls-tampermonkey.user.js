@@ -258,6 +258,9 @@
                 }
             }
         }
+    } else if (matchDomain('nrc.nl')) {
+        const paywall = document.querySelector('.paywall--topbanner');
+        removeDOMElement(paywall);
     } else if (matchDomain(['ad.nl', 'ed.nl', 'bndestem.nl', 'bd.nl', 'tubantia.nl', 'destentor.nl', 'pzc.nl', 'gelderlander.nl'])) {
         const paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
         removeDOMElement(paywall);
