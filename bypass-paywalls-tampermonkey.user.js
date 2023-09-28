@@ -8,7 +8,7 @@
 // @downloadURL  https://github.com/LegeBeker/bypass-paywalls-tampermonkey/raw/master/bypass-paywalls-tampermonkey.user.js
 // @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAQAAABpN6lAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfkBhAPLAM1PCwiAAABZ0lEQVR42u3aPUoDURiG0bsBU6W2UKLrMQoWrkIY3Yu9INhaBldidBNGrJLXQhS9MYU4guM9TzkzCdyT+flIUookSZIkSVJV/nkAAAAAAABAywC9iw1srgEAAAAAAAAAbF7gd/f3PZn99vsBAAAAAAAAAPoD+PFgMvRBCAAAAAAAAADQG0DzgxAAAAAAAADg+wCTIAAAAAAAAOD/AX4ZAgAAAAAAAP4QwNACAAAAAAAAABiEAAAAAAAAAAAGIQAAmgdYVFu2Ph0+qvYuBr78ej2PJffVpoNPLzis9j4MHKBez7zktt6U8fvh48yrvTeDXv76emYl52uPznmmGWWUw7WzIzkd8Mn/1Xq6kv2s0mrLTEopuWoW4PL15NjNU5PLX2Tn7fqYNngZrHL88RZx1hjBKl19lzxq6EJ4zslXD4rtXGTZwGd/nd3NT8u9dJnlbm1A/g+3vLvM0mVSJEmSJEmSJElSo70AqgAJADOYlfQAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMDYtMTZUMTU6NDM6NTcrMDA6MDAT/mVIAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTA2LTE2VDE1OjQzOjU3KzAwOjAwYqPd9AAAAABJRU5ErkJggg==
 // @run-at       document-end
-// @version      0.1.1
+// @version      0.1.2
 // @match        *://*.adweek.com/*
 // @match        *://*.ad.nl/*
 // @match        *://*.americanbanker.com/*
@@ -183,7 +183,7 @@
 (function () {
     'use strict';
 
-    if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org', 'elmundo.es'])) {
+    if (!matchDomain(['seekingalpha.com', 'sfchronicle.com', 'cen.acs.org', 'elmundo.es', 'scmp.com', 'nytimes.com'])) {
         window.localStorage.clear();
     }
 
@@ -260,9 +260,6 @@
         }
     } else if (matchDomain('nrc.nl')) {
         const paywall = document.querySelector('.paywall--topbanner');
-        removeDOMElement(paywall);
-    } else if (matchDomain(['ad.nl', 'ed.nl', 'bndestem.nl', 'bd.nl', 'tubantia.nl', 'destentor.nl', 'pzc.nl', 'gelderlander.nl'])) {
-        const paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
         removeDOMElement(paywall);
     } else if (matchDomain('washingtonpost.com')) {
         const leaderboard = document.querySelector('#leaderboard-wrapper');
@@ -449,17 +446,8 @@
             removeDOMElement(counter, coBanner, support);
         });
     } else if (matchDomain('nytimes.com')) {
-        const previewButton = document.querySelector('.css-3s1ce0');
-        if (previewButton) { previewButton.click(); }
-        blockElement('.css-3fbowa'); // Prevent bottom dock from appearing
-        blockElement('#gateway-content'); // Remove paywall
-        blockElement('.css-1bd8bfl'); // Remove filter
-        // Restore scrolling
-        document.onreadystatechange = function () {
-            if (document.readyState === 'complete') {
-                document.querySelector('.css-mcm29f').setAttribute('style', 'position:relative');
-            }
-        };
+        const banners = document.querySelectorAll('div[data-testid="inline-message"], div[id^="ad-"], div.expanded-dock, div.pz-ad-box');
+        removeDOMElement(...banners);
     } else if (matchDomain('technologyreview.com')) {
         window.setTimeout(function () {
             const bodyObscured = document.querySelector('body[class*="body__obscureContent"]');
@@ -540,12 +528,8 @@
         const banner = document.querySelector('.persistent-banner');
         removeDOMElement(banner);
     } else if (matchDomain('spectator.co.uk')) {
-        const container = document.querySelector('.HardPayWallContainer-module__overlay');
-        window.setTimeout(function () {
-            if (container && window.location.href.includes('/www.spectator.co.uk/')) {
-                window.location.href = window.location.href + '/amp';
-            }
-        }, 500);
+        const banner = document.querySelector('#subscribe-ribbon');
+        removeDOMElement(banner);
     } else if (matchDomain('barrons.com')) {
         const url = window.location.href;
         if (!url.includes('barrons.com/amp/')) {
@@ -658,45 +642,32 @@
         document.querySelectorAll('div[class*="fancybox"]').forEach(function (el) {
             removeDOMElement(el);
         });
-    } else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
-        window.setInterval(function () {
-            const paywall = document.querySelector('#slideup-paywall');
-            const darken = document.querySelector('#darken-overlay');
-            if (paywall && darken) {
-                removeDOMElement(paywall);
-                removeDOMElement(darken);
-                window.clearInterval();
-            }
-        }, 100);
-
-        const styleElement = document.createElement('style');
-
-        const cssRules = `
-                .noscroll {
-                 overflow: auto !important;
-                 height: auto !important;
-                 width: auto !important;
-                 position: static !important;
-                 }
-            `;
-
-        styleElement.innerHTML = cssRules;
-        document.head.appendChild(styleElement);
-
-        if (!window.location.href.includes('?amp')) {
-            const paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall');
-            const amphtml = document.querySelector('link[rel="amphtml"]');
-            if (paywall.length && amphtml) {
-                removeDOMElement(...paywall);
-                window.setTimeout(function () {
-                    window.location.href = amphtml.href;
-                }, 500);
+    } else if (matchDomain('theathletic.com')) {
+        if (!window.location.search.match(/(\?|&)amp/)) {
+            const paywall = document.querySelector('div#slideup-paywall');
+            if (paywall) {
+                const overlays = document.querySelectorAll('div[id*="overlay"], div:empty:not([data-rjs])');
+                removeDOMElement(paywall, ...overlays);
+                const body = document.querySelector('body');
+                if (body) {
+                    body.style.overflow = 'visible';
+                    body.style.position = 'relative';
+                }
+            } else {
+                const headlinePaywall = document.querySelectorAll('a.headline-paywall');
+                const amphtml = document.querySelector('link[rel="amphtml"]');
+                if (headlinePaywall.length && amphtml) {
+                    removeDOMElement(...headlinePaywall);
+                    window.setTimeout(function () {
+                        window.location.href = amphtml.href;
+                    }, 1000);
+                }
             }
         } else {
             ampUnhideSubscriptionsSection();
-            const subscriptionsActions = document.querySelectorAll('[subscriptions-actions]');
-            removeDOMElement(...subscriptionsActions);
         }
+        const apron = document.querySelector('div#free-apron-cta, div.slideup-free-apron-container');
+        removeDOMElement(apron);
     } else if (matchDomain('newyorker.com')) {
         blockElement('.paywall-bar', true);
         blockElement('.paywall-modal');
@@ -915,6 +886,28 @@
                 }
             }
         }).observe(document, { subtree: true, childList: true });
+    } else if (matchDomain('hbrchina.org')) {
+        const hiddenDiv = document.querySelector('div#the_content');
+        if (hiddenDiv) {
+            hiddenDiv.removeAttribute('style');
+        }
+    } else if (matchDomain('scmp.com')) {
+        if (window.location.href.includes('/amp.')) {
+            const divHidden = document.querySelectorAll('div.article-body[amp-access][amp-access-hide]');
+            for (const elem of divHidden) {
+                elem.removeAttribute('amp-access-hide');
+            }
+            const defaultMeters = document.querySelectorAll('div.default-meter, div#archive-article-meter');
+            const ads = document.querySelectorAll('amp-ad, div.ad-banner, div.advert-fly-carpet-container, div.inline-advert');
+            removeDOMElement(...defaultMeters, ...ads);
+        }
+    } else if (matchDomain('fortune.com')) {
+        const paywalledArticle = document.querySelector('.paywall.paywallActive');
+        if (paywalledArticle) {
+            for (const clazz of ['paywall', 'paywallActive']) {
+                paywalledArticle.classList.remove(clazz);
+            }
+        }
     }
 
     function matchDomain(domains) {
@@ -984,32 +977,25 @@
         removeDOMElement(...ampAds);
     }
 
-    'use strict';
-
     const restrictions = {
         'adweek.com': /^((?!\.adweek\.com\/(.+\/)?(amp|agencyspy|tvnewser|tvspy)\/).)*$/,
         'barrons.com': /.+\.barrons\.com\/(amp\/)?article(s)?\/.+/,
         'economist.com': /.+economist\.com\/.+\/\d{1,4}\/\d{1,2}\/\d{2}\/.+/,
         'seekingalpha.com': /.+seekingalpha\.com\/article\/.+/,
         'techinasia.com': /\.techinasia\.com\/.+/,
-        'ft.com': /.+\.ft.com\/content\//
+        'ft.com': /.+\.ft.com\/content\//,
+        'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/
     };
 
     // Don't remove cookies before page load
     const allowCookies = [
-        'ad.nl',
-        'bd.nl',
-        'bndestem.nl',
         'brisbanetimes.com.au',
         'canberratimes.com.au',
         'cen.acs.org',
         'demorgen.be',
         'denverpost.com',
-        'destentor.nl',
-        'ed.nl',
         'examiner.com.au',
         'gelocal.it',
-        'gelderlander.nl',
         'grubstreet.com',
         'harpers.org',
         'hbr.org',
@@ -1023,7 +1009,6 @@
         'nymag.com',
         'ocregister.com',
         'parool.nl',
-        'pzc.nl',
         'qz.com',
         'scientificamerican.com',
         'seattletimes.com',
@@ -1031,7 +1016,6 @@
         'sofrep.com',
         'spectator.co.uk',
         'speld.nl',
-        'tubantia.nl',
         'techinasia.com',
         'telegraaf.nl',
         'the-american-interest.com',
@@ -1048,7 +1032,6 @@
         'volkskrant.nl',
         'vulture.com',
         'nzz.ch',
-        'handelsblatt.com',
         'thehindu.com',
         'financialpost.com',
         'haaretz.co.il',
@@ -1066,20 +1049,14 @@
 
     // Removes cookies after page load
     const removeCookies = [
-        'ad.nl',
-        'bd.nl',
         'bloomberg.com',
         'bloombergquint.com',
-        'bndestem.nl',
         'brisbanetimes.com.au',
         'canberratimes.com.au',
         'cen.acs.org',
         'demorgen.be',
         'denverpost.com',
-        'destentor.nl',
-        'ed.nl',
         'examiner.com.au',
-        'gelderlander.nl',
         'globes.co.il',
         'grubstreet.com',
         'harpers.org',
@@ -1091,7 +1068,6 @@
         'nrc.nl',
         'nymag.com',
         'ocregister.com',
-        'pzc.nl',
         'qz.com',
         'scientificamerican.com',
         'seattletimes.com',
@@ -1105,12 +1081,13 @@
         'thecut.com',
         'thediplomat.com',
         'towardsdatascience.com',
-        'tubantia.nl',
         'vn.nl',
         'vulture.com',
         'wsj.com',
         'medium.com',
-        'washingtonpost.com'
+        'washingtonpost.com',
+        'japantimes.co.jp',
+        'nytimes.com'
     ];
 
     // Contains remove cookie sites above plus any custom sites
@@ -1125,19 +1102,11 @@
 
     // select only specific cookie(s) to drop from removeCookies domains
     const removeCookiesSelectDrop = {
-        'ad.nl': ['temptationTrackingId'],
         'ambito.com': ['TDNotesRead'],
-        'bd.nl': ['temptationTrackingId'],
-        'bndestem.nl': ['temptationTrackingId'],
         'demorgen.be': ['TID_ID'],
-        'destentor.nl': ['temptationTrackingId'],
-        'ed.nl': ['temptationTrackingId'],
         'fd.nl': ['socialread'],
-        'gelderlander.nl': ['temptationTrackingId'],
         'humo.be': ['TID_ID'],
         'nrc.nl': ['counter'],
-        'pzc.nl': ['temptationTrackingId'],
-        'tubantia.nl': ['temptationTrackingId'],
         'speld.nl': ['speld-paywall']
     };
 
@@ -1161,7 +1130,6 @@
         'kansascity.com',
         'republic.ru',
         'nzz.ch',
-        'handelsblatt.com',
         'df.cl',
         'ft.com',
         'wired.com',
@@ -1169,7 +1137,9 @@
     ];
 
     // Override User-Agent with Bingbot
-    const useBingBot = [
+    const useBingBot = [];
+
+    const useMsnBot = [
         'haaretz.co.il',
         'haaretz.com',
         'themarker.com'
@@ -1230,13 +1200,21 @@
         'expansion.com': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/,
         'chicagobusiness.com': /(\.tinypass\.com\/|\.chicagobusiness\.com\/.+\/js\/js_.+\.js)/,
         'dailytelegraph.com.au': /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/,
-        'theglobeandmail.com': /(\.theglobeandmail\.com\/pf\/dist\/engine\/react\.js|smartwall\.theglobeandmail\.com\/)/
+        'theglobeandmail.com': /(\.theglobeandmail\.com\/pf\/dist\/engine\/react\.js|smartwall\.theglobeandmail\.com\/)/,
+        'nytimes.com': /(\.nytimes\.com\/meter\.js|mwcm\.nyt\.com\/.+\.js|cooking\.nytimes\.com\/api\/.+\/access)/,
+        'latimes.com': /(metering\.platform\.latimes\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
+        'theathletic.com': /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
+        'japantimes.co.jp': /cdn\.cxense\.com\//,
+        'scmp.com': /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
+        'ilmessaggero.it': /(utils\.cedsdigital\.it\/js\/PaywallMeter\.js)/,
+        'washingtonpost.com': /\.washingtonpost\.com\/tetro\/metering\/evaluate/
     };
 
     const userAgentDesktop = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
     const userAgentMobile = 'Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)';
     const userAgentDesktopBingBot = 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)';
     const userAgentMobileBingBot = 'Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)';
+    const userAgentMsnBot = 'msnbot/2.0b (+http://search.msn.com/msnbot.htm)';
 
     let enabledSites = [];
 
@@ -1305,9 +1283,28 @@
         ['blocking']
     );
 
+    // nytimes.com
+    extensionApi.webRequest.onHeadersReceived.addListener(function (details) {
+        if (!isSiteEnabled(details)) {
+            return;
+        }
+        let headers = details.responseHeaders;
+        headers = headers.map(function (header) {
+            if (header.name === 'x-frame-options') { header.value = 'SAMEORIGIN'; }
+            return header;
+        });
+        return {
+            responseHeaders: headers
+        };
+    }, {
+        urls: ['*://*.nytimes.com/*']
+    },
+        ['blocking', 'responseHeaders']);
+
     // Disable javascript for these sites
     extensionApi.webRequest.onBeforeRequest.addListener(function (details) {
-        if (!isSiteEnabled(details) && !enabledSites.includes('generalpaywallbypass')) {
+        const headerReferer = details.originUrl ? details.originUrl : details.initiator;
+        if (!isSiteEnabled(details) && (!enabledSites.includes('generalpaywallbypass') || matchUrlDomain('japantimes.co.jp', headerReferer))) {
             return;
         }
         return { cancel: true };
@@ -1424,6 +1421,14 @@
             });
         }
 
+        // override User-Agent to use Google AdsBot Mobile Web
+        if (matchUrlDomain(useMsnBot, details.url)) {
+            requestHeaders.push({
+                name: 'User-Agent',
+                value: userAgentMsnBot
+            });
+        }
+
         // remove cookies before page load
         const enabledCookies = allowCookies.some(function (site) {
             return matchUrlDomain(site, details.url);
@@ -1525,11 +1530,14 @@
     }
 
     function matchUrlDomain(domains, url) {
+        return matchDomain(domains, urlHost(url));
+    }
+
+    function matchDomain(domains, hostname) {
         let matchedDomain = false;
-        let url_host = urlHost(url);
-        if (!url_host) { url_host = window.location.hostname; }
+        if (!hostname) { hostname = window.location.hostname; }
         if (typeof domains === 'string') { domains = [domains]; }
-        domains.some(domain => (url_host === domain || url_host.endsWith('.' + domain)) && (matchedDomain = domain));
+        domains.some(domain => (hostname === domain || hostname.endsWith('.' + domain)) && (matchedDomain = domain));
         return matchedDomain;
     }
 
@@ -1543,5 +1551,4 @@
         }
         return url;
     }
-
 })();
