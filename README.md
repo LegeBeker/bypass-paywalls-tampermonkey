@@ -13,16 +13,13 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 ### Bypass the following sites' paywalls with this extension:
 
 [Adweek](https://www.adweek.com)\
-[Algemeen Dagblad](https://www.ad.nl)\
 [American Banker](https://www.americanbanker.com)\
 [Ámbito](https://www.ambito.com)\
 [Baltimore Sun](https://www.baltimoresun.com)\
 [Barron's](https://www.barrons.com)\
 [Bloomberg Quint](https://www.bloombergquint.com)\
 [Bloomberg](https://www.bloomberg.com)\
-[BN De Stem](https://www.bndestem.nl)\
 [Boston Globe](https://www.bostonglobe.com)\
-[Brabants Dagblad](https://www.bd.nl)\
 [Brisbane Times](https://www.brisbanetimes.com.au)\
 [Business Insider](https://www.businessinsider.com)\
 [Caixin](https://www.caixinglobal.com)\
@@ -32,9 +29,7 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [Corriere Della Sera](https://www.corriere.it)\
 [Crain's Chicago Business](https://www.chicagobusiness.com)\
 [Daily Press](https://www.dailypress.com)\
-[De Gelderlander](https://www.gelderlander.nl)\
 [De Groene Amsterdammer](https://www.groene.nl)\
-[De Stentor](https://www.destentor.nl)\
 [De Speld](https://speld.nl)\
 [De Tijd](https://www.tijd.be)\
 [De Volkskrant](https://www.volkskrant.nl)\
@@ -43,7 +38,6 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [Diario Financiero](https://www.df.cl)\
 [Domani](https://www.editorialedomani.it)\
 [Dynamed Plus](https://www.dynamed.com)\
-[Eindhovens Dagblad](https://www.ed.nl)\
 [El Mercurio](https://www.elmercurio.com)\
 [El Pais](https://www.elpais.com)\
 [El Periodico](https://www.elperiodico.com)\
@@ -64,15 +58,16 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [Grubstreet](https://www.grubstreet.com)\
 [Haaretz.co.il](https://www.haaretz.co.il)\
 [Haaretz.com](https://www.haaretz.com)\
-[Handelsblatt](https://www.handelsblatt.com)\
 [Harper's Magazine](https://harpers.org)\
 [Hartford Courant](https://www.courant.com)\
 [Harvard Business Review](https://www.hbr.org)\
+[Harvard Business Review China](https://www.hbrchina.org)\
 [Herald Sun](https://www.heraldsun.com.au)\
 [Het Financieel Dagblad](https://fd.nl)\
 [History Extra](https://www.historyextra.com)\
 [Humo](https://www.humo.be)\
 [Il Manifesto](https://www.ilmanifesto.it)\
+[Il Messaggero](https://www.ilmessaggero.it)\
 [Inc.com](https://www.inc.com)\
 [Interest.co.nz](https://www.interest.co.nz)\
 [Investors Chronicle](https://www.investorschronicle.co.uk)
@@ -105,7 +100,6 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [New Zealand Herald](https://www.nzherald.co.nz)\
 [Orange County Register](https://www.ocregister.com)\
 [Orlando Sentinel](https://www.orlandosentinel.com)\
-[PZC](https://www.pzc.nl)\
 [Palo Alto Online](https://www.paloaltoonline.com)\
 [Parool](https://www.parool.nl)\
 [Postimees](https://www.postimees.ee)\
@@ -147,6 +141,7 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [The Herald](https://www.theherald.com.au)\
 [The Hindu](https://www.thehindu.com)\
 [The Irish Times](https://www.irishtimes.com)\
+[The Japan Times](https://www.japantimes.co.jp)\
 [The Kansas City Star](https://www.kansascity.com)\
 [The Mercury News](https://www.mercurynews.com)\
 [The Mercury Tasmania](https://www.themercury.com.au)\
@@ -173,13 +168,11 @@ You can add it quick to tampermonkey via this link: [Add to Tampermonkey](https:
 [Times Literary Supplement](https://www.the-tls.co.uk)\
 [Towards Data Science](https://www.towardsdatascience.com)\
 [Trouw](https://www.trouw.nl)\
-[Tubantia](https://www.tubantia.nl)\
 [Vanity Fair](https://www.vanityfair.com)\
 [Vrij Nederland](https://www.vn.nl)\
 [Vulture](https://www.vulture.com)\
 [Winston-Salem Journal](https://journalnow.com)\
 [Wired](https://www.wired.com)\
-[World Politics Review](https://www.worldpoliticsreview.com)\
 [Zeit Online](https://www.zeit.de)
 
 ### Sites with limited number of free articles
