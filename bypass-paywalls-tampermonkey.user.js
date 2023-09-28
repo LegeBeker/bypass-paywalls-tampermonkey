@@ -659,6 +659,30 @@
             removeDOMElement(el);
         });
     } else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
+        window.setInterval(function () {
+            const paywall = document.querySelector('#slideup-paywall');
+            const darken = document.querySelector('#darken-overlay');
+            if (paywall && darken) {
+                removeDOMElement(paywall);
+                removeDOMElement(darken);
+                window.clearInterval();
+            }
+        }, 100);
+
+        const styleElement = document.createElement('style');
+
+        const cssRules = `
+                .noscroll {
+                 overflow: auto !important;
+                 height: auto !important;
+                 width: auto !important;
+                 position: static !important;
+                 }
+            `;
+
+        styleElement.innerHTML = cssRules;
+        document.head.appendChild(styleElement);
+
         if (!window.location.href.includes('?amp')) {
             const paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall');
             const amphtml = document.querySelector('link[rel="amphtml"]');
