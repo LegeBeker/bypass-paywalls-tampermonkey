@@ -642,32 +642,45 @@
         document.querySelectorAll('div[class*="fancybox"]').forEach(function (el) {
             removeDOMElement(el);
         });
-    } else if (matchDomain('theathletic.com')) {
-        if (!window.location.search.match(/(\?|&)amp/)) {
-            const paywall = document.querySelector('div#slideup-paywall');
-            if (paywall) {
-                const overlays = document.querySelectorAll('div[id*="overlay"], div:empty:not([data-rjs])');
-                removeDOMElement(paywall, ...overlays);
-                const body = document.querySelector('body');
-                if (body) {
-                    body.style.overflow = 'visible';
-                    body.style.position = 'relative';
-                }
-            } else {
-                const headlinePaywall = document.querySelectorAll('a.headline-paywall');
-                const amphtml = document.querySelector('link[rel="amphtml"]');
-                if (headlinePaywall.length && amphtml) {
-                    removeDOMElement(...headlinePaywall);
-                    window.setTimeout(function () {
-                        window.location.href = amphtml.href;
-                    }, 1000);
-                }
+    } else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
+        window.setInterval(function () {
+            const paywall = document.querySelector('#slideup-paywall');
+            const darken = document.querySelector('#darken-overlay');
+            if (paywall && darken) {
+                removeDOMElement(paywall);
+                removeDOMElement(darken);
+                window.clearInterval();
+            }
+        }, 100);
+
+        const styleElement = document.createElement('style');
+
+        const cssRules = `
+                .noscroll {
+                 overflow: auto !important;
+                 height: auto !important;
+                 width: auto !important;
+                 position: static !important;
+                 }
+            `;
+
+        styleElement.innerHTML = cssRules;
+        document.head.appendChild(styleElement);
+
+        if (!window.location.href.includes('?amp')) {
+            const paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall');
+            const amphtml = document.querySelector('link[rel="amphtml"]');
+            if (paywall.length && amphtml) {
+                removeDOMElement(...paywall);
+                window.setTimeout(function () {
+                    window.location.href = amphtml.href;
+                }, 500);
             }
         } else {
             ampUnhideSubscriptionsSection();
+            const subscriptionsActions = document.querySelectorAll('[subscriptions-actions]');
+            removeDOMElement(...subscriptionsActions);
         }
-        const apron = document.querySelector('div#free-apron-cta, div.slideup-free-apron-container');
-        removeDOMElement(apron);
     } else if (matchDomain('newyorker.com')) {
         blockElement('.paywall-bar', true);
         blockElement('.paywall-modal');
